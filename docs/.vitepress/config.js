@@ -37,7 +37,7 @@ export default {
 }
 function nav() {
     return [
-        { text: 'Android', link: '/Android/',activeMatch:'/Android/' },
+        { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
         { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
         { text: 'ML', link: '/ML/',activeMatch:'/ML/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
