@@ -1,8 +1,54 @@
 export default {
-    title: 'VitePress Test',
-    description: 'Just playing around.',
-    //如果要用子目录（https://example.com/subdir/）作为站点，则必须在 docs/.vitepress/config.js 中将 '/subdir/' 设置为 base
-// 示例： 如果您使用 Github（或 GitLab）页面并部署到 user.github.io/repo/，则将 base 设置为 /repo/。
-    base: '/'
-    // srcDir: './docs'
+    lang: 'zh-CN',
+    title: 'The World Through My Eyes',
+    description: 'Share Develop/Life',
+    base: '/',
+    cleanUrls: true,
+    lastUpdated: true,
+
+    head: [['meta', { name: 'theme-color', content: '#6495ED' }]],
+    markdown: {
+        headers: {
+            level: [0, 0]
+        }
+    },
+
+    themeConfig: {
+        nav: nav(),
+        sidebar: {
+
+        },
+        socialLinks: [
+            { icon: 'github', link: 'https://github.com/italks/italks.github.io' }
+        ],
+        // algolia: {
+        //     appId: '8J64VVRP8K',
+        //     apiKey: 'a18e2f4cc5665f6602c5631fd868adfd',
+        //     indexName: 'vitepress'
+        // },
+        footer: {
+            message: 'Released under the Creative Commons license.',
+            copyright: 'Copyright © 2023-present italks'
+        },
+    }
+}
+function nav() {
+    return [
+        { text: 'Android', link: '/Android/',activeMatch:'/Android/' },
+        { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
+        { text: 'ML', link: '/ML/',activeMatch:'/ML/' },
+        { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
+    ]
+}
+
+function sidebarGuide() {
+    return [
+
+    ]
+}
+
+function sidebarConfig() {
+    return [
+
+    ]
 }
