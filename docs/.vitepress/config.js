@@ -37,7 +37,7 @@ export default {
 }
 function nav() {
     return [
-        { text: 'Android', link: '/Android/Flutter/Android原生项目引入Flutter',activeMatch:'/Android/' },
+        { text: 'Android', link: '/Android/',activeMatch:'/Android/' },
         { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
         { text: 'ML', link: '/ML/',activeMatch:'/ML/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
