@@ -16,7 +16,10 @@ export default {
     themeConfig: {
         nav: nav(),
         sidebar: {
-
+            '/Android/':sidebarAndroid(),
+            '/Vue/':sidebarVue(),
+            '/ML/':sidebarML(),
+            // '/Ubuntu/':sidebarUbuntu(),
         },
         socialLinks: [
             { icon: 'github', link: 'https://github.com/italks/italks.github.io' }
@@ -34,21 +37,74 @@ export default {
 }
 function nav() {
     return [
-        { text: 'Android', link: '/Android/',activeMatch:'/Android/' },
+        { text: 'Android', link: '/Android/Flutter/Android原生项目引入Flutter',activeMatch:'/Android/' },
         { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
         { text: 'ML', link: '/ML/',activeMatch:'/ML/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
     ]
 }
 
-function sidebarGuide() {
+function sidebarAndroid() {
     return [
-
+        {
+            text:'Flutter',
+            collapsed: false,
+            items:[
+                {text:'Android原生项目引入Flutter',link:'/Android/Flutter/Android原生项目引入Flutter'}
+            ]
+        },{
+            text:'Kotlin',
+            collapsed:false,
+            items:[]
+        },{
+            text:'Jetpack',
+            collapsed:false,
+            items:[]
+        },{
+            text:'Android开发板',
+            collapsed:false,
+            items:[]
+        }
     ]
 }
 
-function sidebarConfig() {
+function sidebarVue() {
     return [
-
+        {
+            text:'Vue2',
+            collapsed:false,
+            items:[]
+        },{
+            text:'Vue3',
+            collapsed:false,
+            items:[]
+        }
     ]
 }
+
+function sidebarML(){
+    return[
+        {
+            text:'Google ML Kit',
+            collapsed:false,
+            items:[]
+        },
+        {
+            text:'MediaPipe',
+            collapsed:false,
+            items:[]
+        },
+        {
+            text:'NCNN/TNN',
+            collapsed:false,
+            items:[]
+        }
+    ]
+}
+// function sidebarUbuntu(){
+//     return [
+//         {
+
+//         }
+//     ]
+// }
