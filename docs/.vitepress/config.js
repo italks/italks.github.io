@@ -16,7 +16,7 @@ export default {
     themeConfig: {
         nav: nav(),
         sidebar: {
-            '/Android/':sidebarAndroid(),
+            // '/Android/':sidebarAndroid(),
             '/Vue/':sidebarVue(),
             '/ML/':sidebarML(),
             // '/Ubuntu/':sidebarUbuntu(),
@@ -44,29 +44,6 @@ function nav() {
     ]
 }
 
-function sidebarAndroid() {
-    return [
-        {
-            text:'Flutter',
-            collapsed: false,
-            items:[
-                {text:'Android原生项目引入Flutter',link:'/Android/Flutter/Android原生项目引入Flutter'}
-            ]
-        },{
-            text:'Kotlin',
-            collapsed:false,
-            items:[]
-        },{
-            text:'Jetpack',
-            collapsed:false,
-            items:[]
-        },{
-            text:'Android开发板',
-            collapsed:false,
-            items:[]
-        }
-    ]
-}
 
 function sidebarVue() {
     return [
