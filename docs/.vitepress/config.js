@@ -38,6 +38,7 @@ export default {
 function nav() {
     return [
         { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
+        {text:'Flutter',link:'https://italks.github.io/Flutter/',activeMatch:'/Flutter/'},
         { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
         { text: 'ML', link: '/ML/',activeMatch:'/ML/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
