@@ -19,7 +19,7 @@ export default {
             // '/Android/':sidebarAndroid(),
             '/Vue/':sidebarVue(),
             '/ML/':sidebarML(),
-            // '/Ubuntu/':sidebarUbuntu(),
+            '/Ubuntu/':sidebarUbuntu(),
         },
         socialLinks: [
             { icon: 'github', link: 'https://github.com/italks/italks.github.io' }
@@ -42,6 +42,7 @@ function nav() {
         { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
         { text: 'ML', link: '/ML/',activeMatch:'/ML/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
+        {text:'README',link:'https://github.com/italks',activeMatch:'/README/'},
     ]
 }
 
@@ -79,10 +80,12 @@ function sidebarML(){
         }
     ]
 }
-// function sidebarUbuntu(){
-//     return [
-//         {
-
-//         }
-//     ]
-// }
+function sidebarUbuntu(){
+    return [
+        {
+            text:'微信QQ社群',
+            link:'/Ubuntu/WeChatQQ',
+            activeMatch:'/Ubuntu/WeChatQQ'
+        }
+    ]
+}
