@@ -40,7 +40,7 @@ function nav() {
         { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
         {text:'Flutter',link:'https://italks.github.io/Flutter/',activeMatch:'/Flutter/'},
         { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
-        { text: 'AI Tools', link: 'https://italks.github.io/ai-tools/',activeMatch:'/ai-tools/' },
+        { text: 'AI Tools', link: 'https://italks.github.io/ai-tools',activeMatch:'/ai-tools/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
         {text:'README',link:'https://github.com/italks',activeMatch:'/README/'},
     ]
