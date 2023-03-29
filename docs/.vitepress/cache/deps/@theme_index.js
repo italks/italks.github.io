@@ -1,5 +1,7 @@
 // node_modules/vitepress/dist/client/theme-default/index.js
 import "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/styles/fonts.css";
+
+// node_modules/vitepress/dist/client/theme-default/without-fonts.js
 import "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/styles/vars.css";
 import "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/styles/base.css";
 import "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/styles/utils.css";
@@ -10,7 +12,6 @@ import "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/
 import "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/styles/components/vp-sponsor.css";
 import VPBadge from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/components/VPBadge.vue";
 import Layout from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/Layout.vue";
-import NotFound from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/NotFound.vue";
 import { default as default2 } from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/components/VPHomeHero.vue";
 import { default as default3 } from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/components/VPHomeFeatures.vue";
 import { default as default4 } from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/components/VPHomeSponsors.vue";
@@ -21,12 +22,11 @@ import { default as default8 } from "C:/Users/italk/blog/italks.github.io/node_m
 import { default as default9 } from "C:/Users/italk/blog/italks.github.io/node_modules/vitepress/dist/client/theme-default/components/VPTeamMembers.vue";
 var theme = {
   Layout,
-  NotFound,
   enhanceApp: ({ app }) => {
     app.component("Badge", VPBadge);
   }
 };
-var theme_default_default = theme;
+var without_fonts_default = theme;
 export {
   default5 as VPDocAsideSponsors,
   default3 as VPHomeFeatures,
@@ -36,6 +36,6 @@ export {
   default6 as VPTeamPage,
   default8 as VPTeamPageSection,
   default7 as VPTeamPageTitle,
-  theme_default_default as default
+  without_fonts_default as default
 };
 //# sourceMappingURL=@theme_index.js.map
