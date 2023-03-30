@@ -37,9 +37,9 @@ export default {
 }
 function nav() {
     return [
-        { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
-        {text:'Flutter',link:'https://italks.github.io/Flutter/',activeMatch:'/Flutter/'},
-        { text: 'Vue', link: '/Vue/',activeMatch:'/Vue/' },
+        // { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
+        // {text:'Flutter',link:'https://italks.github.io/Flutter/',activeMatch:'/Flutter/'},
+        { text: '开发', link: '/code/',activeMatch:'/code/' },
         { text: 'AI Tools', link: 'https://italks.github.io/ai-tools',activeMatch:'/ai-tools/' },
         { text: 'Ubuntu', link: '/Ubuntu/',activeMatch:'/Android/' },
         {text:'README',link:'https://github.com/italks',activeMatch:'/README/'},
@@ -86,6 +86,10 @@ function sidebarUbuntu(){
             text:'微信QQ社群',
             link:'/Ubuntu/WeChatQQ',
             activeMatch:'/Ubuntu/WeChatQQ'
+        },{
+            text:'国内各大学开源镜像站',
+            link:'/Ubuntu/UniversityOpenSource',
+            activeMatch:'/Ubuntu/University'
         }
     ]
 }
