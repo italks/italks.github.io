@@ -37,7 +37,7 @@ export default {
 }
 function nav() {
     return [
-        // { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
+        { text: 'Android', link: 'https://italks.github.io/Android/',activeMatch:'/Android/' },
         // {text:'Flutter',link:'https://italks.github.io/Flutter/',activeMatch:'/Flutter/'},
         { text: '开发', link: '/code/',activeMatch:'/code/' },
         { text: 'AI Tools', link: 'https://italks.github.io/ai-tools',activeMatch:'/ai-tools/' },
