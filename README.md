@@ -8,4 +8,5 @@
 - 构建命令`npm run docs:build`
 - 构建输出目录`/docs/.vitepress/dist`
 - 根目录`/`
-# 自定义域[](https://page.zhoulizhi.fun)
+# 自定义域
+[国内访问地址](https://page.zhoulizhi.fun)
