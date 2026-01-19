@@ -1,36 +1,25 @@
 ---
+# https://vitepress.dev/reference/default-theme-home-page
 layout: home
 
-title: 以我眼光看世界
-titleTemplate: 个人博客，分享知识，兴趣，生活
-
 hero:
-    name: VitePress On Github
-    text: 多项目博客
-    tagline: 基于Github Actions，Github Pages，Github README
-    actions:
-        - theme: brand
-          text: 快速入门
-          link: /getting-started.md
-        - theme: alt
-          text: 查看源码
-          link: https://github.com/italks/italks.github.io
+  name: "运营平台"
+  text: "自媒体运营平台"
+  tagline: My great project tagline
+  actions:
+    - theme: brand
+      text: Markdown Examples
+      link: /markdown-examples
+    - theme: alt
+      text: API Examples
+      link: /api-examples
 
 features:
-  - title: Android
-    details: 原生开发，Koltin，混合开发，安卓开发板
-  - title: Flutter
-    details: Flutter开发，原生交互
-  - title: Vue
-    details: Vue2，Vue3，uniapp，前端相关
-  - title: ML
-    details: 机器学习，深度神经网络，ML Kit，Mediapipe，TNN，NCNN
-  - title: Ubuntu
-    details: Ubuntu桌面版，Linux相关知识
-  - title: README
-    details: Github README
+  - title: Feature A
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature B
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Feature C
+    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
-
-
-
 
