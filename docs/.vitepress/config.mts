@@ -12,7 +12,13 @@ export default defineConfig({
         items: [
           { text:"账号矩阵",link:"/mp/index"},
           { text: 'UbuntuNews', link: '/mp/Ubuntu/index' },
-          { text: '移动APP开发', link: '/mp/APP/index' },
+          {
+            text: '移动APP开发',
+            items: [
+              { text: '定位分析', link: '/mp/APP/index' },
+              { text: '文章：商城小程序开发成本', link: '/mp/APP/2026-01-19-mall-miniprogram-cost' }
+            ]
+          },
           { text: '以我眼光看世界', link: '/mp/Me/index' }
         ]
       },{

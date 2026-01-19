@@ -1,0 +1,20 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="900" height="383" fill="#f0f0f0" />
+  
+  <!-- Safe Zone (Center 1:1 area for sharing) -->
+  <rect x="258.5" y="0" width="383" height="383" fill="#e0e0e0" stroke="#E95420" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Guidelines -->
+  <line x1="0" y1="191.5" x2="900" y2="191.5" stroke="#999" stroke-width="1" />
+  <line x1="450" y1="0" x2="450" y2="383" stroke="#999" stroke-width="1" />
+  
+  <!-- Text Labels -->
+  <text x="450" y="180" font-family="Arial" font-size="24" text-anchor="middle" fill="#333" font-weight="bold">微信公众号首图封面 (900x383)</text>
+  <text x="450" y="220" font-family="Arial" font-size="16" text-anchor="middle" fill="#E95420">红色虚线框内为分享/转发安全区域 (1:1)</text>
+  <text x="450" y="240" font-family="Arial" font-size="14" text-anchor="middle" fill="#666">关键文字和Logo请务必放在此区域内</text>
+  
+  <!-- Dimensions -->
+  <text x="10" y="30" font-family="Arial" font-size="12" fill="#999">900px</text>
+  <text x="10" y="370" font-family="Arial" font-size="12" fill="#999">383px</text>
+</svg>

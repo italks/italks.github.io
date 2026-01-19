@@ -1,0 +1,40 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg)" />
+  
+  <!-- Right Side Illustration: Mobile + Bill -->
+  <g transform="translate(550, 40)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="160" height="300" rx="20" ry="20" fill="#fff" />
+    <rect x="10" y="10" width="140" height="280" rx="5" ry="5" fill="#f0f0f0" />
+    <!-- Screen Elements -->
+    <rect x="20" y="30" width="120" height="80" rx="5" fill="#ddd" />
+    <rect x="20" y="120" width="50" height="50" rx="5" fill="#ddd" />
+    <rect x="80" y="120" width="50" height="50" rx="5" fill="#ddd" />
+    <rect x="20" y="180" width="120" height="20" rx="5" fill="#ddd" />
+    
+    <!-- Price Tag Floating -->
+    <circle cx="160" cy="50" r="40" fill="#ff6b6b" />
+    <text x="160" y="65" font-family="Arial" font-size="30" text-anchor="middle" fill="#fff" font-weight="bold">¥?</text>
+  </g>
+  
+  <!-- Left Side Text -->
+  <g transform="translate(80, 150)">
+    <text x="0" y="0" font-family="Microsoft YaHei, SimHei, Arial" font-size="60" fill="#fff" font-weight="bold">商城小程序</text>
+    <text x="0" y="80" font-family="Microsoft YaHei, SimHei, Arial" font-size="60" fill="#fff" font-weight="bold">到底要多少钱？</text>
+    
+    <!-- Tagline -->
+    <rect x="0" y="110" width="320" height="40" rx="5" fill="#ffcb05" />
+    <text x="160" y="138" font-family="Microsoft YaHei, SimHei, Arial" font-size="20" text-anchor="middle" fill="#333" font-weight="bold">2026年最新成本拆解</text>
+  </g>
+  
+  <!-- Safe Zone Markers (Optional, for reference, subtle) -->
+  <rect x="258.5" y="0" width="383" height="383" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5,5" />
+</svg>
