@@ -1,0 +1,54 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient: Brand Blue to Tech Blue -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg)" />
+  
+  <!-- Content Container (Left Side 60%) -->
+  <g transform="translate(60, 80)">
+    <!-- Highlight Tag -->
+    <rect x="0" y="-10" width="180" height="36" rx="4" fill="#FFCB05" />
+    <text x="90" y="15" font-family="Microsoft YaHei, SimHei, Arial" font-size="20" text-anchor="middle" fill="#333" font-weight="bold">2026 私域新玩法</text>
+    
+    <!-- Main Title -->
+    <text x="0" y="80" font-family="Microsoft YaHei, SimHei, Arial" font-size="48" fill="#fff" font-weight="bold">别被“做个APP”</text>
+    <text x="0" y="145" font-family="Microsoft YaHei, SimHei, Arial" font-size="48" fill="#fff" font-weight="bold">忽悠了！</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="200" font-family="Microsoft YaHei, SimHei, Arial" font-size="24" fill="#ddd">小程序 + 企微群 = 黄金搭档</text>
+  </g>
+  
+  <!-- Illustration (Right Side 40%) -->
+  <g transform="translate(580, 50)">
+    <!-- Broken APP Icon (Symbolizing high cost/failure) -->
+    <g transform="translate(0, 180) rotate(-15)">
+       <rect x="0" y="0" width="80" height="80" rx="15" fill="#555" opacity="0.5" />
+       <text x="40" y="55" font-family="Arial" font-size="30" text-anchor="middle" fill="#999">APP</text>
+       <line x1="10" y1="10" x2="70" y2="70" stroke="#FF6B6B" stroke-width="4" />
+       <line x1="70" y1="10" x2="10" y2="70" stroke="#FF6B6B" stroke-width="4" />
+    </g>
+
+    <!-- Connection Lines -->
+    <path d="M 80 180 Q 130 140 160 100" stroke="#FFCB05" stroke-width="3" fill="none" stroke-dasharray="5,5" />
+    
+    <!-- Mini Program Icon (Green) -->
+    <circle cx="200" cy="80" r="50" fill="#07c160" />
+    <text x="200" y="95" font-family="Arial" font-size="40" text-anchor="middle" fill="#fff" font-weight="bold">S</text>
+    
+    <!-- WeChat Work Icon (Blue) -->
+    <rect x="150" y="160" width="100" height="100" rx="20" fill="#3d8bf2" />
+    <text x="200" y="220" font-family="Arial" font-size="40" text-anchor="middle" fill="#fff" font-weight="bold">W</text>
+    
+    <!-- Plus Sign -->
+    <text x="200" y="145" font-family="Arial" font-size="30" text-anchor="middle" fill="#fff" font-weight="bold">+</text>
+  </g>
+  
+  <!-- Safe Zone Reference (Invisible in final, good for check) -->
+  <rect x="258.5" y="0" width="383" height="383" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="1" stroke-dasharray="5,5" />
+</svg>

@@ -16,7 +16,8 @@ export default defineConfig({
             text: '移动APP开发',
             items: [
               { text: '定位分析', link: '/mp/APP/index' },
-              { text: '文章：商城小程序开发成本', link: '/mp/APP/2026-01-19-mall-miniprogram-cost' }
+              { text: '文章：商城小程序开发成本', link: '/mp/APP/2026-01-19-mall-miniprogram-cost' },
+              { text: '文章：小程序+企微私域', link: '/mp/APP/2026-01-20-miniprogram-private-traffic' }
             ]
           },
           { text: '以我眼光看世界', link: '/mp/Me/index' }
