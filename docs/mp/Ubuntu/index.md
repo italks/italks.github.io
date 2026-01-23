@@ -25,6 +25,12 @@
 **【定位名称】**：Ubuntu 与开源技术的深度实践前哨站
 **【核心价值】**：提供最前沿的 Ubuntu 动态、最硬核的 Linux 技术教程、最真实的开发者落地经验。
 **【受众画像】**：后端开发人员、运维工程师（SRE）、AI 模型部署工程师、计算机专业学生、极客/HomeLab 玩家。
+**【粉丝兴趣领域】**：
+*   **科技 (Technology):** 前沿硬件、开源文化、AI 大模型、网络安全。
+*   **科学 (Science):** 基础物理模拟、生物信息学（与 Linux 计算集群相关）。
+*   **汽车 (Automotive):** 自动驾驶系统 (ROS 2 on Ubuntu)、车载娱乐系统 (Automotive Grade Linux)。
+*   **摄影 (Photography):** 开源后期工作流 (Darktable/GIMP)、NAS 影像存储方案。
+*   **财经 (Finance):** 量化交易系统搭建、高频交易低延迟内核优化。
 **【品牌调性】**：专业 (Professional)、极客 (Geeky)、实用 (Pragmatic)、简洁 (Clean)。
 
 ---

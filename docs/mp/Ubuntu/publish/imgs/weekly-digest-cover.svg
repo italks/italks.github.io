@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Gradient: Deep Tech Blue -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1c1c2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a2a40;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Grid Pattern for Tech Feel -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#444455" stroke-width="0.5" stroke-opacity="0.3"/>
+    </pattern>
+    
+    <!-- News Icon Gradient -->
+    <linearGradient id="iconGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF9F00;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF5500;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background Layers -->
+  <rect width="900" height="383" fill="url(#bg)" />
+  <rect width="900" height="383" fill="url(#grid)" />
+  
+  <!-- Decoration: Abstract Newspaper/Feed Layout on Left -->
+  <g opacity="0.1" transform="translate(50, 60)">
+    <rect x="0" y="0" width="200" height="15" rx="2" fill="#ffffff" />
+    <rect x="0" y="30" width="140" height="10" rx="2" fill="#ffffff" />
+    <rect x="0" y="50" width="180" height="10" rx="2" fill="#ffffff" />
+    <rect x="0" y="70" width="160" height="10" rx="2" fill="#ffffff" />
+    
+    <rect x="0" y="110" width="200" height="15" rx="2" fill="#ffffff" />
+    <rect x="0" y="140" width="120" height="10" rx="2" fill="#ffffff" />
+    <rect x="0" y="160" width="190" height="10" rx="2" fill="#ffffff" />
+  </g>
+  
+  <!-- Decoration: Right Side Notification Bubbles -->
+  <circle cx="820" cy="80" r="40" fill="#E95420" opacity="0.1" />
+  <circle cx="850" cy="150" r="20" fill="#772953" opacity="0.2" />
+  
+  <!-- Center Content -->
+  <!-- Icon: Simple Newspaper/Globe abstraction -->
+  <circle cx="450" cy="140" r="40" fill="url(#iconGradient)" />
+  <path d="M435 125 L465 125 L465 155 L435 155 Z" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <line x1="440" y1="135" x2="460" y2="135" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="440" y1="145" x2="455" y2="145" stroke="#ffffff" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Main Title -->
+  <text x="450" y="230" font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif" font-size="56" text-anchor="middle" fill="#ffffff" font-weight="bold" letter-spacing="4">开源周报</text>
+  <text x="450" y="280" font-family="system-ui, -apple-system, 'PingFang SC', 'Microsoft YaHei', 'SimHei', sans-serif" font-size="28" text-anchor="middle" fill="#cccccc" font-weight="normal" letter-spacing="2">WEEKLY DIGEST</text>
+  
+  <!-- Footer Tag -->
+  <rect x="390" y="310" width="120" height="4" rx="2" fill="#E95420" />
+  
+</svg>
