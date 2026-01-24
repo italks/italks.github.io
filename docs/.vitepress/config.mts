@@ -41,7 +41,14 @@ export default defineConfig({
             ]
           },
           { text: '移动APP开发', link: '/mp/APP/index' },
-          { text: '以我眼光看世界', link: '/mp/Me/index' }
+          {
+            text: '以我眼光看世界',
+            collapsed: false,
+            items: [
+              { text: '定位分析', link: '/mp/Me/index' },
+              { text: '文章：读懂《太平年》', link: '/mp/Me/2026-01-24-peaceful-year-history' }
+            ]
+          }
         ]
       },
       {
