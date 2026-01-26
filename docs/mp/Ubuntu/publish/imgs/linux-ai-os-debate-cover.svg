@@ -1,0 +1,54 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c001e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e1e1e;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg)" />
+  <rect width="900" height="383" fill="url(#grid)" />
+  
+  <!-- Decoration: Terminal Window on Left (Faded) -->
+  <rect x="30" y="50" width="240" height="280" rx="5" fill="#000000" fill-opacity="0.3" />
+  <circle cx="50" cy="70" r="5" fill="#ff5f56" opacity="0.6" />
+  <circle cx="70" cy="70" r="5" fill="#ffbd2e" opacity="0.6" />
+  <circle cx="90" cy="70" r="5" fill="#27c93f" opacity="0.6" />
+  <text x="50" y="110" font-family="monospace" font-size="12" fill="#00ff00" opacity="0.6">$ nvidia-smi</text>
+  <text x="50" y="130" font-family="monospace" font-size="12" fill="#ffffff" opacity="0.5">| 4090 | 24GB |</text>
+  <text x="50" y="150" font-family="monospace" font-size="12" fill="#ffffff" opacity="0.5">| 0%   | 10W  |</text>
+  <text x="50" y="180" font-family="monospace" font-size="12" fill="#00ff00" opacity="0.6">$ python train.py</text>
+  <text x="50" y="200" font-family="monospace" font-size="12" fill="#cccccc" opacity="0.4">Epoch 1/100...</text>
+  
+  <!-- Decoration: Right Side Abstract (Faded) -->
+  <path d="M 800 100 L 850 150 L 800 200" stroke="#ffffff" stroke-width="2" fill="none" opacity="0.1" />
+  <path d="M 820 120 L 870 170 L 820 220" stroke="#E95420" stroke-width="2" fill="none" opacity="0.1" />
+
+  <!-- Center Safe Zone Content -->
+  
+  <!-- Main Title -->
+  <text x="450" y="150" font-family="sans-serif" font-size="60" text-anchor="middle" font-weight="bold" filter="url(#glow)">
+    <tspan fill="#E95420">Linux</tspan>
+    <tspan fill="#ffffff"> &gt; </tspan>
+    <tspan fill="#cccccc">macOS</tspan>
+    <tspan fill="#E95420"> ?</tspan>
+  </text>
+  
+  <text x="450" y="220" font-family="sans-serif" font-size="38" text-anchor="middle" fill="#ffffff" font-weight="bold">AI 时代的最佳 OS</text>
+  
+  <!-- Tag / Subtitle -->
+  <rect x="380" y="260" width="140" height="36" rx="18" fill="#E95420" />
+  <text x="450" y="284" font-family="sans-serif" font-size="18" text-anchor="middle" fill="#ffffff" font-weight="bold">深度对比</text>
+  
+</svg>
