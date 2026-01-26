@@ -1,0 +1,36 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="techGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e293b;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#techGrad)" />
+  
+  <!-- Grid Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#334155" stroke-width="1"/>
+  </pattern>
+  <rect width="900" height="383" fill="url(#grid)" opacity="0.3" />
+  
+  <!-- Lock Icon / Shield Concept (Simplified) -->
+  <path d="M 450 80 L 550 130 L 550 220 Q 450 300 450 300 Q 350 220 350 220 L 350 130 Z" fill="none" stroke="#22c55e" stroke-width="5" opacity="0.3" />
+  
+  <!-- Main Text -->
+  <text x="450" y="170" font-family="Arial, sans-serif" font-weight="bold" font-size="70" fill="#e2e8f0" text-anchor="middle" filter="url(#glow)">DeepSeek + Ubuntu</text>
+  
+  <!-- Sub Text -->
+  <text x="450" y="240" font-family="Arial, sans-serif" font-weight="bold" font-size="45" fill="#22c55e" text-anchor="middle" filter="url(#glow)">本地 RAG · 绝对隐私</text>
+  
+  <!-- Tags -->
+  <text x="450" y="310" font-family="Arial, sans-serif" font-size="24" fill="#94a3b8" text-anchor="middle">Ollama | AnythingLLM | Offline</text>
+</svg>
