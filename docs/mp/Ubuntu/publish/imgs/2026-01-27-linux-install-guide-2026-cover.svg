@@ -1,0 +1,26 @@
+<svg width="500" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="installGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0078D7;stop-opacity:1" /> <!-- Windows Blue -->
+      <stop offset="100%" style="stop-color:#FCC624;stop-opacity:1" /> <!-- Linux Tux Yellowish/Gold hint -->
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="500" height="500" fill="#1e1e1e" />
+  
+  <!-- Diagonal Split/Shape -->
+  <path d="M 0 0 L 500 0 L 500 400 L 0 500 Z" fill="url(#installGrad)" opacity="0.1" />
+
+  <!-- Icons / Representation -->
+  <!-- Gear Icon (simplified) -->
+  <circle cx="250" cy="200" r="80" stroke="#ffffff" stroke-width="8" fill="none" opacity="0.8" />
+  <circle cx="250" cy="200" r="30" fill="#ffffff" opacity="0.8" />
+  <rect x="240" y="100" width="20" height="200" fill="#ffffff" opacity="0.8" />
+  <rect x="150" y="190" width="200" height="20" fill="#ffffff" opacity="0.8" />
+
+  <!-- Text -->
+  <text x="250" y="350" font-family="Arial, sans-serif" font-weight="bold" font-size="40" fill="#ffffff" text-anchor="middle">Linux 安装</text>
+  <text x="250" y="400" font-family="Arial, sans-serif" font-size="24" fill="#dddddd" text-anchor="middle">WSL2 | VM | Dual Boot</text>
+  <text x="250" y="440" font-family="Arial, sans-serif" font-size="18" fill="#aaaaaa" text-anchor="middle">2026 新手指南</text>
+</svg>

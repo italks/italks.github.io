@@ -1,0 +1,51 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ubuntuGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#772953;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fedoraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0B57A4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3C6EB4;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="archGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1793D1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#333333;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bgGrad)" />
+
+  <!-- VS Text Background -->
+  <text x="450" y="220" font-family="Arial, sans-serif" font-weight="900" font-size="180" fill="#ffffff" opacity="0.05" text-anchor="middle">VS</text>
+
+  <!-- Section 1: Ubuntu -->
+  <g transform="translate(100, 100)">
+    <circle cx="60" cy="60" r="50" fill="url(#ubuntuGrad)" />
+    <text x="60" y="140" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#E95420" text-anchor="middle">Ubuntu</text>
+  </g>
+
+  <!-- Section 2: Fedora -->
+  <g transform="translate(400, 100)">
+    <circle cx="60" cy="60" r="50" fill="url(#fedoraGrad)" />
+    <text x="60" y="140" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#3C6EB4" text-anchor="middle">Fedora</text>
+  </g>
+
+  <!-- Section 3: Arch -->
+  <g transform="translate(700, 100)">
+    <circle cx="60" cy="60" r="50" fill="url(#archGrad)" />
+    <text x="60" y="140" font-family="Arial, sans-serif" font-weight="bold" font-size="24" fill="#1793D1" text-anchor="middle">Arch</text>
+  </g>
+
+  <!-- Main Title -->
+  <text x="450" y="300" font-family="Arial, sans-serif" font-weight="bold" font-size="48" fill="#ffffff" text-anchor="middle">Distro Wars 2026</text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="340" font-family="Arial, sans-serif" font-size="24" fill="#cccccc" text-anchor="middle">Who is the Desktop King?</text>
+</svg>
