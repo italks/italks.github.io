@@ -1,0 +1,17 @@
+# AI Image Generation Prompts (Midjourney / DALL-E 3 / Stable Diffusion)
+
+## Option 1: Tech & Architecture (Abstract)
+**Prompt:**
+> abstract isometric 3d illustration of a high-tech shopping mall mini-program architecture, data flowing like light streams, high concurrency, servers, load balancer, glowing blue and neon orange connection lines, stable structure, minimalist tech style, 4k resolution, unreal engine 5 render --ar 2.35:1
+
+## Option 2: "Crash" vs "Stable" Concept
+**Prompt:**
+> split screen composition, left side shows a chaotic crashing server room with red warning lights and smoke, right side shows a clean futuristic organized server room with blue soothing lights, representing high concurrency optimization, high detail, cinematic lighting --ar 2.35:1
+
+## Option 3: Minimalist Vector (Flat)
+**Prompt:**
+> flat vector art, cover image for tech blog, mobile phone screen displaying a shopping app, surrounded by cloud infrastructure icons, database, redis, shield, speed lines, dark background, vibrant colors, clean lines --ar 2.35:1
+
+## Recommended Text Overlay (Add manually)
+- Main Title: 商城小程序架构解密
+- Subtitle: 为什么一搞活动就崩？

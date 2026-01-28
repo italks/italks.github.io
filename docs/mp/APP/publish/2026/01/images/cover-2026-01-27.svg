@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a2a6c;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#b21f1f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#fdbb2d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
+      <feOffset dx="2" dy="2" result="offsetblur" />
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5" />
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode />
+        <feMergeNode in="SourceGraphic" />
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#grad1)" />
+  
+  <!-- Grid Pattern overlay -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-width="1" opacity="0.1"/>
+  </pattern>
+  <rect width="900" height="383" fill="url(#grid)" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="100" fill="white" opacity="0.05" />
+  <circle cx="850" cy="330" r="120" fill="white" opacity="0.05" />
+  
+  <!-- Main Title -->
+  <text x="450" y="180" font-family="'Microsoft YaHei', 'Heiti SC', sans-serif" font-size="64" font-weight="bold" fill="white" text-anchor="middle" filter="url(#shadow)">
+    商城小程序架构解密
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="260" font-family="'Microsoft YaHei', 'Heiti SC', sans-serif" font-size="36" font-weight="normal" fill="#ffd700" text-anchor="middle" filter="url(#shadow)">
+    高并发 · 防崩溃 · 架构优化
+  </text>
+  
+  <!-- Tag/Badge -->
+  <rect x="380" y="80" width="140" height="30" rx="15" ry="15" fill="rgba(255,255,255,0.2)" />
+  <text x="450" y="102" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">实战解决方案</text>
+</svg>

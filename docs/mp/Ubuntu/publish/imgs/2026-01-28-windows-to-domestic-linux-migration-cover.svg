@@ -1,0 +1,48 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0078D7;stop-opacity:1" /> <!-- Windows Blue -->
+      <stop offset="50%" style="stop-color:#2c3e50;stop-opacity:1" /> <!-- Transition Dark -->
+      <stop offset="100%" style="stop-color:#C7000B;stop-opacity:1" /> <!-- China Red/UOS style -->
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bgGrad)" />
+  
+  <!-- Overlay pattern (subtle grid) -->
+  <pattern id="grid" width="20" height="20" patternUnits="userSpaceOnUse">
+    <path d="M 20 0 L 0 0 0 20" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="900" height="383" fill="url(#grid)" />
+
+  <!-- Central Visual: Migration Arrow -->
+  <g transform="translate(450, 150)">
+    <!-- Arrow Body -->
+    <path d="M -100 -20 L 50 -20 L 50 -50 L 120 0 L 50 50 L 50 20 L -100 20 Z" fill="#ffffff" opacity="0.9" filter="url(#shadow)"/>
+    
+    <!-- Windows Side Icon (Simplified 4 squares) -->
+    <g transform="translate(-180, -30)">
+        <rect x="0" y="0" width="25" height="25" fill="#ffffff" opacity="0.8"/>
+        <rect x="30" y="0" width="25" height="25" fill="#ffffff" opacity="0.8"/>
+        <rect x="0" y="30" width="25" height="25" fill="#ffffff" opacity="0.8"/>
+        <rect x="30" y="30" width="25" height="25" fill="#ffffff" opacity="0.8"/>
+    </g>
+
+    <!-- Linux Side Icon (Simplified Penguin/Terminal) -->
+    <g transform="translate(140, -30)">
+        <path d="M 10 60 C 10 60 0 40 0 30 C 0 10 20 0 30 0 C 40 0 60 10 60 30 C 60 40 50 60 50 60 L 10 60 Z" fill="#ffffff" opacity="0.8"/>
+        <circle cx="20" cy="25" r="5" fill="#333"/>
+        <circle cx="40" cy="25" r="5" fill="#333"/>
+        <path d="M 25 35 Q 30 40 35 35" stroke="#333" stroke-width="2" fill="none"/>
+    </g>
+  </g>
+
+  <!-- Text -->
+  <text x="450" y="260" font-family="'Microsoft YaHei', 'SimHei', sans-serif" font-weight="bold" font-size="48" fill="#ffffff" text-anchor="middle" filter="url(#shadow)">告别 C 盘焦虑</text>
+  <text x="450" y="320" font-family="'Microsoft YaHei', 'SimHei', sans-serif" font-size="28" fill="#f0f0f0" text-anchor="middle" filter="url(#shadow)">Windows ➔ 国产 Linux 迁移指南</text>
+
+</svg>
