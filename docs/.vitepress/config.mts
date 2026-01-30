@@ -41,6 +41,9 @@ export default defineConfig({
                 text: '2026年1月',
                 collapsed: true,
                 items: [
+                  { text: '28日: Ubuntu L2TP 搭建', link: '/mp/Ubuntu/publish/2026/01/2026-01-28-ubuntu-l2tp-server-tutorial' },
+                  { text: '28日: Windows 迁移指南', link: '/mp/Ubuntu/publish/2026/01/2026-01-28-windows-to-domestic-linux-migration' },
+                  { text: '27日: GNOME 50 新特性', link: '/mp/Ubuntu/publish/2026/01/2026-01-27-gnome-50-features' },
                   { text: '27日: 发行版大比拼', link: '/mp/Ubuntu/publish/2026/01/2026-01-27-distro-wars-2026' },
                   { text: '27日: Linux 安装指南', link: '/mp/Ubuntu/publish/2026/01/2026-01-27-linux-install-guide-2026' },
                   { text: '26日: Ubuntu 26.04 深度前瞻', link: '/mp/Ubuntu/publish/2026/01/2026-01-26-ubuntu-26-04-deep-dive' },
