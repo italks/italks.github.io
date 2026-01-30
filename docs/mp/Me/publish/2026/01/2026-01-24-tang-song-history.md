@@ -5,7 +5,7 @@ layout: doc
 
 # 从唐末乱世到北宋一统：一部《太平年》背后的血泪演变史
 
-![历史演变](./imgs/tang-song-history-cover.svg)
+![历史演变](../../../imgs/tang-song-history-cover.svg)
 
 > “天子，兵强马壮者当为之，宁有种耶！” —— 安重荣（五代军阀）
 

@@ -5,7 +5,7 @@ layout: doc
 
 # 读懂《太平年》背后的五代十国：一场关于“活着”与“太平”的豪赌
 
-![太平年封面图](./imgs/peaceful-year-cover.svg)
+![太平年封面图](../../../imgs/peaceful-year-cover.svg)
 
 > “宁做太平犬，不做乱世人。” —— 这句老话，在那个时代是无数百姓最真实的血泪。
 

@@ -73,7 +73,7 @@
 
 我们在官方论坛发现了一些优秀的早期投稿（来自用户 mendhak 等），大家感受一下这届选手的实力：
 
-![社区投稿作品](imgs/wallpaper-contest-1.jpg)
+![社区投稿作品](../../imgs/wallpaper-contest-1.jpg)
 
 *(更多高清作品请前往 Discourse 论坛围观)*
 
