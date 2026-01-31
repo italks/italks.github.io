@@ -1,0 +1,82 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1b26;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#24283b;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="text-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7aa2f7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#bb9af7;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+
+  <!-- Abstract Circuit Lines -->
+  <g stroke="#414868" stroke-width="2" fill="none" opacity="0.4">
+    <path d="M50 225 H 150 L 200 150 H 600 L 650 225 H 750" />
+    <path d="M100 450 V 350 L 200 250" />
+    <path d="M700 0 V 100 L 600 200" />
+    <circle cx="200" cy="150" r="4" fill="#565f89" />
+    <circle cx="600" cy="150" r="4" fill="#565f89" />
+    <circle cx="200" cy="250" r="4" fill="#565f89" />
+    <circle cx="600" cy="250" r="4" fill="#565f89" />
+  </g>
+
+  <!-- Controller Outline Hint -->
+  <path d="M 200 150 Q 200 100 250 100 H 550 Q 600 100 600 150 V 250 Q 600 350 500 350 H 300 Q 200 350 200 250 Z" 
+        fill="none" stroke="#7aa2f7" stroke-width="2" stroke-dasharray="10,10" opacity="0.2" />
+
+  <!-- Main Title -->
+  <text x="400" y="210" font-family="Arial, sans-serif" font-weight="bold" font-size="80" text-anchor="middle" fill="url(#text-grad)" filter="url(#glow)">OGC</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="260" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="bold" font-size="28" text-anchor="middle" fill="#c0caf5">开放游戏联盟</text>
+  
+  <!-- Slogan -->
+  <text x="400" y="290" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="16" text-anchor="middle" fill="#9ece6a">共建 Linux 游戏新生态</text>
+
+  <!-- Member Nodes -->
+  <g transform="translate(400, 225)">
+    <!-- Bazzite -->
+    <g transform="translate(-250, -80)">
+       <rect x="-60" y="-15" width="120" height="30" rx="15" fill="#16161e" stroke="#7aa2f7" stroke-width="1.5" />
+       <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a9b1d6">Bazzite</text>
+    </g>
+    <!-- Nobara -->
+    <g transform="translate(250, -80)">
+       <rect x="-60" y="-15" width="120" height="30" rx="15" fill="#16161e" stroke="#f7768e" stroke-width="1.5" />
+       <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a9b1d6">Nobara</text>
+    </g>
+    <!-- ChimeraOS -->
+    <g transform="translate(-250, 80)">
+       <rect x="-65" y="-15" width="130" height="30" rx="15" fill="#16161e" stroke="#bb9af7" stroke-width="1.5" />
+       <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a9b1d6">ChimeraOS</text>
+    </g>
+    <!-- ASUS Linux -->
+    <g transform="translate(250, 80)">
+       <rect x="-65" y="-15" width="130" height="30" rx="15" fill="#16161e" stroke="#e0af68" stroke-width="1.5" />
+       <text x="0" y="5" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#a9b1d6">ASUS Linux</text>
+    </g>
+    
+    <!-- Connecting Lines -->
+    <line x1="-190" y1="-80" x2="-100" y2="-20" stroke="#7aa2f7" stroke-width="1" opacity="0.5" />
+    <line x1="190" y1="-80" x2="100" y2="-20" stroke="#f7768e" stroke-width="1" opacity="0.5" />
+    <line x1="-185" y1="80" x2="-100" y2="20" stroke="#bb9af7" stroke-width="1" opacity="0.5" />
+    <line x1="185" y1="80" x2="100" y2="20" stroke="#e0af68" stroke-width="1" opacity="0.5" />
+  </g>
+  
+  <!-- Penguin Hint (Bottom Center) -->
+  <path d="M385 380 Q 400 360 415 380 Q 430 400 415 420 H 385 Q 370 400 385 380" fill="#1a1b26" stroke="#565f89" stroke-width="2" opacity="0.3"/>
+  <circle cx="392" cy="385" r="2" fill="#565f89" opacity="0.5"/>
+  <circle cx="408" cy="385" r="2" fill="#565f89" opacity="0.5"/>
+
+</svg>
