@@ -1,0 +1,49 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c001e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#5E2750;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" stroke-opacity="0.05"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg)" />
+  <rect width="900" height="383" fill="url(#grid)" />
+  
+  <!-- Decoration: Terminal Window on Left (Faded) -->
+  <rect x="20" y="60" width="220" height="260" rx="5" fill="#000000" fill-opacity="0.2" />
+  <circle cx="40" cy="80" r="5" fill="#ff5f56" opacity="0.6" />
+  <circle cx="60" cy="80" r="5" fill="#ffbd2e" opacity="0.6" />
+  <circle cx="80" cy="80" r="5" fill="#27c93f" opacity="0.6" />
+  <text x="40" y="120" font-family="monospace" font-size="12" fill="#00ff00" opacity="0.5">$ ./continuity.sh</text>
+  <text x="40" y="140" font-family="monospace" font-size="12" fill="#cccccc" opacity="0.4">Checking maintainers...</text>
+  <text x="40" y="160" font-family="monospace" font-size="12" fill="#cccccc" opacity="0.4">Loading protocols...</text>
+  <text x="40" y="180" font-family="monospace" font-size="12" fill="#00ff00" opacity="0.5">Status: STABLE</text>
+  
+  <!-- Decoration: Right Side Abstract (Faded) -->
+  <circle cx="850" cy="191" r="120" fill="none" stroke="#E95420" stroke-width="2" stroke-dasharray="10,10" opacity="0.1"/>
+  <text x="800" y="100" font-family="monospace" font-size="14" fill="#ffffff" opacity="0.1">kernel</text>
+  <text x="820" y="280" font-family="monospace" font-size="14" fill="#ffffff" opacity="0.1">panic</text>
+  
+  <!-- Main Content -->
+  <!-- Top Label: Linux Foundation -->
+  <text x="450" y="140" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="28" text-anchor="middle" fill="#E95420" font-weight="bold" letter-spacing="2">Linux 基金会</text>
+  
+  <!-- Main Title -->
+  <text x="450" y="220" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="64" text-anchor="middle" fill="#ffffff" font-weight="bold" filter="url(#glow)">接班人计划</text>
+  
+  <!-- Tag / Subtitle -->
+  <rect x="300" y="260" width="300" height="40" rx="20" fill="#ffffff" fill-opacity="0.1" />
+  <text x="450" y="288" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="20" text-anchor="middle" fill="#ffffff">连续性保障与“白烟”机制</text>
+  
+</svg>
