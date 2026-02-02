@@ -1,0 +1,59 @@
+<svg width="800" height="450" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#000000;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1a1a;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="nvidia-green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#76b900;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#91d300;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="450" fill="url(#bg-grad)" />
+  
+  <!-- Grid/Tech Pattern -->
+  <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#76b900" stroke-width="0.5" opacity="0.1"/>
+  </pattern>
+  <rect width="800" height="450" fill="url(#grid)" />
+
+  <!-- Ubuntu Logo Abstract (Circle of Friends) -->
+  <circle cx="200" cy="225" r="100" fill="none" stroke="#E95420" stroke-width="8" opacity="0.8" />
+  <circle cx="200" cy="225" r="70" fill="none" stroke="#E95420" stroke-width="4" opacity="0.4" />
+  <!-- Dots -->
+  <circle cx="200" cy="125" r="15" fill="#E95420" />
+  <circle cx="113" cy="275" r="15" fill="#E95420" />
+  <circle cx="287" cy="275" r="15" fill="#E95420" />
+
+  <!-- Plus Sign -->
+  <text x="400" y="250" font-family="Arial, sans-serif" font-weight="bold" font-size="60" text-anchor="middle" fill="#ffffff" opacity="0.8">+</text>
+
+  <!-- NVIDIA GeForce NOW Logo Abstract -->
+  <g transform="translate(600, 225)">
+    <!-- Eye Shape -->
+    <path d="M -80 -40 Q 0 -80 80 -40 Q 0 0 -80 -40" fill="none" stroke="url(#nvidia-green)" stroke-width="6" />
+    <path d="M -80 40 Q 0 80 80 40 Q 0 0 -80 40" fill="none" stroke="url(#nvidia-green)" stroke-width="6" />
+    <!-- Text -->
+    <text x="0" y="10" font-family="Arial, sans-serif" font-weight="bold" font-size="24" text-anchor="middle" fill="#ffffff">GEFORCE</text>
+    <text x="0" y="40" font-family="Arial, sans-serif" font-weight="bold" font-size="24" text-anchor="middle" fill="#ffffff">NOW</text>
+  </g>
+
+  <!-- Main Title Text -->
+  <text x="400" y="380" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="bold" font-size="36" text-anchor="middle" fill="#ffffff" filter="url(#glow)">原生支持 Ubuntu</text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="420" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" text-anchor="middle" fill="#aaaaaa">云端畅玩 3A 大作</text>
+  
+  <!-- Cloud Icon Hint -->
+  <path d="M 370 100 Q 380 80 400 80 Q 420 80 430 100 Q 450 100 450 120 Q 450 140 430 140 H 370 Q 350 140 350 120 Q 350 100 370 100" fill="none" stroke="#76b900" stroke-width="2" opacity="0.6"/>
+
+</svg>
