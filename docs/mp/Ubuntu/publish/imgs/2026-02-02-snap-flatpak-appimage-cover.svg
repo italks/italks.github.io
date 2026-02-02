@@ -1,0 +1,62 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#772953;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Decorative Elements: Abstract Packages -->
+  <!-- Left Box (Snap) -->
+  <g transform="translate(100, 191) rotate(-15)" opacity="0.1">
+    <rect x="-60" y="-60" width="120" height="120" rx="20" fill="white"/>
+  </g>
+  
+  <!-- Right Box (Flatpak) -->
+  <g transform="translate(800, 100) rotate(20)" opacity="0.1">
+    <rect x="-50" y="-50" width="100" height="100" rx="15" fill="white"/>
+  </g>
+
+    <!-- Bottom Box (AppImage) -->
+  <g transform="translate(500, 350) rotate(5)" opacity="0.1">
+    <rect x="-80" y="-40" width="160" height="80" rx="10" fill="white"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="450" y="180" font-family="'Ubuntu', 'Segoe UI', sans-serif" font-weight="bold" font-size="64" fill="white" text-anchor="middle" filter="url(#shadow)">
+    Snap <tspan fill="#FFD700">vs</tspan> Flatpak
+  </text>
+  <text x="450" y="250" font-family="'Ubuntu', 'Segoe UI', sans-serif" font-weight="bold" font-size="64" fill="white" text-anchor="middle" filter="url(#shadow)">
+    <tspan fill="#FFD700">vs</tspan> AppImage
+  </text>
+  
+  <!-- Subtitle -->
+  <rect x="250" y="290" width="400" height="2" fill="white" fill-opacity="0.5"/>
+  <text x="450" y="330" font-family="'Ubuntu', 'Segoe UI', sans-serif" font-weight="normal" font-size="28" fill="white" text-anchor="middle" letter-spacing="2">
+    LINUX 通用包格式深度解析
+  </text>
+
+  <!-- Top Label -->
+  <rect x="30" y="30" width="160" height="36" rx="18" fill="white" fill-opacity="0.2"/>
+  <text x="110" y="55" font-family="'Ubuntu', 'Segoe UI', sans-serif" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">
+    # Ubuntu Guide
+  </text>
+</svg>
