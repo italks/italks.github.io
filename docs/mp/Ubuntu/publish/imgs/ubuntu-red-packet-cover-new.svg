@@ -1,0 +1,140 @@
+<svg width="957" height="1278" viewBox="0 0 957 1278" xmlns="http://www.w3.org/2000/svg">
+  <!-- 微信红包封面专用尺寸：957x1278 像素 -->
+  
+  <!-- 定义渐变和滤镜 -->
+  <defs>
+    <!-- Ubuntu 品牌渐变 -->
+    <linearGradient id="ubuntuGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#77216F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2C001E;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 金色渐变 -->
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#FFA500;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF8C00;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 祥云图案 -->
+    <pattern id="xiangyun" x="0" y="0" width="120" height="60" patternUnits="userSpaceOnUse">
+      <path d="M0,30 Q30,10 60,30 Q90,10 120,30" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.3"/>
+      <path d="M0,40 Q30,20 60,40 Q90,20 120,40" stroke="#FFA500" stroke-width="1.5" fill="none" opacity="0.2"/>
+    </pattern>
+    
+    <!-- 元宝形状 -->
+    <symbol id="yuanbao" viewBox="0 0 100 60">
+      <ellipse cx="50" cy="30" rx="45" ry="20" fill="url(#goldGradient)" opacity="0.9"/>
+      <ellipse cx="50" cy="25" rx="35" ry="15" fill="#FFD700" opacity="0.8"/>
+      <path d="M15,25 Q50,10 85,25" stroke="#FFA500" stroke-width="2" fill="none"/>
+    </symbol>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="957" height="1278" fill="url(#ubuntuGradient)"/>
+  
+  <!-- 祥云纹理背景 -->
+  <rect width="957" height="1278" fill="url(#xiangyun)" opacity="0.4"/>
+  
+  <!-- 顶部装饰 -->
+  <g transform="translate(478, 150)">
+    <!-- 传统云纹 -->
+    <path d="M-200,0 Q-150,-40 -100,-20 Q-50,-50 0,-20 Q50,-50 100,-20 Q150,-40 200,0" 
+          stroke="#FFD700" stroke-width="3" fill="none" opacity="0.8"/>
+    <path d="M-180,20 Q-130,-20 -80,0 Q-30,-30 0,0 Q30,-30 80,0 Q130,-20 180,20" 
+          stroke="#FFA500" stroke-width="2" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- 中央奔马图案 -->
+  <g transform="translate(478, 550)" filter="url(#glow)">
+    <!-- 马的轮廓 -->
+    <path d="M-120,-80 Q-80,-120 -20,-120 Q40,-120 80,-80 Q120,-40 100,20 Q80,80 20,120 L-40,120 L-80,80 L-120,40 L-140,-20 Z" 
+          fill="white" opacity="0.9"/>
+    
+    <!-- 马鬃 -->
+    <path d="M-60,-100 Q-80,-70 -60,-40 M-40,-110 Q-60,-80 -40,-50 M-20,-115 Q-40,-85 -20,-55" 
+          stroke="#E95420" stroke-width="8" fill="none" stroke-linecap="round" opacity="0.8"/>
+    
+    <!-- 马尾 -->
+    <path d="M100,40 Q130,60 120,100 Q110,120 90,110" 
+          stroke="#77216F" stroke-width="6" fill="none" stroke-linecap="round" opacity="0.7"/>
+    
+    <!-- Ubuntu Logo 融合 -->
+    <g transform="translate(0,0)">
+      <!-- 外圈 -->
+      <circle cx="0" cy="0" r="140" fill="none" stroke="#E95420" stroke-width="12" 
+              stroke-dasharray="70 35" opacity="0.8" transform="rotate(45)"/>
+      <!-- 内圈 -->
+      <circle cx="0" cy="0" r="100" fill="none" stroke="#77216F" stroke-width="8" 
+              stroke-dasharray="50 25" opacity="0.6" transform="rotate(-30)"/>
+    </g>
+  </g>
+  
+  <!-- 福字装饰（左上角） -->
+  <g transform="translate(150, 200)">
+    <rect x="-50" y="-50" width="100" height="100" rx="10" 
+          fill="#DC143C" stroke="#FFD700" stroke-width="4" transform="rotate(45)"/>
+    <text x="0" y="20" font-family="'Microsoft YaHei', sans-serif" 
+          font-size="70" fill="#FFD700" text-anchor="middle" font-weight="bold">福</text>
+    <!-- 小元宝装饰 -->
+    <use href="#yuanbao" x="60" y="60" width="50" height="30"/>
+    <use href="#yuanbao" x="-80" y="60" width="40" height="24"/>
+  </g>
+  
+  <!-- 右侧装饰 -->
+  <g transform="translate(750, 350)">
+    <!-- 传统回纹 -->
+    <path d="M0,0 L50,0 L50,50 L100,50 L100,100 L150,100 L150,150" 
+          stroke="#FFD700" stroke-width="3" fill="none" opacity="0.7"/>
+    <!-- 元宝群 -->
+    <use href="#yuanbao" x="0" y="180" width="70" height="42"/>
+    <use href="#yuanbao" x="-40" y="220" width="60" height="36"/>
+    <use href="#yuanbao" x="40" y="240" width="55" height="33"/>
+  </g>
+  
+  <!-- 底部装饰 -->
+  <g transform="translate(478, 1000)">
+    <!-- 波浪纹 -->
+    <path d="M-300,0 Q-250,-30 -200,0 Q-150,-30 -100,0 Q-50,-30 0,0 Q50,-30 100,0 Q150,-30 200,0 Q250,-30 300,0" 
+          stroke="#FFD700" stroke-width="4" fill="none" opacity="0.8"/>
+    <path d="M-250,30 Q-200,10 -150,30 Q-100,10 -50,30 Q0,10 50,30 Q100,10 150,30 Q200,10 250,30" 
+          stroke="#FFA500" stroke-width="3" fill="none" opacity="0.6"/>
+  </g>
+  
+  <!-- 主要文字 -->
+  <g transform="translate(478, 800)">
+    <text x="0" y="0" font-family="'Microsoft YaHei', sans-serif" 
+          font-size="80" fill="#FFD700" text-anchor="middle" font-weight="bold"
+          filter="url(#glow)">马到成功</text>
+    <text x="0" y="80" font-family="'Microsoft YaHei', sans-serif" 
+          font-size="40" fill="white" text-anchor="middle" opacity="0.9">Ubuntu 马年大吉</text>
+  </g>
+  
+  <!-- 散落的小装饰 -->
+  <g opacity="0.7">
+    <!-- 小元宝 -->
+    <use href="#yuanbao" x="80" y="400" width="45" height="27" transform="rotate(20 102.5 413.5)"/>
+    <use href="#yuanbao" x="800" y="500" width="50" height="30" transform="rotate(-15 825 515)"/>
+    <use href="#yuanbao" x="100" y="700" width="40" height="24" transform="rotate(30 120 712)"/>
+    
+    <!-- 小祥云 -->
+    <path d="M200,600 Q230,580 260,600" stroke="#FFD700" stroke-width="2" fill="none" opacity="0.5"/>
+    <path d="M650,650 Q680,630 710,650" stroke="#FFA500" stroke-width="2" fill="none" opacity="0.4"/>
+  </g>
+  
+  <!-- 边框装饰 -->
+  <rect x="20" y="20" width="917" height="1238" fill="none" 
+        stroke="#FFD700" stroke-width="6" rx="20" opacity="0.8"/>
+  <rect x="40" y="40" width="877" height="1198" fill="none" 
+        stroke="#FFA500" stroke-width="3" rx="15" opacity="0.6"/>
+</svg>

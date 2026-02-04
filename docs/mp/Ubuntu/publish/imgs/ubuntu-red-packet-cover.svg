@@ -1,0 +1,93 @@
+<svg width="957" height="1278" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Ubuntu 品牌渐变色 -->
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#772953;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 金色渐变 -->
+    <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 中国风祥云纹理 -->
+    <pattern id="clouds" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M10 50 Q30 30 50 50 T90 50" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/>
+      <path d="M10 50 Q30 70 50 50 T90 50" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/>
+      <circle cx="50" cy="50" r="3" fill="white" fill-opacity="0.1"/>
+      <path d="M60 20 Q80 0 100 20" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/>
+      <path d="M-40 80 Q-20 60 0 80" transform="translate(100,0)" fill="none" stroke="white" stroke-width="2" stroke-opacity="0.1"/>
+    </pattern>
+
+    <!-- 发光效果 -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- 元宝定义 -->
+    <symbol id="yuanbao" viewBox="0 0 100 60">
+      <path d="M10 20 Q50 60 90 20 L80 10 Q50 40 20 10 Z" fill="url(#gold-gradient)" />
+      <ellipse cx="50" cy="15" rx="30" ry="10" fill="#FFD700" />
+      <ellipse cx="50" cy="15" rx="20" ry="6" fill="#FFF8DC" />
+    </symbol>
+  </defs>
+
+  <!-- 背景层 -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  <rect width="100%" height="100%" fill="url(#clouds)"/>
+
+  <!-- 顶部曲线（红包形状暗示） -->
+  <path d="M0 0 L957 0 L957 200 Q478 400 0 200 Z" fill="#E95420" fill-opacity="0.3"/>
+
+  <!-- 核心元素：马年主题 Ubuntu Logo -->
+  <g transform="translate(478, 480)" filter="url(#glow)">
+    <!-- 奔马剪影（几何科技感） -->
+    <path d="M-60 -80 L-20 -120 L40 -120 L80 -80 L100 -20 L80 40 L40 80 L-40 80 L-80 40 L-100 -20 Z" fill="none" stroke="white" stroke-width="2" opacity="0.1" /> <!-- 辅助几何框 -->
+    
+    <!-- 抽象马头 -->
+    <path d="M-20 -60 Q20 -100 60 -60 Q80 -40 70 0 Q60 40 20 60 L-20 60 L-40 20 Z" fill="white" opacity="0.9"/>
+    <!-- 马鬃 -->
+    <path d="M-30 -50 L-50 -20 L-30 10" stroke="white" stroke-width="8" fill="none" stroke-linecap="round"/>
+    
+    <!-- Ubuntu 环绕圈（保留品牌特征） -->
+    <circle cx="0" cy="0" r="160" fill="none" stroke="white" stroke-width="15" stroke-dasharray="80 40" stroke-opacity="0.6" transform="rotate(30)"/>
+    
+    <!-- 三个节点（代表社区） -->
+    <circle cx="0" cy="-160" r="25" fill="#FFD700"/>
+    <circle cx="138" cy="80" r="25" fill="#FFD700"/>
+    <circle cx="-138" cy="80" r="25" fill="#FFD700"/>
+  </g>
+
+  <!-- 福字挂饰（右上角） -->
+  <g transform="translate(800, 150) rotate(15)">
+    <rect x="-60" y="-60" width="120" height="120" rx="10" fill="#B22222" stroke="#FFD700" stroke-width="4" transform="rotate(45)"/>
+    <text x="0" y="25" font-family="'Microsoft YaHei', sans-serif" font-size="80" fill="#FFD700" text-anchor="middle" font-weight="bold">福</text>
+    <!-- 挂绳 -->
+    <line x1="0" y1="-100" x2="0" y2="-200" stroke="#FFD700" stroke-width="4"/>
+  </g>
+
+  <!-- 文字：大吉大利 -->
+  <text x="478" y="750" font-family="'Ubuntu Mono', monospace" font-size="50" fill="white" text-anchor="middle" font-weight="bold" letter-spacing="2">
+    sudo apt-get install
+  </text>
+  <text x="478" y="880" font-family="'Microsoft YaHei', 'PingFang SC', 'Heiti SC', sans-serif" font-size="120" fill="url(#gold-gradient)" text-anchor="middle" font-weight="900" filter="url(#glow)" letter-spacing="10">
+    马到成功
+  </text>
+
+  <!-- 装饰元素：散落的元宝 -->
+  <use href="#yuanbao" x="100" y="950" width="80" height="48" transform="rotate(-15 140 974)"/>
+  <use href="#yuanbao" x="750" y="1000" width="100" height="60" transform="rotate(20 800 1030)"/>
+  <use href="#yuanbao" x="200" y="250" width="60" height="36" transform="rotate(45 230 268)" opacity="0.6"/>
+  <use href="#yuanbao" x="600" y="300" width="50" height="30" transform="rotate(-30 625 315)" opacity="0.6"/>
+
+  <!-- 底部品牌标识 -->
+  <text x="478" y="1150" font-family="'Microsoft YaHei', sans-serif" font-size="32" fill="white" text-anchor="middle" opacity="0.8" letter-spacing="4">
+    UBUNTU 强力驱动
+  </text>
+</svg>

@@ -1,0 +1,66 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C001E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+      <feOffset dx="2" dy="4" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  
+  <!-- Grid Pattern (Tech feel) -->
+  <path d="M0 50 L900 50 M0 150 L900 150 M0 250 L900 250 M0 350 L900 350" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+  <path d="M50 0 L50 383 M150 0 L150 383 M250 0 L250 383 M350 0 L350 383 M450 0 L450 383 M550 0 L550 383 M650 0 L650 383 M750 0 L750 383 M850 0 L850 383" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+
+  <!-- Left Element: Legacy (Fading out) -->
+  <g transform="translate(150, 191)" opacity="0.3">
+    <!-- Old document icon -->
+    <rect x="-60" y="-80" width="120" height="160" rx="5" fill="none" stroke="white" stroke-width="4"/>
+    <line x1="-40" y1="-40" x2="40" y2="-40" stroke="white" stroke-width="4"/>
+    <line x1="-40" y1="0" x2="40" y2="0" stroke="white" stroke-width="4"/>
+    <line x1="-40" y1="40" x2="40" y2="40" stroke="white" stroke-width="4"/>
+    <text x="0" y="120" font-family="sans-serif" font-size="24" fill="white" text-anchor="middle">Legacy</text>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M380 191 L520 191 M500 171 L520 191 L500 211" stroke="white" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round" opacity="0.8"/>
+
+  <!-- Right Element: Modern (Bright) -->
+  <g transform="translate(750, 191)">
+    <!-- New platform icon -->
+    <rect x="-70" y="-90" width="140" height="180" rx="10" fill="#E95420" filter="url(#shadow)"/>
+    <rect x="-50" y="-70" width="100" height="140" rx="5" fill="white"/>
+    <!-- Code lines -->
+    <rect x="-30" y="-50" width="60" height="8" rx="2" fill="#E95420" opacity="0.5"/>
+    <rect x="-30" y="-30" width="40" height="8" rx="2" fill="#E95420" opacity="0.3"/>
+    <rect x="-30" y="10" width="60" height="8" rx="2" fill="#E95420" opacity="0.5"/>
+    <rect x="-30" y="30" width="50" height="8" rx="2" fill="#E95420" opacity="0.3"/>
+    
+    <circle cx="40" cy="50" r="15" fill="#772953"/>
+    <path d="M35 50 L40 55 L48 45" stroke="white" stroke-width="3" fill="none"/>
+  </g>
+
+  <!-- Main Text -->
+  <text x="450" y="100" font-family="'Ubuntu', 'Segoe UI', sans-serif" font-weight="bold" font-size="48" fill="white" text-anchor="middle" filter="url(#shadow)">
+    Ubuntu Wiki Rebuild
+  </text>
+  
+  <text x="450" y="320" font-family="'Ubuntu', 'Segoe UI', sans-serif" font-size="24" fill="white" text-anchor="middle" letter-spacing="4" opacity="0.9">
+    2004 - 2026
+  </text>
+  
+  <rect x="350" y="340" width="200" height="2" fill="white" opacity="0.5"/>
+
+</svg>
