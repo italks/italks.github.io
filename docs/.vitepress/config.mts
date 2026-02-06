@@ -38,6 +38,16 @@ export default defineConfig({
             items: [
               { text: '定位分析', link: '/mp/Ubuntu/index' },
               {
+                text: '2026年2月',
+                collapsed: true,
+                items: [
+                  { text: '04日: Ubuntu WSL镜像部署指南', link: '/mp/Ubuntu/publish/2026/02/2026-02-04-ubuntu-wsl-image-deployment-guide' },
+                  { text: '04日: Ubuntu 26.04 vs 24.04 对比', link: '/mp/Ubuntu/publish/2026/02/2026-02-04-ubuntu-26-04-vs-24-04' },
+                  { text: '03日: Ubuntu Wiki重构公告', link: '/mp/Ubuntu/publish/2026/02/2026-02-03-ubuntu-wiki-rebuild' },
+                  { text: '02日: Snap vs Flatpak vs AppImage', link: '/mp/Ubuntu/publish/2026/02/2026-02-02-snap-flatpak-appimage' }
+                ]
+              },
+              {
                 text: '2026年1月',
                 collapsed: true,
                 items: [
