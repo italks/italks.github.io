@@ -1,0 +1,67 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#772953;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:1" />
+    </linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="white" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- Decorative Elements -->
+  <!-- Left: Terminal Icon (Abstract) -->
+  <g transform="translate(120, 191) rotate(-12)" opacity="0.15">
+    <rect x="-80" y="-60" width="160" height="120" rx="8" fill="white"/>
+    <circle cx="-60" cy="-40" r="6" fill="#000" opacity="0.3"/>
+    <circle cx="-40" cy="-40" r="6" fill="#000" opacity="0.3"/>
+    <circle cx="-20" cy="-40" r="6" fill="#000" opacity="0.3"/>
+    <rect x="-60" y="-15" width="20" height="6" fill="#000" opacity="0.3"/>
+    <rect x="-30" y="-15" width="80" height="6" fill="#000" opacity="0.3"/>
+    <rect x="-60" y="5" width="100" height="6" fill="#000" opacity="0.3"/>
+  </g>
+  
+  <!-- Right: Package Box (Abstract) -->
+  <g transform="translate(780, 191) rotate(12)" opacity="0.15">
+    <path d="M -50 -30 L 0 -60 L 50 -30 L 50 30 L 0 60 L -50 30 Z" fill="white"/>
+    <path d="M -50 -30 L 0 0 L 50 -30" stroke="#000" stroke-width="2" fill="none" opacity="0.2"/>
+    <path d="M 0 0 L 0 60" stroke="#000" stroke-width="2" fill="none" opacity="0.2"/>
+  </g>
+
+  <!-- Main Title -->
+  <text x="450" y="170" font-family="'Microsoft YaHei', 'Heiti SC', 'SimHei', 'Ubuntu', sans-serif" font-weight="900" font-size="64" fill="white" text-anchor="middle" filter="url(#shadow)">
+    Ubuntu 装软件
+  </text>
+  
+  <!-- Subtitle (Highlight) -->
+  <text x="450" y="245" font-family="'Microsoft YaHei', 'Heiti SC', 'SimHei', 'Ubuntu', sans-serif" font-weight="bold" font-size="42" fill="#FFD700" text-anchor="middle" filter="url(#shadow)">
+    5 种隐藏姿势
+  </text>
+  
+  <!-- Bottom Text -->
+  <rect x="300" y="285" width="300" height="2" fill="white" fill-opacity="0.6"/>
+  <text x="450" y="325" font-family="'Microsoft YaHei', 'Heiti SC', 'SimHei', 'Ubuntu', sans-serif" font-weight="normal" font-size="22" fill="white" text-anchor="middle" letter-spacing="3">
+    告别 .exe 全攻略
+  </text>
+
+  <!-- Top Label -->
+  <rect x="30" y="30" width="180" height="36" rx="18" fill="white" fill-opacity="0.2"/>
+  <text x="120" y="55" font-family="'Ubuntu', sans-serif" font-size="16" fill="white" text-anchor="middle" dominant-baseline="middle">
+    # Beginner Guide
+  </text>
+</svg>
