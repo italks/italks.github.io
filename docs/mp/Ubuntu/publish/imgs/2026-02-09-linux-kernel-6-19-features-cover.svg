@@ -1,0 +1,58 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2C001E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:1" />
+    </linearGradient>
+    
+    <pattern id="circuit" width="50" height="50" patternUnits="userSpaceOnUse">
+       <path d="M 10 10 L 40 10 L 40 40" fill="none" stroke="white" stroke-width="1" stroke-opacity="0.05"/>
+       <circle cx="10" cy="10" r="1.5" fill="white" fill-opacity="0.1"/>
+       <circle cx="40" cy="40" r="1.5" fill="white" fill-opacity="0.1"/>
+    </pattern>
+
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="3" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  <rect width="100%" height="100%" fill="url(#circuit)"/>
+  
+  <!-- Central Content (Safe Zone) -->
+  <rect x="350" y="110" width="200" height="30" rx="15" fill="#E95420" fill-opacity="0.2"/>
+  <text x="450" y="132" font-family="'Ubuntu', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="bold" font-size="16" fill="#E95420" text-anchor="middle" letter-spacing="2">重磅发布</text>
+  
+  <text x="450" y="200" font-family="'Ubuntu', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-weight="900" font-size="80" fill="white" text-anchor="middle" filter="url(#shadow)">Linux 6.19</text>
+  
+  <text x="450" y="245" font-family="'Ubuntu', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="24" fill="white" text-anchor="middle" opacity="0.9">新特性解析与升级指南</text>
+
+  <!-- Bottom Features -->
+  <g opacity="0.9">
+    <rect x="150" y="310" width="180" height="32" rx="16" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="240" y="331" font-family="'Ubuntu', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="white" text-anchor="middle">内核热重启 (LUO)</text>
+
+    <rect x="360" y="310" width="180" height="32" rx="16" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="450" y="331" font-family="'Ubuntu', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="white" text-anchor="middle">龙架构 32 位支持</text>
+
+    <rect x="570" y="310" width="180" height="32" rx="16" fill="white" fill-opacity="0.1" stroke="white" stroke-opacity="0.2" stroke-width="1"/>
+    <text x="660" y="331" font-family="'Ubuntu', 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="14" fill="white" text-anchor="middle">PCIe 链路加密</text>
+  </g>
+  
+  <!-- Decorative Tech Elements -->
+  <path d="M 50 191 L 100 191" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="100" cy="191" r="3" fill="white" fill-opacity="0.3"/>
+  
+  <path d="M 800 191 L 850 191" stroke="white" stroke-opacity="0.2" stroke-width="2"/>
+  <circle cx="800" cy="191" r="3" fill="white" fill-opacity="0.3"/>
+
+</svg>
