@@ -1,0 +1,68 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a1a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d2d2d;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000000" flood-opacity="0.4"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- Diagram Container -->
+  <g transform="translate(450, 191.5)">
+    
+    <!-- Title -->
+    <text x="-250" y="-30" text-anchor="end" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="48" font-weight="bold">Linux</text>
+    <text x="-250" y="20" text-anchor="end" fill="#4caf50" font-family="'Segoe UI', sans-serif" font-size="24" font-weight="bold">THE ARCHITECTURE</text>
+    <text x="-250" y="50" text-anchor="end" fill="#aaaaaa" font-family="'Segoe UI', sans-serif" font-size="16">内核 · Shell · 发行版</text>
+
+    <!-- Layered Stack Diagram -->
+    <g transform="translate(50, -100)">
+      
+      <!-- Layer 4: Users / Apps -->
+      <g transform="translate(0, 0)">
+        <rect x="-140" y="0" width="280" height="40" rx="6" fill="#42a5f5" filter="url(#shadow)" />
+        <text x="0" y="25" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14">USER APPS / GUI</text>
+      </g>
+      
+      <!-- Connection Arrow -->
+      <path d="M0 40 L0 55" stroke="#666" stroke-width="2" stroke-dasharray="4,2" />
+
+      <!-- Layer 3: Shell -->
+      <g transform="translate(0, 55)">
+        <rect x="-120" y="0" width="240" height="40" rx="6" fill="#ffb74d" filter="url(#shadow)" />
+        <text x="0" y="25" text-anchor="middle" fill="#2d2d2d" font-family="sans-serif" font-weight="bold" font-size="14">SHELL / CLI</text>
+      </g>
+
+      <!-- Connection Arrow -->
+      <path d="M0 95 L0 110" stroke="#666" stroke-width="2" stroke-dasharray="4,2" />
+
+      <!-- Layer 2: Kernel -->
+      <g transform="translate(0, 110)">
+        <rect x="-100" y="0" width="200" height="40" rx="6" fill="#ef5350" filter="url(#shadow)" />
+        <text x="0" y="25" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14">LINUX KERNEL</text>
+      </g>
+
+      <!-- Connection Arrow -->
+      <path d="M0 150 L0 165" stroke="#666" stroke-width="2" stroke-dasharray="4,2" />
+
+      <!-- Layer 1: Hardware -->
+      <g transform="translate(0, 165)">
+        <rect x="-140" y="0" width="280" height="40" rx="6" fill="#78909c" filter="url(#shadow)" />
+        <text x="0" y="25" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14">HARDWARE</text>
+      </g>
+
+      <!-- Distribution Bracket -->
+      <path d="M160 0 L170 0 L170 150 L160 150" fill="none" stroke="#fff" stroke-width="2" />
+      <text x="180" y="80" fill="#fff" font-family="sans-serif" font-size="14" alignment-baseline="middle">
+        <tspan x="180" dy="-10">Linux</tspan>
+        <tspan x="180" dy="20">Distribution</tspan>
+      </text>
+
+    </g>
+  </g>
+</svg>
