@@ -1,0 +1,49 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#772953;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- App Store Icon Mockup (Left) -->
+  <g transform="translate(200, 191.5)">
+    <rect x="-80" y="-80" width="160" height="160" rx="30" fill="#fff" filter="url(#shadow)" />
+    <!-- Shopping Bag Icon -->
+    <path d="M-40 -10 L-40 50 L40 50 L40 -10 Z" fill="#E95420" />
+    <path d="M-40 -10 Q-40 -40 0 -40 Q40 -40 40 -10" fill="none" stroke="#E95420" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="0" cy="10" r="15" fill="#fff"/>
+  </g>
+
+  <!-- Plus Sign -->
+  <text x="360" y="210" text-anchor="middle" fill="#fff" font-size="48" font-weight="bold">+</text>
+
+  <!-- Package Formats (Right) -->
+  <g transform="translate(550, 191.5)">
+    <!-- APT/DEB -->
+    <g transform="translate(0, -70)">
+      <rect x="-80" y="-25" width="160" height="50" rx="10" fill="#A41D35" filter="url(#shadow)" />
+      <text y="10" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="20">APT / .deb</text>
+    </g>
+    <!-- Snap -->
+    <g transform="translate(0, 0)">
+      <rect x="-80" y="-25" width="160" height="50" rx="10" fill="#4E9A06" filter="url(#shadow)" />
+      <text y="10" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="20">Snap</text>
+    </g>
+    <!-- Flatpak -->
+    <g transform="translate(0, 70)">
+      <rect x="-80" y="-25" width="160" height="50" rx="10" fill="#204A87" filter="url(#shadow)" />
+      <text y="10" text-anchor="middle" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="20">Flatpak</text>
+    </g>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="50" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="36" font-weight="bold" filter="url(#shadow)">Ubuntu 软件安装指南</text>
+
+</svg>

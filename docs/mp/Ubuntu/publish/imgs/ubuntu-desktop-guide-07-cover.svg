@@ -1,0 +1,50 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#212121;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#424242;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- Main Content Area -->
+  <g transform="translate(450, 191.5)">
+    
+    <!-- Title -->
+    <text y="-50" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="48" font-weight="bold" filter="url(#shadow)">Ubuntu 办公指南</text>
+    
+    <!-- Subtitle -->
+    <text y="10" text-anchor="middle" fill="#90CAF9" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="24">生产力工具全家桶</text>
+
+    <!-- App Icons (Simulated) -->
+    <g transform="translate(0, 80)">
+      
+      <!-- WPS Office -->
+      <g transform="translate(-150, 0)">
+        <rect x="-40" y="-40" width="80" height="80" rx="15" fill="#D32F2F" filter="url(#shadow)" />
+        <text y="10" text-anchor="middle" fill="#fff" font-family="serif" font-weight="bold" font-size="40">W</text>
+      </g>
+      
+      <!-- Flameshot -->
+      <g transform="translate(0, 0)">
+        <rect x="-40" y="-40" width="80" height="80" rx="15" fill="#5E35B1" filter="url(#shadow)" />
+        <path d="M-20 0 L0 -20 L20 0 L0 20 Z" fill="#fff" />
+      </g>
+
+      <!-- WeChat/IM -->
+      <g transform="translate(150, 0)">
+        <rect x="-40" y="-40" width="80" height="80" rx="15" fill="#43A047" filter="url(#shadow)" />
+        <circle cx="-10" cy="-5" r="5" fill="#fff" />
+        <circle cx="10" cy="-5" r="5" fill="#fff" />
+        <path d="M-15 15 Q0 25 15 15" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" />
+      </g>
+
+    </g>
+
+  </g>
+</svg>

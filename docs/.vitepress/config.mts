@@ -38,6 +38,37 @@ export default defineConfig({
             items: [
               { text: '定位分析', link: '/mp/Ubuntu/index' },
               {
+                text: 'Ubuntu 桌面生存指南',
+                collapsed: true,
+                items: [
+                  { text: '00. 系列大纲', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/00-series-outline' },
+                  { text: '01. 为什么要选择 Linux/Ubuntu？', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/01-为什么要选择-LinuxUbuntu？' },
+                  { text: '02. 准备工作与安装方式选择', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/02-准备工作与安装方式选择' },
+                  { text: '03. 手把手教你安装 Ubuntu 24.04 LTS', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/03-手把手教你安装-Ubuntu-24.04-LTS-(或最新版)' },
+                  { text: '04. GNOME 桌面环境初探', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/04-GNOME-桌面环境初探' },
+                  { text: '05. 软件安装与管理：告别 .exe', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/05-软件安装与管理：告别-.exe' },
+                  { text: '06. 中文环境配置与输入法', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/06-中文环境配置与输入法' },
+                  { text: '07. 办公与生产力工具', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/07-办公与生产力工具' },
+                  { text: '08. 终端 (Terminal) 的第一步', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/08-终端-(Terminal)-的第一步' },
+                  { text: '09. 文件权限与用户管理', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/09-文件权限与用户管理' },
+                  { text: '10. 文本编辑之争：Nano 与 Vim 入门', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/10-文本编辑之争：Nano-与-Vim-入门' },
+                  { text: '11. 命令行下的软件管理 (APT)', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/11-命令行下的软件管理-(APT)' },
+                  { text: '12. 终端美化与效率工具', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/12-终端美化与效率工具' },
+                  { text: '13. Git 版本控制环境', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/13-Git-版本控制环境' },
+                  { text: '14. 搭建编程环境', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/14-搭建编程环境' },
+                  { text: '15. 容器化技术：Docker', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/15-容器化技术：Docker' },
+                  { text: '16. 进程管理与系统监控', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/16-进程管理与系统监控' },
+                  { text: '17. 磁盘管理与文件系统', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/17-磁盘管理与文件系统' },
+                  { text: '18. 网络配置与远程访问', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/18-网络配置与远程访问' },
+                  { text: '19. Systemd 服务管理', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/19-Systemd-服务管理' },
+                  { text: '20. 备份与恢复策略', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/20-备份与恢复策略' },
+                  { text: '21. 桌面美化 (Ricing)', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/21-桌面美化-(Ricing)' },
+                  { text: '22. 运行 Windows 应用：Wine 与 Proton', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/22-运行-Windows-应用：Wine-与-Proton' },
+                  { text: '23. 探索其他桌面环境 (Optional)', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/23-探索其他桌面环境-(Optional)' },
+                  { text: '24. 总结与进阶学习路线', link: '/mp/Ubuntu/publish/ubuntu-desktop-guide/24-总结与进阶学习路线' }
+                ]
+              },
+              {
                 text: '2026年2月',
                 collapsed: true,
                 items: [

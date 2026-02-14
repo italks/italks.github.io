@@ -1,0 +1,50 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#212121;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- Terminal Window Mockup -->
+  <g transform="translate(150, 60)">
+    <rect width="600" height="263" rx="10" fill="#333" stroke="#555" stroke-width="2" />
+    <!-- Title Bar -->
+    <rect width="600" height="30" rx="10" fill="#444" />
+    <circle cx="20" cy="15" r="6" fill="#ff5f56" />
+    <circle cx="40" cy="15" r="6" fill="#ffbd2e" />
+    <circle cx="60" cy="15" r="6" fill="#27c93f" />
+    <text x="300" y="20" text-anchor="middle" fill="#aaa" font-family="monospace" font-size="12">user@ubuntu: ~</text>
+    
+    <!-- Terminal Content -->
+    <g transform="translate(20, 60)" font-family="'Consolas', 'Courier New', monospace" font-size="24">
+      <!-- Line 1 -->
+      <text y="0" fill="#87CEFA" font-weight="bold">user@ubuntu:~$ <tspan fill="#fff">ls -la</tspan></text>
+      <!-- Line 2 -->
+      <text y="40" fill="#fff" opacity="0.8">drwxr-xr-x  2 user user 4096 .</text>
+      <text y="70" fill="#fff" opacity="0.8">drwxr-xr-x 20 user user 4096 ..</text>
+      <text y="100" fill="#fff" opacity="0.8">-rw-r--r--  1 user user  220 .bashrc</text>
+      <!-- Line 3 (Prompt with Cursor) -->
+      <text y="150" fill="#87CEFA" font-weight="bold">user@ubuntu:~$ <tspan fill="#fff">_</tspan>
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite" />
+      </text>
+    </g>
+  </g>
+
+  <!-- Overlay Text (Title) -->
+  <g transform="translate(780, 320)">
+    <text text-anchor="end" fill="#4CAF50" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="48" font-weight="bold" filter="url(#glow)">TERMINAL</text>
+    <text y="30" text-anchor="end" fill="#fff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="20" letter-spacing="2">入门指南</text>
+  </g>
+
+</svg>
