@@ -46,21 +46,19 @@ console.log(props.title)
 
 ### 1.2 TypeScript 用户的福音
 
-如果你使用 TypeScript，你可以通过泛型参数来定义 props，这将获得极佳的类型推导体验：
+如果你使用 TypeScript，你可以通过泛型参数来定义 props，这会带来更好的类型推导体验。需要注意的是，**类型声明不会自动生成运行时校验**，若需要运行时校验需使用对象写法的 `defineProps`。
 
 ```vue
 <script setup lang="ts">
 interface Props {
   title: string
-  count?: number // 可选
+  count?: number
   items: string[]
 }
 
-// 基于类型的声明，编译器会自动推导出运行时 props 选项
-const props = defineProps<Props>()
-
-// 设置默认值 (Vue 3.3+)
-const { count = 0 } = defineProps<Props>()
+const props = withDefaults(defineProps<Props>(), {
+  count: 0
+})
 </script>
 ```
 
@@ -125,9 +123,9 @@ const update = () => {
 父组件使用：
 
 ```vue
-<Parent>
+<template>
   <Child v-model="count" />
-</Parent>
+</template>
 ```
 
 `defineModel` 返回的是一个 `ref`，你可以像操作普通响应式变量一样操作它，Vue 会自动处理底层的 props/emit 逻辑。这是 Vue 3 组件化体验的一次巨大飞跃！
@@ -226,3 +224,13 @@ const items = ref(['A', 'B', 'C'])
 
 **下一篇预告**：
 《逻辑复用新范式：Composables》。我们将学习如何利用 Composition API 编写优雅的组合式函数 (Hooks)，彻底改变你的代码组织方式。
+
+---
+
+> **这里是《Vue 3 全景攻略》系列教程。**
+>
+> 如果你觉得这篇文章对你有帮助，欢迎 **点赞、在看、分享** 支持一下！
+>
+> 👇 **关注公众号「移动APP开发」，回复“Vue3”获取本系列完整思维导图与源码。**
+
+*(此处插入公众号名片)*

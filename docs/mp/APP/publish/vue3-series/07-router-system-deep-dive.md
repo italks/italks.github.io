@@ -127,14 +127,11 @@ export default defineConfig({
 
 ## 3. Data Loaders：路由与数据获取的完美结合
 
-Vue Router 正在实验一个新的特性：**Data Loaders**。它旨在解决“导航完成后才开始请求数据导致页面空白”的问题。
+Vue Router 生态正在探索一个新的方向：**Data Loaders**。它旨在解决“导航完成后才开始请求数据导致页面空白”的问题，通常需要搭配相关插件生态一起使用。
 
 传统的做法是在组件的 `onMounted` 里请求数据。而 Data Loaders 允许你在**导航发生之前**（或并行）请求数据。
 
 ```javascript
-// 此特性尚在 RFC 阶段，但值得关注
-import { defineLoader } from 'vue-router/auto'
-
 export const useUserData = defineLoader(async (route) => {
   return await fetchUser(route.params.id)
 })
@@ -160,3 +157,13 @@ const user = useUserData() // 数据已经准备好了！
 
 **下一篇预告**：
 开发环境配置好了，代码也写得差不多了，如何保证打包出来的应用体积小、加载快？Vite 的构建优化有哪些黑科技？如何编写一个 Vite 插件？下一篇《Vite 极速构建》将为你揭秘。
+
+---
+
+> **这里是《Vue 3 全景攻略》系列教程。**
+>
+> 如果你觉得这篇文章对你有帮助，欢迎 **点赞、在看、分享** 支持一下！
+>
+> 👇 **关注公众号「移动APP开发」，回复“Vue3”获取本系列完整思维导图与源码。**
+
+*(此处插入公众号名片)*
