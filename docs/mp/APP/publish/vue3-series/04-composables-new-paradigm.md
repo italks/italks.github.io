@@ -1,4 +1,6 @@
-# 逻辑复用新范式：Composables (组合式函数) (Vue 3 Mastery Series - 04)
+# 逻辑复用新范式：Composables (组合式函数) (Vue 3 全景攻略 - 04)
+
+> **摘要**：告别 Mixins 的混乱，拥抱 Composables 的优雅。本文详细介绍 Vue 3 逻辑复用的新范式——组合式函数。我们将从实战出发，手把手教你封装通用的 `useFetch`，探讨 Composable 的设计原则、参数灵活性及副作用清理，并介绍 VueUse 工具库的使用，助你像搭积木一样构建复杂的业务逻辑。
 
 ## 引言：Mixins 已死，Composables 当立
 

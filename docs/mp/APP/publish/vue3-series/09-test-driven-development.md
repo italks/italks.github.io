@@ -1,4 +1,6 @@
-# 测试驱动开发：Vitest 与 Cypress 实战 (Vue 3 Mastery Series - 09)
+# 测试驱动开发：Vitest 与 Cypress 实战 (Vue 3 全景攻略 - 09)
+
+> **摘要**：不敢重构？因为没有测试！本文将带你建立前端测试金字塔：利用 Vitest 进行极速单元测试与 Composable 测试，使用 Vue Test Utils 验证组件交互逻辑，以及通过 Cypress 进行端到端（E2E）流程测试。掌握 TDD 思维，让自动化测试成为你代码质量的坚实后盾，告别“改一处崩一片”的恐惧。
 
 ## 引言：不敢重构的恐惧
 

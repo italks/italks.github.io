@@ -1,4 +1,6 @@
-# 状态管理进阶：Pinia, VueUse 与 Server State (Vue 3 Mastery Series - 06)
+# 状态管理进阶：Pinia, VueUse 与 Server State (Vue 3 全景攻略 - 06)
+
+> **摘要**：Pinia 已成为 Vue 3 的状态管理首选。本文跳出简单的 Store 定义，深入探讨状态管理的三个层级：Local State、Global Client State (Pinia) 与 Server State (TanStack Query)。我们将学习 Pinia 的 Setup Store 写法、插件机制及持久化策略，并引入 VueUse 的轻量级状态共享方案，构建清晰的数据流架构。
 
 ## 引言：State 的三个层级
 

@@ -1,4 +1,6 @@
-# 组件化设计哲学：Props, Emits 与 Slots (Vue 3 Mastery Series - 03)
+# 组件化设计哲学：Props, Emits 与 Slots (Vue 3 全景攻略 - 03)
+
+> **摘要**：组件化是现代前端开发的基石。本文将带你重新审视 Vue 3 的组件设计哲学，从 Props 的单向数据流契约，到 Emits 的事件驱动机制，再到 Slots 的灵活内容分发。特别是 Vue 3.4 引入的 `defineModel` 宏，如何简化双向绑定逻辑？让我们一起掌握构建高复用、可维护组件的核心技巧。
 
 ## 引言：从面条代码到乐高积木
 

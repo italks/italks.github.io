@@ -1,4 +1,6 @@
-# 现代 CSS 架构：从 Scoped 到 Tailwind/UnoCSS (Vue 3 Mastery Series - 05)
+# 现代 CSS 架构：从 Scoped 到 Tailwind/UnoCSS (Vue 3 全景攻略 - 05)
+
+> **摘要**：在 Vue 3 项目中，CSS 架构该如何选择？是从 Scoped CSS 的安全隔离，到 CSS Modules 的模块化，再到 Tailwind/UnoCSS 的原子化革命。本文对比了不同方案的优缺点，深入解析 UnoCSS 的属性化模式与纯 CSS 图标方案，并给出企业级项目中的混合架构建议，助你构建高效、可维护的样式系统。
 
 ## 引言：CSS 的混沌与秩序
 

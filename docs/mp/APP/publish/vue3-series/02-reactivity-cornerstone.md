@@ -1,4 +1,6 @@
-# 响应式系统的基石：Ref 与 Reactive (Vue 3 Mastery Series - 02)
+# 响应式系统的基石：Ref 与 Reactive (Vue 3 全景攻略 - 02)
+
+> **摘要**：Ref 还是 Reactive？这是 Vue 3 新手最常问的问题。本文深入剖析 Vue 3 响应式系统的底层机制，对比 Ref（包装原始值）与 Reactive（Proxy 代理）的核心差异与局限性。通过最佳实践建议与源码层面的原理解读，帮你彻底厘清两者的使用场景，避开解构丢失响应性等常见陷阱。
 
 ## 引言：Ref 还是 Reactive？这是个问题
 

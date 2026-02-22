@@ -1,4 +1,6 @@
-# 编译器探秘：从 Template 到 Render Function (Vue 3 Mastery Series - 13)
+# 编译器探秘：从 Template 到 Render Function (Vue 3 全景攻略 - 13)
+
+> **摘要**：Vue 模版是如何变成 Render 函数的？本文带你走进 Vue 3 编译器的内部世界，解析 Parse（解析）、Transform（转换）与 Generate（生成）的三部曲。我们将了解指令（如 `v-if`）的编译逻辑，以及静态提升在编译阶段的实现。理解编译原理，将助你写出对编译器更友好的高性能代码。
 
 ## 引言：为什么需要编译？
 

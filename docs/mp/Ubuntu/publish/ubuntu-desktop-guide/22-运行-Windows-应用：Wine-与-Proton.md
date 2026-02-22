@@ -1,5 +1,7 @@
 # 22. 运行 Windows 应用：Wine 与 Proton
 
+> **摘要**：离不开 Windows 软件？本文提供三种解决方案：利用 Steam Proton 畅玩大作，使用 Bottles 容器化运行工具软件，以及通过 Deepin-Wine 搞定微信等国产应用。助你在 Linux 上也能无缝使用必要的 Windows 独占程序，兼顾生态与体验。
+
 Linux 生态已经能覆盖大多数日常需求，但总有一些 Windows 独占的软件绕不开。解决思路通常有三条路：**原生替代**、**兼容层（Wine/Proton）**、**虚拟机/双系统**。别一上来就硬刚 Wine，先选最省心的路径。
 
 ## 1. 什么是 Wine？

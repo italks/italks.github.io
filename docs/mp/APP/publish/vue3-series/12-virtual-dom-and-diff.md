@@ -1,4 +1,6 @@
-# 虚拟 DOM 与 Diff 算法：Vue 3 的性能秘密 (Vue 3 Mastery Series - 12)
+# 虚拟 DOM 与 Diff 算法：Vue 3 的性能秘密 (Vue 3 全景攻略 - 12)
+
+> **摘要**：Vue 3 为什么比 Vue 2 快？秘密在于编译时优化。本文深入剖析 Vue 3 的虚拟 DOM 与 Diff 算法，揭秘 Patch Flags（补丁标记）、Static Hoisting（静态提升）与 Block Tree（区块树）如何实现靶向更新。同时，我们将探讨最长递增子序列（LIS）算法在列表 Diff 中的应用，领略算法之美。
 
 ## 引言：Virtual DOM 的功与过
 
