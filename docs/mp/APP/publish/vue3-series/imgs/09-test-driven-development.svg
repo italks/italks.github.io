@@ -1,0 +1,44 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad_09-test-driven-development_svg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A2980;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#26D0CE;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#grad_09-test-driven-development_svg)" />
+  
+  <!-- Geometric Pattern -->
+  
+        <path d="M0,192 C150,250 300,150 450,192 C600,230 750,150 900,192 V383 H0 Z" fill="#FFFFFF" opacity="0.1" />
+        <path d="M0,250 C200,300 400,200 600,250 C800,300 900,200 900,250 V383 H0 Z" fill="#FFFFFF" opacity="0.15" />
+        
+  
+  <!-- Content Layout (Left Aligned) -->
+  <g transform="translate(60, 0)">
+      <!-- Series Tag -->
+      <rect x="0" y="50" width="160" height="36" rx="18" fill="#FFCB05" />
+      <text x="80" y="75" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="16" font-weight="bold" fill="#1E3C72" text-anchor="middle">Vue 3 全景攻略</text>
+      
+      <!-- Main Title -->
+      <text x="0" y="160" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="56" font-weight="bold" fill="#FFFFFF" filter="url(#shadow)">测试驱动开发</text>
+      
+      <!-- Sub Title -->
+      <text x="0" y="230" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="32" font-weight="normal" fill="#FFFFFF" opacity="0.9">Vitest &amp; Cypress 实战</text>
+      
+      <!-- Chapter Number -->
+      <line x1="0" y1="270" x2="60" y2="270" stroke="#FFFFFF" stroke-width="4" />
+      <text x="80" y="278" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="20" fill="#FFFFFF" opacity="0.8">第 09 篇</text>
+  </g>
+  
+  <!-- Vue Logo Placeholder (Abstract) -->
+  <path d="M750 100 L850 273 L750 100" fill="none" /> 
+  <g transform="translate(650, 90) scale(0.8)">
+    <path d="M128 0 L256 220 L0 220 Z" fill="#42b883" opacity="0.2"/>
+    <path d="M128 50 L220 200 L36 200 Z" fill="#35495e" opacity="0.3"/>
+  </g>
+</svg>

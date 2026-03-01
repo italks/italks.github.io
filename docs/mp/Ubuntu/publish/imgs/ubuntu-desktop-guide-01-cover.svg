@@ -1,0 +1,51 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#77216F;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background: Ubuntu Brand Colors -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- Circle Pattern (Abstract Ubuntu Logo) -->
+  <circle cx="800" cy="50" r="150" fill="white" opacity="0.1" />
+  <circle cx="50" cy="350" r="100" fill="white" opacity="0.1" />
+
+  <!-- Content Group (Centered) -->
+  <g transform="translate(450, 191.5)">
+    
+    <!-- Main Title -->
+    <text y="-20" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="48" font-weight="bold" filter="url(#shadow)">为什么选择 Ubuntu?</text>
+    
+    <!-- Subtitle -->
+    <text y="30" text-anchor="middle" fill="#f0f0f0" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="24">不仅是系统，更是新的工作流</text>
+
+    <!-- Key Points Icons/Text -->
+    <g transform="translate(0, 90)">
+      <!-- Point 1 -->
+      <g transform="translate(-180, 0)">
+        <circle r="5" fill="#fff" cy="-5"/>
+        <text x="15" y="0" fill="#fff" font-family="sans-serif" font-size="16" font-weight="bold">开源自由</text>
+      </g>
+      <!-- Point 2 -->
+      <g transform="translate(0, 0)">
+        <circle r="5" fill="#fff" cy="-5"/>
+        <text x="15" y="0" fill="#fff" font-family="sans-serif" font-size="16" font-weight="bold">安全稳定</text>
+      </g>
+      <!-- Point 3 -->
+      <g transform="translate(180, 0)">
+        <circle r="5" fill="#fff" cy="-5"/>
+        <text x="15" y="0" fill="#fff" font-family="sans-serif" font-size="16" font-weight="bold">极致定制</text>
+      </g>
+    </g>
+
+    <!-- Decorative Line -->
+    <line x1="-100" y1="55" x2="100" y2="55" stroke="rgba(255,255,255,0.5)" stroke-width="2" />
+
+  </g>
+</svg>

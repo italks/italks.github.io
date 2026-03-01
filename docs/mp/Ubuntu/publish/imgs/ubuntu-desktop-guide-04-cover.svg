@@ -1,0 +1,59 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#333333;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="4" stdDeviation="5" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- GNOME UI Mockup -->
+  <!-- Top Bar -->
+  <rect x="0" y="0" width="900" height="30" fill="#1e1e1e" />
+  <text x="20" y="20" fill="#fff" font-family="sans-serif" font-weight="bold" font-size="14">Activities</text>
+  <text x="450" y="20" text-anchor="middle" fill="#fff" font-family="sans-serif" font-size="14">Feb 14 12:00</text>
+  <circle cx="870" cy="15" r="5" fill="#fff" opacity="0.8"/>
+  <circle cx="850" cy="15" r="5" fill="#fff" opacity="0.8"/>
+
+  <!-- Main Content Area -->
+  <g transform="translate(450, 200)">
+    
+    <!-- Title -->
+    <text y="-30" text-anchor="middle" fill="#ffffff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="48" font-weight="bold" filter="url(#shadow)">GNOME 桌面指南</text>
+    
+    <!-- Subtitle -->
+    <text y="20" text-anchor="middle" fill="#4caf50" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="20" letter-spacing="2">ACTIVITIES · WORKSPACES · SHORTCUTS</text>
+
+    <!-- Shortcut Keys Visualization -->
+    <g transform="translate(0, 80)">
+      <!-- Key: Super -->
+      <g transform="translate(-120, 0)">
+        <rect x="-40" y="-25" width="80" height="50" rx="8" fill="#e0e0e0" filter="url(#shadow)" />
+        <text y="8" text-anchor="middle" fill="#333" font-family="sans-serif" font-weight="bold" font-size="18">Super</text>
+      </g>
+      
+      <!-- Plus Sign -->
+      <text x="0" y="10" text-anchor="middle" fill="#888" font-size="24">+</text>
+
+      <!-- Key: Tab -->
+      <g transform="translate(120, 0)">
+        <rect x="-40" y="-25" width="80" height="50" rx="8" fill="#e0e0e0" filter="url(#shadow)" />
+        <text y="8" text-anchor="middle" fill="#333" font-family="sans-serif" font-weight="bold" font-size="18">Tab</text>
+      </g>
+    </g>
+
+  </g>
+
+  <!-- Dash / Dock (Left) -->
+  <rect x="10" y="100" width="60" height="200" rx="10" fill="rgba(255,255,255,0.1)" />
+  <circle cx="40" cy="130" r="15" fill="#E95420" /> <!-- Ubuntu Orange -->
+  <rect x="25" y="160" width="30" height="30" rx="5" fill="#2196F3" />
+  <rect x="25" y="200" width="30" height="30" rx="5" fill="#4CAF50" />
+  <rect x="25" y="240" width="30" height="30" rx="5" fill="#FFC107" />
+
+</svg>

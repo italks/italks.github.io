@@ -1,0 +1,34 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#37474F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#263238;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- Shield/Lock Icon -->
+  <g transform="translate(180, 191.5)">
+    <path d="M0 -80 C-50 -80 -90 -40 -90 10 L-90 60 C-90 110 0 160 0 160 C0 160 90 110 90 60 L90 10 C90 -40 50 -80 0 -80 Z" fill="#F44336" filter="url(#shadow)" />
+    <path d="M-30 0 L30 0 L30 60 L-30 60 Z M0 -50 C-15 -50 -25 -40 -25 -25 L25 -25 C25 -40 15 -50 0 -50 Z" fill="#fff" transform="translate(0, 10)" />
+  </g>
+
+  <!-- Permission Code Visualization -->
+  <g transform="translate(400, 191.5)">
+    <text x="0" y="-30" fill="#fff" font-family="'Consolas', monospace" font-size="60" font-weight="bold" letter-spacing="5">
+      <tspan fill="#4CAF50">rwx</tspan><tspan fill="#FFC107">r-x</tspan><tspan fill="#F44336">r--</tspan>
+    </text>
+    
+    <!-- Title -->
+    <text x="0" y="50" fill="#ffffff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="42" font-weight="bold" filter="url(#shadow)">文件权限与 Root</text>
+    
+    <!-- Commands -->
+    <text x="0" y="100" fill="#B0BEC5" font-family="monospace" font-size="24">chmod · chown · sudo</text>
+  </g>
+
+</svg>

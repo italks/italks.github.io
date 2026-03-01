@@ -1,0 +1,54 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c3e50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- USB Stick Graphic -->
+  <g transform="translate(150, 191.5) rotate(-15)">
+    <rect x="-60" y="-100" width="120" height="200" rx="10" fill="#e0e0e0" filter="url(#shadow)" />
+    <rect x="-60" y="-100" width="120" height="150" rx="10" fill="#333" />
+    <rect x="-40" y="60" width="80" height="30" fill="#999" /> <!-- Connector -->
+    <circle cx="0" cy="-50" r="30" fill="#E95420" /> <!-- Ubuntu Logo Circle -->
+    <path d="M0 -50 m-15 0 a 15 15 0 1 0 30 0 a 15 15 0 1 0 -30 0" fill="none" stroke="white" stroke-width="4" stroke-dasharray="10,5"/>
+  </g>
+
+  <!-- Arrow -->
+  <path d="M280 191.5 L380 191.5" stroke="#4CAF50" stroke-width="8" marker-end="url(#arrowhead)" filter="url(#glow)" stroke-dasharray="20,10"/>
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="0" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#4CAF50" />
+    </marker>
+  </defs>
+
+  <!-- Content Group -->
+  <g transform="translate(450, 191.5)">
+    <!-- Title -->
+    <text x="50" y="-40" text-anchor="start" fill="#ffffff" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="48" font-weight="bold" filter="url(#shadow)">Ubuntu 安装实战</text>
+    
+    <!-- Subtitle -->
+    <text x="50" y="10" text-anchor="start" fill="#4CAF50" font-family="'Segoe UI', Ubuntu, sans-serif" font-size="24" font-weight="bold">HANDS-ON GUIDE</text>
+    
+    <!-- Steps -->
+    <text x="50" y="60" text-anchor="start" fill="#cccccc" font-family="sans-serif" font-size="18">
+      <tspan x="50" dy="0">1. 制作启动盘</tspan>
+      <tspan x="50" dy="30">2. BIOS 设置</tspan>
+      <tspan x="50" dy="30">3. 分区与安装</tspan>
+    </text>
+  </g>
+</svg>

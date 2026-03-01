@@ -1,5 +1,7 @@
 # 21. 桌面美化 (Ricing)
 
+> **摘要**：让 Ubuntu 变成你喜欢的样子！本文介绍 GNOME Tweaks 和 Extension Manager 的使用，推荐 Dash to Dock、Blur my Shell 等必装扩展，以及更换 GTK 和图标主题的方法。在保持系统稳定的前提下，适度美化，提升桌面的颜值与易用性。
+
 "Ricing" 是 Linux 社区的黑话，指像改装赛车一样深度定制桌面。
 GNOME 默认相对克制，但通过扩展、主题和图标，你依然能把它调成顺手的工作台。
 

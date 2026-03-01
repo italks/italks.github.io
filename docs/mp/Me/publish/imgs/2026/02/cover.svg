@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <!-- Background: Gradient -->
+  <defs>
+    <linearGradient id="bg-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2a3a5f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a1f2e;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feFlood flood-color="#000000" flood-opacity="0.5"/>
+      <feComposite in2="offsetblur" operator="in"/>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="383" fill="url(#bg-grad)" />
+
+  <!-- Accent Circle 1 -->
+  <circle cx="800" cy="50" r="100" fill="#3b82f6" opacity="0.1" />
+  <!-- Accent Circle 2 -->
+  <circle cx="100" cy="300" r="80" fill="#10b981" opacity="0.1" />
+
+  <!-- Text Content -->
+  <g font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" text-anchor="middle">
+    <!-- Main Title -->
+    <text x="450" y="140" font-size="64" font-weight="bold" fill="#ffffff" filter="url(#shadow)">
+      Ollama + OpenWebUI
+    </text>
+    
+    <!-- Sub Title -->
+    <text x="450" y="210" font-size="42" font-weight="normal" fill="#e2e8f0" filter="url(#shadow)">
+      保姆级部署教程
+    </text>
+
+    <!-- Tagline -->
+    <text x="450" y="280" font-size="28" fill="#10b981" font-weight="bold">
+      3 个真实任务 + 可复制 Prompt 模板
+    </text>
+  </g>
+
+  <!-- Decorative Border -->
+  <rect x="20" y="20" width="860" height="343" fill="none" stroke="#ffffff" stroke-opacity="0.1" stroke-width="2" rx="15" ry="15" />
+</svg>
