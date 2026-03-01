@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <linearGradient id="bg2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111827"/>
+      <stop offset="55%" stop-color="#1f2937"/>
+      <stop offset="100%" stop-color="#0b1020"/>
+    </linearGradient>
+    <linearGradient id="line" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#34d399"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="383" fill="url(#bg2)"/>
+  <rect x="0" y="0" width="900" height="383" fill="rgba(255,255,255,0.03)"/>
+
+  <g transform="translate(56,58)">
+    <rect x="0" y="0" width="290" height="42" rx="21" fill="#22d3ee"/>
+    <text x="145" y="28" text-anchor="middle" font-family="Alibaba PuHuiTi, Microsoft YaHei, PingFang SC, sans-serif" font-size="20" font-weight="700" fill="#0f172a">选型决策指南</text>
+
+    <text x="0" y="105" font-family="Alibaba PuHuiTi, Microsoft YaHei, PingFang SC, sans-serif" font-size="56" font-weight="800" fill="#ffffff">APP vs H5</text>
+    <text x="0" y="168" font-family="Alibaba PuHuiTi, Microsoft YaHei, PingFang SC, sans-serif" font-size="56" font-weight="800" fill="#ffffff">vs 小程序</text>
+
+    <text x="0" y="214" font-family="Alibaba PuHuiTi, Microsoft YaHei, PingFang SC, sans-serif" font-size="24" fill="#cbd5e1">成本 · 周期 · 回本 一图看懂</text>
+  </g>
+
+  <g transform="translate(520,52)">
+    <rect x="0" y="0" width="320" height="280" rx="20" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.16)"/>
+
+    <line x1="26" y1="228" x2="294" y2="228" stroke="url(#line)" stroke-width="3"/>
+
+    <g transform="translate(38,36)">
+      <rect x="0" y="124" width="58" height="68" rx="10" fill="#f97316"/>
+      <text x="29" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">APP</text>
+      <text x="29" y="146" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="700" fill="#fff">高</text>
+    </g>
+
+    <g transform="translate(130,36)">
+      <rect x="0" y="152" width="58" height="40" rx="10" fill="#38bdf8"/>
+      <text x="29" y="216" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#ffffff">H5</text>
+      <text x="29" y="172" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">中</text>
+    </g>
+
+    <g transform="translate(222,36)">
+      <rect x="0" y="98" width="58" height="94" rx="10" fill="#10b981"/>
+      <text x="29" y="216" text-anchor="middle" font-family="Alibaba PuHuiTi, Microsoft YaHei, PingFang SC, sans-serif" font-size="14" font-weight="700" fill="#ffffff">小程序</text>
+      <text x="29" y="122" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#fff">优</text>
+    </g>
+
+    <text x="160" y="28" text-anchor="middle" font-family="Alibaba PuHuiTi, Microsoft YaHei, PingFang SC, sans-serif" font-size="22" font-weight="700" fill="#ffffff">投入产出对比</text>
+  </g>
+</svg>
