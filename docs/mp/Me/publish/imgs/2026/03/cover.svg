@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <defs>
+    <!-- Dark War Room Background -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Target Scope Pattern -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#2c3e50" stroke-width="1"/>
+    </pattern>
+
+    <!-- Glowing Red Effect -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+
+  <!-- Left Side: US Theme (Subtle Blue Stripes) -->
+  <path d="M0 0 L600 0 L500 675 L0 675 Z" fill="#1e3799" opacity="0.1"/>
+  
+  <!-- Right Side: Iran Theme (Subtle Green/Red hints) -->
+  <path d="M600 0 L1200 0 L1200 675 L500 675 Z" fill="#eb2f06" opacity="0.1"/>
+
+  <!-- Central Conflict Zone -->
+  <circle cx="600" cy="337.5" r="200" fill="none" stroke="#e74c3c" stroke-width="2" stroke-dasharray="10,5" opacity="0.3"/>
+  <circle cx="600" cy="337.5" r="150" fill="none" stroke="#e74c3c" stroke-width="1" opacity="0.5"/>
+  <circle cx="600" cy="337.5" r="10" fill="#e74c3c" filter="url(#glow)"/>
+
+  <!-- Title Text -->
+  <text x="600" y="280" font-family="'Microsoft YaHei', sans-serif" font-size="96" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="url(#glow)">
+    美伊开战！
+  </text>
+
+  <!-- Subtitle Text -->
+  <text x="600" y="380" font-family="'Microsoft YaHei', sans-serif" font-size="48" font-weight="normal" fill="#ecf0f1" text-anchor="middle">
+    深度复盘与终局推演
+  </text>
+
+  <!-- Decorative Elements -->
+  <line x1="100" y1="337.5" x2="400" y2="337.5" stroke="#ecf0f1" stroke-width="2" opacity="0.3"/>
+  <line x1="800" y1="337.5" x2="1100" y2="337.5" stroke="#ecf0f1" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Corner Tech Details -->
+  <text x="50" y="650" font-family="monospace" font-size="24" fill="#bdc3c7">TARGET: IRAN</text>
+  <text x="950" y="650" font-family="monospace" font-size="24" fill="#bdc3c7">DATE: 2026.03.02</text>
+  
+
+
+</svg>
