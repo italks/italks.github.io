@@ -1,5 +1,8 @@
 # 🚀 New API：下一代 LLM 网关与 AI 资产管理系统
 
+![New API 封面图](https://cdn.jsdelivr.net/gh/italks/blog-assets/covers/new-api-cover-flat.png)
+> *（提示：您可以替换上方的图片链接为自定义生成的封面图。Prompt: `flat vector illustration, clean minimal tech poster, central futuristic gateway hub (circular core) connecting multiple colorful AI brain icons, smooth flowing data streams, thin gradient lines, blue and purple gradients with subtle cyan accents, clean white background, lots of negative space, crisp edges, geometric shapes, modern SaaS branding, dribbble quality --ar 2.35:1`）*
+
 > 在大模型百花齐放的今天，如何统一管理 OpenAI、Claude、Gemini 等各家 API？如何为团队或客户提供稳定、可计费的 AI 接口服务？**New API** 给出了完美的答案。
 
 ## 🌟 什么是 New API？
