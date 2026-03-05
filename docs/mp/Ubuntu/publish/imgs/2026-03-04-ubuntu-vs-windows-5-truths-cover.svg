@@ -1,0 +1,49 @@
+<svg width="900" height="383" viewBox="0 0 900 383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="55%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#111827"/>
+    </linearGradient>
+    <linearGradient id="ubuntuGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#E95420"/>
+      <stop offset="100%" stop-color="#F97316"/>
+    </linearGradient>
+    <linearGradient id="winGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0EA5E9"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M 28 0 L 0 0 0 28" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <rect width="900" height="383" fill="url(#bg)"/>
+  <rect width="900" height="383" fill="url(#grid)"/>
+
+  <circle cx="130" cy="55" r="110" fill="#E95420" opacity="0.18"/>
+  <circle cx="810" cy="320" r="150" fill="#2563EB" opacity="0.16"/>
+
+  <rect x="54" y="52" width="340" height="120" rx="20" fill="url(#ubuntuGrad)" filter="url(#shadow)"/>
+  <rect x="506" y="52" width="340" height="120" rx="20" fill="url(#winGrad)" filter="url(#shadow)"/>
+
+  <text x="224" y="100" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Ubuntu</text>
+  <text x="224" y="136" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" fill="#fff7ed" text-anchor="middle">轻量 · 免费 · 开发友好</text>
+
+  <text x="676" y="100" font-family="'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif" font-size="28" font-weight="700" fill="#ffffff" text-anchor="middle">Windows</text>
+  <text x="676" y="136" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" fill="#e0f2fe" text-anchor="middle">生态强 · 学习成本低</text>
+
+  <circle cx="450" cy="112" r="42" fill="#ffffff" filter="url(#shadow)"/>
+  <text x="450" y="122" font-family="Arial,sans-serif" font-size="30" font-weight="900" fill="#111827" text-anchor="middle">VS</text>
+
+  <text x="450" y="232" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="44" font-weight="800" fill="#ffffff" text-anchor="middle">2026 年 Ubuntu 爆火 5 个真相</text>
+  <text x="450" y="270" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="22" fill="#cbd5e1" text-anchor="middle">谁适合换系统？谁该继续用 Windows？</text>
+
+  <g transform="translate(270,310)">
+    <rect x="0" y="0" width="360" height="40" rx="20" fill="#0b1220" stroke="#334155"/>
+    <text x="180" y="27" font-family="'PingFang SC','Microsoft YaHei','Noto Sans CJK SC',sans-serif" font-size="18" fill="#f8fafc" text-anchor="middle">性能 · 安全 · 生态兼容 一文看懂</text>
+  </g>
+</svg>
