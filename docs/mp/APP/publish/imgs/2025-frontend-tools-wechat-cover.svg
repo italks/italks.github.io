@@ -1,0 +1,41 @@
+<svg width="900" height="383" viewBox="0 0 900 383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e3c72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2a5298;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.5"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="900" height="383" fill="url(#bg)"/>
+  
+  <!-- Decorative elements -->
+  <circle cx="50" cy="50" r="20" fill="#ffffff" opacity="0.1"/>
+  <circle cx="850" cy="330" r="40" fill="#ffffff" opacity="0.1"/>
+  <rect x="800" y="50" width="30" height="30" fill="#ffffff" opacity="0.1" transform="rotate(45 815 65)"/>
+  
+  <!-- Main Title -->
+  <text x="50%" y="45%" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="64" font-weight="bold" fill="#ffffff" text-anchor="middle" filter="url(#shadow)">
+    2025 前端提效神器
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="50%" y="65%" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="32" fill="#ffd700" text-anchor="middle" filter="url(#shadow)">
+    10大工具 · 效率翻倍 · 拒绝加班
+  </text>
+  
+  <!-- Tagline or small text -->
+  <text x="50%" y="85%" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#e0e0e0" text-anchor="middle">
+    Trae / CodeFun / Rspack / Zeabur / MasterGo
+  </text>
+</svg>
