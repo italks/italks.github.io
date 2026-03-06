@@ -10,21 +10,23 @@ export default defineConfig({
       {
         text: '微信公众号',
         items: [
-          { text:"账号矩阵",link:"/mp/index"},
+          { text: "账号矩阵", link: "/mp/index" },
           { text: 'UbuntuNews', link: '/mp/Ubuntu/index' },
           {
             text: '移动APP开发',
             items: [
               { text: '定位分析', link: '/mp/APP/index' },
               { text: '系列：安卓与前端混合开发', link: '/mp/APP/publish/android-frontend-hybrid/00-series-outline' },
+              { text: '系列：安卓与Flutter混合', link: '/mp/APP/publish/android-flutter-hybrid/00-series-outline' },
+              { text: '系列：安卓与UniApp混合', link: '/mp/APP/publish/android-uniapp-hybrid/00-series-outline' },
               { text: '文章：商城小程序开发成本', link: '/mp/APP/2026-01-19-mall-miniprogram-cost' },
               { text: '文章：小程序+企微私域', link: '/mp/APP/2026-01-20-miniprogram-private-traffic' }
             ]
           },
           { text: '以我眼光看世界', link: '/mp/Me/index' }
         ]
-      },{
-        text: '小红书',link: '/xiaohongshu',
+      }, {
+        text: '小红书', link: '/xiaohongshu',
       }
     ],
 
@@ -111,6 +113,20 @@ export default defineConfig({
                 collapsed: true,
                 items: [
                   { text: '00. 系列大纲与 Demo', link: '/mp/APP/publish/android-frontend-hybrid/00-series-outline' }
+                ]
+              },
+              {
+                text: '安卓与Flutter混合开发实战',
+                collapsed: true,
+                items: [
+                  { text: '00. 系列大纲与 Demo', link: '/mp/APP/publish/android-flutter-hybrid/00-series-outline' }
+                ]
+              },
+              {
+                text: '安卓与UniApp混合开发实战',
+                collapsed: true,
+                items: [
+                  { text: '00. 系列大纲与 Demo', link: '/mp/APP/publish/android-uniapp-hybrid/00-series-outline' }
                 ]
               }
             ]
