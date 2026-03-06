@@ -1,0 +1,71 @@
+<svg width="1280" height="720" viewBox="0 0 1280 720" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E3C72"/>
+      <stop offset="100%" stop-color="#2A5298"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+        <path d="M0,0 L0,6 L9,3 z" fill="#FFCB05" />
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="url(#bg-gradient)"/>
+  
+  <!-- Decorative Background Elements -->
+  <circle cx="1200" cy="100" r="300" fill="#FFFFFF" fill-opacity="0.03"/>
+  <path d="M0 600 L1280 300" stroke="#FFFFFF" stroke-opacity="0.05" stroke-width="2"/>
+  
+  <!-- Left Side: Text -->
+  <g transform="translate(80, 200)">
+    <!-- Tag -->
+    <g transform="translate(0, -60)">
+        <rect width="160" height="40" rx="4" fill="#FF6B6B" filter="url(#shadow)"/>
+        <text x="80" y="28" font-family="'Source Han Sans CN', 'Microsoft YaHei', sans-serif" font-weight="bold" font-size="20" fill="#FFFFFF" text-anchor="middle">生存法则</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="60" font-family="'Source Han Sans CN', 'Microsoft YaHei', sans-serif" font-weight="900" font-size="100" fill="#FFFFFF" filter="url(#shadow)">从移动端</text>
+    <text x="0" y="170" font-family="'Source Han Sans CN', 'Microsoft YaHei', sans-serif" font-weight="900" font-size="100" fill="#FFFFFF" filter="url(#shadow)">到前端</text>
+    
+    <!-- Subtitle -->
+    <text x="0" y="260" font-family="'Source Han Sans CN', 'Microsoft YaHei', sans-serif" font-weight="normal" font-size="36" fill="#FFCB05" filter="url(#shadow)">一个开发者的被迫转型实录</text>
+  </g>
+  
+  <!-- Right Side: Graphic -->
+  <g transform="translate(750, 150)">
+    <!-- Phone -->
+    <rect x="0" y="100" width="180" height="360" rx="24" fill="#1E3C72" stroke="#FFFFFF" stroke-width="4" filter="url(#shadow)"/>
+    <rect x="10" y="120" width="160" height="320" rx="4" fill="#2A5298" opacity="0.9"/>
+    <!-- Code on Phone -->
+    <rect x="30" y="150" width="80" height="10" rx="2" fill="#FFFFFF" opacity="0.3"/>
+    <rect x="30" y="170" width="120" height="10" rx="2" fill="#FFFFFF" opacity="0.3"/>
+    <rect x="30" y="190" width="100" height="10" rx="2" fill="#FFFFFF" opacity="0.3"/>
+
+    <!-- Arrow -->
+    <path d="M220 280 L320 280" stroke="#FFCB05" stroke-width="6" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+    <!-- Browser Window -->
+    <rect x="360" y="50" width="450" height="320" rx="8" fill="#FFFFFF" filter="url(#shadow)"/>
+    <!-- Browser Toolbar -->
+    <rect x="360" y="50" width="450" height="40" rx="8" fill="#F0F0F0"/>
+    <circle cx="380" cy="70" r="6" fill="#FF5F56"/>
+    <circle cx="400" cy="70" r="6" fill="#FFBD2E"/>
+    <circle cx="420" cy="70" r="6" fill="#27C93F"/>
+    <!-- Web Page Content -->
+    <rect x="380" y="110" width="100" height="100" fill="#42b883"/> <!-- Vue Logo Green -->
+    <path d="M430 180 L395 125 L465 125 Z" fill="#35495E"/> <!-- Vue Logo Shape approx -->
+    
+    <rect x="500" y="120" width="200" height="20" rx="2" fill="#333" opacity="0.1"/>
+    <rect x="500" y="150" width="280" height="14" rx="2" fill="#333" opacity="0.1"/>
+    <rect x="500" y="175" width="260" height="14" rx="2" fill="#333" opacity="0.1"/>
+    
+    <rect x="380" y="230" width="410" height="120" rx="4" fill="#F5F5F5"/>
+    <text x="400" y="270" font-family="Consolas, monospace" font-size="20" fill="#333">&lt;template&gt;</text>
+    <text x="420" y="300" font-family="Consolas, monospace" font-size="20" fill="#333">  &lt;App /&gt;</text>
+    <text x="400" y="330" font-family="Consolas, monospace" font-size="20" fill="#333">&lt;/template&gt;</text>
+  </g>
+</svg>
