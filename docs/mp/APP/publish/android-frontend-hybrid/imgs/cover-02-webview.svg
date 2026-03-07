@@ -1,0 +1,23 @@
+<svg width="900" height="383" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#073042;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#031d29;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="383" fill="url(#grad1)" />
+  <circle cx="850" cy="50" r="150" fill="white" fill-opacity="0.05" />
+  <circle cx="50" cy="330" r="100" fill="#3DDC84" fill-opacity="0.1" />
+  <path d="M 700 300 L 900 100 L 900 383 Z" fill="white" fill-opacity="0.03" />
+
+  <text x="450" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="20" text-anchor="middle" fill="#3DDC84" font-weight="bold" letter-spacing="2">HYBRID APP 开发系列课程 [02]</text>
+  <text x="450" y="210" font-family="system-ui, -apple-system, sans-serif" font-size="48" text-anchor="middle" fill="white" font-weight="900">WebView 深度揭秘</text>
+  <text x="450" y="260" font-family="system-ui, -apple-system, sans-serif" font-size="18" text-anchor="middle" fill="rgba(255,255,255,0.7)">调优 WebSettings，攻克常见 WebView 坑点</text>
+
+  <g transform="translate(100, 160) scale(0.8)" opacity="0.2">
+    <path d="M12,2L4.5,4.5C4.2,4.6,4,5,4,5.3V9c0,4.4,3.1,8.5,7.5,9.5c0.3,0.1,0.7,0.1,1,0c4.4-1.1,7.5-5.2,7.5-9.5V5.3 c0-0.4-0.2-0.7-0.5-0.8L12,2z" fill="white"/>
+  </g>
+  <g transform="translate(750, 160) scale(0.8)" opacity="0.2">
+    <path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" fill="white"/>
+  </g>
+</svg>
