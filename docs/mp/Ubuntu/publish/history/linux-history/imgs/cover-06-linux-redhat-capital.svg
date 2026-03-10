@@ -38,35 +38,41 @@
   </text>
   
   <!-- 副标题 -->
-  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#cc0000">
-    资本入局与巨头的恐惧——红帽崛起
+  <text x="50" y="175" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#cc0000">
+    微软最恐惧的敌人
+  </text>
+  <text x="50" y="200" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#cc0000">
+    竟然不靠卖软件赚钱
   </text>
   
   <!-- 分隔线 -->
-  <rect x="50" y="215" width="500" height="2" fill="#cc0000" opacity="0.6"/>
+  <rect x="50" y="225" width="500" height="2" fill="#cc0000" opacity="0.6"/>
   
   <!-- 关键词 -->
   <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    Red Hat 上市 | IBM 10亿投资 | 商业模式创新
+    Red Hat 上市 | 万圣节文件 | IBM 10亿投资
   </text>
   <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    万圣节文件 | 微软恐惧 | 软件免费服务收费
+    软件免费服务收费 | 商业模式创新
   </text>
   
-  <!-- 右侧红帽图标 -->
+  <!-- 右侧红帽图标与免费标签 -->
   <g transform="translate(680, 70)">
     <!-- 红帽 -->
-    <ellipse cx="70" cy="150" rx="60" ry="15" fill="#8B0000"/>
-    <path d="M20 150 Q20 80 70 70 Q120 80 120 150 Z" fill="#cc0000"/>
-    <path d="M20 150 Q20 140 70 135 Q120 140 120 150" fill="#8B0000"/>
+    <ellipse cx="70" cy="140" rx="60" ry="15" fill="#8B0000"/>
+    <path d="M20 140 Q20 70 70 60 Q120 70 120 140 Z" fill="#cc0000"/>
+    <path d="M20 140 Q20 130 70 125 Q120 130 120 140" fill="#8B0000"/>
     <!-- 帽带 -->
-    <rect x="15" y="130" width="110" height="15" fill="#2c3e50"/>
+    <rect x="15" y="120" width="110" height="15" fill="#2c3e50"/>
     <!-- 阴影 -->
-    <ellipse cx="70" cy="165" rx="55" ry="8" fill="#1a1a1a" opacity="0.3"/>
+    <ellipse cx="70" cy="155" rx="55" ry="8" fill="#1a1a1a" opacity="0.3"/>
     <!-- Red Hat 文字 -->
-    <text x="70" y="200" font-family="Impact, sans-serif" font-size="28" fill="#cc0000" text-anchor="middle" font-weight="bold">RED HAT</text>
+    <text x="70" y="190" font-family="Impact, sans-serif" font-size="28" fill="#cc0000" text-anchor="middle" font-weight="bold">RED HAT</text>
+    <!-- FREE 标签 -->
+    <rect x="120" y="20" width="60" height="30" rx="5" fill="#27ae60"/>
+    <text x="150" y="42" font-family="Arial, sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">FREE</text>
     <!-- 上升箭头 -->
-    <g transform="translate(120, 20)">
+    <g transform="translate(120, 0)">
       <polygon points="20,0 40,30 30,30 30,60 10,60 10,30 0,30" fill="url(#moneyGrad)" opacity="0.8"/>
     </g>
   </g>
@@ -74,9 +80,9 @@
   <!-- 底部重要信息 -->
   <rect x="50" y="310" width="600" height="50" rx="5" fill="#cc0000" opacity="0.3"/>
   <text x="70" y="335" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#f1c40f">
-    📈 1999年8月11日 红帽纳斯达克上市
+    📈 不卖软件，只卖服务——颠覆性的商业模式
   </text>
   <text x="70" y="355" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#bdc3c7">
-    "软件免费，服务收费" — 开源商业模式的胜利
+    1999年8月11日 红帽纳斯达克上市，证明开源可以赚钱
   </text>
 </svg>

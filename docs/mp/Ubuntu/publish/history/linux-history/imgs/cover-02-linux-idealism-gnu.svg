@@ -35,47 +35,49 @@
   </text>
   
   <!-- 副标题 -->
-  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#e74c3c">
-    理想主义的反叛——斯托曼与 GNU 计划
+  <text x="50" y="175" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#e74c3c">
+    他为了修改打印机代码被拒绝
+  </text>
+  <text x="50" y="200" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#e74c3c">
+    一怒之下辞职改变了世界
   </text>
   
   <!-- 分隔线 -->
-  <rect x="50" y="215" width="500" height="2" fill="#c31432" opacity="0.6"/>
+  <rect x="50" y="225" width="500" height="2" fill="#c31432" opacity="0.6"/>
   
   <!-- 关键词 -->
   <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
     Richard Stallman | GNU 宣言 | 自由软件基金会
   </text>
   <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    GPL 协议 | Copyleft | Emacs | GCC
+    GPL 协议 | Copyleft | 打印机事件
   </text>
   
-  <!-- 右侧 GNU 图标 -->
+  <!-- 右侧打印机图标 -->
   <g transform="translate(680, 80)">
-    <!-- GNU 头部轮廓 -->
-    <ellipse cx="60" cy="80" rx="55" ry="60" fill="#8B4513" opacity="0.8"/>
-    <!-- 角 -->
-    <path d="M20 60 Q10 20 30 40 Q25 50 25 60" fill="#5D3A1A"/>
-    <path d="M100 60 Q110 20 90 40 Q95 50 95 60" fill="#5D3A1A"/>
-    <!-- 脸部 -->
-    <ellipse cx="60" cy="100" rx="40" ry="35" fill="#A0522D"/>
-    <!-- 眼睛 -->
-    <circle cx="45" cy="85" r="6" fill="#2c3e50"/>
-    <circle cx="75" cy="85" r="6" fill="#2c3e50"/>
-    <!-- 鼻子 -->
-    <ellipse cx="60" cy="105" rx="8" ry="6" fill="#6B4226"/>
-    <!-- 嘴 -->
-    <path d="M45 120 Q60 130 75 120" stroke="#5D3A1A" stroke-width="2" fill="none"/>
-    <!-- GNU 文字 -->
-    <text x="60" y="170" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#c31432" text-anchor="middle">GNU</text>
+    <!-- 打印机主体 -->
+    <rect x="20" y="60" width="120" height="80" rx="8" fill="#5D4E6D"/>
+    <rect x="30" y="70" width="100" height="50" fill="#2c3e50"/>
+    <!-- 出纸口 -->
+    <rect x="40" y="120" width="80" height="30" fill="#7f8c8d"/>
+    <rect x="50" y="125" width="60" height="20" fill="#ecf0f1"/>
+    <!-- 控制面板 -->
+    <rect x="110" y="90" width="20" height="10" fill="#e74c3c"/>
+    <rect x="110" y="105" width="20" height="10" fill="#27ae60"/>
+    <!-- 警告符号 -->
+    <polygon points="80,30 95,60 65,60" fill="#f39c12" opacity="0.8"/>
+    <text x="80" y="55" font-family="Arial, sans-serif" font-size="20" fill="#2c3e50" text-anchor="middle" font-weight="bold">!</text>
+    <!-- 禁止符号 -->
+    <circle cx="80" cy="45" r="25" stroke="#e74c3c" stroke-width="3" fill="none"/>
+    <line x1="62" y1="27" x2="98" y2="63" stroke="#e74c3c" stroke-width="3"/>
   </g>
   
   <!-- 底部引言 -->
   <rect x="50" y="310" width="600" height="50" rx="5" fill="#1a1a2e" opacity="0.6"/>
   <text x="70" y="340" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#ecf0f1" font-style="italic">
-    "自由软件是一种自由，而不是价格。"
+    "拒绝分享代码，就是背叛人性"
   </text>
   <text x="70" y="358" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#7f8c8d">
-    —— Richard Stallman
+    —— Richard Stallman，因一台打印机开启的开源革命
   </text>
 </svg>

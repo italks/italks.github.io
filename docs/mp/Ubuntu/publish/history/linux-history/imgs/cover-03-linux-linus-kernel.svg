@@ -37,19 +37,22 @@
   </text>
   
   <!-- 副标题 -->
-  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#3498db">
-    芬兰大学生的业余爱好——Linux 内核诞生
+  <text x="50" y="175" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#3498db">
+    21岁芬兰学生的一封邮件
+  </text>
+  <text x="50" y="200" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#3498db">
+    如何改变世界？
   </text>
   
   <!-- 分隔线 -->
-  <rect x="50" y="215" width="500" height="2" fill="#0052cc" opacity="0.6"/>
+  <rect x="50" y="225" width="500" height="2" fill="#0052cc" opacity="0.6"/>
   
   <!-- 关键词 -->
   <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
     Linus Torvalds | 赫尔辛基大学 | 386 电脑
   </text>
   <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    MINIX | 终端仿真器 | GPL 协议 | 0.01 版本
+    业余爱好 | 改变世界的邮件 | 穷学生
   </text>
   
   <!-- 右侧代码窗口 -->
@@ -70,14 +73,17 @@
     <text x="30" y="120" font-family="Courier New, monospace" font-size="8" fill="#ecf0f1">system (just a hobby...)</text>
     <text x="30" y="135" font-family="Courier New, monospace" font-size="9" fill="#e74c3c">- Linus Torvalds</text>
     <text x="30" y="148" font-family="Courier New, monospace" font-size="8" fill="#7f8c8d">1991.08.25</text>
+    <!-- 问号强调 -->
+    <circle cx="110" cy="90" r="15" fill="#f39c12" opacity="0.3"/>
+    <text x="110" y="95" font-family="Arial, sans-serif" font-size="20" fill="#f39c12" text-anchor="middle" font-weight="bold">?</text>
   </g>
   
   <!-- 底部重要日期 -->
   <rect x="50" y="310" width="600" height="50" rx="5" fill="#003580" opacity="0.4"/>
   <text x="70" y="335" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#3498db">
-    📧 1991年8月25日 — 那封改变世界的邮件
+    📧 1991年8月25日 — 一个穷学生的"业余爱好"
   </text>
   <text x="70" y="355" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#7f8c8d">
-    "不会像 GNU 那样庞大和专业，只是个业余爱好"
+    谁也没想到，这封邮件会成为改变世界的关键
   </text>
 </svg>
