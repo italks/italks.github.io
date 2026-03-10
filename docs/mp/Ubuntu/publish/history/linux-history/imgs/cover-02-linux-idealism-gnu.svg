@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#141E30"/>
+      <stop offset="100%" style="stop-color:#243B55"/>
+    </linearGradient>
+    <linearGradient id="libertyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#c31432"/>
+      <stop offset="100%" style="stop-color:#240b36"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="383" fill="url(#bgGrad2)"/>
+  
+  <!-- 装饰性光芒 -->
+  <g opacity="0.08">
+    <circle cx="780" cy="100" r="150" fill="#fff"/>
+    <circle cx="780" cy="100" r="100" fill="#fff"/>
+    <circle cx="780" cy="100" r="50" fill="#fff"/>
+  </g>
+  
+  <!-- 左侧装饰条 -->
+  <rect x="0" y="0" width="8" height="383" fill="url(#libertyGrad)"/>
+  
+  <!-- 年代标签 -->
+  <rect x="50" y="40" width="120" height="36" rx="18" fill="#c31432" opacity="0.9"/>
+  <text x="110" y="65" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">
+    1983-1990
+  </text>
+  
+  <!-- 主标题 -->
+  <text x="50" y="130" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="42" font-weight="bold" fill="#ecf0f1">
+    Linux 演进史（二）
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#e74c3c">
+    理想主义的反叛——斯托曼与 GNU 计划
+  </text>
+  
+  <!-- 分隔线 -->
+  <rect x="50" y="215" width="500" height="2" fill="#c31432" opacity="0.6"/>
+  
+  <!-- 关键词 -->
+  <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    Richard Stallman | GNU 宣言 | 自由软件基金会
+  </text>
+  <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    GPL 协议 | Copyleft | Emacs | GCC
+  </text>
+  
+  <!-- 右侧 GNU 图标 -->
+  <g transform="translate(680, 80)">
+    <!-- GNU 头部轮廓 -->
+    <ellipse cx="60" cy="80" rx="55" ry="60" fill="#8B4513" opacity="0.8"/>
+    <!-- 角 -->
+    <path d="M20 60 Q10 20 30 40 Q25 50 25 60" fill="#5D3A1A"/>
+    <path d="M100 60 Q110 20 90 40 Q95 50 95 60" fill="#5D3A1A"/>
+    <!-- 脸部 -->
+    <ellipse cx="60" cy="100" rx="40" ry="35" fill="#A0522D"/>
+    <!-- 眼睛 -->
+    <circle cx="45" cy="85" r="6" fill="#2c3e50"/>
+    <circle cx="75" cy="85" r="6" fill="#2c3e50"/>
+    <!-- 鼻子 -->
+    <ellipse cx="60" cy="105" rx="8" ry="6" fill="#6B4226"/>
+    <!-- 嘴 -->
+    <path d="M45 120 Q60 130 75 120" stroke="#5D3A1A" stroke-width="2" fill="none"/>
+    <!-- GNU 文字 -->
+    <text x="60" y="170" font-family="Courier New, monospace" font-size="28" font-weight="bold" fill="#c31432" text-anchor="middle">GNU</text>
+  </g>
+  
+  <!-- 底部引言 -->
+  <rect x="50" y="310" width="600" height="50" rx="5" fill="#1a1a2e" opacity="0.6"/>
+  <text x="70" y="340" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#ecf0f1" font-style="italic">
+    "自由软件是一种自由，而不是价格。"
+  </text>
+  <text x="70" y="358" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#7f8c8d">
+    —— Richard Stallman
+  </text>
+</svg>

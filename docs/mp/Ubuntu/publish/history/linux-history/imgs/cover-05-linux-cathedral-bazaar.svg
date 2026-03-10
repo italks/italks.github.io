@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="383" viewBox="0 0 900 383">
+  <defs>
+    <linearGradient id="bgGrad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f1c2c"/>
+      <stop offset="100%" style="stop-color:#928DAB"/>
+    </linearGradient>
+    <linearGradient id="bazaarGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#11998e"/>
+      <stop offset="100%" style="stop-color:#38ef7d"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="383" fill="url(#bgGrad5)"/>
+  
+  <!-- 左侧装饰条 -->
+  <rect x="0" y="0" width="8" height="383" fill="url(#bazaarGrad)"/>
+  
+  <!-- 年代标签 -->
+  <rect x="50" y="40" width="120" height="36" rx="18" fill="#11998e" opacity="0.9"/>
+  <text x="110" y="65" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">
+    1993-1998
+  </text>
+  
+  <!-- 主标题 -->
+  <text x="50" y="130" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="42" font-weight="bold" fill="#ecf0f1">
+    Linux 演进史（五）
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#38ef7d">
+    大教堂与集市——开源协作模式的奇迹
+  </text>
+  
+  <!-- 分隔线 -->
+  <rect x="50" y="215" width="500" height="2" fill="#11998e" opacity="0.6"/>
+  
+  <!-- 关键词 -->
+  <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    Eric S. Raymond | 林纳斯定律 | Linus's Law
+  </text>
+  <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    Slackware | Debian | Ian Murdock | APT
+  </text>
+  
+  <!-- 右侧大教堂与集市对比 -->
+  <g transform="translate(580, 60)">
+    <!-- 大教堂 -->
+    <g transform="translate(0, 0)">
+      <text x="55" y="15" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="12" fill="#928DAB" text-anchor="middle" font-weight="bold">大教堂</text>
+      <!-- 教堂建筑 -->
+      <rect x="20" y="100" width="70" height="80" fill="#5D4E6D"/>
+      <polygon points="55,60 15,100 95,100" fill="#5D4E6D"/>
+      <rect x="45" y="130" width="20" height="50" fill="#3D3250"/>
+      <circle cx="55" cy="115" r="12" fill="#3D3250"/>
+      <!-- 十字架 -->
+      <rect x="52" y="45" width="6" height="20" fill="#928DAB"/>
+      <rect x="48" y="50" width="14" height="4" fill="#928DAB"/>
+      <!-- 封闭线条 -->
+      <line x1="10" y1="90" x2="10" y2="190" stroke="#e74c3c" stroke-width="2" opacity="0.6"/>
+      <line x1="10" y1="90" x2="100" y2="90" stroke="#e74c3c" stroke-width="2" opacity="0.6"/>
+    </g>
+    
+    <!-- VS -->
+    <text x="125" y="130" font-family="Impact, sans-serif" font-size="24" fill="#fff" text-anchor="middle">VS</text>
+    
+    <!-- 集市 -->
+    <g transform="translate(150, 0)">
+      <text x="55" y="15" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="12" fill="#38ef7d" text-anchor="middle" font-weight="bold">集市</text>
+      <!-- 多个小摊位 -->
+      <rect x="15" y="120" width="25" height="30" fill="#27ae60" rx="2"/>
+      <rect x="50" y="130" width="25" height="25" fill="#3498db" rx="2"/>
+      <rect x="85" y="125" width="25" height="35" fill="#f39c12" rx="2"/>
+      <rect x="25" y="160" width="20" height="25" fill="#e74c3c" rx="2"/>
+      <rect x="55" y="165" width="20" height="20" fill="#9b59b6" rx="2"/>
+      <rect x="80" y="158" width="20" height="22" fill="#1abc9c" rx="2"/>
+      <!-- 连接线表示协作 -->
+      <line x1="27" y1="135" x2="62" y2="142" stroke="#38ef7d" stroke-width="1" opacity="0.5"/>
+      <line x1="62" y1="142" x2="97" y2="142" stroke="#38ef7d" stroke-width="1" opacity="0.5"/>
+      <line x1="35" y1="172" x2="65" y2="175" stroke="#38ef7d" stroke-width="1" opacity="0.5"/>
+      <line x1="65" y1="175" x2="90" y2="169" stroke="#38ef7d" stroke-width="1" opacity="0.5"/>
+      <!-- 小人图标 -->
+      <circle cx="27" cy="115" r="4" fill="#ecf0f1"/>
+      <circle cx="62" cy="122" r="4" fill="#ecf0f1"/>
+      <circle cx="97" cy="118" r="4" fill="#ecf0f1"/>
+    </g>
+  </g>
+  
+  <!-- 底部引言 -->
+  <rect x="50" y="310" width="600" height="50" rx="5" fill="#1f1c2c" opacity="0.6"/>
+  <text x="70" y="335" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#ecf0f1" font-style="italic">
+    "只要有足够多的眼球，所有的 Bug 都将浮出水面"
+  </text>
+  <text x="70" y="355" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#7f8c8d">
+    —— 林纳斯定律 (Linus's Law)
+  </text>
+</svg>
