@@ -14,10 +14,10 @@
       <stop offset="100%" style="stop-color:#56ab2f"/>
     </linearGradient>
   </defs>
-  
+
   <!-- 背景 -->
   <rect width="900" height="383" fill="url(#bgGrad8)"/>
-  
+
   <!-- 星空效果 -->
   <g opacity="0.3">
     <circle cx="100" cy="50" r="1.5" fill="#fff"/>
@@ -30,37 +30,37 @@
     <circle cx="450" cy="25" r="1" fill="#fff"/>
     <circle cx="300" cy="90" r="1" fill="#fff"/>
   </g>
-  
+
   <!-- 左侧装饰条 -->
   <rect x="0" y="0" width="8" height="383" fill="url(#cloudGrad)"/>
-  
+
   <!-- 年代标签 -->
   <rect x="50" y="40" width="130" height="36" rx="18" fill="#00d2ff" opacity="0.9"/>
   <text x="115" y="65" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">
     2008-至今
   </text>
-  
+
   <!-- 主标题 -->
   <text x="50" y="130" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="42" font-weight="bold" fill="#ecf0f1">
     Linux 演进史（八）
   </text>
-  
+
   <!-- 副标题 -->
-  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#00d2ff">
-    吞噬世界的企鹅——从移动端到云端霸主
+  <text x="50" y="175" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="18" fill="#00d2ff">
+    从30亿台手机到云端霸主，这个"玩具"如何统治世界？
   </text>
-  
+
   <!-- 分隔线 -->
-  <rect x="50" y="215" width="500" height="2" fill="#3a7bd5" opacity="0.6"/>
-  
+  <rect x="50" y="205" width="500" height="2" fill="#3a7bd5" opacity="0.6"/>
+
   <!-- 关键词 -->
-  <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    Android | Docker | Kubernetes
+  <text x="50" y="245" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    Android | Docker | Kubernetes | AI 算力
   </text>
-  <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    AWS | 公有云 | Top 500 超算 | AI 算力底座
+  <text x="50" y="270" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    AWS | 公有云 | Top 500 超算 | 数字基础设施
   </text>
-  
+
   <!-- 右侧云与Android组合图 -->
   <g transform="translate(600, 40)">
     <!-- 云朵 -->
@@ -74,7 +74,7 @@
       <text x="60" y="95" font-family="Arial, sans-serif" font-size="12" fill="#fff" text-anchor="middle">AWS</text>
       <text x="140" y="95" font-family="Arial, sans-serif" font-size="10" fill="#fff" text-anchor="middle">K8S</text>
     </g>
-    
+
     <!-- Android 机器人 -->
     <g transform="translate(40, 120)">
       <!-- 身体 -->
@@ -94,11 +94,11 @@
       <rect x="38" y="80" width="15" height="30" rx="5" fill="url(#androidGrad)"/>
       <rect x="67" y="80" width="15" height="30" rx="5" fill="url(#androidGrad)"/>
     </g>
-    
+
     <!-- 连接线 -->
     <path d="M100 115 Q100 130 100 140" stroke="#00d2ff" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
   </g>
-  
+
   <!-- 底部统计信息 -->
   <rect x="50" y="310" width="600" height="50" rx="5" fill="#0f0c29" opacity="0.8"/>
   <text x="70" y="335" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#00d2ff">
@@ -107,4 +107,5 @@
   <text x="70" y="355" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#7f8c8d">
     从移动端到云端，Linux 成为人类数字基础设施的底座
   </text>
+
 </svg>
