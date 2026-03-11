@@ -1,0 +1,152 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 510">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0a0a"/>
+      <stop offset="100%" style="stop-color:#2d1515"/>
+    </linearGradient>
+    <linearGradient id="clawGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35"/>
+      <stop offset="100%" style="stop-color:#E63946"/>
+    </linearGradient>
+    <linearGradient id="safeGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="510" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle pattern -->
+  <g opacity="0.05">
+    <line x1="0" y1="85" x2="1200" y2="85" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="0" y1="170" x2="1200" y2="170" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="0" y1="255" x2="1200" y2="255" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="0" y1="340" x2="1200" y2="340" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="200" y1="0" x2="200" y2="510" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="400" y1="0" x2="400" y2="510" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="600" y1="0" x2="600" y2="510" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="800" y1="0" x2="800" y2="510" stroke="#FF6B35" stroke-width="0.5"/>
+    <line x1="1000" y1="0" x2="1000" y2="510" stroke="#FF6B35" stroke-width="0.5"/>
+  </g>
+  
+  <!-- Main Title -->
+  <text x="600" y="60" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="42" font-weight="bold">小龙虾 OpenClaw 很香？</text>
+  <text x="600" y="100" text-anchor="middle" fill="#FF6B35" font-family="Arial, sans-serif" font-size="22">别急，先把这篇看完</text>
+  
+  <!-- Central Lobster/Claw Icon -->
+  <g transform="translate(600, 240)">
+    <!-- Main claw body -->
+    <ellipse cx="0" cy="0" rx="50" ry="35" fill="url(#clawGrad)" opacity="0.3"/>
+    
+    <!-- Big claw (left) -->
+    <path d="M-40,-15 Q-70,-30 -60,10 Q-50,30 -30,20 Q-20,10 -25,-5 Q-30,-15 -40,-15" 
+          fill="url(#clawGrad)" filter="url(#glow)"/>
+    <ellipse cx="-55" cy="-5" rx="12" ry="8" fill="#2d1515" opacity="0.3"/>
+    
+    <!-- Big claw (right) -->
+    <path d="M40,-15 Q70,-30 60,10 Q50,30 30,20 Q20,10 25,-5 Q30,-15 40,-15" 
+          fill="url(#clawGrad)" filter="url(#glow)"/>
+    <ellipse cx="55" cy="-5" rx="12" ry="8" fill="#2d1515" opacity="0.3"/>
+    
+    <!-- Body -->
+    <ellipse cx="0" cy="20" rx="30" ry="25" fill="url(#clawGrad)" opacity="0.8"/>
+    
+    <!-- Eyes -->
+    <circle cx="-12" cy="-20" r="8" fill="#fff"/>
+    <circle cx="12" cy="-20" r="8" fill="#fff"/>
+    <circle cx="-12" cy="-20" r="4" fill="#1a0a0a"/>
+    <circle cx="12" cy="-20" r="4" fill="#1a0a0a"/>
+    
+    <!-- Antenna -->
+    <path d="M-15,-30 Q-25,-50 -30,-60" fill="none" stroke="#FF6B35" stroke-width="2"/>
+    <path d="M15,-30 Q25,-50 30,-60" fill="none" stroke="#FF6B35" stroke-width="2"/>
+    
+    <!-- Warning sign above -->
+    <g transform="translate(0, -85)">
+      <polygon points="0,-20 18,10 -18,10" fill="#FFD700" stroke="#fff" stroke-width="1.5"/>
+      <text x="0" y="5" text-anchor="middle" fill="#1a0a0a" font-family="Arial" font-size="18" font-weight="bold">!</text>
+    </g>
+    
+    <!-- Lock/shield below -->
+    <g transform="translate(0, 70)">
+      <path d="M-15,-10 L-15,5 Q-15,20 0,25 Q15,20 15,5 L15,-10 Q15,-20 0,-20 Q-15,-20 -15,-10" 
+            fill="url(#safeGrad)" opacity="0.8"/>
+      <rect x="-8" y="-5" width="16" height="12" rx="2" fill="#1a0a0a" opacity="0.5"/>
+      <circle cx="0" cy="2" r="3" fill="#10B981"/>
+    </g>
+  </g>
+  
+  <!-- 4 Permission Levels with deployment icons -->
+  
+  <!-- Level 1: VM (Safest) -->
+  <g transform="translate(150, 400)">
+    <rect x="-55" y="-35" width="110" height="70" rx="8" fill="#2d1515" stroke="#10B981" stroke-width="2"/>
+    <!-- VM icon -->
+    <rect x="-25" y="-20" width="20" height="15" rx="2" fill="#10B981" opacity="0.4"/>
+    <rect x="5" y="-20" width="20" height="15" rx="2" fill="#10B981" opacity="0.4"/>
+    <rect x="-25" y="0" width="20" height="15" rx="2" fill="#10B981" opacity="0.4"/>
+    <rect x="5" y="0" width="20" height="15" rx="2" fill="#10B981" opacity="0.4"/>
+    <text x="0" y="28" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">虚拟机隔离</text>
+    <text x="0" y="50" text-anchor="middle" fill="#10B981" font-family="Arial" font-size="11">⭐⭐⭐⭐⭐</text>
+  </g>
+  
+  <!-- Level 2: Cloud Server -->
+  <g transform="translate(400, 400)">
+    <rect x="-55" y="-35" width="110" height="70" rx="8" fill="#2d1515" stroke="#3B82F6" stroke-width="2"/>
+    <!-- Cloud icon -->
+    <ellipse cx="-10" cy="-5" rx="18" ry="12" fill="#3B82F6" opacity="0.3"/>
+    <ellipse cx="12" cy="-5" rx="15" ry="10" fill="#3B82F6" opacity="0.3"/>
+    <ellipse cx="0" cy="5" rx="22" ry="12" fill="#3B82F6" opacity="0.4"/>
+    <text x="0" y="28" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">云服务器</text>
+    <text x="0" y="50" text-anchor="middle" fill="#3B82F6" font-family="Arial" font-size="11">⭐⭐⭐⭐☆</text>
+  </g>
+  
+  <!-- Level 3: WSL -->
+  <g transform="translate(650, 400)">
+    <rect x="-55" y="-35" width="110" height="70" rx="8" fill="#2d1515" stroke="#F59E0B" stroke-width="2"/>
+    <!-- Windows + Linux icon -->
+    <rect x="-20" y="-18" width="15" height="15" fill="#F59E0B" opacity="0.3"/>
+    <rect x="-2" y="-18" width="15" height="15" fill="#F59E0B" opacity="0.3"/>
+    <rect x="-20" y="0" width="15" height="15" fill="#F59E0B" opacity="0.3"/>
+    <rect x="-2" y="0" width="15" height="15" fill="#F59E0B" opacity="0.3"/>
+    <text x="0" y="28" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">WSL 半隔离</text>
+    <text x="0" y="50" text-anchor="middle" fill="#F59E0B" font-family="Arial" font-size="11">⭐⭐⭐☆☆</text>
+  </g>
+  
+  <!-- Level 4: Windows Direct (Dangerous) -->
+  <g transform="translate(900, 400)">
+    <rect x="-55" y="-35" width="110" height="70" rx="8" fill="#2d1515" stroke="#EF4444" stroke-width="3"/>
+    <!-- Windows with skull -->
+    <rect x="-18" y="-18" width="15" height="15" fill="#EF4444" opacity="0.3"/>
+    <rect x="0" y="-18" width="15" height="15" fill="#EF4444" opacity="0.3"/>
+    <rect x="-18" y="0" width="15" height="15" fill="#EF4444" opacity="0.3"/>
+    <rect x="0" y="0" width="15" height="15" fill="#EF4444" opacity="0.3"/>
+    <!-- X mark -->
+    <text x="25" y="-10" fill="#EF4444" font-family="Arial" font-size="20" font-weight="bold">✗</text>
+    <text x="0" y="28" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="12" font-weight="bold">Windows直装</text>
+    <text x="0" y="50" text-anchor="middle" fill="#EF4444" font-family="Arial" font-size="11">⭐☆☆☆☆</text>
+  </g>
+  
+  <!-- Bottom text -->
+  <g fill="#888" font-family="Arial" font-size="10">
+    <text x="150" y="475" text-anchor="middle">推荐尝鲜</text>
+    <text x="400" y="475" text-anchor="middle">长期稳定</text>
+    <text x="650" y="475" text-anchor="middle">有风险</text>
+    <text x="900" y="475" text-anchor="middle">不推荐</text>
+  </g>
+  
+  <!-- Tagline -->
+  <text x="600" y="505" text-anchor="middle" fill="#FF6B35" font-family="Arial" font-size="12" opacity="0.8">Ubuntu 公众号 · 小龙虾好吃，但别被钳到手</text>
+  
+  <!-- Decorative corners -->
+  <polygon points="0,0 70,0 0,70" fill="#FF6B35" opacity="0.1"/>
+  <polygon points="1200,510 1130,510 1200,440" fill="#FF6B35" opacity="0.1"/>
+</svg>
