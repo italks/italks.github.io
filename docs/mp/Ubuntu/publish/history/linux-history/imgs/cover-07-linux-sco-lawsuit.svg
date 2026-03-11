@@ -13,10 +13,10 @@
       <stop offset="100%" style="stop-color:#a8e063"/>
     </linearGradient>
   </defs>
-  
+
   <!-- 背景 -->
   <rect width="900" height="383" fill="url(#bgGrad7)"/>
-  
+
   <!-- 警告装饰线 -->
   <g opacity="0.15">
     <line x1="0" y1="50" x2="900" y2="50" stroke="#ef473a" stroke-width="1" stroke-dasharray="10,5"/>
@@ -24,37 +24,37 @@
     <line x1="0" y1="250" x2="900" y2="250" stroke="#ef473a" stroke-width="1" stroke-dasharray="10,5"/>
     <line x1="0" y1="333" x2="900" y2="333" stroke="#ef473a" stroke-width="1" stroke-dasharray="10,5"/>
   </g>
-  
+
   <!-- 左侧装饰条 -->
   <rect x="0" y="0" width="8" height="383" fill="url(#justiceGrad)"/>
-  
+
   <!-- 年代标签 -->
   <rect x="50" y="40" width="120" height="36" rx="18" fill="#cb2d3e" opacity="0.9"/>
   <text x="110" y="65" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="16" font-weight="bold" fill="#fff" text-anchor="middle">
     2003-2007
   </text>
-  
+
   <!-- 主标题 -->
   <text x="50" y="130" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="42" font-weight="bold" fill="#ecf0f1">
     Linux 演进史（七）
   </text>
-  
+
   <!-- 副标题 -->
-  <text x="50" y="185" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#ef473a">
+  <text x="50" y="175" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="22" fill="#ef473a">
     知识产权的生死保卫战——SCO 诉讼案
   </text>
-  
+
   <!-- 分隔线 -->
-  <rect x="50" y="215" width="500" height="2" fill="#cb2d3e" opacity="0.6"/>
-  
+  <rect x="50" y="205" width="500" height="2" fill="#cb2d3e" opacity="0.6"/>
+
   <!-- 关键词 -->
-  <text x="50" y="260" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    SCO vs IBM | 50亿美元索赔 | 专利流氓
+  <text x="50" y="250" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    SCO vs IBM | 50亿美元索赔 | Groklaw
   </text>
-  <text x="50" y="285" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
-    Linux 基金会 | OIN | 开放发明网络
+  <text x="50" y="275" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="14" fill="#bdc3c7">
+    Linux 基金会 | OIN | 十年诉讼终胜诉
   </text>
-  
+
   <!-- 右侧法律天平与盾牌 -->
   <g transform="translate(620, 50)">
     <!-- 天平 -->
@@ -75,7 +75,7 @@
       <ellipse cx="150" cy="105" rx="25" ry="8" fill="url(#shieldGrad)"/>
       <text x="150" y="108" font-family="Courier New, monospace" font-size="8" fill="#fff" text-anchor="middle">正义</text>
     </g>
-    
+
     <!-- 盾牌 -->
     <g transform="translate(70, 160)">
       <path d="M40 0 L70 15 L70 45 Q70 70 40 85 Q10 70 10 45 L10 15 Z" fill="url(#shieldGrad)" opacity="0.8"/>
@@ -83,7 +83,7 @@
       <text x="40" y="50" font-family="Arial, sans-serif" font-size="24" fill="#fff" text-anchor="middle">✓</text>
     </g>
   </g>
-  
+
   <!-- 底部重要信息 -->
   <rect x="50" y="310" width="600" height="50" rx="5" fill="#232526" opacity="0.8"/>
   <text x="70" y="335" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="13" fill="#ef473a">
@@ -92,4 +92,5 @@
   <text x="70" y="355" font-family="Microsoft YaHei, SimHei, sans-serif" font-size="11" fill="#7f8c8d">
     十年诉讼终胜诉，Linux 基金会与 OIN 守护开源火种
   </text>
+
 </svg>
