@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 383">
+  <!-- 背景 -->
+  <rect width="900" height="383" fill="#1A237E"/>
+  
+  <!-- 左侧彩色边条 - 高级篇红色 -->
+  <rect width="8" height="383" fill="#F44336"/>
+  
+  <!-- 右上角 Logo -->
+  <rect x="750" y="20" width="130" height="40" rx="5" fill="#0066CC" opacity="0.3"/>
+  <text x="815" y="47" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">OpenClaw</text>
+  
+  <!-- 主标题 -->
+  <text x="450" y="120" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#FFFFFF" text-anchor="middle">性能优化与安全加固</text>
+  
+  <!-- 副标题 -->
+  <text x="450" y="170" font-family="Arial, sans-serif" font-size="28" fill="#B3E5FC" text-anchor="middle">OpenClaw进阶配置</text>
+  
+  <!-- 左侧:速度仪表盘(性能优化) -->
+  <g transform="translate(150, 200)">
+    <!-- 仪表盘外圈 -->
+    <circle cx="100" cy="100" r="90" fill="none" stroke="#4CAF50" stroke-width="8"/>
+    <circle cx="100" cy="100" r="80" fill="none" stroke="#2E7D32" stroke-width="4"/>
+    
+    <!-- 刻度 -->
+    <line x1="100" y1="30" x2="100" y2="40" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="170" y1="100" x2="160" y2="100" stroke="#FFFFFF" stroke-width="2"/>
+    <line x1="30" y1="100" x2="40" y2="100" stroke="#FFFFFF" stroke-width="2"/>
+    
+    <!-- 指针 -->
+    <line x1="100" y1="100" x2="150" y2="60" stroke="#FF6600" stroke-width="4" stroke-linecap="round"/>
+    <circle cx="100" cy="100" r="8" fill="#FF6600"/>
+    
+    <!-- 速度文字 -->
+    <text x="100" y="140" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">性能</text>
+    <text x="100" y="160" font-family="Arial, sans-serif" font-size="14" fill="#B3E5FC" text-anchor="middle">优化</text>
+    
+    <!-- 火箭图标 -->
+    <g transform="translate(130, 20)">
+      <path d="M 10 0 L 15 10 L 10 8 L 5 10 Z" fill="#FF6600"/>
+      <path d="M 8 10 L 10 15 L 12 10" fill="#FF6600"/>
+    </g>
+  </g>
+  
+  <!-- 右侧:盾牌(安全加固) -->
+  <g transform="translate(500, 180)">
+    <!-- 盾牌形状 -->
+    <path d="M 100 0 L 180 20 L 180 100 C 180 150, 100 200, 100 200 C 100 200, 20 150, 20 100 L 20 20 Z" 
+          fill="#2196F3" stroke="#1976D2" stroke-width="3"/>
+    
+    <!-- 锁图标 -->
+    <rect x="70" y="60" width="60" height="50" rx="5" fill="#FFFFFF"/>
+    <path d="M 85 60 L 85 45 C 85 30, 100 30, 100 30 C 100 30, 115 30, 115 45 L 115 60" 
+          fill="none" stroke="#FFFFFF" stroke-width="8"/>
+    <circle cx="100" cy="85" r="8" fill="#2196F3"/>
+    
+    <!-- 安全文字 -->
+    <text x="100" y="150" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">安全</text>
+    <text x="100" y="170" font-family="Arial, sans-serif" font-size="14" fill="#B3E5FC" text-anchor="middle">加固</text>
+  </g>
+  
+  <!-- 装饰元素 -->
+  <!-- 锁图标 -->
+  <g transform="translate(100, 100)" opacity="0.3">
+    <rect x="0" y="15" width="30" height="20" rx="3" fill="#FFFFFF"/>
+    <path d="M 5 15 L 5 8 C 5 0, 15 0, 15 0 C 15 0, 25 0, 25 8 L 25 15" 
+          fill="none" stroke="#FFFFFF" stroke-width="3"/>
+  </g>
+  
+  <!-- 火箭 -->
+  <g transform="translate(800, 280)" opacity="0.3">
+    <path d="M 15 0 L 20 15 L 15 12 L 10 15 Z" fill="#FFFFFF"/>
+    <path d="M 12 15 L 15 25 L 18 15" fill="#FFFFFF"/>
+  </g>
+  
+  <!-- 右下角标签 -->
+  <rect x="760" y="340" width="120" height="30" rx="15" fill="#F44336" opacity="0.3"/>
+  <text x="820" y="360" font-family="Arial, sans-serif" font-size="14" fill="#F44336" text-anchor="middle" font-weight="bold">#高级篇 18/19</text>
+</svg>

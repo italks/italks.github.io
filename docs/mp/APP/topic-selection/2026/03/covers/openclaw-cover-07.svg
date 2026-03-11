@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 383">
+  <!-- 背景 -->
+  <rect width="900" height="383" fill="#FAFAFA"/>
+  
+  <!-- 左侧彩色边条 - 基础篇蓝色 -->
+  <rect width="8" height="383" fill="#2196F3"/>
+  
+  <!-- 右上角 Logo -->
+  <rect x="750" y="20" width="130" height="40" rx="5" fill="#0066CC" opacity="0.1"/>
+  <text x="815" y="47" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0066CC" text-anchor="middle">OpenClaw</text>
+  
+  <!-- 主标题 -->
+  <text x="450" y="120" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#333333" text-anchor="middle">OpenClaw界面全解读</text>
+  
+  <!-- 副标题 -->
+  <text x="450" y="170" font-family="Arial, sans-serif" font-size="28" fill="#666666" text-anchor="middle">每个按钮都有用</text>
+  
+  <!-- 界面截图框架 -->
+  <g transform="translate(150, 200)">
+    <!-- 外框 -->
+    <rect x="0" y="0" width="600" height="160" rx="8" fill="#FFFFFF" stroke="#E0E0E0" stroke-width="2"/>
+    
+    <!-- 左侧技能区 -->
+    <rect x="0" y="0" width="150" height="160" rx="8" fill="#F5F5F5"/>
+    <text x="75" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#666666" text-anchor="middle">技能列表</text>
+    <rect x="10" y="40" width="130" height="30" rx="5" fill="#FFFFFF" stroke="#E0E0E0"/>
+    <text x="75" y="60" font-family="Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">📁 pdf</text>
+    <rect x="10" y="80" width="130" height="30" rx="5" fill="#FFFFFF" stroke="#E0E0E0"/>
+    <text x="75" y="100" font-family="Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">📊 xlsx</text>
+    <rect x="10" y="120" width="130" height="30" rx="5" fill="#FFFFFF" stroke="#E0E0E0"/>
+    <text x="75" y="140" font-family="Arial, sans-serif" font-size="11" fill="#333333" text-anchor="middle">📽️ pptx</text>
+    
+    <!-- 中间任务区 -->
+    <rect x="150" y="0" width="450" height="100" fill="#FFFFFF"/>
+    <text x="375" y="25" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#666666" text-anchor="middle">任务输入区</text>
+    <rect x="160" y="40" width="430" height="50" rx="5" fill="#F5F5F5" stroke="#E0E0E0"/>
+    <text x="375" y="70" font-family="Arial, sans-serif" font-size="11" fill="#999999" text-anchor="middle">描述你的任务...</text>
+    
+    <!-- 底部日志区 -->
+    <rect x="150" y="100" width="450" height="60" fill="#F5F5F5"/>
+    <text x="375" y="120" font-family="Arial, sans-serif" font-size="11" fill="#666666" text-anchor="middle">[日志] 任务执行中...</text>
+    
+    <!-- 标注箭头和文字 -->
+    <!-- 左侧标注 -->
+    <line x1="-30" y1="80" x2="5" y2="80" stroke="#FF6600" stroke-width="2"/>
+    <text x="-35" y="85" font-family="Arial, sans-serif" font-size="10" fill="#FF6600" text-anchor="end">技能区</text>
+    
+    <!-- 右侧标注 -->
+    <line x1="755" y1="50" x2="605" y2="50" stroke="#FF6600" stroke-width="2"/>
+    <text x="760" y="55" font-family="Arial, sans-serif" font-size="10" fill="#FF6600">任务区</text>
+    
+    <line x1="755" y1="130" x2="605" y2="130" stroke="#FF6600" stroke-width="2"/>
+    <text x="760" y="135" font-family="Arial, sans-serif" font-size="10" fill="#FF6600">日志区</text>
+  </g>
+  
+  <!-- 右下角标签 -->
+  <rect x="760" y="340" width="120" height="30" rx="15" fill="#2196F3" opacity="0.2"/>
+  <text x="820" y="360" font-family="Arial, sans-serif" font-size="14" fill="#2196F3" text-anchor="middle" font-weight="bold">#基础篇 07/19</text>
+</svg>

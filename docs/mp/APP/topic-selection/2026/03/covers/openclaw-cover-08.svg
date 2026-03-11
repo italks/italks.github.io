@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 383">
+  <!-- 背景 -->
+  <rect width="900" height="383" fill="#E3F2FD"/>
+  
+  <!-- 左侧彩色边条 - 进阶篇橙色 -->
+  <rect width="8" height="383" fill="#FF9800"/>
+  
+  <!-- 右上角 Logo -->
+  <rect x="750" y="20" width="130" height="40" rx="5" fill="#0066CC" opacity="0.1"/>
+  <text x="815" y="47" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0066CC" text-anchor="middle">OpenClaw</text>
+  
+  <!-- 主标题 -->
+  <text x="450" y="120" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#333333" text-anchor="middle">文档处理三部曲</text>
+  
+  <!-- 副标题 -->
+  <text x="450" y="170" font-family="Arial, sans-serif" font-size="28" fill="#666666" text-anchor="middle">PDF、Word、Excel一网打尽</text>
+  
+  <!-- 三个图标横向排列 -->
+  <!-- PDF -->
+  <g transform="translate(150, 200)">
+    <rect x="0" y="0" width="150" height="150" rx="15" fill="#FF5722"/>
+    <rect x="20" y="20" width="110" height="110" fill="#FFFFFF" opacity="0.3"/>
+    <text x="75" y="85" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">PDF</text>
+    <circle cx="130" cy="30" r="15" fill="#FFC107"/>
+    <text x="130" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">1</text>
+  </g>
+  
+  <!-- Word -->
+  <g transform="translate(375, 200)">
+    <rect x="0" y="0" width="150" height="150" rx="15" fill="#2196F3"/>
+    <rect x="20" y="20" width="110" height="110" fill="#FFFFFF" opacity="0.3"/>
+    <text x="75" y="85" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Word</text>
+    <circle cx="130" cy="30" r="15" fill="#FFC107"/>
+    <text x="130" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">2</text>
+  </g>
+  
+  <!-- Excel -->
+  <g transform="translate(600, 200)">
+    <rect x="0" y="0" width="150" height="150" rx="15" fill="#4CAF50"/>
+    <rect x="20" y="20" width="110" height="110" fill="#FFFFFF" opacity="0.3"/>
+    <text x="75" y="85" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FFFFFF" text-anchor="middle">Excel</text>
+    <circle cx="130" cy="30" r="15" fill="#FFC107"/>
+    <text x="130" y="35" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333" text-anchor="middle">3</text>
+  </g>
+  
+  <!-- 连接箭头 -->
+  <path d="M 310 275 L 360 275" stroke="#FF9800" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  <path d="M 535 275 L 585 275" stroke="#FF9800" stroke-width="4" fill="none" marker-end="url(#arrowhead)"/>
+  
+  <defs>
+    <marker id="arrowhead" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#FF9800"/>
+    </marker>
+  </defs>
+  
+  <!-- 右下角标签 -->
+  <rect x="760" y="340" width="120" height="30" rx="15" fill="#FF9800" opacity="0.2"/>
+  <text x="820" y="360" font-family="Arial, sans-serif" font-size="14" fill="#FF9800" text-anchor="middle" font-weight="bold">#进阶篇 08/19</text>
+</svg>
