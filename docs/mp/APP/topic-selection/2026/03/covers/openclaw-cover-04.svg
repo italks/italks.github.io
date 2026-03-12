@@ -1,43 +1,46 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 383">
   <!-- 背景 -->
   <rect width="900" height="383" fill="#E3F2FD"/>
-  
+
   <!-- 左侧彩色边条 - 基础篇蓝色 -->
   <rect width="8" height="383" fill="#2196F3"/>
-  
+
   <!-- 右上角 Logo -->
   <rect x="750" y="20" width="130" height="40" rx="5" fill="#0066CC" opacity="0.1"/>
   <text x="815" y="47" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0066CC" text-anchor="middle">OpenClaw</text>
-  
+
   <!-- 主标题 -->
   <text x="450" y="120" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="#333333" text-anchor="middle">10分钟安装 OpenClaw</text>
-  
+
   <!-- 副标题 -->
   <text x="450" y="170" font-family="Arial, sans-serif" font-size="28" fill="#666666" text-anchor="middle">小白也能搞定</text>
-  
-  <!-- 中央:大号数字10 + 时钟 -->
-  <g transform="translate(280, 200)">
-    <!-- 数字10 -->
-    <text x="100" y="100" font-family="Arial, sans-serif" font-size="150" font-weight="bold" fill="#0066CC" text-anchor="middle" opacity="0.3">10</text>
-    
-    <!-- 时钟 -->
-    <circle cx="200" cy="80" r="50" fill="#0066CC" opacity="0.9"/>
-    <circle cx="200" cy="80" r="40" fill="#FFFFFF"/>
+
+  <!-- 中央:大号数字10 + 时钟 (左右布局) -->
+  <g transform="translate(200, 180)">
+    <!-- 数字10 (左侧) -->
+    <text x="80" y="100" font-family="Arial, sans-serif" font-size="140" font-weight="bold" fill="#0066CC" text-anchor="middle" opacity="0.3">10</text>
+
+    <!-- 时钟 (右侧) -->
+    <circle cx="280" cy="60" r="50" fill="#0066CC" opacity="0.9"/>
+    <circle cx="280" cy="60" r="40" fill="#FFFFFF"/>
     <!-- 时针 -->
-    <line x1="200" y1="80" x2="200" y2="55" stroke="#0066CC" stroke-width="4" stroke-linecap="round"/>
+    <line x1="280" y1="60" x2="280" y2="55" stroke="#0066CC" stroke-width="4" stroke-linecap="round"/>
     <!-- 分针 -->
-    <line x1="200" y1="80" x2="220" y2="65" stroke="#0066CC" stroke-width="3" stroke-linecap="round"/>
+    <line x1="280" y1="60" x2="300" y2="65" stroke="#0066CC" stroke-width="3" stroke-linecap="round"/>
     <!-- 中心点 -->
-    <circle cx="200" cy="80" r="4" fill="#FF6600"/>
+    <circle cx="280" cy="60" r="4" fill="#FF6600"/>
+    
+    <!-- 分隔符 "分钟" -->
+    <text x="180" y="80" font-family="Arial, sans-serif" font-size="24" fill="#666666" text-anchor="middle" font-weight="bold">分钟</text>
   </g>
-  
+
   <!-- 下载进度条 -->
   <g transform="translate(200, 310)">
     <rect x="0" y="0" width="500" height="20" rx="10" fill="#E0E0E0"/>
     <rect x="0" y="0" width="500" height="20" rx="10" fill="#4CAF50"/>
     <text x="250" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#FFFFFF" text-anchor="middle">安装进度 100%</text>
   </g>
-  
+
   <!-- 右下角标签 -->
   <rect x="760" y="340" width="120" height="30" rx="15" fill="#2196F3" opacity="0.2"/>
   <text x="820" y="360" font-family="Arial, sans-serif" font-size="14" fill="#2196F3" text-anchor="middle" font-weight="bold">#基础篇 04/19</text>
