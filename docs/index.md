@@ -8,10 +8,13 @@ hero:
   tagline: My great project tagline
   actions:
     - theme: brand
-      text: Markdown Examples
+      text: Ubuntu
       link: /markdown-examples
     - theme: alt
-      text: API Examples
+      text: 移动APP开发
+      link: /api-examples
+    - theme: alt
+      text: 以我眼光看世界
       link: /api-examples
 
 features:
