@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="battle-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#302b63;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#24243e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="ubuntu-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#DD4814;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="fedora-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3C6EB4;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#294172;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="arch-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1793D1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D5C8C;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="deepin-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D4AA;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00A080;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#battle-bg)"/>
+  
+  <!-- VS battle lines -->
+  <g opacity="0.15">
+    <line x1="450" y1="0" x2="450" y2="500" stroke="#fff" stroke-width="2" stroke-dasharray="10,10"/>
+    <line x1="0" y1="250" x2="900" y2="250" stroke="#fff" stroke-width="2" stroke-dasharray="10,10"/>
+  </g>
+  
+  <!-- Ubuntu section -->
+  <g transform="translate(50, 80)" filter="url(#shadow)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#1a1a2e"/>
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="url(#ubuntu-gradient)" opacity="0.2"/>
+    
+    <!-- Ubuntu logo simplified -->
+    <circle cx="90" cy="45" r="25" fill="none" stroke="#E95420" stroke-width="4"/>
+    <circle cx="90" cy="45" r="8" fill="#E95420"/>
+    <circle cx="70" cy="30" r="5" fill="#E95420"/>
+    <circle cx="110" cy="30" r="5" fill="#E95420"/>
+    <circle cx="90" cy="70" r="5" fill="#E95420"/>
+    
+    <text x="90" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="18" font-weight="bold">Ubuntu</text>
+    <text x="90" y="115" text-anchor="middle" fill="#a0aec0" font-size="11">26.04 LTS</text>
+  </g>
+  
+  <!-- Fedora section -->
+  <g transform="translate(260, 80)" filter="url(#shadow)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#1a1a2e"/>
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="url(#fedora-gradient)" opacity="0.2"/>
+    
+    <!-- Fedora logo simplified -->
+    <circle cx="90" cy="45" r="25" fill="#3C6EB4"/>
+    <path d="M80 30 Q95 30 95 45 Q95 55 85 55 Q80 55 80 50 Q80 45 85 45 L90 45" fill="none" stroke="#fff" stroke-width="4" stroke-linecap="round"/>
+    
+    <text x="90" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="18" font-weight="bold">Fedora</text>
+    <text x="90" y="115" text-anchor="middle" fill="#a0aec0" font-size="11">44 Workstation</text>
+  </g>
+  
+  <!-- Arch section -->
+  <g transform="translate(470, 80)" filter="url(#shadow)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#1a1a2e"/>
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="url(#arch-gradient)" opacity="0.2"/>
+    
+    <!-- Arch logo simplified -->
+    <path d="M90 20 L110 60 L95 60 L95 70 L85 70 L85 60 L70 60 Z" fill="#1793D1"/>
+    <circle cx="90" cy="40" r="4" fill="#fff"/>
+    
+    <text x="90" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="18" font-weight="bold">Arch Linux</text>
+    <text x="90" y="115" text-anchor="middle" fill="#a0aec0" font-size="11">Rolling Release</text>
+  </g>
+  
+  <!-- Deepin section -->
+  <g transform="translate(680, 80)" filter="url(#shadow)">
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="#1a1a2e"/>
+    <rect x="0" y="0" width="180" height="120" rx="15" fill="url(#deepin-gradient)" opacity="0.2"/>
+    
+    <!-- Deepin logo simplified -->
+    <circle cx="90" cy="45" r="25" fill="none" stroke="#00D4AA" stroke-width="4"/>
+    <path d="M75 45 Q90 25 105 45 Q90 65 75 45" fill="#00D4AA"/>
+    
+    <text x="90" y="100" text-anchor="middle" fill="#fff" font-family="Arial" font-size="18" font-weight="bold">Deepin</text>
+    <text x="90" y="115" text-anchor="middle" fill="#a0aec0" font-size="11">25 国产之光</text>
+  </g>
+  
+  <!-- VS badge in center -->
+  <g transform="translate(450, 250)">
+    <circle cx="0" cy="0" r="45" fill="#1a1a2e" stroke="#fff" stroke-width="3"/>
+    <text x="0" y="10" text-anchor="middle" fill="#fff" font-family="Arial" font-size="32" font-weight="bold">VS</text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="450" y="350" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="38" font-weight="bold">
+    2026年桌面Linux四强争霸
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="450" y="390" text-anchor="middle" fill="#a0aec0" font-family="Arial, sans-serif" font-size="20">
+    五维度深度对比 · 帮你找到最适合的发行版
+  </text>
+  
+  <!-- Comparison metrics -->
+  <g transform="translate(150, 420)">
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+    <text x="50" y="20" text-anchor="middle" fill="#fff" font-size="13">安装体验</text>
+  </g>
+  <g transform="translate(270, 420)">
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+    <text x="50" y="20" text-anchor="middle" fill="#fff" font-size="13">软件生态</text>
+  </g>
+  <g transform="translate(390, 420)">
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+    <text x="50" y="20" text-anchor="middle" fill="#fff" font-size="13">性能表现</text>
+  </g>
+  <g transform="translate(510, 420)">
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+    <text x="50" y="20" text-anchor="middle" fill="#fff" font-size="13">桌面体验</text>
+  </g>
+  <g transform="translate(630, 420)">
+    <rect x="0" y="0" width="100" height="30" rx="15" fill="rgba(255,255,255,0.1)"/>
+    <text x="50" y="20" text-anchor="middle" fill="#fff" font-size="13">社区支持</text>
+  </g>
+  
+  <!-- Bottom year badge -->
+  <rect x="400" y="465" width="100" height="25" rx="12" fill="linear-gradient(90deg, #667eea, #764ba2)"/>
+  <text x="450" y="483" text-anchor="middle" fill="#fff" font-size="13" font-weight="bold">2026 专题</text>
+</svg>

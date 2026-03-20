@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#1a1a2e"/>
+  
+  <!-- IBus Card -->
+  <rect x="80" y="100" width="350" height="160" rx="20" fill="#1e1e2e"/>
+  <rect x="80" y="100" width="350" height="60" rx="20" fill="#db2777"/>
+  <rect x="80" y="130" width="350" height="30" fill="#db2777"/>
+  
+  <circle cx="130" cy="130" r="18" fill="rgba(255,255,255,0.2)"/>
+  <text x="130" y="136" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold">i</text>
+  <text x="165" y="138" fill="#ffffff" font-family="Arial" font-size="24" font-weight="bold">IBus</text>
+  
+  <text x="105" y="185" fill="#a0aec0" font-size="14">✓ Ubuntu默认框架</text>
+  <text x="105" y="210" fill="#a0aec0" font-size="14">✓ GNOME深度集成</text>
+  <text x="105" y="235" fill="#a0aec0" font-size="14">✓ 开箱即用</text>
+  
+  <!-- Fcitx 5 Card -->
+  <rect x="470" y="100" width="350" height="160" rx="20" fill="#1e1e2e"/>
+  <rect x="470" y="100" width="350" height="60" rx="20" fill="#059669"/>
+  <rect x="470" y="130" width="350" height="30" fill="#059669"/>
+  
+  <circle cx="520" cy="130" r="18" fill="rgba(255,255,255,0.2)"/>
+  <text x="520" y="136" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold">F</text>
+  <text x="555" y="138" fill="#ffffff" font-family="Arial" font-size="24" font-weight="bold">Fcitx 5</text>
+  
+  <text x="495" y="185" fill="#a0aec0" font-size="14">✓ 响应速度快无卡顿</text>
+  <text x="495" y="210" fill="#a0aec0" font-size="14">✓ 功能丰富可定制</text>
+  <text x="495" y="235" fill="#a0aec0" font-size="14">✓ 中文输入体验最佳</text>
+  
+  <!-- VS Badge -->
+  <circle cx="450" cy="180" r="25" fill="#1e1e2e" stroke="#ffffff" stroke-width="2"/>
+  <text x="450" y="187" text-anchor="middle" fill="#ffffff" font-size="16" font-weight="bold">VS</text>
+  
+  <!-- Main Title -->
+  <text x="450" y="350" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="36" font-weight="bold">Ubuntu输入法终极指南</text>
+  
+
+
+  <!-- Feature Tags -->
+  <rect x="170" y="430" width="80" height="26" rx="13" fill="#2d3748" stroke="#db2777" stroke-width="1"/>
+  <text x="210" y="448" text-anchor="middle" fill="#ffffff" font-size="12">雾凇拼音</text>
+  
+  <rect x="270" y="430" width="80" height="26" rx="13" fill="#2d3748" stroke="#059669" stroke-width="1"/>
+  <text x="310" y="448" text-anchor="middle" fill="#ffffff" font-size="12">性能测试</text>
+  
+  <rect x="370" y="430" width="80" height="26" rx="13" fill="#2d3748" stroke="#fbbf24" stroke-width="1"/>
+  <text x="410" y="448" text-anchor="middle" fill="#ffffff" font-size="12">配置教程</text>
+  
+  <rect x="470" y="430" width="80" height="26" rx="13" fill="#2d3748" stroke="#8b5cf6" stroke-width="1"/>
+  <text x="510" y="448" text-anchor="middle" fill="#ffffff" font-size="12">常见问题</text>
+  
+  <rect x="570" y="430" width="80" height="26" rx="13" fill="#2d3748" stroke="#3b82f6" stroke-width="1"/>
+  <text x="610" y="448" text-anchor="middle" fill="#ffffff" font-size="12">中国用户</text>
+  
+
+
+
+
+</svg>

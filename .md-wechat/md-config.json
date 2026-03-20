@@ -1,0 +1,30 @@
+{
+  "theme": {
+    "name": "default",
+    "primaryColor": "#2B579A"
+  },
+  "style": {
+    "fontFamily": "-apple-system-font, BlinkMacSystemFont, \"Helvetica Neue\", \"PingFang SC\", \"Hiragino Sans GB\", \"Microsoft YaHei UI\", \"Microsoft YaHei\", Arial, sans-serif",
+    "fontSize": "16px",
+    "lineHeight": "1.8",
+    "maxWidth": "100%"
+  },
+  "codeBlock": {
+    "themeName": "atom-one-dark",
+    "isMacStyle": true,
+    "fontSize": "14px"
+  },
+  "paragraph": {
+    "margin": "15px 0"
+  },
+  "heading": {
+    "marginTop": "25px",
+    "marginBottom": "15px"
+  },
+  "link": {
+    "color": "#2B579A"
+  },
+  "image": {
+    "borderRadius": "4px"
+  }
+}
