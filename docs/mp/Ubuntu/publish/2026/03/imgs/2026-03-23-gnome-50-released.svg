@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <!-- Background -->
+  <rect width="900" height="500" fill="#1a1a2e"/>
+  
+  <!-- GNOME Foot Logo (simplified) -->
+  <g transform="translate(450, 180)">
+    <ellipse cx="0" cy="0" rx="70" ry="60" fill="#4a90d9"/>
+    <ellipse cx="-40" cy="-50" rx="25" ry="30" fill="#4a90d9"/>
+    <ellipse cx="-60" cy="-20" rx="20" ry="25" fill="#4a90d9"/>
+    <ellipse cx="-50" cy="30" rx="18" ry="22" fill="#4a90d9"/>
+    <ellipse cx="-30" cy="60" rx="15" ry="18" fill="#4a90d9"/>
+    <ellipse cx="30" cy="55" rx="15" ry="18" fill="#4a90d9"/>
+  </g>
+  
+  <!-- Version Badge -->
+  <circle cx="450" cy="180" r="90" fill="none" stroke="#4a90d9" stroke-width="3" opacity="0.3"/>
+  
+  <!-- "50" Text -->
+  <text x="450" y="220" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="72" font-weight="bold">50</text>
+  
+  <!-- Codename -->
+  <text x="450" y="260" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="18">"Tokyo"</text>
+  
+  <!-- Main Title -->
+  <text x="450" y="340" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="42" font-weight="bold">GNOME 50 正式发布</text>
+  
+  <!-- Accent Line -->
+  <rect x="350" y="360" width="200" height="4" rx="2" fill="#4a90d9"/>
+  
+  <!-- Subtitle -->
+  <text x="450" y="400" text-anchor="middle" fill="#a0aec0" font-family="Arial" font-size="20">彻底告别X11 · VRR支持 · 家长控制 · 远程桌面飞跃</text>
+  
+  <!-- Feature Tags -->
+  <g transform="translate(250, 430)">
+    <rect x="0" y="0" width="80" height="28" rx="14" fill="#2d3748" stroke="#10b981" stroke-width="1"/>
+    <text x="40" y="18" text-anchor="middle" fill="#ffffff" font-size="12">Wayland</text>
+  </g>
+  
+  <g transform="translate(340, 430)">
+    <rect x="0" y="0" width="80" height="28" rx="14" fill="#2d3748" stroke="#fbbf24" stroke-width="1"/>
+    <text x="40" y="18" text-anchor="middle" fill="#ffffff" font-size="12">VRR</text>
+  </g>
+  
+  <g transform="translate(430, 430)">
+    <rect x="0" y="0" width="90" height="28" rx="14" fill="#2d3748" stroke="#ec4899" stroke-width="1"/>
+    <text x="45" y="18" text-anchor="middle" fill="#ffffff" font-size="12">分数缩放</text>
+  </g>
+  
+  <g transform="translate(530, 430)">
+    <rect x="0" y="0" width="90" height="28" rx="14" fill="#2d3748" stroke="#8b5cf6" stroke-width="1"/>
+    <text x="45" y="18" text-anchor="middle" fill="#ffffff" font-size="12">家长控制</text>
+  </g>
+  
+  <!-- X11 Deprecated Badge -->
+  <rect x="60" y="60" width="160" height="40" rx="20" fill="#ef4444"/>
+  <text x="140" y="86" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold">X11 已移除</text>
+  
+  <!-- Ubuntu Badge -->
+  <rect x="680" y="60" width="160" height="40" rx="20" fill="#E95420"/>
+  <text x="760" y="86" text-anchor="middle" fill="#ffffff" font-family="Arial" font-size="16" font-weight="bold">Ubuntu 26.04</text>
+  
+  <!-- Release Date -->
+  <text x="450" y="475" text-anchor="middle" fill="#6b7280" font-size="14">2026年3月18日发布</text>
+  
+  <!-- Decorative dots -->
+  <circle cx="100" cy="150" r="3" fill="#4a90d9" opacity="0.3"/>
+  <circle cx="800" cy="150" r="3" fill="#4a90d9" opacity="0.3"/>
+  <circle cx="100" cy="350" r="3" fill="#4a90d9" opacity="0.3"/>
+  <circle cx="800" cy="350" r="3" fill="#4a90d9" opacity="0.3"/>
+</svg>
