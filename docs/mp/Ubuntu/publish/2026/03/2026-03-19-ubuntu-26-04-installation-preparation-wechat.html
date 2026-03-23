@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微信文章</title>
+  
+</head>
+<body style="font-family: -apple-system-font, BlinkMacSystemFont, 'Helvetica Neue', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei UI', 'Microsoft YaHei', Arial, sans-serif; font-size: 16px; line-height: 1.8; color: #333; padding: 20px; max-width: 100%; box-sizing: border-box;">
+<h1 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 24px; text-align: center;">Ubuntu 26.04 安装前必做：5个关键准备,避开90%的坑</h1>
+<p style="margin: 15px 0; word-wrap: break-word;">你可能听过这样的故事：</p>
+<p style="margin: 15px 0; word-wrap: break-word;">有人装完 Ubuntu 发现网卡驱动没有,只能用手机热点下载驱动;<br>有人分区时手一抖,把 Windows 系统盘格式化了;<br>还有人装完才发现常用软件找不到替代品,又灰溜溜切回 Windows。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">安装 Linux 最怕的不是技术难度,而是那些&quot;没想到&quot;的坑。</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">Ubuntu 26.04 将在4月正式发布,不少朋友已经跃跃欲试。但作为过来人,我得提醒你:<br>安装前的准备工作,往往比安装本身更重要。</p>
+<p style="margin: 15px 0; word-wrap: break-word;">这篇文章整理了 5 个关键准备步骤,都是真实踩坑经验的总结。<br>把这些做好,你的安装过程才能真正&quot;丝滑&quot;。</p>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<h2 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 20px; border-bottom: 2px solid #2B579A; padding-bottom: 10px;">准备一:硬件兼容性自检</h2>
+<p style="margin: 15px 0; word-wrap: break-word;">这是最容易忽略,也最容易翻车的环节。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">为什么要检查?</h3>
+<p style="margin: 15px 0; word-wrap: break-word;">很多人以为 Linux 硬件兼容性已经很好了,确实如此——但&quot;很好&quot;不等于&quot;完美&quot;。</p>
+<p style="margin: 15px 0; word-wrap: break-word;">最容易出问题的是这些:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">显卡驱动</strong>: NVIDIA 显卡需要闭源驱动,部分新显卡可能支持不完善</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">无线网卡</strong>: 尤其是 Realtek 芯片,有些型号需要手动编译驱动</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">蓝牙模块</strong>: 某些笔记本的蓝牙固件需要额外处理</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">触控板</strong>: 部分高端笔记本的手势识别可能不完整</li>
+</ul>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">如何检查?</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">方法一:查看官方硬件兼容性列表(HCL)</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">Ubuntu 官方维护了一份认证硬件列表,可以在认证页面搜索你的设备型号。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">方法二:Live USB 试用模式</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">这是最可靠的方法。用 U 盘启动后选择&quot;试用 Ubuntu&quot;,不要急着安装。<br>在这个模式下测试:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin: 5px 0;">能否连接 WiFi</li>
+<li style="margin: 5px 0;">声音是否正常</li>
+<li style="margin: 5px 0;">外接显示器能否识别</li>
+<li style="margin: 5px 0;">睡眠/唤醒是否稳定</li>
+</ul>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">方法三:搜索自己的硬件型号</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">在搜索引擎或论坛搜索:<code style="padding: 2px 6px; background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; font-size: 14px; color: #d14;">你的硬件型号 + Ubuntu 26.04</code>。<br>如果有人遇到问题,通常能找到解决方案或确认是否支持。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">小建议</h3>
+<p style="margin: 15px 0; word-wrap: break-word;">如果你用的是比较新的硬件(比如刚发布的显卡或笔记本型号),建议等 Ubuntu 26.04.1 LTS 发布后再升级。<br>这个版本通常会修复首批用户反馈的硬件兼容问题。</p>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<h2 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 20px; border-bottom: 2px solid #2B579A; padding-bottom: 10px;">准备二:数据备份方案</h2>
+<p style="margin: 15px 0; word-wrap: break-word;">这个建议听起来很基础,但真的有太多人栽在这里。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">必备备份清单</h3>
+<table style="margin: 15px 0; border-collapse: collapse; width: 100%;" width="100%"><thead><tr>
+<th align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #f5f5f5; font-weight: bold;" bgcolor="#f5f5f5">备份内容</th>
+<th align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #f5f5f5; font-weight: bold;" bgcolor="#f5f5f5">备份方式</th>
+<th align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #f5f5f5; font-weight: bold;" bgcolor="#f5f5f5">推荐工具</th>
+</tr>
+</thead><tbody><tr>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">个人文档</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">云同步/外置硬盘</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Nextcloud、rclone</td>
+</tr>
+<tr style="background-color: #fafafa;" bgcolor="#fafafa">
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">浏览器数据</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">账号同步</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Firefox Sync、Chrome Sync</td>
+</tr>
+<tr>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">开发环境配置</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">配置文件导出</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">dotfiles(.bashrc、.vimrc 等)</td>
+</tr>
+<tr style="background-color: #fafafa;" bgcolor="#fafafa">
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">虚拟机/容器</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">导出镜像</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Docker save、VirtualBox 导出</td>
+</tr>
+<tr>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">SSH 密钥</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">复制到安全位置</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">~/.ssh 目录</td>
+</tr>
+</tbody></table><h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">开发者特别注意</h3>
+<p style="margin: 15px 0; word-wrap: break-word;">如果你是开发者,这些文件一定要备份:</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code class="language-bash" style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span># 打包常用配置文件
+tar -czf ~/config-backup.tar.gz \
+  ~/.bashrc \
+  ~/.zshrc \
+  ~/.vimrc \
+  ~/.ssh \
+  ~/.gitconfig \
+  ~/.config/Code  # VS Code 配置
+</code></pre>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">Docker 用户</strong>记得导出重要镜像:</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code class="language-bash" style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span># 查看本地镜像
+docker images
+
+# 导出需要的镜像
+docker save -o myimage.tar 镜像名:标签
+</code></pre>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">备份验证</h3>
+<p style="margin: 15px 0; word-wrap: break-word;">备份完成后,别急着删除原文件。<br>随机抽取几个重要文件,确认能正常打开和使用。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">建议保留两份备份</strong>:一份云端,一份本地硬盘。<br>硬盘可能坏,云盘可能倒闭,双重保险最稳妥。</p>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<h2 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 20px; border-bottom: 2px solid #2B579A; padding-bottom: 10px;">准备三:分区规划策略</h2>
+<p style="margin: 15px 0; word-wrap: break-word;">分区是新手最容易纠结的环节。这里给你三个方案,按需选择。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">方案一:简单方案(新手推荐)</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">适用场景</strong>:第一次装 Linux、硬盘空间较小(≤128GB)</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span>/        整个硬盘(除 swap)
+swap     与内存相当
+</code></pre>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">优点</strong>:简单,不用纠结<br><strong style="font-weight: bold; color: #333;">缺点</strong>:重装系统会丢失所有数据</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">方案二:推荐方案(日常使用)</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">适用场景</strong>:日常办公和开发</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span>EFI     512MB     (UEFI 启动必须)
+/       50GB      (系统和软件)
+/home   剩余空间  (个人数据)
+swap    8GB       (休眠需要)
+</code></pre>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">优点</strong>:重装系统不会丢失个人文件<br><strong style="font-weight: bold; color: #333;">缺点</strong>:需要提前规划空间</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">方案三:进阶方案(服务器/高级用户)</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">适用场景</strong>:服务器或对系统管理有要求的用户</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span>EFI     512MB
+/       30GB
+/home   剩余空间的60%
+/var    20GB      (日志和临时文件)
+swap    与内存相当
+</code></pre>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">优点</strong>:各分区独立,日志不会撑爆系统<br><strong style="font-weight: bold; color: #333;">缺点</strong>:规划复杂,空间利用率稍低</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">分区避坑指南</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">坑一:忘记 EFI 分区</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">UEFI 启动必须要有 EFI 分区,建议 512MB,格式为 FAT32。<br>如果忘记创建,系统可能无法启动。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">坑二:swap 太大或太小</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">传统建议是 swap 设为内存的 1-2 倍,但在 SSD 时代,这个规则已经过时。</p>
+<p style="margin: 15px 0; word-wrap: break-word;">现在的建议:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin: 5px 0;">8GB 以上内存:swap 设 4-8GB 即可</li>
+<li style="margin: 5px 0;">需要休眠功能:swap 设为与内存相当</li>
+</ul>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">坑三:/home 分区太小</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">很多软件的配置文件、缓存都在 ~/.config 和 ~/.cache 目录下。<br>如果 /home 分区太小,用久了会发现空间不够用。</p>
+<p style="margin: 15px 0; word-wrap: break-word;">建议至少预留 100GB 给 /home(如果你硬盘够大)。</p>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<h2 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 20px; border-bottom: 2px solid #2B579A; padding-bottom: 10px;">准备四:启动盘制作要点</h2>
+<p style="margin: 15px 0; word-wrap: break-word;">启动盘制作看似简单,但细节决定成败。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">工具选择</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">Windows 用户:Rufus(推荐)</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">优点:界面简洁,功能完善,支持 UEFI<br>下载:<a href="https://rufus.ie" style="color: #2B579A; text-decoration: none;">https://rufus.ie</a></p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">macOS/Linux 用户:balenaEtcher</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">优点:操作简单,界面美观<br>下载:<a href="https://www.balena.io/etcher/" style="color: #2B579A; text-decoration: none;">https://www.balena.io/etcher/</a></p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">多系统用户:Ventoy</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">优点:一个 U 盘装多个系统 ISO,无需重复格式化<br>官网:<a href="https://www.ventoy.net" style="color: #2B579A; text-decoration: none;">https://www.ventoy.net</a></p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">关键设置</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">1. 选择正确的分区方案</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">现代电脑基本都是 UEFI 启动,所以选择 GPT 分区方案。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">2. 关闭 Secure Boot</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">部分主板需要关闭 Secure Boot 才能启动 Linux。<br>具体方法各品牌主板不同,一般在 BIOS 的 Security 或 Boot 菜单中。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">3. 验证 ISO 校验和</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">下载完成后,一定要验证镜像完整性:</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code class="language-bash" style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span># 验证 SHA256 校验和
+sha256sum ubuntu-26.04-desktop-amd64.iso
+</code></pre>
+<p style="margin: 15px 0; word-wrap: break-word;">对比官网提供的校验和,完全一致才算下载成功。<br>这个步骤能避免因镜像损坏导致的各种奇怪问题。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">U 盘选择建议</h3>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin: 5px 0;">容量至少 8GB(推荐 16GB)</li>
+<li style="margin: 5px 0;">读写速度不要太慢,否则启动会很慢</li>
+<li style="margin: 5px 0;">使用 USB 3.0 接口的 U 盘体验更好</li>
+</ul>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<h2 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 20px; border-bottom: 2px solid #2B579A; padding-bottom: 10px;">准备五:安装后必做清单预览</h2>
+<p style="margin: 15px 0; word-wrap: break-word;">别以为装完系统就万事大吉了,还有一堆事等着你。</p>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">安装后第一步</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">更新系统</strong>:</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code class="language-bash" style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span>sudo apt update
+sudo apt upgrade -y
+</code></pre>
+<p style="margin: 15px 0; word-wrap: break-word;">这步能修复已知问题,更新安全补丁。</p>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">安装常用软件</strong>:</p>
+<p style="margin: 15px 0; word-wrap: break-word;">每个人需要的软件不同,但有一些是通用的:</p>
+<pre style="margin: 15px 0; padding: 15px; background-color: #282c34; border-radius: 6px; overflow-x: auto; position: relative;"><span style="position: absolute; top: 12px; left: 12px; width: 12px; height: 12px; background-color: #ff5f56; border-radius: 50%; box-shadow: 20px 0 0 #ffbd2e, 40px 0 0 #27c93f;"></span><code class="language-bash" style="background-color: #f5f5f5; border-radius: 3px; font-family: Consolas, Monaco, 'Courier New', monospace; padding: 0; background: none; color: #abb2bf; font-size: 14px; line-height: 1.6; display: block;"><span style="display: block; height: 20px;"></span># 中文输入法
+sudo apt install ibus-pinyin
+
+# 压缩工具
+sudo apt install p7zip-full unzip
+
+# 多媒体编解码器
+sudo apt install ubuntu-restricted-extras
+
+# Git
+sudo apt install git
+
+# 基础开发工具
+sudo apt install build-essential
+</code></pre>
+<h3 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 18px;">提前准备</h3>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">列出自己的软件清单</strong>:</p>
+<p style="margin: 15px 0; word-wrap: break-word;">把你在 Windows 上常用的软件列出来,逐一找到 Linux 替代品:</p>
+<table style="margin: 15px 0; border-collapse: collapse; width: 100%;" width="100%"><thead><tr>
+<th align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #f5f5f5; font-weight: bold;" bgcolor="#f5f5f5">Windows 软件</th>
+<th align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left; background-color: #f5f5f5; font-weight: bold;" bgcolor="#f5f5f5">Linux 替代品</th>
+</tr>
+</thead><tbody><tr>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Office</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">LibreOffice、WPS</td>
+</tr>
+<tr style="background-color: #fafafa;" bgcolor="#fafafa">
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Photoshop</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">GIMP、Krita</td>
+</tr>
+<tr>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Notepad++</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">VS Code、Sublime Text</td>
+</tr>
+<tr style="background-color: #fafafa;" bgcolor="#fafafa">
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">utools</td>
+<td align="left" style="padding: 10px; border: 1px solid #ddd; text-align: left;">Albert、Ulauncher</td>
+</tr>
+</tbody></table><p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">记录网络配置</strong>:</p>
+<p style="margin: 15px 0; word-wrap: break-word;">如果你用的是静态 IP 或特殊网络配置,记得提前记录:</p>
+<ul style="margin: 15px 0; padding-left: 25px;">
+<li style="margin: 5px 0;">IP 地址</li>
+<li style="margin: 5px 0;">网关</li>
+<li style="margin: 5px 0;">DNS 服务器</li>
+<li style="margin: 5px 0;">代理设置</li>
+</ul>
+<p style="margin: 15px 0; word-wrap: break-word;">这些信息重装后需要重新配置。</p>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<h2 style="margin-top: 25px; margin-bottom: 15px; font-weight: bold; line-height: 1.4; font-size: 20px; border-bottom: 2px solid #2B579A; padding-bottom: 10px;">总结</h2>
+<p style="margin: 15px 0; word-wrap: break-word;">安装 Ubuntu 26.04 前的 5 个关键准备:</p>
+<ol style="margin: 15px 0; padding-left: 25px;">
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">硬件兼容性自检</strong>:避免装完发现驱动不能用</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">数据备份</strong>:双重备份最稳妥</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">分区规划</strong>:/home 单独分区能救命</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">启动盘制作</strong>:验证校验和,选择正确分区方案</li>
+<li style="margin: 5px 0;"><strong style="font-weight: bold; color: #333;">安装后清单</strong>:提前准备软件列表和网络配置</li>
+</ol>
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">准备工作做得越充分,安装过程就越顺利。</strong></p>
+<p style="margin: 15px 0; word-wrap: break-word;">与其在遇到问题时焦头烂额,不如花半小时把准备工作做扎实。</p>
+<hr style="margin: 20px 0; border: none; border-top: 1px solid #eee;">
+<p style="margin: 15px 0; word-wrap: break-word;"><strong style="font-weight: bold; color: #333;">你在安装 Linux 时遇到过哪些坑?</strong> 欢迎在评论区分享你的经验。</p>
+<p style="margin: 15px 0; word-wrap: break-word;">如果这篇文章对你有帮助,别忘了点赞收藏,以后升级系统时还能翻出来看看。</p>
+
+</body>
+</html>
