@@ -157,3 +157,79 @@ d:/projects/italks.github.io/docs/mp/Ubuntu/
 - **2026-03-22**：生成Ubuntu输入法终极指南文章
 - **2026-03-23**：生成GNOME 50发布文章
 - **2026-03-24**：完成小红书账号定位诊断，输出运营策略优化方案
+- **2026-03-25**：
+  - 生成VSCode 1.112 Linux开发者效率提升指南
+  - 开发md-wechat排版技能，支持Markdown转微信公众号HTML
+  - 创建Ubuntu公众号统一排版配置文件(md-wechat.json)
+
+## md-wechat排版技能
+
+### 技能位置
+`C:\Users\zhoulizhi\.workbuddy\skills\md-wechat\`
+
+### 核心功能
+- Markdown转微信公众号HTML
+- 支持自定义主题和样式配置
+- 代码语法高亮
+- 表格美化
+- 引用块样式定制
+
+### 使用方法
+```bash
+# 基础用法
+node ~/.workbuddy/skills/md-wechat/scripts/convert.js <input.md> -o <output.html>
+
+# 使用配置文件
+node ~/.workbuddy/skills/md-wechat/scripts/convert.js <input.md> -o <output.html> --config <config.json>
+
+# 示例（Ubuntu公众号）
+node ~/.workbuddy/skills/md-wechat/scripts/convert.js "docs/mp/Ubuntu/publish/2026/03/article.md" -o "docs/mp/Ubuntu/publish/2026/03/article-wechat.html" --config "docs/mp/Ubuntu/md-wechat.json"
+```
+
+### 配置文件
+- 默认配置：`C:\Users\zhoulizhi\.workbuddy\skills\md-wechat\md-config.json`
+- Ubuntu配置：`d:/projects/italks.github.io/docs/mp/Ubuntu/md-wechat.json`
+
+### 主题色系
+- 主色：Ubuntu橙色(#E95420)
+- 代码块：深色主题(#282c34)
+- 表头：橙色背景(#E95420)
+
+### 微信公众号发布流程
+
+#### 自动上传草稿
+```bash
+# 使用素材库默认封面
+node ~/.workbuddy/skills/md-wechat/scripts/get-materials.js \
+  "docs/mp/Ubuntu/config.json" \
+  "article1.html" "article2.html"
+```
+
+#### 注意事项
+- 内容限制：单篇文章20000字符
+- 封面要求：使用素材库中已有的PNG/JPG图片
+- API要求：
+  - IP白名单已配置
+  - 需要草稿箱管理接口权限
+  - AppID和AppSecret在`config.json`中
+
+#### 手动发布备选方案
+如API上传失败,可手动操作:
+1. 打开HTML文件 → 全选复制
+2. 登录微信公众号后台
+3. 新建图文 → 粘贴内容
+4. 上传封面图 → 保存草稿
+
+#### 常见问题与解决方案
+- **内容丢失**：`parseHtmlFile()`不要处理空白字符，保留原始HTML结构
+- **文章合并**：每篇文章单独调用`addDraft()`API，传入单篇文章数组
+- **内容过长+标签不闭合**：使用`truncateHtml()`智能截断
+  - 在完整块级元素处截断（</p>, </div>, </h1-6>, </li>, </ul>, </ol>, </table>, </pre>, </blockquote>）
+  - 自动统计并闭合未关闭的HTML标签
+  - 添加截断提示框（橙色背景+居中文字）
+  - 确保最终长度在20000字符限制内
+  - ⚠️ **已暂停使用**：截断影响阅读体验
+
+#### 当前发布方案
+- **手动复制粘贴**：打开排版后的HTML文件 → 全选复制 → 粘贴到微信公众号后台
+- **原因**：避免20000字符限制导致的内容截断
