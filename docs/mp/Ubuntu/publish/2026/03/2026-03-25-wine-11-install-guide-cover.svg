@@ -1,0 +1,116 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e14;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1c1f26;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- Wine红渐变 -->
+    <linearGradient id="wineGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e63946;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#b22234;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 性能渐变 -->
+    <linearGradient id="perfGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00c9ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00ff9f;stop-opacity:1" />
+    </linearGradient>
+
+    <!-- 柔和发光 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGradient)"/>
+
+  <!-- 左侧：Wine Logo -->
+  <g transform="translate(200, 250)">
+    <!-- 酒杯 - 更标准的形状 -->
+    <g filter="url(#glow)">
+      <!-- 杯口 -->
+      <ellipse cx="0" cy="0" rx="50" ry="15" fill="none" stroke="#e63946" stroke-width="3"/>
+
+      <!-- 杯身左半边 -->
+      <path d="M -50 0 Q -55 60 -40 120 L -25 120"
+            fill="none" stroke="#e63946" stroke-width="3"/>
+
+      <!-- 杯身右半边 -->
+      <path d="M 50 0 Q 55 60 40 120 L 25 120"
+            fill="none" stroke="#e63946" stroke-width="3"/>
+
+      <!-- 酒液 -->
+      <path d="M -45 20 Q -50 70 -35 110 L 35 110 Q 50 70 45 20 Z"
+            fill="url(#wineGradient)" opacity="0.8"/>
+
+      <!-- 杯颈 -->
+      <rect x="-8" y="120" width="16" height="40" fill="#b22234"/>
+
+      <!-- 杯座 -->
+      <ellipse cx="0" cy="165" rx="45" ry="12" fill="#b22234"/>
+    </g>
+
+    <!-- 版本号 -->
+    <text x="0" y="220" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-weight="bold" font-size="56">
+      11.0
+    </text>
+  </g>
+
+  <!-- 右上：主标题 -->
+  <g transform="translate(650, 100)">
+    <text x="0" y="0" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-weight="bold" font-size="36">
+      Wine 11.0
+    </text>
+    <text x="0" y="40" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="18">
+      2026.01.13 发布
+    </text>
+  </g>
+
+  <!-- 右中上：NTSYNC -->
+  <g transform="translate(650, 200)">
+    <rect x="-150" y="0" width="300" height="60" rx="8" fill="#00c9ff" opacity="0.1" stroke="#00c9ff" stroke-width="2"/>
+    <text x="0" y="25" text-anchor="middle" fill="url(#perfGradient)" font-family="Arial, sans-serif" font-weight="bold" font-size="24">
+      🚀 NTSYNC 内核级同步
+    </text>
+    <text x="0" y="48" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="14">
+      性能暴涨 678%
+    </text>
+  </g>
+
+  <!-- 右中下：WoW64 -->
+  <g transform="translate(650, 290)">
+    <rect x="-150" y="0" width="300" height="60" rx="8" fill="#00ff9f" opacity="0.1" stroke="#00ff9f" stroke-width="2"/>
+    <text x="0" y="25" text-anchor="middle" fill="#00ff9f" font-family="Arial, sans-serif" font-weight="bold" font-size="24">
+      ✓ WoW64 完整支持
+    </text>
+    <text x="0" y="48" text-anchor="middle" fill="#888" font-family="Arial, sans-serif" font-size="14">
+      无需安装 32 位库
+    </text>
+  </g>
+
+  <!-- 右下：实测数据 -->
+  <g transform="translate(650, 380)">
+    <rect x="-150" y="0" width="300" height="50" rx="8" fill="#e63946" opacity="0.1" stroke="#e63946" stroke-width="2"/>
+    <text x="0" y="22" text-anchor="middle" fill="#fff" font-family="Arial, sans-serif" font-size="16">
+      Dirt 3 实测
+    </text>
+    <text x="0" y="42" text-anchor="middle" fill="#00ff9f" font-family="Arial, sans-serif" font-weight="bold" font-size="18">
+      110 FPS → 860 FPS
+    </text>
+  </g>
+
+  <!-- 底部信息栏 -->
+  <g transform="translate(0, 450)">
+    <rect width="900" height="50" fill="#000" opacity="0.3"/>
+    <text x="450" y="32" text-anchor="middle" fill="#666" font-family="Arial, sans-serif" font-size="15">
+      Kernel 6.14+ · Vulkan 1.4 · Wayland · Linux/macOS/FreeBSD
+    </text>
+  </g>
+</svg>
