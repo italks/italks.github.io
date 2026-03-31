@@ -1,0 +1,167 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <!-- 主背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3C72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A5298;stop-opacity:1" />
+    </linearGradient>
+    <!-- 卡片高亮渐变 -->
+    <linearGradient id="cardGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFCB05;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#FFCB05;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="cardGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#54C1E0;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#54C1E0;stop-opacity:0.05" />
+    </linearGradient>
+    <linearGradient id="cardGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B6B;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#FF6B6B;stop-opacity:0.05" />
+    </linearGradient>
+    <!-- 装饰线渐变 -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FFCB05;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFCB05;stop-opacity:0" />
+    </linearGradient>
+    <!-- 光晕效果 -->
+    <radialGradient id="glowGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4A90D9;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#1E3C72;stop-opacity:0" />
+    </radialGradient>
+    <!-- 剪切路径 -->
+    <clipPath id="roundRect">
+      <rect x="0" y="0" width="900" height="500" rx="12" ry="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)" rx="12" ry="12"/>
+
+  <!-- 装饰性背景圆 -->
+  <circle cx="750" cy="80" r="180" fill="url(#glowGrad)" opacity="0.6"/>
+  <circle cx="820" cy="420" r="120" fill="url(#glowGrad)" opacity="0.4"/>
+
+  <!-- 网格装饰线 -->
+  <g opacity="0.06" stroke="#FFFFFF" stroke-width="1">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- === 左侧文字区域（60%） === -->
+
+  <!-- 标签 -->
+  <rect x="40" y="42" width="140" height="30" rx="4" fill="#FFCB05" opacity="0.9"/>
+  <text x="110" y="62" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" font-weight="bold" fill="#1E3C72">2026 技术选型</text>
+
+  <!-- 主标题 -->
+  <text x="40" y="120" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF">跨平台开发</text>
+  <text x="40" y="166" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF">大洗牌</text>
+
+  <!-- 黄色强调线 -->
+  <rect x="40" y="178" width="200" height="4" rx="2" fill="url(#lineGrad)"/>
+
+  <!-- 副标题 -->
+  <text x="40" y="220" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" fill="#A8C8F0">UniAppX  vs  Flutter  vs  React Native</text>
+
+  <!-- 核心问题标语 -->
+  <text x="40" y="268" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="bold" fill="#FFCB05">你的项目该怎么选？</text>
+
+  <!-- 关键要点列表 -->
+  <circle cx="52" cy="315" r="4" fill="#FFCB05"/>
+  <text x="66" y="320" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#D0E8FF">鸿蒙 NEXT 彻底脱离 Android</text>
+
+  <circle cx="52" cy="348" r="4" fill="#FFCB05"/>
+  <text x="66" y="353" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#D0E8FF">三平台适配成本全面对比</text>
+
+  <circle cx="52" cy="381" r="4" fill="#FFCB05"/>
+  <text x="66" y="386" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="14" fill="#D0E8FF">5分钟决策树找到你的答案</text>
+
+  <!-- 底部品牌标签 -->
+  <text x="40" y="460" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#7AA8D0">移动APP开发  |  技术实战 · 行业解决方案</text>
+
+  <!-- === 右侧图示区域（40%） === -->
+
+  <!-- 框架对比卡片 - UniAppX -->
+  <rect x="500" y="55" width="180" height="115" rx="10" fill="url(#cardGrad1)" stroke="#FFCB05" stroke-width="1.5" opacity="0.9"/>
+  <!-- UniAppX Logo图示 -->
+  <rect x="516" y="72" width="36" height="36" rx="6" fill="#FFCB05" opacity="0.9"/>
+  <text x="534" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1E3C72">U</text>
+  <text x="562" y="85" font-family="'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">UniAppX</text>
+  <text x="562" y="102" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#FFCB05">国内首选 ✓</text>
+  <!-- 平台标签 -->
+  <rect x="516" y="118" width="50" height="18" rx="3" fill="#1a3060"/>
+  <text x="541" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">Android</text>
+  <rect x="572" y="118" width="32" height="18" rx="3" fill="#1a3060"/>
+  <text x="588" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">iOS</text>
+  <rect x="610" y="118" width="42" height="18" rx="3" fill="#1a3060"/>
+  <text x="631" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CF9FFE">鸿蒙 ✓</text>
+  <!-- 费用标签 -->
+  <text x="520" y="158" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#A8C8F0">成本 ¥30-50万</text>
+
+  <!-- 框架对比卡片 - Flutter -->
+  <rect x="695" y="55" width="180" height="115" rx="10" fill="url(#cardGrad2)" stroke="#54C1E0" stroke-width="1.5" opacity="0.9"/>
+  <!-- Flutter 图示 -->
+  <polygon points="711,93 729,72 747,93 729,114" fill="#54C1E0" opacity="0.9"/>
+  <text x="757" y="85" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="#FFFFFF">Flutter</text>
+  <text x="757" y="102" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#54C1E0">精品首选 ✓</text>
+  <!-- 平台标签 -->
+  <rect x="711" y="118" width="50" height="18" rx="3" fill="#1a3060"/>
+  <text x="736" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">Android</text>
+  <rect x="767" y="118" width="32" height="18" rx="3" fill="#1a3060"/>
+  <text x="783" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">iOS</text>
+  <rect x="805" y="118" width="42" height="18" rx="3" fill="#322060"/>
+  <text x="826" y="131" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#CF9FFE">鸿蒙~</text>
+  <!-- 费用标签 -->
+  <text x="715" y="158" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#A8C8F0">成本 ¥50-80万</text>
+
+  <!-- 框架对比卡片 - React Native -->
+  <rect x="500" y="190" width="180" height="115" rx="10" fill="url(#cardGrad3)" stroke="#FF6B6B" stroke-width="1.5" opacity="0.9"/>
+  <!-- RN 图示 -->
+  <circle cx="534" cy="247" r="20" fill="none" stroke="#61DAFB" stroke-width="3"/>
+  <circle cx="534" cy="247" r="5" fill="#61DAFB"/>
+  <text x="562" y="240" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#FFFFFF">React Native</text>
+  <text x="562" y="257" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#FF8F8F">出海首选 ✓</text>
+  <!-- 平台标签 -->
+  <rect x="516" y="272" width="50" height="18" rx="3" fill="#1a3060"/>
+  <text x="541" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">Android</text>
+  <rect x="572" y="272" width="32" height="18" rx="3" fill="#1a3060"/>
+  <text x="588" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">iOS</text>
+  <rect x="610" y="272" width="42" height="18" rx="3" fill="#3a2020"/>
+  <text x="631" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FF9F9F">鸿蒙✗</text>
+  <!-- 费用标签 -->
+  <text x="520" y="295" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#A8C8F0">成本 ¥40-70万</text>
+
+  <!-- 决策标签 -->
+  <rect x="695" y="190" width="180" height="115" rx="10" fill="#0d1f3c" stroke="#FFCB05" stroke-width="2" stroke-dasharray="5,3" opacity="0.9"/>
+  <text x="785" y="225" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" fill="#FFCB05">核心建议</text>
+  <text x="785" y="252" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#FFFFFF">国内用户</text>
+  <text x="785" y="270" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" font-weight="bold" fill="#FFCB05">→ UniAppX</text>
+  <text x="785" y="290" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#FFFFFF">精品/海外</text>
+  <text x="785" y="308" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" font-weight="bold" fill="#54C1E0">→ Flutter</text>
+
+  <!-- 鸿蒙警示条 -->
+  <rect x="500" y="325" width="375" height="40" rx="6" fill="#FFCB05" opacity="0.15"/>
+  <rect x="500" y="325" width="4" height="40" rx="2" fill="#FFCB05"/>
+  <text x="516" y="340" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#FFCB05">⚠ 鸿蒙提醒</text>
+  <text x="516" y="358" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#D0E8FF">中国市场鸿蒙用户超 3500 万，适配不可忽视</text>
+
+  <!-- AI集成提示 -->
+  <rect x="500" y="380" width="375" height="40" rx="6" fill="#2A5298" opacity="0.5"/>
+  <text x="516" y="395" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#54C1E0">🤖 2026 新变量</text>
+  <text x="516" y="413" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#D0E8FF">APP 内置 AI 能力已成标配，框架的 AI SDK 支持是关键</text>
+
+  <!-- 底部信息栏 -->
+  <rect x="500" y="440" width="375" height="40" rx="6" fill="#1a2e5c" opacity="0.7"/>
+  <text x="516" y="455" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="11" fill="#7AA8D0">周四技术干货</text>
+  <text x="516" y="472" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#A8C8F0">用代码构建商业护城河</text>
+  <!-- 日期 -->
+  <text x="855" y="455" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#5a88b0">2026.03.26</text>
+  <text x="855" y="472" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#5a88b0">Thursday</text>
+</svg>
