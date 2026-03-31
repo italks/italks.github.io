@@ -1,0 +1,76 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0505"/>
+      <stop offset="100%" style="stop-color:#0a0a15"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- 顶部红色警示条 -->
+  <rect x="0" y="0" width="900" height="6" fill="#dc2626"/>
+
+  <!-- 左侧：axios 包图标 -->
+  <g transform="translate(120, 180)">
+    <!-- 外框 -->
+    <rect x="-80" y="-80" width="160" height="160" rx="12" fill="#1e1e2e" stroke="#dc2626" stroke-width="2"/>
+    <!-- npm 标志 -->
+    <rect x="-55" y="-55" width="110" height="50" rx="4" fill="#cb3837"/>
+    <text x="0" y="-22" font-family="monospace" font-size="24" font-weight="bold" fill="white" text-anchor="middle">npm</text>
+    <!-- axios 文字 -->
+    <text x="0" y="22" font-family="'Courier New', monospace" font-size="32" font-weight="bold" fill="#e5e5e5" text-anchor="middle">axios</text>
+    <!-- 被污染标记 -->
+    <text x="0" y="50" font-family="monospace" font-size="14" fill="#dc2626" text-anchor="middle">@1.14.1 ⚠</text>
+    <!-- 红叉 -->
+    <circle cx="55" cy="-55" r="18" fill="#dc2626"/>
+    <path d="M48,-62 L62,-48 M48,-48 L62,-62" stroke="white" stroke-width="3" stroke-linecap="round"/>
+  </g>
+
+  <!-- 中间：向下箭头 -->
+  <g transform="translate(120, 355)">
+    <path d="M0,-15 L0,15 M-12,3 L0,15 L12,3" stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- 右侧信息区 -->
+  <!-- 大标题 -->
+  <text x="540" y="140" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="42" font-weight="900" fill="white" text-anchor="middle" filter="url(#glow)">axios 遭供应链投毒</text>
+
+  <!-- 副标题 -->
+  <text x="540" y="180" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#fca5a5" text-anchor="middle">周下载 3 亿次的 npm 包植入跨平台 RAT 木马</text>
+
+  <!-- 分隔线 -->
+  <line x1="320" y1="210" x2="760" y2="210" stroke="#dc2626" stroke-width="1" opacity="0.5"/>
+
+  <!-- 版本信息卡片 -->
+  <!-- 恶意版本 -->
+  <g transform="translate(350, 250)">
+    <rect width="170" height="80" rx="8" fill="#1c0808" stroke="#dc2626" stroke-width="1.5"/>
+    <text x="85" y="28" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#f87171" text-anchor="middle" font-weight="bold">❌ 恶意版本</text>
+    <text x="85" y="52" font-family="monospace" font-size="14" fill="#dc2626" text-anchor="middle">axios@1.14.1</text>
+    <text x="85" y="70" font-family="monospace" font-size="14" fill="#dc2626" text-anchor="middle">axios@0.30.4</text>
+  </g>
+
+  <!-- 安全版本 -->
+  <g transform="translate(540, 250)">
+    <rect width="170" height="80" rx="8" fill="#051a0a" stroke="#22c55e" stroke-width="1.5"/>
+    <text x="85" y="28" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="13" fill="#4ade80" text-anchor="middle" font-weight="bold">✅ 安全版本</text>
+    <text x="85" y="52" font-family="monospace" font-size="14" fill="#22c55e" text-anchor="middle">axios@1.14.0</text>
+    <text x="85" y="70" font-family="monospace" font-size="14" fill="#22c55e" text-anchor="middle">axios@0.30.3</text>
+  </g>
+
+  <!-- 检测命令 -->
+  <g transform="translate(320, 365)">
+    <rect width="440" height="36" rx="6" fill="#0f0f1a" stroke="#333" stroke-width="1"/>
+    <text x="15" y="24" font-family="monospace" font-size="12" fill="#6b7280">$</text>
+    <text x="30" y="24" font-family="monospace" font-size="12" fill="#22c55e">npm list axios | grep -E "1\.14\.1|0\.30\.4"</text>
+  </g>
+
+  <!-- 底部品牌 -->
+  <text x="850" y="475" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="11" fill="#4b5563" text-anchor="end">AppTalks</text>
+</svg>

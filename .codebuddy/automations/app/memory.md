@@ -1,6 +1,19 @@
 # 移动APP开发公众号运营 - 执行记录
 
 ## 执行时间
+2026年3月31日（周二）17:12 — axios 供应链攻击紧急预警（手动触发）
+
+### 热点：axios 供应链投毒
+- 恶意版本：axios@1.14.1 / axios@0.30.4
+- 安全版本：axios@1.14.0 / axios@0.30.3
+- 攻击手法：劫持维护者账号 → 植入恶意依赖 plain-crypto-js@4.2.1 → postinstall 钩子 → RAT 木马
+- C2：sfrclak[.]com:8000 (142.11.206.73)
+- 生成文章：`2026-03-31-axios-supply-chain-attack-emergency.md`
+- 生成封面：`images/2026-03-31-axios-supply-chain-cover.svg`
+
+---
+
+## 执行时间
 2026年3月31日（周二）
 
 ### 热点抓取总结
