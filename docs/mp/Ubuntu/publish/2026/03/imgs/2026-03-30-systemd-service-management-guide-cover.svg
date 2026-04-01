@@ -1,0 +1,108 @@
+<svg width="900" height="500" viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#16213e;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="orangeGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="greenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4CAF50;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E7D32;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="2" dy="4" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGradient)"/>
+  
+  <!-- 装饰性几何图形 -->
+  <circle cx="100" cy="150" r="180" fill="#E95420" opacity="0.08"/>
+  <circle cx="820" cy="350" r="220" fill="#4CAF50" opacity="0.06"/>
+  <rect x="700" y="50" width="150" height="150" rx="10" fill="#E95420" opacity="0.1" transform="rotate(45, 775, 125)"/>
+  
+  <!-- Systemd Logo风格图标 -->
+  <g transform="translate(80, 180)">
+    <!-- 外圈 -->
+    <circle cx="0" cy="0" r="55" fill="none" stroke="#E95420" stroke-width="4" opacity="0.8"/>
+    <!-- 内圈 -->
+    <circle cx="0" cy="0" r="40" fill="none" stroke="#FF6B35" stroke-width="3" opacity="0.6"/>
+    <!-- 齿轮效果 -->
+    <circle cx="0" cy="0" r="25" fill="#E95420" opacity="0.3"/>
+    <!-- 中心点 -->
+    <circle cx="0" cy="0" r="8" fill="#E95420" filter="url(#glow)"/>
+    <!-- 辐射线 -->
+    <line x1="0" y1="-30" x2="0" y2="-50" stroke="#FF6B35" stroke-width="3" opacity="0.8"/>
+    <line x1="30" y1="0" x2="50" y2="0" stroke="#FF6B35" stroke-width="3" opacity="0.8"/>
+    <line x1="0" y1="30" x2="0" y2="50" stroke="#FF6B35" stroke-width="3" opacity="0.8"/>
+    <line x1="-30" y1="0" x2="-50" y2="0" stroke="#FF6B35" stroke-width="3" opacity="0.8"/>
+  </g>
+  
+  <!-- 实战标签 -->
+  <rect x="30" y="30" width="80" height="40" rx="5" fill="url(#greenGradient)" filter="url(#shadow)"/>
+  <text x="70" y="58" font-family="Arial, sans-serif" font-size="20" font-weight="bold" fill="white" text-anchor="middle">实战</text>
+  
+  <!-- 主标题 -->
+  <text x="480" y="160" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="white" text-anchor="middle" filter="url(#shadow)">Systemd</text>
+  <text x="480" y="220" font-family="Arial, sans-serif" font-size="68" font-weight="bold" fill="white" text-anchor="middle" filter="url(#shadow)">服务管理</text>
+  
+  <!-- 副标题 -->
+  <text x="480" y="270" font-family="Arial, sans-serif" font-size="28" fill="url(#orangeGradient)" text-anchor="middle">从入门到精通 · 掌握Linux系统核心技能</text>
+  
+  <!-- 分隔线 -->
+  <rect x="180" y="295" width="540" height="3" fill="url(#orangeGradient)" rx="1.5"/>
+  
+  <!-- 核心特性标签 - 第一行 -->
+  <g transform="translate(120, 330)">
+    <rect x="0" y="0" width="150" height="45" rx="8" fill="#2C2C2C" stroke="#E95420" stroke-width="2"/>
+    <text x="75" y="20" font-family="Arial, sans-serif" font-size="13" fill="#E95420" text-anchor="middle">⚡ systemctl命令</text>
+    <text x="75" y="37" font-family="Arial, sans-serif" font-size="11" fill="#999" text-anchor="middle">服务管理五件套</text>
+  </g>
+  
+  <g transform="translate(290, 330)">
+    <rect x="0" y="0" width="150" height="45" rx="8" fill="#2C2C2C" stroke="#E95420" stroke-width="2"/>
+    <text x="75" y="20" font-family="Arial, sans-serif" font-size="13" fill="#E95420" text-anchor="middle">📝 Unit文件</text>
+    <text x="75" y="37" font-family="Arial, sans-serif" font-size="11" fill="#999" text-anchor="middle">配置三段结构</text>
+  </g>
+  
+  <g transform="translate(460, 330)">
+    <rect x="0" y="0" width="150" height="45" rx="8" fill="#2C2C2C" stroke="#E95420" stroke-width="2"/>
+    <text x="75" y="20" font-family="Arial, sans-serif" font-size="13" fill="#E95420" text-anchor="middle">🔧 自定义服务</text>
+    <text x="75" y="37" font-family="Arial, sans-serif" font-size="11" fill="#999" text-anchor="middle">Python应用实战</text>
+  </g>
+  
+  <g transform="translate(630, 330)">
+    <rect x="0" y="0" width="150" height="45" rx="8" fill="#2C2C2C" stroke="#E95420" stroke-width="2"/>
+    <text x="75" y="20" font-family="Arial, sans-serif" font-size="13" fill="#E95420" text-anchor="middle">🔍 故障排查</text>
+    <text x="75" y="37" font-family="Arial, sans-serif" font-size="11" fill="#999" text-anchor="middle">10种常见错误</text>
+  </g>
+  
+  <!-- 底部信息栏 -->
+  <rect x="0" y="440" width="900" height="60" fill="#1a1a2e" opacity="0.8"/>
+  <text x="50" y="475" font-family="Arial, sans-serif" font-size="16" fill="#4CAF50">📊 启动速度提升70%+</text>
+  <text x="280" y="475" font-family="Arial, sans-serif" font-size="16" fill="#FF6B35">🎯 覆盖95%发行版</text>
+  <text x="510" y="475" font-family="Arial, sans-serif" font-size="16" fill="#FF6B35">⏱️ 阅读时长8分钟</text>
+  
+  <!-- UbuntuNews 品牌标识 -->
+  <text x="850" y="475" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#E95420" text-anchor="end">UbuntuNews</text>
+  
+  <!-- 终端命令装饰 -->
+  <g transform="translate(680, 80)">
+    <rect x="0" y="0" width="180" height="100" rx="5" fill="#1a1a2e" stroke="#4CAF50" stroke-width="1.5" opacity="0.9"/>
+    <text x="15" y="25" font-family="monospace" font-size="11" fill="#4CAF50">$ systemctl start nginx</text>
+    <text x="15" y="45" font-family="monospace" font-size="11" fill="#4CAF50">$ systemctl status nginx</text>
+    <text x="15" y="65" font-family="monospace" font-size="11" fill="#4CAF50">$ systemctl enable nginx</text>
+    <text x="15" y="85" font-family="monospace" font-size="11" fill="#999"># 服务管理五件套</text>
+  </g>
+</svg>

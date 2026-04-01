@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif">
+  <defs>
+    <!-- 主背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1b3e;stop-opacity:1" />
+      <stop offset="60%" style="stop-color:#1E3C72;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2A5298;stop-opacity:1" />
+    </linearGradient>
+    <!-- 苹果logo渐变 -->
+    <linearGradient id="appleGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#a8d8ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4da6e8;stop-opacity:1" />
+    </linearGradient>
+    <!-- AI能量光晕 -->
+    <radialGradient id="aiGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#FFCB05;stop-opacity:0.35" />
+      <stop offset="100%" style="stop-color:#FFCB05;stop-opacity:0" />
+    </radialGradient>
+    <!-- 网格辅助线 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.2" stroke-opacity="0.07"/>
+    </pattern>
+    <!-- Siri波纹效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="phoneClip">
+      <rect x="0" y="0" width="900" height="500" rx="0"/>
+    </clipPath>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+
+  <!-- 右侧装饰性光晕 -->
+  <ellipse cx="680" cy="250" rx="200" ry="200" fill="url(#aiGlow)"/>
+
+  <!-- ========== 左侧主文案区域 ========== -->
+  
+  <!-- WWDC26 标签 -->
+  <rect x="40" y="45" width="140" height="32" rx="6" fill="#FFCB05"/>
+  <text x="110" y="66" text-anchor="middle" font-size="15" font-weight="bold" fill="#1E3C72">WWDC26 官宣</text>
+
+  <!-- 主标题：大字冲击 -->
+  <text x="40" y="130" font-size="52" font-weight="bold" fill="#FFFFFF" letter-spacing="-1">iOS 27</text>
+  <text x="40" y="190" font-size="52" font-weight="bold" fill="#FFCB05" letter-spacing="-1">+升级版 Siri</text>
+  
+
+  <!-- 日期和倒计时 -->
+  <rect x="40" y="395" width="340" height="50" rx="8" fill="#ffffff" fill-opacity="0.07" stroke="#ffffff" stroke-opacity="0.15" stroke-width="1"/>
+  <text x="60" y="416" font-size="13" fill="#8ab4e8">📅 WWDC26 开幕倒计时</text>
+  <text x="60" y="436" font-size="13" fill="#FFCB05" font-weight="bold">2026年6月9日 · 距今约 70 天</text>
+
+  <!-- 底部品牌 -->
+  <text x="40" y="480" font-size="13" fill="#5a7db0">移动APP开发 | 技术实战 · 行业解决方案</text>
+
+  <!-- ========== 右侧 iPhone 插图 ========== -->
+  
+  <!-- iPhone 外壳 -->
+  <rect x="570" y="50" width="230" height="400" rx="36" fill="#1a1a2e" stroke="#4a6fa5" stroke-width="2.5"/>
+  <rect x="580" y="60" width="210" height="380" rx="28" fill="#0f1322"/>
+  
+  <!-- 刘海/灵动岛 -->
+  <rect x="660" y="70" width="90" height="24" rx="12" fill="#1a1a2e"/>
+  
+  <!-- 手机屏幕内容 - Siri AI界面 -->
+  <!-- 顶部状态栏 -->
+  <text x="595" y="104" font-size="11" fill="#8ab4e8">9:41</text>
+  <text x="762" y="104" font-size="11" fill="#8ab4e8">●●●</text>
+  
+  <!-- Siri 波纹动画圆 (静态表示) -->
+  <circle cx="685" cy="175" r="55" fill="none" stroke="#4da6e8" stroke-width="1.5" stroke-opacity="0.2"/>
+  <circle cx="685" cy="175" r="42" fill="none" stroke="#4da6e8" stroke-width="2" stroke-opacity="0.35"/>
+  <circle cx="685" cy="175" r="30" fill="none" stroke="#FFCB05" stroke-width="2.5" stroke-opacity="0.55"/>
+  <circle cx="685" cy="175" r="19" fill="#FFCB05" fill-opacity="0.15"/>
+  
+  <!-- Siri 麦克风图标 -->
+  <rect x="679" y="158" width="12" height="18" rx="6" fill="#FFCB05" fill-opacity="0.9"/>
+  <path d="M 672 172 Q 672 182 685 182 Q 698 182 698 172" fill="none" stroke="#FFCB05" stroke-width="2" stroke-opacity="0.9"/>
+  <line x1="685" y1="182" x2="685" y2="188" stroke="#FFCB05" stroke-width="2" stroke-opacity="0.9"/>
+  <line x1="679" y1="188" x2="691" y2="188" stroke="#FFCB05" stroke-width="2" stroke-opacity="0.9"/>
+  
+  <!-- Siri 文字提示 -->
+  <text x="685" y="218" text-anchor="middle" font-size="12" fill="#a8d8ff" font-weight="bold">Hi，我是新 Siri</text>
+  <text x="685" y="234" text-anchor="middle" font-size="10" fill="#6a8fc8">跨 App 智能 Agent</text>
+
+  <!-- 分隔线 -->
+  <line x1="595" y1="248" x2="775" y2="248" stroke="#2a4a7a" stroke-width="1"/>
+
+  <!-- App列表（模拟被调用的App） -->
+  <text x="605" y="268" font-size="11" fill="#8ab4e8">Siri 可调用的 App</text>
+  
+  <!-- App Intents 接入状态 -->
+  <rect x="600" y="278" width="170" height="28" rx="5" fill="#0d2040"/>
+  <circle cx="614" cy="292" r="8" fill="#4CAF50" fill-opacity="0.8"/>
+  <text x="628" y="296" font-size="11" fill="#a8d8ff">已接入 App Intents ✓</text>
+  
+  <rect x="600" y="312" width="170" height="28" rx="5" fill="#0d2040"/>
+  <circle cx="614" cy="326" r="8" fill="#FF6B6B" fill-opacity="0.8"/>
+  <text x="628" y="330" font-size="11" fill="#6a8fc8">未接入 = AI 无法调用</text>
+
+  <!-- Home Bar -->
+  <rect x="655" y="428" width="60" height="4" rx="2" fill="#3a5a8a"/>
+
+
+  <!-- 右上角装饰光点 -->
+  <circle cx="830" cy="60" r="3" fill="#FFCB05" fill-opacity="0.8"/>
+  <circle cx="850" cy="45" r="2" fill="#4da6e8" fill-opacity="0.6"/>
+  <circle cx="860" cy="75" r="1.5" fill="#FFCB05" fill-opacity="0.5"/>
+  <circle cx="810" cy="80" r="2.5" fill="#4da6e8" fill-opacity="0.4"/>
+
+  <!-- 顶部装饰条纹 -->
+  <rect x="0" y="0" width="900" height="4" fill="#FFCB05" fill-opacity="0.8"/>
+</svg>

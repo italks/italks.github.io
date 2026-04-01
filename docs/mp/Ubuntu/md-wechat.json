@@ -1,0 +1,175 @@
+{
+  "title": "Ubuntu 26.04 新特性详解：从安装到上手，一篇文章就够了",
+  "author": "UbuntuNews",
+  "theme": "default",
+  "style": {
+    "fontSize": "16px",
+    "lineHeight": "1.8",
+    "textAlign": "left",
+    "color": "#333333",
+    "backgroundColor": "#ffffff",
+    "padding": "20px 15px",
+    "maxWidth": "100%"
+  },
+  "heading": {
+    "h1": {
+      "fontSize": "24px",
+      "fontWeight": "bold",
+      "color": "#000000",
+      "textAlign": "center",
+      "margin": "25px 0 20px 0",
+      "padding": "10px 0",
+      "borderBottom": "2px solid #E95420"
+    },
+    "h2": {
+      "fontSize": "20px",
+      "fontWeight": "bold",
+      "color": "#E95420",
+      "margin": "20px 0 15px 0",
+      "padding": "8px 0",
+      "borderLeft": "4px solid #E95420",
+      "paddingLeft": "10px"
+    },
+    "h3": {
+      "fontSize": "18px",
+      "fontWeight": "bold",
+      "color": "#333333",
+      "margin": "18px 0 12px 0",
+      "padding": "5px 0"
+    }
+  },
+  "paragraph": {
+    "margin": "10px 0",
+    "textIndent": "2em"
+  },
+  "blockquote": {
+    "backgroundColor": "#f8f8f8",
+    "borderLeft": "4px solid #E95420",
+    "padding": "15px 20px",
+    "margin": "15px 0",
+    "color": "#666666",
+    "fontSize": "15px",
+    "borderRadius": "4px"
+  },
+  "code": {
+    "inline": {
+      "backgroundColor": "#f5f5f5",
+      "color": "#E95420",
+      "padding": "2px 6px",
+      "borderRadius": "3px",
+      "fontSize": "14px",
+      "fontFamily": "Consolas, Monaco, monospace"
+    },
+    "block": {
+      "backgroundColor": "#282c34",
+      "color": "#abb2bf",
+      "padding": "15px 20px",
+      "borderRadius": "6px",
+      "margin": "15px 0",
+      "fontSize": "14px",
+      "lineHeight": "1.6",
+      "fontFamily": "Consolas, Monaco, monospace",
+      "overflow": "auto"
+    }
+  },
+  "list": {
+    "ul": {
+      "margin": "10px 0",
+      "paddingLeft": "25px"
+    },
+    "ol": {
+      "margin": "10px 0",
+      "paddingLeft": "25px"
+    },
+    "li": {
+      "margin": "5px 0",
+      "lineHeight": "1.8"
+    }
+  },
+  "table": {
+    "width": "100%",
+    "borderCollapse": "collapse",
+    "margin": "15px 0",
+    "th": {
+      "backgroundColor": "#E95420",
+      "color": "#ffffff",
+      "padding": "10px",
+      "border": "1px solid #ddd",
+      "textAlign": "left",
+      "fontWeight": "bold"
+    },
+    "td": {
+      "padding": "10px",
+      "border": "1px solid #ddd",
+      "textAlign": "left"
+    },
+    "tr": {
+      "nthChildEven": {
+        "backgroundColor": "#f9f9f9"
+      }
+    }
+  },
+  "link": {
+    "color": "#E95420",
+    "textDecoration": "none",
+    "borderBottom": "1px solid #E95420"
+  },
+  "image": {
+    "maxWidth": "100%",
+    "height": "auto",
+    "display": "block",
+    "margin": "15px auto",
+    "borderRadius": "4px",
+    "boxShadow": "0 2px 8px rgba(0,0,0,0.1)"
+  },
+  "hr": {
+    "border": "none",
+    "height": "1px",
+    "backgroundColor": "#E95420",
+    "margin": "20px 0"
+  },
+  "emphasis": {
+    "strong": {
+      "color": "#E95420",
+      "fontWeight": "bold"
+    },
+    "em": {
+      "fontStyle": "italic",
+      "color": "#666666"
+    }
+  },
+  "customStyles": {
+    "summary": {
+      "backgroundColor": "#FFF3E0",
+      "borderLeft": "4px solid #FF9800",
+      "padding": "12px 15px",
+      "margin": "15px 0",
+      "borderRadius": "4px",
+      "fontSize": "15px",
+      "color": "#E65100"
+    },
+    "tip": {
+      "backgroundColor": "#E8F5E9",
+      "borderLeft": "4px solid #4CAF50",
+      "padding": "12px 15px",
+      "margin": "15px 0",
+      "borderRadius": "4px",
+      "fontSize": "15px"
+    },
+    "warning": {
+      "backgroundColor": "#FFF3E0",
+      "borderLeft": "4px solid #FF9800",
+      "padding": "12px 15px",
+      "margin": "15px 0",
+      "borderRadius": "4px",
+      "fontSize": "15px",
+      "color": "#F57C00"
+    }
+  },
+  "output": {
+    "format": "html",
+    "includeStyle": true,
+    "minify": false,
+    "addWrapper": true
+  }
+}

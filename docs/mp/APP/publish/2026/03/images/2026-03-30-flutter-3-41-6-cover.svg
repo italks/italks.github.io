@@ -1,0 +1,165 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <!-- 背景渐变：深蓝科技风 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e1a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1b3e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#091525;stop-opacity:1" />
+    </linearGradient>
+    <!-- Flutter蓝渐变 -->
+    <linearGradient id="flutterBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#54C5F8;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#01579B;stop-opacity:1" />
+    </linearGradient>
+    <!-- 警告红渐变 -->
+    <linearGradient id="alertRed" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1" />
+    </linearGradient>
+    <!-- 绿色修复渐变 -->
+    <linearGradient id="fixGreen" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00C853;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#69F0AE;stop-opacity:1" />
+    </linearGradient>
+    <!-- 光晕效果 -->
+    <radialGradient id="glow1" cx="30%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#54C5F8;stop-opacity:0.12" />
+      <stop offset="100%" style="stop-color:#54C5F8;stop-opacity:0" />
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="70%" r="35%">
+      <stop offset="0%" style="stop-color:#FF4444;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#FF4444;stop-opacity:0" />
+    </radialGradient>
+    <!-- 卡片模糊 -->
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+  <!-- 光晕层 -->
+  <rect width="900" height="500" fill="url(#glow1)"/>
+  <rect width="900" height="500" fill="url(#glow2)"/>
+
+  <!-- 网格线装饰 -->
+  <g opacity="0.06" stroke="#54C5F8" stroke-width="0.5">
+    <line x1="0" y1="83" x2="900" y2="83"/>
+    <line x1="0" y1="166" x2="900" y2="166"/>
+    <line x1="0" y1="249" x2="900" y2="249"/>
+    <line x1="0" y1="332" x2="900" y2="332"/>
+    <line x1="0" y1="415" x2="900" y2="415"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- Flutter Logo（简化版 - 两个斜箭头） -->
+  <g transform="translate(58, 155)">
+    <!-- 大三角 -->
+    <polygon points="0,0 52,52 0,104" fill="url(#flutterBlue)" opacity="0.9"/>
+    <!-- 小三角（右下角） -->
+    <polygon points="16,88 52,52 88,88 52,124" fill="#54C5F8" opacity="0.7"/>
+    <!-- 遮盖造型 -->
+    <polygon points="16,88 52,52 52,88" fill="#0d1b3e"/>
+  </g>
+
+  <!-- 主标题区域 -->
+  <!-- 紧急标签 -->
+  <rect x="58" y="64" width="110" height="28" rx="14" fill="url(#alertRed)" filter="url(#shadow)"/>
+  <text x="113" y="83" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">🚨 紧急升级</text>
+
+  <!-- 主标题 -->
+  <text x="58" y="152" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="46" font-weight="900" fill="white" letter-spacing="-1">
+    Flutter 3.41.6
+  </text>
+  <text x="58" y="205" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="30" font-weight="700" fill="#54C5F8">
+    重要 Hotfix 发布
+  </text>
+
+  <!-- 副标题 -->
+  <text x="58" y="248" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="17" fill="#8bafc8">
+    修复 Android 16 锁屏/后台切换 ANR 崩溃问题
+  </text>
+
+  <!-- 分割线 -->
+  <line x1="58" y1="270" x2="460" y2="270" stroke="#54C5F8" stroke-width="1" opacity="0.3"/>
+
+  <!-- 影响说明 -->
+  <g transform="translate(58, 290)">
+    <!-- 标签1：受影响 -->
+    <rect x="0" y="0" width="160" height="36" rx="6" fill="#FF444422" stroke="#FF4444" stroke-width="1"/>
+    <text x="80" y="23" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#FF6B6B" text-anchor="middle">⚠ 影响 3.41.5 及以下</text>
+
+    <!-- 标签2：已修复 -->
+    <rect x="172" y="0" width="140" height="36" rx="6" fill="#00C85322" stroke="#00C853" stroke-width="1"/>
+    <text x="242" y="23" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#69F0AE" text-anchor="middle">✓ 3.41.6 已修复</text>
+
+    <!-- 标签3：Android 16 -->
+    <rect x="324" y="0" width="148" height="36" rx="6" fill="#54C5F822" stroke="#54C5F8" stroke-width="1"/>
+    <text x="398" y="23" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#54C5F8" text-anchor="middle">Android 16 必现</text>
+  </g>
+
+  <!-- 操作指南 -->
+  <rect x="58" y="356" width="300" height="36" rx="8" fill="url(#flutterBlue)" opacity="0.9" filter="url(#shadow)"/>
+  <text x="208" y="380" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="15" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1">flutter upgrade → 立即修复</text>
+
+  <!-- 右侧装饰：手机 + 崩溃图标 -->
+  <g transform="translate(590, 80)">
+    <!-- 手机外框 -->
+    <rect x="0" y="0" width="140" height="260" rx="18" fill="#1a2a4a" stroke="#2a4a7a" stroke-width="2" filter="url(#shadow)"/>
+    <!-- 手机顶部摄像头 -->
+    <ellipse cx="70" cy="16" rx="10" ry="5" fill="#0d1b3e"/>
+    <!-- 屏幕区域 -->
+    <rect x="10" y="32" width="120" height="210" rx="4" fill="#0a1528"/>
+
+    <!-- 崩溃界面 -->
+    <rect x="10" y="32" width="120" height="210" rx="4" fill="#1a0a0a"/>
+    <!-- 错误图标 -->
+    <text x="70" y="115" font-size="40" text-anchor="middle" fill="#FF4444">💥</text>
+    <!-- ANR 文字 -->
+    <text x="70" y="148" font-family="monospace" font-size="11" fill="#FF6666" text-anchor="middle">ANR Detected</text>
+    <text x="70" y="163" font-family="monospace" font-size="9" fill="#884444" text-anchor="middle">Surface Lost KHR</text>
+    <text x="70" y="178" font-family="monospace" font-size="9" fill="#884444" text-anchor="middle">Vulkan Deadlock</text>
+
+    <!-- 底部按钮 -->
+    <rect x="40" y="198" width="80" height="22" rx="4" fill="#FF444433" stroke="#FF4444" stroke-width="1"/>
+    <text x="80" y="213" font-family="'PingFang SC',Arial,sans-serif" font-size="10" fill="#FF8888" text-anchor="middle">等待中...</text>
+
+    <!-- 手机底部 -->
+    <ellipse cx="70" cy="250" rx="12" ry="4" fill="#0d1b3e"/>
+  </g>
+
+  <!-- 箭头 + 修复后的手机 -->
+  <g transform="translate(748, 80)">
+    <!-- 修复后手机外框 -->
+    <rect x="0" y="0" width="140" height="260" rx="18" fill="#1a2a1a" stroke="#2a7a4a" stroke-width="2" filter="url(#shadow)"/>
+    <ellipse cx="70" cy="16" rx="10" ry="5" fill="#0d2a1a"/>
+    <rect x="10" y="32" width="120" height="210" rx="4" fill="#0a1a0a"/>
+
+    <!-- 正常界面 -->
+    <text x="70" y="115" font-size="40" text-anchor="middle" fill="#00C853">✅</text>
+    <text x="70" y="148" font-family="'PingFang SC',Arial,sans-serif" font-size="11" fill="#69F0AE" text-anchor="middle">运行正常</text>
+    <text x="70" y="163" font-family="monospace" font-size="9" fill="#4a884a" text-anchor="middle">3.41.6 Fixed</text>
+    <text x="70" y="178" font-family="monospace" font-size="9" fill="#4a884a" text-anchor="middle">Fence Tracking ✓</text>
+
+    <!-- 底部按钮正常 -->
+    <rect x="30" y="195" width="80" height="22" rx="4" fill="#00C85333" stroke="#00C853" stroke-width="1"/>
+    <text x="70" y="210" font-family="'PingFang SC',Arial,sans-serif" font-size="10" fill="#69F0AE" text-anchor="middle">锁屏恢复正常</text>
+
+    <ellipse cx="70" cy="250" rx="12" ry="4" fill="#0d2a1a"/>
+  </g>
+
+  <!-- 中间箭头 -->
+  <g transform="translate(738, 190)">
+    <polygon points="0,0 16,20 0,40" fill="#54C5F8" opacity="0.8"/>
+  </g>
+
+  <!-- 发布者标签 -->
+  <text x="58" y="470" font-family="'PingFang SC','Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#4a6a8a">移动开发者日报 · 2026.03.30</text>
+
+  <!-- 右下角版本标注 -->
+  <text x="842" y="470" font-family="monospace" font-size="12" fill="#4a6a8a" text-anchor="end">v3.41.6 hotfix</text>
+</svg>

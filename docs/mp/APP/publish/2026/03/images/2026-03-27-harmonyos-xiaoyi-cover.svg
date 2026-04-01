@@ -1,0 +1,210 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <!-- 主背景渐变 深色科技风 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A1628;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#0D2044;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#1A0A3C;stop-opacity:1"/>
+    </linearGradient>
+    <!-- 华为红渐变 -->
+    <linearGradient id="huaweiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#CF0A2C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FF3A5C;stop-opacity:1"/>
+    </linearGradient>
+    <!-- 蓝色光晕 -->
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#4A9EFF;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#4A9EFF;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 红色光晕 -->
+    <radialGradient id="glowRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#CF0A2C;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#CF0A2C;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 网格图案 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1E3A6E" stroke-width="0.5"/>
+    </pattern>
+    <!-- 点阵图案 -->
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="1" fill="#2A4A7E" opacity="0.5"/>
+    </pattern>
+    <!-- 发光滤镜 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge><feMergeNode in="coloredBlur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <!-- 徽章渐变 -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#CF0A2C;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:1"/>
+    </linearGradient>
+    <!-- 卡片渐变 -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1A2E50;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#0F1E38;stop-opacity:0.9"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 主背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <!-- 网格背景 -->
+  <rect width="900" height="500" fill="url(#grid)" opacity="0.6"/>
+  <!-- 点阵装饰 -->
+  <rect width="900" height="500" fill="url(#dots)" opacity="0.4"/>
+
+  <!-- 左侧蓝色光晕 -->
+  <ellipse cx="150" cy="250" rx="220" ry="220" fill="url(#glowBlue)" opacity="0.5"/>
+  <!-- 右侧红色光晕 -->
+  <ellipse cx="750" cy="250" rx="200" ry="200" fill="url(#glowRed)" opacity="0.6"/>
+
+  <!-- ===== 左侧装饰区 ===== -->
+  <!-- 流线装饰圆 -->
+  <circle cx="80" cy="120" r="80" fill="none" stroke="#4A9EFF" stroke-width="0.8" opacity="0.3"/>
+  <circle cx="80" cy="120" r="60" fill="none" stroke="#4A9EFF" stroke-width="0.5" opacity="0.2"/>
+  <!-- 六边形装饰 -->
+  <polygon points="60,380 90,365 90,395 60,410 30,395 30,365" fill="none" stroke="#CF0A2C" stroke-width="1.5" opacity="0.4" filter="url(#glow)"/>
+  <polygon points="60,380 90,365 90,395 60,410 30,395 30,365" fill="#CF0A2C" opacity="0.05"/>
+
+  <!-- ===== 右侧流线装饰 ===== -->
+  <path d="M820,50 Q870,150 850,250 Q830,350 870,450" fill="none" stroke="#4A9EFF" stroke-width="1.5" opacity="0.3"/>
+  <path d="M840,50 Q890,150 870,250 Q850,350 890,450" fill="none" stroke="#CF0A2C" stroke-width="1" opacity="0.2"/>
+
+  <!-- ===== 顶部标签区 ===== -->
+  <!-- 创新赛徽章 -->
+  <rect x="40" y="32" width="180" height="34" rx="17" fill="url(#badgeGrad)"/>
+  <text x="130" y="54" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" font-weight="bold" fill="white" text-anchor="middle">🏆 HarmonyOS创新赛</text>
+
+  <!-- 奖金标签 -->
+  <rect x="240" y="32" width="130" height="34" rx="17" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.8"/>
+  <text x="305" y="54" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" font-weight="bold" fill="#FFD700" text-anchor="middle">💰 总奖金 68万</text>
+
+  <!-- 截止日期标签 -->
+  <rect x="390" y="32" width="140" height="34" rx="17" fill="none" stroke="#4A9EFF" stroke-width="1.5" opacity="0.8"/>
+  <text x="460" y="54" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#4A9EFF" text-anchor="middle">⏰ 5月15日截止</text>
+
+  <!-- ===== 主标题区 ===== -->
+  <!-- 大标题背景光效 -->
+  <rect x="40" y="90" width="520" height="120" rx="8" fill="none"/>
+
+  <!-- 主标题行1 -->
+  <text x="48" y="135" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="38" font-weight="900" fill="white" filter="url(#softGlow)">鸿蒙小艺智能体</text>
+  <!-- 主标题行2 -->
+  <text x="48" y="185" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="38" font-weight="900" fill="white">开发入门</text>
+
+  <!-- 副标题 -->
+  <text x="48" y="225" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="18" fill="#B0C8E8" opacity="0.9">从零到上架，避开90%开发者踩的坑</text>
+
+  <!-- 分隔线 -->
+  <line x1="48" y1="245" x2="400" y2="245" stroke="#CF0A2C" stroke-width="2" opacity="0.7"/>
+  <line x1="408" y1="245" x2="440" y2="245" stroke="#CF0A2C" stroke-width="2" opacity="0.4"/>
+
+  <!-- ===== 四大步骤卡片区 ===== -->
+  <!-- 标签 -->
+  <text x="48" y="278" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="14" fill="#8CAFD0">核心开发流程</text>
+
+  <!-- 卡片1：选准模式 -->
+  <rect x="48" y="290" width="110" height="75" rx="8" fill="url(#cardGrad)" stroke="#2A4A8E" stroke-width="1"/>
+  <text x="103" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" text-anchor="middle">🎯</text>
+  <text x="103" y="342" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#4A9EFF" text-anchor="middle" font-weight="bold">选准模式</text>
+  <text x="103" y="357" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#8CAFD0" text-anchor="middle">LLM/工作流</text>
+
+  <!-- 箭头 -->
+  <text x="170" y="335" font-family="sans-serif" font-size="16" fill="#4A9EFF" opacity="0.7">→</text>
+
+  <!-- 卡片2：Prompt先行 -->
+  <rect x="188" y="290" width="110" height="75" rx="8" fill="url(#cardGrad)" stroke="#2A4A8E" stroke-width="1"/>
+  <text x="243" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" text-anchor="middle">✍️</text>
+  <text x="243" y="342" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#4A9EFF" text-anchor="middle" font-weight="bold">Prompt先行</text>
+  <text x="243" y="357" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#8CAFD0" text-anchor="middle">边界清晰</text>
+
+  <!-- 箭头 -->
+  <text x="310" y="335" font-family="sans-serif" font-size="16" fill="#4A9EFF" opacity="0.7">→</text>
+
+  <!-- 卡片3：最小上线 -->
+  <rect x="328" y="290" width="110" height="75" rx="8" fill="url(#cardGrad)" stroke="#2A4A8E" stroke-width="1"/>
+  <text x="383" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" text-anchor="middle">🚀</text>
+  <text x="383" y="342" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#4A9EFF" text-anchor="middle" font-weight="bold">最小上线</text>
+  <text x="383" y="357" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#8CAFD0" text-anchor="middle">单点打透</text>
+
+  <!-- 箭头 -->
+  <text x="450" y="335" font-family="sans-serif" font-size="16" fill="#4A9EFF" opacity="0.7">→</text>
+
+  <!-- 卡片4：合规上架 -->
+  <rect x="468" y="290" width="110" height="75" rx="8" fill="url(#cardGrad)" stroke="#CF0A2C" stroke-width="1.5"/>
+  <text x="523" y="320" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="22" text-anchor="middle">✅</text>
+  <text x="523" y="342" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#FF6B6B" text-anchor="middle" font-weight="bold">合规上架</text>
+  <text x="523" y="357" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#8CAFD0" text-anchor="middle">避开5大雷区</text>
+
+  <!-- ===== 底部信息区 ===== -->
+  <rect x="40" y="388" width="560" height="70" rx="8" fill="#0F1E38" opacity="0.6"/>
+  <!-- 适合人群标签 -->
+  <text x="58" y="413" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#8CAFD0">适合：</text>
+  <rect x="90" y="399" width="90" height="22" rx="11" fill="#1A3A6E" opacity="0.8"/>
+  <text x="135" y="414" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#4A9EFF" text-anchor="middle">移动开发者</text>
+  <rect x="190" y="399" width="90" height="22" rx="11" fill="#1A3A6E" opacity="0.8"/>
+  <text x="235" y="414" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#4A9EFF" text-anchor="middle">AI创业者</text>
+  <rect x="290" y="399" width="90" height="22" rx="11" fill="#1A3A6E" opacity="0.8"/>
+  <text x="335" y="414" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#4A9EFF" text-anchor="middle">鸿蒙爱好者</text>
+
+  <!-- 阅读时长 -->
+  <text x="58" y="445" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="13" fill="#6A8FAF">📖 阅读约12分钟 | 含完整Prompt模板 + 审核避坑清单</text>
+
+  <!-- ===== 右侧可视化区 ===== -->
+  <!-- 鸿蒙风格装饰图形 -->
+  <!-- 外圆 -->
+  <circle cx="735" cy="255" r="150" fill="none" stroke="#CF0A2C" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="735" cy="255" r="120" fill="none" stroke="#4A9EFF" stroke-width="1" opacity="0.2"/>
+  <circle cx="735" cy="255" r="90" fill="none" stroke="#CF0A2C" stroke-width="0.8" opacity="0.15" stroke-dasharray="5,5"/>
+
+  <!-- 中心圆 -->
+  <circle cx="735" cy="255" r="68" fill="#0F1E38" opacity="0.9"/>
+  <circle cx="735" cy="255" r="68" fill="none" stroke="#CF0A2C" stroke-width="2" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- 花瓣装饰 (鸿蒙logo风格) -->
+  <g transform="translate(735,255)" opacity="0.85" filter="url(#glow)">
+    <!-- 上 -->
+    <ellipse cx="0" cy="-45" rx="14" ry="22" fill="#CF0A2C" opacity="0.8" transform="rotate(0)"/>
+    <!-- 右上 -->
+    <ellipse cx="0" cy="-45" rx="14" ry="22" fill="#CF0A2C" opacity="0.7" transform="rotate(60)"/>
+    <!-- 右下 -->
+    <ellipse cx="0" cy="-45" rx="14" ry="22" fill="#CF0A2C" opacity="0.6" transform="rotate(120)"/>
+    <!-- 下 -->
+    <ellipse cx="0" cy="-45" rx="14" ry="22" fill="#CF0A2C" opacity="0.8" transform="rotate(180)"/>
+    <!-- 左下 -->
+    <ellipse cx="0" cy="-45" rx="14" ry="22" fill="#CF0A2C" opacity="0.7" transform="rotate(240)"/>
+    <!-- 左上 -->
+    <ellipse cx="0" cy="-45" rx="14" ry="22" fill="#CF0A2C" opacity="0.6" transform="rotate(300)"/>
+  </g>
+
+  <!-- 中心文字 -->
+  <text x="735" y="248" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="15" font-weight="bold" fill="white" text-anchor="middle">小艺</text>
+  <text x="735" y="268" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#4A9EFF" text-anchor="middle">智能体</text>
+
+  <!-- 四象限连接线和标签 -->
+  <!-- AI智能化 -->
+  <line x1="735" y1="180" x2="735" y2="100" stroke="#4A9EFF" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  <text x="735" y="93" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#4A9EFF" text-anchor="middle" font-weight="bold">AI智能化</text>
+
+  <!-- 全场景协同 -->
+  <line x1="810" y1="255" x2="875" y2="255" stroke="#4A9EFF" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  <text x="876" y="252" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#8CAFD0" text-anchor="start">全场景</text>
+  <text x="876" y="264" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#8CAFD0" text-anchor="start">协同</text>
+
+  <!-- 安全隐私 -->
+  <line x1="660" y1="255" x2="610" y2="255" stroke="#FF6B35" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  <text x="608" y="252" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#FF9970" text-anchor="end">安全</text>
+  <text x="608" y="264" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="10" fill="#FF9970" text-anchor="end">隐私</text>
+
+  <!-- 3D空间化 -->
+  <line x1="735" y1="330" x2="735" y2="390" stroke="#FFD700" stroke-width="1" opacity="0.5" stroke-dasharray="3,3"/>
+  <text x="735" y="403" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="11" fill="#FFD700" text-anchor="middle" font-weight="bold">3D空间化</text>
+
+  <!-- ===== 品牌信息 ===== -->
+  <text x="48" y="484" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#4A7AAF" opacity="0.7">AppDevHub · 移动开发者社区</text>
+  <text x="852" y="484" font-family="PingFang SC, Microsoft YaHei, sans-serif" font-size="12" fill="#4A7AAF" opacity="0.7" text-anchor="end">2026.03.27</text>
+</svg>
