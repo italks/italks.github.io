@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2c001e"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#FF7043"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <pattern id="circuit" patternUnits="userSpaceOnUse" width="50" height="50">
+      <path d="M 25 0 L 25 15 M 10 25 L 40 25 M 25 35 L 25 50" stroke="#333" stroke-width="0.5" fill="none"/>
+      <circle cx="25" cy="25" r="2" fill="#444"/>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#circuit)" opacity="0.3"/>
+  
+  <!-- 装饰线条 -->
+  <path d="M 0 450 Q 225 400 450 450 T 900 420" stroke="#E95420" stroke-width="1" fill="none" opacity="0.3"/>
+  <path d="M 0 470 Q 225 420 450 470 T 900 440" stroke="#E95420" stroke-width="0.5" fill="none" opacity="0.2"/>
+  
+  <!-- 主标题 -->
+  <text x="450" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="url(#orangeGrad)" filter="url(#glow)">
+    type="module"
+  </text>
+  <text x="450" y="190" text-anchor="middle" font-family="Arial, sans-serif" font-size="28" fill="#fff">
+    深度解析
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="450" y="240" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#aaa">
+    模块加载 · 路径解析 · 异步等待
+  </text>
+  
+  <!-- 核心概念卡片 -->
+  <g transform="translate(120, 280)">
+    <rect x="0" y="0" width="200" height="120" rx="10" fill="#1e1e2e" stroke="#E95420" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-family="monospace" font-size="14" fill="#E95420">路径解析</text>
+    <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ccc">相对于当前模块</text>
+    <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ccc">而非 HTML 页面</text>
+    <text x="100" y="105" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">import './utils.js'</text>
+  </g>
+  
+  <g transform="translate(350, 280)">
+    <rect x="0" y="0" width="200" height="120" rx="10" fill="#1e1e2e" stroke="#E95420" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-family="monospace" font-size="14" fill="#E95420">异步加载</text>
+    <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ccc">默认 defer 效果</text>
+    <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ccc">不阻塞 HTML 解析</text>
+    <text x="100" y="105" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">DOM 解析后执行</text>
+  </g>
+  
+  <g transform="translate(580, 280)">
+    <rect x="0" y="0" width="200" height="120" rx="10" fill="#1e1e2e" stroke="#E95420" stroke-width="2"/>
+    <text x="100" y="35" text-anchor="middle" font-family="monospace" font-size="14" fill="#E95420">等待加载</text>
+    <text x="100" y="65" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ccc">import() → Promise</text>
+    <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ccc">顶层 await 语法</text>
+    <text x="100" y="105" text-anchor="middle" font-family="monospace" font-size="11" fill="#888">await import(...)</text>
+  </g>
+  
+  <!-- 代码示例装饰 -->
+  <g transform="translate(100, 420)">
+    <rect x="0" y="0" width="700" height="60" rx="5" fill="#0d0d1a" opacity="0.8"/>
+    <text x="20" y="25" font-family="monospace" font-size="11" fill="#888">&lt;script type="module"&gt;</text>
+    <text x="40" y="45" font-family="monospace" font-size="11" fill="#4CAF50">import</text>
+    <text x="90" y="45" font-family="monospace" font-size="11" fill="#fff">{ init }</text>
+    <text x="140" y="45" font-family="monospace" font-size="11" fill="#4CAF50">from</text>
+    <text x="175" y="45" font-family="monospace" font-size="11" fill="#FFC107">'./app.js'</text>
+    <text x="250" y="45" font-family="monospace" font-size="11" fill="#fff">;</text>
+    <text x="270" y="45" font-family="monospace" font-size="11" fill="#4CAF50">await</text>
+    <text x="310" y="45" font-family="monospace" font-size="11" fill="#fff">init();</text>
+    <text x="680" y="25" font-family="monospace" font-size="11" fill="#888">&lt;/script&gt;</text>
+  </g>
+  
+  <!-- Ubuntu Logo 装饰 -->
+  <g transform="translate(820, 30)">
+    <circle cx="30" cy="30" r="25" fill="none" stroke="#E95420" stroke-width="2" opacity="0.5"/>
+    <circle cx="30" cy="30" r="15" fill="none" stroke="#E95420" stroke-width="1.5" opacity="0.3"/>
+    <circle cx="30" cy="30" r="5" fill="#E95420" opacity="0.5"/>
+  </g>
+</svg>

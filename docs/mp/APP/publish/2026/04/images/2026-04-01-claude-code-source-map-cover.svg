@@ -1,0 +1,139 @@
+<svg width="900" height="500" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e1b4b"/>
+    </linearGradient>
+    <linearGradient id="codeGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="3" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- 网格线 -->
+  <g stroke="#ffffff08" stroke-width="0.5">
+    <line x1="0" y1="125" x2="900" y2="125"/>
+    <line x1="0" y1="250" x2="900" y2="250"/>
+    <line x1="0" y1="375" x2="900" y2="375"/>
+    <line x1="225" y1="0" x2="225" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="675" y1="0" x2="675" y2="500"/>
+  </g>
+
+  <!-- 左侧：代码块示意 -->
+  <g transform="translate(50, 120)">
+    <!-- 原始代码 -->
+    <rect x="0" y="0" width="200" height="120" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <rect x="0" y="0" width="200" height="28" rx="6" fill="#334155"/>
+    <rect x="0" y="22" width="200" height="6" fill="#334155"/>
+    <circle cx="16" cy="14" r="5" fill="#ef4444"/>
+    <circle cx="32" cy="14" r="5" fill="#fbbf24"/>
+    <circle cx="48" cy="14" r="5" fill="#22c55e"/>
+    <text x="12" y="50" font-family="monospace" font-size="9" fill="#94a3b8">async function</text>
+    <text x="88" y="50" font-family="monospace" font-size="9" fill="#fbbf24">fetchUser</text>
+    <text x="12" y="65" font-family="monospace" font-size="9" fill="#94a3b8">  const res = await</text>
+    <text x="12" y="80" font-family="monospace" font-size="9" fill="#fbbf24">    api.get</text>
+    <text x="55" y="80" font-family="monospace" font-size="9" fill="#94a3b8">(url)</text>
+    <text x="12" y="95" font-family="monospace" font-size="9" fill="#94a3b8">  return res.data</text>
+    <text x="8" y="110" font-family="monospace" font-size="8" fill="#64748b">user.ts</text>
+
+    <!-- 箭头 -->
+    <g transform="translate(100, 145)">
+      <path d="M0,0 L0,30 M-8,22 L0,30 L8,22" stroke="#60a5fa" stroke-width="2" fill="none"/>
+      <text x="0" y="45" font-family="monospace" font-size="8" fill="#60a5fa" text-anchor="middle">.map</text>
+    </g>
+
+    <!-- source map 文件 -->
+    <rect x="0" y="200" width="200" height="140" rx="6" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect x="0" y="200" width="200" height="28" rx="6" fill="#78350f"/>
+    <rect x="0" y="222" width="200" height="6" fill="#78350f"/>
+    <text x="100" y="218" font-family="monospace" font-size="10" fill="#fbbf24" text-anchor="middle" font-weight="bold">cli.js.map (60MB)</text>
+    <text x="12" y="248" font-family="monospace" font-size="8" fill="#94a3b8">{</text>
+    <text x="20" y="262" font-family="monospace" font-size="8" fill="#fbbf24">"version"</text>
+    <text x="65" y="262" font-family="monospace" font-size="8" fill="#94a3b8">: 3,</text>
+    <text x="20" y="276" font-family="monospace" font-size="8" fill="#fbbf24">"sources"</text>
+    <text x="68" y="276" font-family="monospace" font-size="8" fill="#94a3b8">: [</text>
+    <text x="28" y="290" font-family="monospace" font-size="8" fill="#60a5fa">"src/cli/index.ts"</text>
+    <text x="28" y="304" font-family="monospace" font-size="8" fill="#60a5fa">"src/tools/*.ts"</text>
+    <text x="28" y="318" font-family="monospace" font-size="8" fill="#94a3b8">...</text>
+    <text x="12" y="332" font-family="monospace" font-size="8" fill="#94a3b8">}</text>
+
+    <!-- 警告标记 -->
+    <g transform="translate(165, 280)">
+      <polygon points="0,-18 16,12 -16,12" fill="#dc2626"/>
+      <text x="0" y="4" font-family="Arial" font-size="14" fill="white" text-anchor="middle" font-weight="bold">!</text>
+    </g>
+  </g>
+
+  <!-- 右侧内容区 -->
+  <!-- 顶部标签 -->
+  <rect x="280" y="30" width="100" height="24" rx="4" fill="#dc2626"/>
+  <text x="330" y="47" font-family="'PingFang SC', sans-serif" font-size="11" fill="white" text-anchor="middle" font-weight="bold">安全事件</text>
+
+  <rect x="390" y="30" width="120" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="450" y="47" font-family="monospace" font-size="10" fill="#94a3b8" text-anchor="middle">2026-03-31</text>
+
+  <!-- 主标题 -->
+  <text x="280" y="100" font-family="'PingFang SC', sans-serif" font-size="38" font-weight="900" fill="white" filter="url(#shadow)">Claude Code 源码泄露</text>
+
+  <!-- 副标题 -->
+  <text x="280" y="135" font-family="'PingFang SC', sans-serif" font-size="16" fill="#94a3b8">一个 source map 文件，51 万行代码"裸奔"</text>
+
+  <!-- 分隔线 -->
+  <line x1="280" y1="160" x2="850" y2="160" stroke="#334155" stroke-width="1"/>
+
+  <!-- 关键数据卡片 -->
+  <!-- 文件数 -->
+  <g transform="translate(280, 180)">
+    <rect width="170" height="70" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="85" y="28" font-family="'PingFang SC', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">泄露文件</text>
+    <text x="85" y="55" font-family="'Courier New', monospace" font-size="24" fill="#fbbf24" text-anchor="middle" font-weight="bold">1,906</text>
+  </g>
+
+  <!-- 代码行数 -->
+  <g transform="translate(465, 180)">
+    <rect width="170" height="70" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="85" y="28" font-family="'PingFang SC', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">代码行数</text>
+    <text x="85" y="55" font-family="'Courier New', monospace" font-size="24" fill="#fbbf24" text-anchor="middle" font-weight="bold">512K+</text>
+  </g>
+
+  <!-- map 文件大小 -->
+  <g transform="translate(650, 180)">
+    <rect width="170" height="70" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="85" y="28" font-family="'PingFang SC', sans-serif" font-size="11" fill="#94a3b8" text-anchor="middle">Source Map 大小</text>
+    <text x="85" y="55" font-family="'Courier New', monospace" font-size="24" fill="#fbbf24" text-anchor="middle" font-weight="bold">60 MB</text>
+  </g>
+
+  <!-- 泄露原因 -->
+  <g transform="translate(280, 270)">
+    <rect width="540" height="50" rx="6" fill="#7f1d1d" stroke="#dc2626" stroke-width="1"/>
+    <text x="20" y="20" font-family="'PingFang SC', sans-serif" font-size="12" fill="#fca5a5" font-weight="bold">⚠️ 泄露原因</text>
+    <text x="20" y="38" font-family="'PingFang SC', sans-serif" font-size="11" fill="#fecaca">npm 包未排除 .map 文件 → 任何人可还原完整 TypeScript 源码</text>
+  </g>
+
+  <!-- 防范措施 -->
+  <g transform="translate(280, 335)">
+    <rect width="540" height="50" rx="6" fill="#14532d" stroke="#22c55e" stroke-width="1"/>
+    <text x="20" y="20" font-family="'PingFang SC', sans-serif" font-size="12" fill="#86efac" font-weight="bold">✅ 防范方法</text>
+    <text x="20" y="38" font-family="monospace" font-size="10" fill="#bbf7d0">.npmignore: *.map  |  npm pack --dry-run  |  CI/CD 自动检查</text>
+  </g>
+
+  <!-- 历史重演提示 -->
+  <g transform="translate(280, 400)">
+    <rect width="540" height="36" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="1"/>
+    <text x="270" y="23" font-family="'PingFang SC', sans-serif" font-size="11" fill="#a5b4fc" text-anchor="middle">🔄 Anthropic 已因此两次泄露：2025年2月 + 2026年3月</text>
+  </g>
+
+  <!-- 底部品牌 -->
+  <text x="850" y="475" font-family="'PingFang SC', sans-serif" font-size="11" fill="#475569" text-anchor="end">AppTalks</text>
+</svg>
