@@ -1,0 +1,220 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <!-- 渐变背景 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e"/>
+      <stop offset="100%" style="stop-color:#0d47a1"/>
+    </linearGradient>
+    
+    <!-- 网络蓝渐变 -->
+    <linearGradient id="networkBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2196F3"/>
+      <stop offset="100%" style="stop-color:#00BCD4"/>
+    </linearGradient>
+    
+    <!-- Ubuntu橙渐变 -->
+    <linearGradient id="ubuntuOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#FF7043"/>
+    </linearGradient>
+    
+    <!-- 数据流渐变 -->
+    <linearGradient id="dataFlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00BCD4" stop-opacity="0.3"/>
+      <stop offset="50%" style="stop-color:#00E5FF" stop-opacity="0.8"/>
+      <stop offset="100%" style="stop-color:#00BCD4" stop-opacity="0.3"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 网络网格背景 -->
+  <g opacity="0.08">
+    <!-- 水平线 -->
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#00BCD4" stroke-width="1"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#00BCD4" stroke-width="1"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#00BCD4" stroke-width="1"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#00BCD4" stroke-width="1"/>
+    <!-- 垂直线 -->
+    <line x1="180" y1="0" x2="180" y2="500" stroke="#00BCD4" stroke-width="1"/>
+    <line x1="360" y1="0" x2="360" y2="500" stroke="#00BCD4" stroke-width="1"/>
+    <line x1="540" y1="0" x2="540" y2="500" stroke="#00BCD4" stroke-width="1"/>
+    <line x1="720" y1="0" x2="720" y2="500" stroke="#00BCD4" stroke-width="1"/>
+    <!-- 网络节点 -->
+    <circle cx="180" cy="100" r="4" fill="#00BCD4"/>
+    <circle cx="360" cy="200" r="4" fill="#00BCD4"/>
+    <circle cx="540" cy="300" r="4" fill="#00BCD4"/>
+    <circle cx="720" cy="400" r="4" fill="#00BCD4"/>
+  </g>
+  
+  <!-- 左侧文字区域 -->
+  <g>
+    <!-- 主标题 -->
+    <text x="60" y="160" font-family="Microsoft YaHei, Arial, sans-serif" font-size="52" font-weight="bold" fill="white">
+      Linux网络配置
+    </text>
+    <text x="60" y="220" font-family="Microsoft YaHei, Arial, sans-serif" font-size="52" font-weight="bold" fill="white">
+      入门教程
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="60" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#00BCD4">
+      从IP地址到DNS，一篇搞定
+    </text>
+    
+    <!-- 分隔线 -->
+    <rect x="60" y="295" width="200" height="4" rx="2" fill="url(#ubuntuOrange)"/>
+    
+    <!-- 关键词标签 -->
+    <g transform="translate(60, 330)">
+      <rect x="0" y="0" width="80" height="30" rx="15" fill="#2196F3" opacity="0.8"/>
+      <text x="40" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">IP配置</text>
+      
+      <rect x="90" y="0" width="80" height="30" rx="15" fill="#00BCD4" opacity="0.8"/>
+      <text x="130" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">DNS设置</text>
+      
+      <rect x="180" y="0" width="80" height="30" rx="15" fill="#E95420" opacity="0.8"/>
+      <text x="220" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">防火墙</text>
+    </g>
+    
+    <!-- 底部信息 -->
+    <g transform="translate(60, 400)">
+      <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#B3E5FC">
+        <tspan x="0" y="0">🌐 IP地址 · 子网掩码 · 网关</tspan>
+        <tspan x="0" y="28">🔧 NetworkManager · nmcli · UFW</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- 右侧网络拓扑图 -->
+  <g transform="translate(480, 70)">
+    <!-- 云（互联网） -->
+    <g transform="translate(100, 0)">
+      <ellipse cx="60" cy="30" rx="60" ry="30" fill="url(#networkBlue)" opacity="0.3"/>
+      <ellipse cx="40" cy="25" rx="25" ry="15" fill="url(#networkBlue)" opacity="0.5"/>
+      <ellipse cx="80" cy="25" rx="25" ry="15" fill="url(#networkBlue)" opacity="0.5"/>
+      <ellipse cx="60" cy="35" rx="35" ry="18" fill="url(#networkBlue)" opacity="0.4"/>
+      <text x="60" y="33" font-family="Microsoft YaHei, Arial, sans-serif" font-size="12" fill="white" text-anchor="middle">互联网</text>
+    </g>
+    
+    <!-- 连接线1：云到路由器 -->
+    <line x1="160" y1="60" x2="160" y2="100" stroke="url(#dataFlow)" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,200;200,0" dur="2s" repeatCount="indefinite"/>
+    </line>
+    
+    <!-- 路由器图标 -->
+    <g transform="translate(100, 100)">
+      <rect x="0" y="0" width="120" height="50" rx="8" fill="#263238" stroke="#00BCD4" stroke-width="2"/>
+      <!-- 天线 -->
+      <rect x="20" y="-15" width="4" height="15" fill="#00BCD4"/>
+      <rect x="60" y="-15" width="4" height="15" fill="#00BCD4"/>
+      <rect x="100" y="-15" width="4" height="15" fill="#00BCD4"/>
+      <!-- 指示灯 -->
+      <circle cx="20" cy="25" r="4" fill="#00E5FF">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="40" cy="25" r="4" fill="#00E5FF">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.3s"/>
+      </circle>
+      <circle cx="60" cy="25" r="4" fill="#00E5FF">
+        <animate attributeName="opacity" values="1;0.3;1" dur="1.5s" repeatCount="indefinite" begin="0.6s"/>
+      </circle>
+      <!-- 文字 -->
+      <text x="60" y="35" font-family="Courier New, monospace" font-size="11" fill="white" text-anchor="middle">192.168.1.1</text>
+    </g>
+    
+    <!-- 连接线2：路由器到交换机 -->
+    <line x1="160" y1="150" x2="160" y2="200" stroke="url(#dataFlow)" stroke-width="3">
+      <animate attributeName="stroke-dasharray" values="0,200;200,0" dur="2s" repeatCount="indefinite" begin="0.5s"/>
+    </line>
+    
+    <!-- 交换机图标 -->
+    <g transform="translate(100, 200)">
+      <rect x="0" y="0" width="120" height="40" rx="6" fill="#37474F" stroke="#2196F3" stroke-width="2"/>
+      <!-- 端口 -->
+      <rect x="15" y="10" width="15" height="20" rx="2" fill="#2196F3" opacity="0.8"/>
+      <rect x="35" y="10" width="15" height="20" rx="2" fill="#2196F3" opacity="0.8"/>
+      <rect x="55" y="10" width="15" height="20" rx="2" fill="#2196F3" opacity="0.8"/>
+      <rect x="75" y="10" width="15" height="20" rx="2" fill="#2196F3" opacity="0.8"/>
+      <rect x="95" y="10" width="15" height="20" rx="2" fill="#2196F3" opacity="0.8"/>
+    </g>
+    
+    <!-- 连接线3：交换机到设备 -->
+    <g stroke="url(#dataFlow)" stroke-width="2">
+      <line x1="120" y1="240" x2="60" y2="300">
+        <animate attributeName="stroke-dasharray" values="0,150;150,0" dur="2s" repeatCount="indefinite" begin="0.8s"/>
+      </line>
+      <line x1="160" y1="240" x2="160" y2="300">
+        <animate attributeName="stroke-dasharray" values="0,150;150,0" dur="2s" repeatCount="indefinite" begin="1s"/>
+      </line>
+      <line x1="200" y1="240" x2="260" y2="300">
+        <animate attributeName="stroke-dasharray" values="0,150;150,0" dur="2s" repeatCount="indefinite" begin="1.2s"/>
+      </line>
+    </g>
+    
+    <!-- 设备图标 -->
+    <!-- Ubuntu服务器 -->
+    <g transform="translate(20, 300)">
+      <rect x="0" y="0" width="80" height="70" rx="6" fill="#263238" stroke="#E95420" stroke-width="2"/>
+      <circle cx="40" cy="25" r="15" fill="#E95420" opacity="0.8"/>
+      <text x="40" y="30" font-family="Ubuntu, sans-serif" font-size="16" fill="white" text-anchor="middle">U</text>
+      <text x="40" y="55" font-family="Courier New, monospace" font-size="9" fill="#B3E5FC" text-anchor="middle">192.168.1.100</text>
+    </g>
+    
+    <!-- Ubuntu桌面 -->
+    <g transform="translate(120, 300)">
+      <rect x="0" y="0" width="80" height="70" rx="6" fill="#263238" stroke="#E95420" stroke-width="2"/>
+      <rect x="10" y="10" width="60" height="40" rx="3" fill="#37474F" stroke="#00BCD4" stroke-width="1"/>
+      <rect x="25" y="52" width="30" height="5" rx="2" fill="#37474F"/>
+      <text x="40" y="65" font-family="Courier New, monospace" font-size="8" fill="#B3E5FC" text-anchor="middle">192.168.1.101</text>
+    </g>
+    
+    <!-- 其他设备 -->
+    <g transform="translate(220, 300)">
+      <rect x="0" y="0" width="80" height="70" rx="6" fill="#263238" stroke="#2196F3" stroke-width="2"/>
+      <!-- 设备图标 -->
+      <rect x="15" y="15" width="50" height="30" rx="4" fill="#37474F" stroke="#2196F3" stroke-width="1"/>
+      <circle cx="40" cy="30" r="6" fill="#2196F3" opacity="0.6"/>
+      <text x="40" y="60" font-family="Courier New, monospace" font-size="8" fill="#B3E5FC" text-anchor="middle">192.168.1.102</text>
+    </g>
+    
+    <!-- DNS服务器提示 -->
+    <g transform="translate(280, 100)">
+      <rect x="0" y="0" width="100" height="50" rx="6" fill="#1a237e" stroke="#9C27B0" stroke-width="2" opacity="0.8"/>
+      <text x="50" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="11" fill="white" text-anchor="middle">DNS服务器</text>
+      <text x="50" y="38" font-family="Courier New, monospace" font-size="9" fill="#CE93D8" text-anchor="middle">8.8.8.8</text>
+    </g>
+    
+    <!-- DNS连接线 -->
+    <line x1="280" y1="125" x2="220" y2="125" stroke="#9C27B0" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+  </g>
+  
+  <!-- 终端窗口预览 -->
+  <g transform="translate(480, 400)">
+    <rect x="0" y="0" width="340" height="60" rx="6" fill="#1E1E1E" stroke="#00BCD4" stroke-width="1" opacity="0.7"/>
+    <text font-family="Courier New, monospace" font-size="11" fill="#00E5FF">
+      <tspan x="10" y="20">$ ip addr show</tspan>
+      <tspan x="10" y="38">eth0: 192.168.1.100/24</tspan>
+      <tspan x="10" y="56">gateway: 192.168.1.1</tspan>
+    </text>
+  </g>
+  
+  <!-- 数据流动画装饰 -->
+  <g opacity="0.3">
+    <circle cx="50" cy="50" r="20" fill="#00BCD4">
+      <animate attributeName="r" values="15;25;15" dur="3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="850" cy="450" r="25" fill="#2196F3">
+      <animate attributeName="r" values="20;30;20" dur="3s" repeatCount="indefinite" begin="1s"/>
+      <animate attributeName="opacity" values="0.3;0.6;0.3" dur="3s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+  </g>
+  
+  <!-- 底部品牌条 -->
+  <rect x="0" y="470" width="900" height="30" fill="#00BCD4" opacity="0.15"/>
+  <text x="450" y="488" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#B3E5FC" text-anchor="middle">
+    UbuntuNews · Linux网络配置 · 入门教程
+  </text>
+</svg>
