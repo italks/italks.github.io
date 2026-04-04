@@ -1,4 +1,16 @@
-node_modules    
+node_modules
 docs/.vitepress/cache
 docs/.vitepress/dist
 config.json
+
+# WorkBuddy 多设备 Memory 配置
+# 方案 A：不同步设备专属 memory（推荐，避免冲突）
+.workbuddy/memory/devices/
+
+# 方案 B：同步所有 memory（允许冲突，手动解决）
+# 如需同步设备专属 memory，注释掉上面的规则，使用：
+# !.workbuddy/memory/devices/
+
+# 保留共享 memory
+!.workbuddy/memory/SHARED.md
+!.workbuddy/memory/DEVICE-CONFIG.md
