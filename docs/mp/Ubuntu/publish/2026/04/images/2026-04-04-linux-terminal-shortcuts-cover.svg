@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <!-- 渐变背景 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    
+    <!-- Ubuntu橙渐变 -->
+    <linearGradient id="ubuntuOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#FF7043"/>
+    </linearGradient>
+    
+    <!-- 代码蓝 -->
+    <linearGradient id="codeBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#282c34"/>
+      <stop offset="100%" style="stop-color:#21252b"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 装饰网格 -->
+  <g opacity="0.03" stroke="#0db7ed" stroke-width="1">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+  </g>
+  
+  <!-- 左侧文字区域 -->
+  <g>
+    <!-- 主标题 -->
+    <text x="60" y="160" font-family="Microsoft YaHei, Arial, sans-serif" font-size="48" font-weight="bold" fill="white">
+      Linux终端
+    </text>
+    <text x="60" y="220" font-family="Microsoft YaHei, Arial, sans-serif" font-size="48" font-weight="bold" fill="white">
+      效率神器
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="60" y="270" font-family="Microsoft YaHei, Arial, sans-serif" font-size="24" fill="#0db7ed">
+      10个必会快捷键，效率提升50%
+    </text>
+    
+    <!-- 分隔线 -->
+    <rect x="60" y="295" width="200" height="4" rx="2" fill="url(#ubuntuOrange)"/>
+    
+    <!-- 关键词 -->
+    <g transform="translate(60, 330)">
+      <rect x="0" y="0" width="80" height="28" rx="14" fill="#E95420" opacity="0.8"/>
+      <text x="40" y="19" font-family="Microsoft YaHei, Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">光标移动</text>
+      
+      <rect x="90" y="0" width="80" height="28" rx="14" fill="#0db7ed" opacity="0.8"/>
+      <text x="130" y="19" font-family="Microsoft YaHei, Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">快速删除</text>
+      
+      <rect x="180" y="0" width="80" height="28" rx="14" fill="#4CAF50" opacity="0.8"/>
+      <text x="220" y="19" font-family="Microsoft YaHei, Arial, sans-serif" font-size="13" fill="white" text-anchor="middle">历史命令</text>
+    </g>
+    
+    <!-- 底部信息 -->
+    <g transform="translate(60, 400)">
+      <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#B0BEC5">
+        <tspan x="0" y="0">⌨️ 告别方向键，快如闪电</tspan>
+        <tspan x="0" y="25">⚡ 3分钟掌握，立即上手</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- 右侧终端窗口 -->
+  <g transform="translate(450, 80)">
+    <!-- 终端窗口 -->
+    <rect x="0" y="0" width="400" height="340" rx="8" fill="url(#codeBlue)" stroke="#3e4451" stroke-width="2"/>
+    
+    <!-- 窗口按钮 -->
+    <circle cx="20" cy="18" r="6" fill="#ff5f56"/>
+    <circle cx="40" cy="18" r="6" fill="#ffbd2e"/>
+    <circle cx="60" cy="18" r="6" fill="#27c93f"/>
+    
+    <!-- 窗口标题 -->
+    <text x="200" y="22" font-family="Courier New, monospace" font-size="12" fill="#abb2bf" text-anchor="middle">Terminal</text>
+    
+    <!-- 终端内容 -->
+    <g transform="translate(20, 50)">
+      <!-- 命令1 -->
+      <text font-family="Courier New, monospace" font-size="13">
+        <tspan x="0" y="0" fill="#98c379">user@ubuntu</tspan>
+        <tspan fill="white">:</tspan>
+        <tspan fill="#61afef">~</tspan>
+        <tspan fill="white">$ </tspan>
+        <tspan fill="#abb2bf">sudo apt update</tspan>
+      </text>
+      
+      <!-- 快捷键提示1 -->
+      <rect x="0" y="15" width="100" height="22" rx="4" fill="#E95420" opacity="0.2"/>
+      <text x="50" y="30" font-family="Courier New, monospace" font-size="11" fill="#E95420" text-anchor="middle">Ctrl + A → 行首</text>
+      
+      <!-- 命令2 -->
+      <text font-family="Courier New, monospace" font-size="13" y="65">
+        <tspan x="0" fill="#98c379">user@ubuntu</tspan>
+        <tspan fill="white">:</tspan>
+        <tspan fill="#61afef">~</tspan>
+        <tspan fill="white">$ </tspan>
+        <tspan fill="#abb2bf">docker run -d nginx</tspan>
+      </text>
+      
+      <!-- 快捷键提示2 -->
+      <rect x="0" y="80" width="120" height="22" rx="4" fill="#0db7ed" opacity="0.2"/>
+      <text x="60" y="95" font-family="Courier New, monospace" font-size="11" fill="#0db7ed" text-anchor="middle">Ctrl + R → 搜索历史</text>
+      
+      <!-- 命令3 -->
+      <text font-family="Courier New, monospace" font-size="13" y="130">
+        <tspan x="0" fill="#98c379">user@ubuntu</tspan>
+        <tspan fill="white">:</tspan>
+        <tspan fill="#61afef">~</tspan>
+        <tspan fill="white">$ </tspan>
+        <tspan fill="#abb2bf">sudo !!</tspan>
+      </text>
+      
+      <!-- 快捷键提示3 -->
+      <rect x="0" y="145" width="90" height="22" rx="4" fill="#4CAF50" opacity="0.2"/>
+      <text x="45" y="160" font-family="Courier New, monospace" font-size="11" fill="#4CAF50" text-anchor="middle">!! → 重复命令</text>
+      
+      <!-- 命令4 -->
+      <text font-family="Courier New, monospace" font-size="13" y="195">
+        <tspan x="0" fill="#98c379">user@ubuntu</tspan>
+        <tspan fill="white">:</tspan>
+        <tspan fill="#61afef">~</tspan>
+        <tspan fill="white">$ </tspan>
+        <tspan fill="#abb2bf">cd !$</tspan>
+      </text>
+      
+      <!-- 快捷键提示4 -->
+      <rect x="0" y="210" width="130" height="22" rx="4" fill="#E95420" opacity="0.2"/>
+      <text x="65" y="225" font-family="Courier New, monospace" font-size="11" fill="#E95420" text-anchor="middle">!$ → 上条命令参数</text>
+    </g>
+    
+    <!-- 光标闪烁 -->
+    <rect x="40" y="280" width="8" height="16" fill="#abb2bf" opacity="0.8">
+      <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  
+  <!-- 浮动快捷键 -->
+  <g transform="translate(480, 440)" opacity="0.6">
+    <text font-family="Courier New, monospace" font-size="14" fill="#0db7ed">
+      <tspan x="0" y="0">Ctrl+U</tspan>
+      <tspan x="80" fill="#abb2bf">|</tspan>
+      <tspan x="100">Ctrl+K</tspan>
+      <tspan x="180" fill="#abb2bf">|</tspan>
+      <tspan x="200">Ctrl+W</tspan>
+      <tspan x="280" fill="#abb2bf">|</tspan>
+      <tspan x="300">Ctrl+Y</tspan>
+    </text>
+  </g>
+  
+  <!-- 装饰元素 -->
+  <g opacity="0.1">
+    <circle cx="50" cy="50" r="15" fill="#E95420"/>
+    <circle cx="100" cy="80" r="10" fill="#0db7ed"/>
+    <circle cx="850" cy="450" r="20" fill="#0db7ed"/>
+    <circle cx="800" cy="430" r="12" fill="#E95420"/>
+  </g>
+  
+  <!-- 底部品牌条 -->
+  <rect x="0" y="470" width="900" height="30" fill="#0db7ed" opacity="0.1"/>
+  <text x="450" y="488" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#B0BEC5" text-anchor="middle">
+    UbuntuNews · Linux效率提升 · 命令行技巧
+  </text>
+</svg>

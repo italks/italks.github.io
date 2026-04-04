@@ -67,8 +67,6 @@
   <!-- 黄色强调线 -->
   <rect x="40" y="178" width="200" height="4" rx="2" fill="url(#lineGrad)"/>
 
-  <!-- 副标题 -->
-  <text x="40" y="220" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="16" fill="#A8C8F0">UniAppX  vs  Flutter  vs  React Native</text>
 
   <!-- 核心问题标语 -->
   <text x="40" y="268" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="20" font-weight="bold" fill="#FFCB05">你的项目该怎么选？</text>
@@ -135,8 +133,6 @@
   <text x="588" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#A8D8FF">iOS</text>
   <rect x="610" y="272" width="42" height="18" rx="3" fill="#3a2020"/>
   <text x="631" y="285" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#FF9F9F">鸿蒙✗</text>
-  <!-- 费用标签 -->
-  <text x="520" y="295" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#A8C8F0">成本 ¥40-70万</text>
 
   <!-- 决策标签 -->
   <rect x="695" y="190" width="180" height="115" rx="10" fill="#0d1f3c" stroke="#FFCB05" stroke-width="2" stroke-dasharray="5,3" opacity="0.9"/>
@@ -144,24 +140,6 @@
   <text x="785" y="252" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#FFFFFF">国内用户</text>
   <text x="785" y="270" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" font-weight="bold" fill="#FFCB05">→ UniAppX</text>
   <text x="785" y="290" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#FFFFFF">精品/海外</text>
-  <text x="785" y="308" text-anchor="middle" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="13" font-weight="bold" fill="#54C1E0">→ Flutter</text>
 
-  <!-- 鸿蒙警示条 -->
-  <rect x="500" y="325" width="375" height="40" rx="6" fill="#FFCB05" opacity="0.15"/>
-  <rect x="500" y="325" width="4" height="40" rx="2" fill="#FFCB05"/>
-  <text x="516" y="340" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#FFCB05">⚠ 鸿蒙提醒</text>
-  <text x="516" y="358" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#D0E8FF">中国市场鸿蒙用户超 3500 万，适配不可忽视</text>
 
-  <!-- AI集成提示 -->
-  <rect x="500" y="380" width="375" height="40" rx="6" fill="#2A5298" opacity="0.5"/>
-  <text x="516" y="395" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" font-weight="bold" fill="#54C1E0">🤖 2026 新变量</text>
-  <text x="516" y="413" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="12" fill="#D0E8FF">APP 内置 AI 能力已成标配，框架的 AI SDK 支持是关键</text>
-
-  <!-- 底部信息栏 -->
-  <rect x="500" y="440" width="375" height="40" rx="6" fill="#1a2e5c" opacity="0.7"/>
-  <text x="516" y="455" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="11" fill="#7AA8D0">周四技术干货</text>
-  <text x="516" y="472" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="11" font-weight="bold" fill="#A8C8F0">用代码构建商业护城河</text>
-  <!-- 日期 -->
-  <text x="855" y="455" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#5a88b0">2026.03.26</text>
-  <text x="855" y="472" text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#5a88b0">Thursday</text>
-</svg>
+  </svg>

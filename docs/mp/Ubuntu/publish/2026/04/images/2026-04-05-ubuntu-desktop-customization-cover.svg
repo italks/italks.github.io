@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <!-- 渐变背景 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2E3440"/>
+      <stop offset="100%" style="stop-color:#3B4252"/>
+    </linearGradient>
+    
+    <!-- Ubuntu橙渐变 -->
+    <linearGradient id="ubuntuOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#FF7043"/>
+    </linearGradient>
+    
+    <!-- Nordic蓝渐变 -->
+    <linearGradient id="nordicBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5E81AC"/>
+      <stop offset="100%" style="stop-color:#81A1C1"/>
+    </linearGradient>
+    
+    <!-- Aurora渐变 -->
+    <linearGradient id="auroraGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#BF616A"/>
+      <stop offset="50%" style="stop-color:#D08770"/>
+      <stop offset="100%" style="stop-color:#EBCB8B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 装饰网格 -->
+  <g opacity="0.05" stroke="#5E81AC" stroke-width="1">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="200" y1="0" x2="200" y2="500"/>
+    <line x1="400" y1="0" x2="400" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="800" y1="0" x2="800" y2="500"/>
+  </g>
+  
+  <!-- 左侧文字区域 -->
+  <g>
+    <!-- 主标题 -->
+    <text x="60" y="140" font-family="Microsoft YaHei, Arial, sans-serif" font-size="52" font-weight="bold" fill="white">
+      Ubuntu桌面
+    </text>
+    <text x="60" y="200" font-family="Microsoft YaHei, Arial, sans-serif" font-size="52" font-weight="bold" fill="white">
+      美化指南
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="60" y="250" font-family="Microsoft YaHei, Arial, sans-serif" font-size="26" fill="#88C0D0">
+      30分钟打造炫酷桌面
+    </text>
+    
+    <!-- 分隔线 -->
+    <rect x="60" y="275" width="220" height="4" rx="2" fill="url(#auroraGrad)"/>
+    
+    <!-- 关键词 -->
+    <g transform="translate(60, 310)">
+      <rect x="0" y="0" width="90" height="30" rx="15" fill="#5E81AC" opacity="0.8"/>
+      <text x="45" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">GNOME</text>
+      
+      <rect x="100" y="0" width="90" height="30" rx="15" fill="#BF616A" opacity="0.8"/>
+      <text x="145" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">主题</text>
+      
+      <rect x="200" y="0" width="90" height="30" rx="15" fill="#A3BE8C" opacity="0.8"/>
+      <text x="245" y="20" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="white" text-anchor="middle">图标</text>
+    </g>
+    
+    <!-- 底部信息 -->
+    <g transform="translate(60, 390)">
+      <text font-family="Microsoft YaHei, Arial, sans-serif" font-size="16" fill="#D8DEE9">
+        <tspan x="0" y="0">✨ 深色主题 + macOS Dock</tspan>
+        <tspan x="0" y="28">🎨 现代图标 + 模糊效果</tspan>
+      </text>
+    </g>
+  </g>
+  
+  <!-- 右侧桌面模拟 -->
+  <g transform="translate(450, 60)">
+    <!-- 桌面窗口 -->
+    <rect x="0" y="0" width="410" height="380" rx="12" fill="#1E1E2E" stroke="#5E81AC" stroke-width="2"/>
+    
+    <!-- 顶部栏 -->
+    <rect x="0" y="0" width="410" height="28" rx="12" fill="rgba(94, 129, 172, 0.3)"/>
+    <rect x="0" y="14" width="410" height="14" fill="rgba(94, 129, 172, 0.3)"/>
+    
+    <!-- 顶部栏内容 -->
+    <text x="20" y="19" font-family="Ubuntu, sans-serif" font-size="11" fill="#ECEFF4">活动</text>
+    <text x="205" y="19" font-family="Ubuntu, sans-serif" font-size="11" fill="#ECEFF4" text-anchor="middle">14:30</text>
+    
+    <!-- 系统监控 -->
+    <g transform="translate(280, 6)">
+      <text font-family="Ubuntu Mono, monospace" font-size="9" fill="#A3BE8C">
+        <tspan x="0" y="8">CPU 45%</tspan>
+        <tspan x="55" y="8" fill="#BF616A">MEM 62%</tspan>
+      </text>
+    </g>
+    
+    <!-- 壁纸区域 -->
+    <rect x="0" y="28" width="410" height="352" rx="0" fill="#2E3440"/>
+    
+    <!-- 渐变壁纸效果 -->
+    <rect x="0" y="28" width="410" height="352" fill="url(#nordicBlue)" opacity="0.15"/>
+    
+    <!-- 图标网格 -->
+    <g transform="translate(20, 50)">
+      <!-- 文件图标 -->
+      <rect x="0" y="0" width="50" height="50" rx="6" fill="#5E81AC" opacity="0.8"/>
+      <text x="25" y="70" font-family="Ubuntu, sans-serif" font-size="10" fill="#D8DEE9" text-anchor="middle">文件</text>
+      
+      <!-- 火狐图标 -->
+      <rect x="60" y="0" width="50" height="50" rx="6" fill="#FF6E40"/>
+      <text x="85" y="70" font-family="Ubuntu, sans-serif" font-size="10" fill="#D8DEE9" text-anchor="middle">Firefox</text>
+      
+      <!-- 终端图标 -->
+      <rect x="120" y="0" width="50" height="50" rx="6" fill="#4C566A"/>
+      <text x="145" y="70" font-family="Ubuntu, sans-serif" font-size="10" fill="#D8DEE9" text-anchor="middle">终端</text>
+      
+      <!-- VSCode图标 -->
+      <rect x="180" y="0" width="50" height="50" rx="6" fill="#007ACC"/>
+      <text x="205" y="70" font-family="Ubuntu, sans-serif" font-size="10" fill="#D8DEE9" text-anchor="middle">VSCode</text>
+    </g>
+    
+    <!-- 底部Dock -->
+    <rect x="80" y="320" width="250" height="50" rx="8" fill="rgba(46, 52, 64, 0.7)" stroke="#5E81AC" stroke-width="1"/>
+    
+    <!-- Dock图标 -->
+    <g transform="translate(95, 330)">
+      <rect x="0" y="0" width="32" height="32" rx="6" fill="#5E81AC"/>
+      <rect x="42" y="0" width="32" height="32" rx="6" fill="#FF6E40"/>
+      <rect x="84" y="0" width="32" height="32" rx="6" fill="#4C566A"/>
+      <rect x="126" y="0" width="32" height="32" rx="6" fill="#007ACC"/>
+      <rect x="168" y="0" width="32" height="32" rx="6" fill="#A3BE8C"/>
+    </g>
+    
+    <!-- 模糊效果装饰 -->
+    <rect x="60" y="200" width="290" height="100" rx="12" fill="rgba(94, 129, 172, 0.15)" stroke="#5E81AC" stroke-width="1" opacity="0.5"/>
+    <text x="205" y="240" font-family="Ubuntu, sans-serif" font-size="12" fill="#D8DEE9" text-anchor="middle" opacity="0.6">透明模糊效果</text>
+  </g>
+  
+  <!-- 浮动元素 -->
+  <g opacity="0.15">
+    <circle cx="50" cy="50" r="18" fill="#5E81AC"/>
+    <circle cx="120" cy="80" r="12" fill="#BF616A"/>
+    <circle cx="850" cy="450" r="22" fill="#5E81AC"/>
+    <circle cx="800" cy="430" r="14" fill="#A3BE8C"/>
+  </g>
+  
+  <!-- 主题色条 -->
+  <g transform="translate(480, 450)" opacity="0.5">
+    <rect x="0" y="0" width="30" height="8" rx="4" fill="#BF616A"/>
+    <rect x="40" y="0" width="30" height="8" rx="4" fill="#D08770"/>
+    <rect x="80" y="0" width="30" height="8" rx="4" fill="#EBCB8B"/>
+    <rect x="120" y="0" width="30" height="8" rx="4" fill="#A3BE8C"/>
+    <rect x="160" y="0" width="30" height="8" rx="4" fill="#88C0D0"/>
+    <rect x="200" y="0" width="30" height="8" rx="4" fill="#81A1C1"/>
+    <rect x="240" y="0" width="30" height="8" rx="4" fill="#5E81AC"/>
+    <rect x="280" y="0" width="30" height="8" rx="4" fill="#B48EAD"/>
+  </g>
+  
+  <!-- 底部品牌条 -->
+  <rect x="0" y="470" width="900" height="30" fill="#5E81AC" opacity="0.1"/>
+  <text x="450" y="488" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#D8DEE9" text-anchor="middle">
+    UbuntuNews · 桌面美化 · 个性化定制
+  </text>
+</svg>
