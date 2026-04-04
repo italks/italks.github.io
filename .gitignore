@@ -4,13 +4,10 @@ docs/.vitepress/dist
 config.json
 
 # WorkBuddy 多设备 Memory 配置
-# 方案 A：不同步设备专属 memory（推荐，避免冲突）
-.workbuddy/memory/devices/
+# 方案：读取所有设备记录，只写入当前设备（推荐）
+# 同步所有设备的 memory，但只修改当前设备的文件
 
-# 方案 B：同步所有 memory（允许冲突，手动解决）
-# 如需同步设备专属 memory，注释掉上面的规则，使用：
-# !.workbuddy/memory/devices/
-
-# 保留共享 memory
-!.workbuddy/memory/SHARED.md
-!.workbuddy/memory/DEVICE-CONFIG.md
+# 保留所有 memory 文件（包括设备专属）
+!.workbuddy/memory/
+!.workbuddy/memory/devices/
+!.workbuddy/memory/devices/**

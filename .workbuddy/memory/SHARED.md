@@ -84,8 +84,23 @@ node ~/.workbuddy/skills/md-wechat/scripts/convert.js \
 - **2026-03-23**：GNOME 50 发布
 - **2026-03-20**：Linux 内核 6.13 集成到 Ubuntu 26.04
 
-## 跨设备协作说明
+## 🔄 多设备协作说明
 
-- 本文件为**共享记忆**，所有设备都可读写
-- 设备专属的工作记录存储在 `.workbuddy/memory/devices/[设备名]/`
-- 遇到冲突时，优先保留最新修改，或手动合并
+### 核心原则
+- **读取**：可以查看所有设备的工作记录
+- **写入**：只修改当前设备的 memory 文件
+- **同步**：通过 Git 同步所有设备的 memory
+
+### 如何查看其他设备的工作记录
+```bash
+# 查看所有设备的最新记录
+ls .workbuddy/memory/devices/*/2026-04-04.md
+
+# 查看指定设备的记录
+cat .workbuddy/memory/devices/desktop-pc/2026-04-04.md
+```
+
+### 详细使用指南
+请查看 `.workbuddy/memory/README.md`
+
+---
