@@ -204,6 +204,21 @@ d:/projects/italks.github.io/docs/mp/Ubuntu/
     └── 运营分析报告_20260318.md
 ```
 
+## APP移动开发公众号项目
+
+- **项目路径**：`d:/projects/italks.github.io/docs/mp/APP/`
+- **账号定位**：移动APP开发（Android/iOS/跨平台/开发效率/AI工具）
+- **⚠️ 内容红线：不生成鸿蒙/HarmonyOS相关内容，账号对此无兴趣**
+
+### 选题方向
+- Android 开发（Jetpack Compose、Kotlin、性能优化、安全）
+- iOS / SwiftUI / Swift 新特性
+- 跨平台框架（Flutter、React Native、KMP、UniAppX）
+- AI 编程工具（Cursor、Copilot、Claude Code 等）
+- 端侧 AI / 手机本地大模型
+- App Store / Google Play 运营与增长
+- 移动安全漏洞与防护
+
 ## 小红书运营项目
 
 - **项目路径**：`d:/projects/italks.github.io/docs/xiaohongshu/`

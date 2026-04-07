@@ -1,0 +1,196 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0A0E1A;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0D1B2A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A0E1A;stop-opacity:1" />
+    </linearGradient>
+    <!-- 红色光晕 -->
+    <radialGradient id="redGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#E84026;stop-opacity:0.25" />
+      <stop offset="100%" style="stop-color:#E84026;stop-opacity:0" />
+    </radialGradient>
+    <!-- 蓝色光晕 -->
+    <radialGradient id="blueGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:0.15" />
+      <stop offset="100%" style="stop-color:#1E90FF;stop-opacity:0" />
+    </radialGradient>
+    <!-- 版本号渐变 -->
+    <linearGradient id="v8Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E84026;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF6B3D;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="v6Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1E90FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00BFFF;stop-opacity:1" />
+    </linearGradient>
+    <!-- 删除线渐变 -->
+    <linearGradient id="strikeGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" style="stop-color:#FF4444;stop-opacity:0" />
+      <stop offset="30%" style="stop-color:#FF4444;stop-opacity:1" />
+      <stop offset="70%" style="stop-color:#FF4444;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FF4444;stop-opacity:0" />
+    </linearGradient>
+    <!-- 光线效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 模糊 -->
+    <filter id="blur4">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="blur8">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- 背景光晕 -->
+  <ellipse cx="250" cy="250" rx="300" ry="220" fill="url(#blueGlow)" filter="url(#blur8)" opacity="0.6"/>
+  <ellipse cx="700" cy="220" rx="280" ry="200" fill="url(#redGlow)" filter="url(#blur8)" opacity="0.7"/>
+
+  <!-- 网格背景线 -->
+  <g stroke="#1A2540" stroke-width="0.5" opacity="0.5">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- 左侧版本时间线 -->
+  <!-- 时间线竖线 -->
+  <line x1="180" y1="80" x2="180" y2="420" stroke="#1E3A5F" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <!-- HarmonyOS 6.1 节点 -->
+  <circle cx="180" cy="130" r="12" fill="#1E90FF" filter="url(#glow)"/>
+  <circle cx="180" cy="130" r="6" fill="#00BFFF"/>
+  <text x="205" y="120" fill="#00BFFF" font-family="Arial, sans-serif" font-size="15" font-weight="bold">HarmonyOS 6.1</text>
+  <text x="205" y="138" fill="#6B8BAD" font-family="Arial, sans-serif" font-size="12">2026 · API 23 · LTS</text>
+  <!-- 当前标签 -->
+  <rect x="205" y="145" width="56" height="18" rx="9" fill="#1E3A5F"/>
+  <text x="233" y="158" fill="#00BFFF" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">当前主推</text>
+
+  <!-- 过渡线 -->
+  <line x1="180" y1="142" x2="180" y2="215" stroke="#1A2540" stroke-width="2" stroke-dasharray="4,3"/>
+
+  <!-- HarmonyOS 7 节点（被划掉）-->
+  <circle cx="180" cy="240" r="10" fill="#2A1A1A" stroke="#FF4444" stroke-width="1.5"/>
+  <!-- X 叉 -->
+  <line x1="173" y1="233" x2="187" y2="247" stroke="#FF4444" stroke-width="2.5"/>
+  <line x1="187" y1="233" x2="173" y2="247" stroke="#FF4444" stroke-width="2.5"/>
+
+  <!-- 版本7文字 + 删除线 -->
+  <text x="205" y="245" fill="#4A3030" font-family="Arial, sans-serif" font-size="15" font-weight="bold">HarmonyOS 7</text>
+  <line x1="203" y1="243" x2="340" y2="243" stroke="#FF4444" stroke-width="2.5" opacity="0.9"/>
+
+  <!-- SKIP 标签 -->
+  <rect x="345" y="232" width="44" height="20" rx="4" fill="#FF4444" opacity="0.9"/>
+  <text x="367" y="246" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle">SKIP</text>
+
+  <!-- 虚线跳跃弧 -->
+  <path d="M 180 250 Q 140 315 180 360" fill="none" stroke="#E84026" stroke-width="2" stroke-dasharray="6,4" opacity="0.7"/>
+  <!-- 箭头 -->
+  <polygon points="175,358 185,358 180,370" fill="#E84026" opacity="0.8"/>
+
+  <!-- HarmonyOS 8 节点 -->
+  <circle cx="180" cy="385" r="14" fill="#E84026" filter="url(#strongGlow)" opacity="0.9"/>
+  <circle cx="180" cy="385" r="8" fill="#FF6B3D"/>
+  <text x="205" y="375" fill="#FF6B3D" font-family="Arial, sans-serif" font-size="15" font-weight="bold" filter="url(#glow)">HarmonyOS 8</text>
+  <text x="205" y="393" fill="#6B5040" font-family="Arial, sans-serif" font-size="12">2028 · 架构重构</text>
+  <!-- 未来标签 -->
+  <rect x="205" y="399" width="44" height="18" rx="9" fill="#3A1A0A"/>
+  <text x="227" y="412" fill="#E84026" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle">未来</text>
+
+  <!-- 分隔线 -->
+  <line x1="420" y1="40" x2="420" y2="460" stroke="#1A2540" stroke-width="1" opacity="0.8"/>
+
+  <!-- 右侧主标题区域 -->
+  <!-- 标签：BREAKING NEWS -->
+  <rect x="450" y="55" width="130" height="26" rx="5" fill="#E84026" opacity="0.9"/>
+  <text x="515" y="73" fill="white" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" letter-spacing="2">🔥 重磅官宣</text>
+
+  <!-- 主标题 -->
+  <text x="450" y="125" fill="white" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="36" font-weight="bold" filter="url(#glow)">鸿蒙</text>
+  <text x="540" y="125" fill="url(#redGlow)" font-family="Arial, sans-serif" font-size="36" font-weight="bold">
+    <tspan fill="url(#v6Grad)" filter="url(#glow)">6</tspan>
+    <tspan fill="white"> → </tspan>
+    <tspan fill="url(#v8Grad)" filter="url(#strongGlow)">8</tspan>
+  </text>
+
+  <!-- 副标题 -->
+  <text x="450" y="162" fill="#B0C8E8" font-family="Arial, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18">版本 7 被官方宣布跳过</text>
+
+  <!-- 大字装饰：数字7（划掉）-->
+  <text x="630" y="260" fill="#200A08" font-family="Arial, sans-serif" font-size="180" font-weight="900" opacity="0.6">7</text>
+  <!-- 红色大叉 -->
+  <line x1="620" y1="115" x2="780" y2="295" stroke="#FF3333" stroke-width="8" opacity="0.7" filter="url(#glow)"/>
+  <line x1="780" y1="115" x2="620" y2="295" stroke="#FF3333" stroke-width="8" opacity="0.7" filter="url(#glow)"/>
+
+  <!-- 三个要点 -->
+  <!-- 要点1 -->
+  <rect x="450" y="315" width="200" height="56" rx="8" fill="#0E1E30" stroke="#1E3A5F" stroke-width="1"/>
+  <rect x="450" y="315" width="4" height="56" rx="2" fill="#1E90FF"/>
+  <text x="466" y="334" fill="#00BFFF" font-family="Arial, 'PingFang SC', sans-serif" font-size="12" font-weight="bold">📅 2026 稳推 6.1</text>
+  <text x="466" y="354" fill="#6B8BAD" font-family="Arial, 'PingFang SC', sans-serif" font-size="11">LTS 支持，2028年前无需迁移</text>
+  <text x="466" y="366" fill="#6B8BAD" font-family="Arial, 'PingFang SC', sans-serif" font-size="11">当前是最佳入场窗口期</text>
+
+  <!-- 要点2 -->
+  <rect x="665" y="315" width="200" height="56" rx="8" fill="#0E1E30" stroke="#2A1A1A" stroke-width="1"/>
+  <rect x="665" y="315" width="4" height="56" rx="2" fill="#E84026"/>
+  <text x="681" y="334" fill="#FF6B3D" font-family="Arial, 'PingFang SC', sans-serif" font-size="12" font-weight="bold">🚀 2028 直推 8</text>
+  <text x="681" y="354" fill="#6B5040" font-family="Arial, 'PingFang SC', sans-serif" font-size="11">架构重构 · AI 原生系统</text>
+  <text x="681" y="366" fill="#6B5040" font-family="Arial, 'PingFang SC', sans-serif" font-size="11">现在做，2028年也受益</text>
+
+  <!-- 要点3 -->
+  <rect x="450" y="382" width="415" height="40" rx="8" fill="#12261A" stroke="#1A3A25" stroke-width="1"/>
+  <rect x="450" y="382" width="4" height="40" rx="2" fill="#00C853"/>
+  <text x="466" y="399" fill="#00C853" font-family="Arial, 'PingFang SC', sans-serif" font-size="12" font-weight="bold">✅ 创新赛奖金 68 万</text>
+  <text x="466" y="415" fill="#3A6B4A" font-family="Arial, 'PingFang SC', sans-serif" font-size="11">5 月 15 日截止 · 一等奖 15 万 · 现在报名不晚</text>
+
+  <!-- 底部标签区 -->
+  <rect x="450" y="440" width="90" height="24" rx="12" fill="#1A2E45"/>
+  <text x="495" y="456" fill="#4A90D9" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">#鸿蒙开发</text>
+
+  <rect x="550" y="440" width="90" height="24" rx="12" fill="#2A1A1A"/>
+  <text x="595" y="456" fill="#E84026" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">#HarmonyOS</text>
+
+  <rect x="650" y="440" width="90" height="24" rx="12" fill="#1A2E45"/>
+  <text x="695" y="456" fill="#4A90D9" font-family="Arial, sans-serif" font-size="11" text-anchor="middle">#跨平台开发</text>
+
+  <!-- 公众号名称 -->
+  <text x="450" y="488" fill="#3A4A5A" font-family="Arial, 'PingFang SC', sans-serif" font-size="12">APP开发者之家 · 2026.04.07</text>
+
+  <!-- 左上角装饰：鸿蒙花瓣 LOGO 简化版 -->
+  <g transform="translate(55, 65)" opacity="0.8">
+    <!-- 四瓣花 -->
+    <ellipse cx="0" cy="-18" rx="8" ry="14" fill="#E84026" transform="rotate(0)" opacity="0.9"/>
+    <ellipse cx="18" cy="0" rx="8" ry="14" fill="#E84026" transform="rotate(90)" opacity="0.9"/>
+    <ellipse cx="0" cy="18" rx="8" ry="14" fill="#E84026" transform="rotate(0)" opacity="0.7"/>
+    <ellipse cx="-18" cy="0" rx="8" ry="14" fill="#E84026" transform="rotate(90)" opacity="0.7"/>
+    <circle cx="0" cy="0" r="6" fill="#FF6B3D"/>
+  </g>
+
+  <!-- 顶部光条 -->
+  <rect x="0" y="0" width="900" height="3" fill="url(#v8Grad)" opacity="0.6"/>
+  <!-- 底部光条 -->
+  <rect x="0" y="497" width="900" height="3" fill="url(#v8Grad)" opacity="0.3"/>
+</svg>
