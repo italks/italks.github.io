@@ -1,8 +1,10 @@
 # Linux终端效率神器：10个必会的快捷键技巧
 
 > 阅读时长：3分钟
-> 
+>
 > 还在拼命敲命令？掌握这10个终端快捷键，让你的效率提升50%，告别重复劳动！
+
+**适用范围**：本文介绍的快捷键适用于所有 Linux 发行版（Ubuntu/CentOS/Fedora/Arch等）和 macOS 终端，不适用于 Windows CMD/PowerShell。
 
 ---
 

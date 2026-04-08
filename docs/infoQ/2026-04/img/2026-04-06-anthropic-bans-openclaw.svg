@@ -1,0 +1,168 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0c29"/>
+      <stop offset="50%" style="stop-color:#302b63"/>
+      <stop offset="100%" style="stop-color:#24243e"/>
+    </linearGradient>
+    <!-- 橙色光晕 -->
+    <radialGradient id="orangeGlow" cx="30%" cy="40%" r="35%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:0.4"/>
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 红色警示光晕 -->
+    <radialGradient id="redGlow" cx="70%" cy="55%" r="30%">
+      <stop offset="0%" style="stop-color:#ff4444;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#ff4444;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 网格图案 -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.08"/>
+    </pattern>
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="strongGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+
+  <!-- 光晕效果 -->
+  <rect width="900" height="500" fill="url(#orangeGlow)"/>
+  <rect width="900" height="500" fill="url(#redGlow)"/>
+
+  <!-- 左侧：Claude/Anthropic 堡垒 -->
+  <g transform="translate(120, 180)">
+    <!-- 防御盾牌/堡垒 -->
+    <path d="M 0,-60 L 50,-80 L 100,-60 L 100,20 Q 100,70 50,100 Q 0,70 0,20 Z"
+          fill="#E95420" fill-opacity="0.15" stroke="#E95420" stroke-width="2.5" filter="url(#glow)"/>
+    
+    <!-- 内部核心 - AI大脑图标 -->
+    <circle cx="50" cy="15" r="28" fill="#1a1a2e" stroke="#E95420" stroke-width="2"/>
+    
+    <!-- 大脑神经网络线条 -->
+    <g stroke="#E95420" stroke-width="1.2" fill="none" opacity="0.8">
+      <circle cx="42" cy="8" r="3" fill="#E95420"/>
+      <circle cx="58" cy="8" r="3" fill="#E95420"/>
+      <circle cx="50" cy="22" r="3" fill="#E95420"/>
+      <circle cx="38" cy="18" r="2.5" fill="#E95420"/>
+      <circle cx="62" cy="18" r="2.5" fill="#E95420"/>
+      <line x1="42" y1="8" x2="58" y2="8"/>
+      <line x1="42" y1="8" x2="38" y2="18"/>
+      <line x1="58" y1="8" x2="62" y2="18"/>
+      <line x1="42" y1="8" x2="50" y2="22"/>
+      <line x1="58" y1="8" x2="50" y2="22"/>
+      <line x1="38" y1="18" x2="50" y2="22"/>
+      <line x1="62" y1="18" x2="50" y2="22"/>
+    </g>
+
+    <!-- 封锁线 - 斜杠表示禁止/封禁 -->
+    <line x1="15" y1="-45" x2="85" y2="75" stroke="#ff4444" stroke-width="4" 
+          stroke-linecap="round" filter="url(#strongGlow)" opacity="0.9"/>
+
+    <!-- 标签：ANTHROPIC -->
+    <text x="50" y="130" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#E95420" letter-spacing="3">ANTHROPIC</text>
+  </g>
+
+  <!-- 中间：冲突符号 -->
+  <g transform="translate(420, 220)">
+    <!-- 闪电/碰撞效果 -->
+    <polygon points="0,-35 12,-8 3,-8 15,35 -3,8 8,8" 
+             fill="#ffcc00" filter="url(#strongGlow)" opacity="0.9"/>
+    <!-- 冲击波环 -->
+    <circle cx="7" cy="0" r="48" fill="none" stroke="#ffcc00" stroke-width="1.5" opacity="0.3"/>
+    <circle cx="7" cy="0" r="62" fill="none" stroke="#ffcc00" stroke-width="1" opacity="0.15"/>
+  </g>
+
+  <!-- 右侧：OpenClaw 小龙虾/钳子 Agent -->
+  <g transform="translate(620, 190)">
+    <!-- 龙虾身体轮廓（简化为科技风格Agent） -->
+    <ellipse cx="60" cy="40" rx="42" ry="32" fill="#1a1a2e" stroke="#00d4aa" stroke-width="2" opacity="0.9"/>
+
+    <!-- 龙虾眼睛（两个圆点代表Agent的"眼睛"） -->
+    <circle cx="42" cy="28" r="6" fill="#00d4aa" filter="url(#glow)"/>
+    <circle cx="78" cy="28" r="6" fill="#00d4aa" filter="url(#glow)"/>
+    <circle cx="43" cy="27" r="2.5" fill="#fff"/>
+    <circle cx="79" cy="27" r="2.5" fill="#fff"/>
+
+    <!-- 大钳子（标志性特征） -->
+    <g fill="none" stroke="#00d4aa" stroke-width="2.5" stroke-linecap="round" filter="url(#glow)">
+      <!-- 左钳子 -->
+      <path d="M 18,35 Q -5,20 5,0 Q 10,-8 18,-2"/>
+      <path d="M 5,0 Q 0,8 8,12"/>
+      <!-- 右钳子 -->
+      <path d="M 102,35 Q 125,20 115,0 Q 110,-8 102,-2"/>
+      <path d="M 115,0 Q 120,8 112,12"/>
+    </g>
+
+    <!-- 被阻挡的效果 - X标记 -->
+    <g transform="translate(60, 45)" opacity="0.85">
+      <line x1="-18" y1="-18" x2="18" y2="18" stroke="#ff4444" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+      <line x1="18" y1="-18" x2="-18" y2="18" stroke="#ff4444" stroke-width="3.5" stroke-linecap="round" filter="url(#glow)"/>
+    </g>
+
+    <!-- 标签：OpenClaw -->
+    <text x="60" y="98" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#00d4aa" letter-spacing="2">OpenClaw</text>
+  </g>
+
+  <!-- 底部：巨头观察者剪影 -->
+  <g transform="translate(0, 380)" opacity="0.5">
+    <!-- Microsoft -->
+    <g transform="translate(150, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#00a4ef" fill-opacity="0.2" stroke="#00a4ef" stroke-width="1"/>
+      <text x="18" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#00a4ef">MSFT</text>
+    </g>
+    <!-- Google -->
+    <g transform="translate(300, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#4285f4" fill-opacity="0.2" stroke="#4285f4" stroke-width="1"/>
+      <text x="18" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#4285f4">Google</text>
+    </g>
+    <!-- Meta -->
+    <g transform="translate(450, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#0668E1" fill-opacity="0.2" stroke="#0668E1" stroke-width="1"/>
+      <text x="18" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#0668E1">Meta</text>
+    </g>
+    <!-- OpenAI -->
+    <g transform="translate(600, 0)">
+      <rect x="0" y="0" width="36" height="36" rx="6" fill="#10a37f" fill-opacity="0.2" stroke="#10a37f" stroke-width="1"/>
+      <text x="18" y="54" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#10a37f">OpenAI</text>
+    </g>
+  </g>
+
+  <!-- 标题文字 -->
+  <text x="450" y="52" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#ffffff" filter="url(#glow)">AI 编程生态战争</text>
+  <text x="450" y="78" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#cccccc">Anthropic 封杀 OpenClaw，平台主权之争全面爆发</text>
+
+  <!-- 数据亮点标签 -->
+  <g transform="translate(720, 140)">
+    <rect x="0" y="0" width="155" height="72" rx="8" fill="#1a1a2e" fill-opacity="0.8" stroke="#E95420" stroke-width="1" opacity="0.9"/>
+    <text x="78" y="24" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#E95420" font-weight="bold">$200 → $5000</text>
+    <text x="78" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">订阅套利比</text>
+    <line x1="15" y1="52" x2="143" y2="52" stroke="#333" stroke-width="1"/>
+    <text x="78" y="66" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#ff6666">25倍差距</text>
+  </g>
+
+  <!-- 时间标签 -->
+  <g transform="translate(720, 230)">
+    <rect x="0" y="0" width="155" height="52" rx="8" fill="#1a1a2e" fill-opacity="0.8" stroke="#ff4444" stroke-width="1" opacity="0.9"/>
+    <text x="78" y="22" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="#ff4444" font-weight="bold">2026.04.04</text>
+    <text x="78" y="42" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaaaaa">正式断供</text>
+  </g>
+
+  <!-- 底部装饰线 -->
+  <line x1="50" y1="470" x2="850" y2="470" stroke="url(#orangeGlow)" stroke-width="1" opacity="0.3"/>
+</svg>
