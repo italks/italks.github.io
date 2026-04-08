@@ -1,0 +1,70 @@
+<svg viewBox="0 0 900 500" xmlns="http://www.w3.org/2000/svg" font-family="'PingFang SC', 'Microsoft YaHei', sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0D1B2A"/>
+      <stop offset="100%" stop-color="#1B2838"/>
+    </linearGradient>
+    <linearGradient id="green" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3DDC84"/>
+      <stop offset="100%" stop-color="#00C853"/>
+    </linearGradient>
+    <linearGradient id="red" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B6B"/>
+      <stop offset="100%" stop-color="#E53935"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- 顶部色条 -->
+  <rect width="900" height="4" fill="url(#green)"/>
+
+  <!-- 左上角标签 -->
+  <rect x="30" y="24" width="110" height="26" rx="13" fill="#3DDC84" opacity="0.12"/>
+  <text x="85" y="42" text-anchor="middle" fill="#3DDC84" font-size="12" font-weight="600">APP开发运营</text>
+
+  <!-- 中央大图标：锁 + Android 风格 -->
+  <g transform="translate(450, 230)">
+    <!-- 外圈光晕 -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="#3DDC84" stroke-width="1" opacity="0.15"/>
+    <circle cx="0" cy="0" r="60" fill="none" stroke="#FF6B6B" stroke-width="1" opacity="0.12"/>
+
+    <!-- 锁主体 -->
+    <rect x="-30" y="-10" width="60" height="45" rx="6" fill="#1E3A5F" stroke="url(#green)" stroke-width="2"/>
+    <!-- 锁孔 -->
+    <circle cx="0" cy="10" r="7" fill="none" stroke="#3DDC84" stroke-width="2.5"/>
+    <line x1="0" y1="14" x2="0" y2="23" stroke="#3DDC84" stroke-width="2.5" stroke-linecap="round"/>
+    <!-- 锁梁（半开状态） -->
+    <path d="M -18 -10 L -18 -25 A 18 18 0 0 1 18 -25 L 18 -10" fill="none" stroke="url(#red)" stroke-width="4.5" stroke-linecap="round"/>
+
+    <!-- 警告感叹号（右上角） -->
+    <circle cx="35" cy="-35" r="16" fill="#E53935" opacity="0.9"/>
+    <text x="35" y="-29" text-anchor="middle" fill="white" font-size="20" font-weight="bold">!</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="450" y="95" text-anchor="middle" fill="white" font-size="36" font-weight="700" letter-spacing="1">谷歌突然"上锁"！</text>
+
+  <!-- 副标题 -->
+  <text x="450" y="135" text-anchor="middle" fill="#8BA4BF" font-size="19" letter-spacing="1">Android 开发者验证来了，你的 App 还能被安装吗？</text>
+
+  <!-- 分割线 -->
+  <line x1="280" y1="155" x2="620" y2="155" stroke="#2A4060" stroke-width="1.5"/>
+
+  <!-- 底部三行关键信息（纯文字，无边框） -->
+  <text x="150" y="380" text-anchor="middle" fill="#3DDC84" font-size="14" font-weight="600">📅 首批生效</text>
+  <text x="150" y="405" text-anchor="middle" fill="white" font-size="17" font-weight="700">2026.09.30</text>
+  <text x="150" y="430" text-anchor="middle" fill="#667788" font-size="12">巴西 · 印尼 · 新加坡</text>
+
+  <text x="450" y="380" text-anchor="middle" fill="#FF6B6B" font-size="14" font-weight="600">⚠️ 核心影响</text>
+  <text x="450" y="405" text-anchor="middle" fill="white" font-size="17" font-weight="700">侧载 APK 分发</text>
+  <text x="450" y="430" text-anchor="middle" fill="#667788" font-size="12">未注册将被拦截安装</text>
+
+  <text x="750" y="380" text-anchor="middle" fill="#FFCA28" font-size="14" font-weight="600">🌍 全球推广</text>
+  <text x="750" y="405" text-anchor="middle" fill="white" font-size="17" font-weight="700">2027 年起</text>
+  <text x="750" y="430" text-anchor="middle" fill="#667788" font-size="12">覆盖所有 Android 设备</text>
+
+  <!-- 底部色条 -->
+  <rect y="496" width="900" height="4" fill="url(#green)" opacity="0.5"/>
+</svg>

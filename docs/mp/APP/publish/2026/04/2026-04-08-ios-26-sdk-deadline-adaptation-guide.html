@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微信公众号文章</title>
+  <style>
+    body { margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", Helvetica Neue, Helvetica, Arial, sans-serif; }
+    .wechat-content { font-size: 16px; line-height: 1.8; text-align: left; color: #333333; background-color: #ffffff; padding: 20px 15px; max-width: 100% }
+    .wechat-content tr:nth-child(even) { background-color: #f9f9f9; }
+  </style>
+</head>
+<body>
+<div class="wechat-content">
+<h1 style="font-size: 24px; font-weight: bold; color: #000000; text-align: center; margin: 25px 0 20px 0; padding: 10px 0; border-bottom: 3px solid #3DDC84">⏰ 还剩20天！App Store 强制要求 iOS 26 SDK，你的 App 会被拒吗？</h1>
+
+<blockquote style="background-color: #F0F7FF; border-left: 4px solid #3DDC84; padding: 15px 20px; margin: 15px 0; color: #444444; font-size: 15px; border-radius: 4px"><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">阅读时长</strong>：约6分钟 | <strong style="color: #E95420; font-weight: bold">紧迫指数</strong>：🔥🔥🔥🔥🔒（4月28日截止）</p></blockquote>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">先说结论：这件事比你想象的严重</h2>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">2026年2月3日苹果正式公告：<strong style="color: #E95420; font-weight: bold">自4月28日起，所有上传 App Store 的应用必须使用 Xcode 26 + iOS 26 SDK 构建</strong>。这不是建议，是强制。</p>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">❌ Xcode 25 及以下构建 → <strong style="color: #E95420; font-weight: bold">直接被拒</strong><br/>❌ 未适配新 API → 可能崩溃<br/>✅ 升级 Xcode 26 + 适配新 API → 安全过关</p>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">一、三个核心变化速览</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0"><tr><th style="background-color: #3DDC84; color: #ffffff; padding: 11px 13px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 15px">变化</th><th style="background-color: #3DDC84; color: #ffffff; padding: 11px 13px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 15px">要点</th><th style="background-color: #3DDC84; color: #ffffff; padding: 11px 13px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 15px">风险等级</th></tr><tr><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px">SDK 强制升级</td><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px">必须用 Xcode 26 + iOS 26 SDK 构建</td><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px"><strong style="color: #E95420; font-weight: bold">⛔ 不通过=被拒</strong></td></tr><tr><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px">UIScene 生命周期</td><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px">旧 AppDelegate 方式可能导致状态丢失/闪退</td><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px"><strong style="color: #FF6B6B; font-weight: bold">⚠️ 高危</strong></td></tr><tr><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px">液态玻璃 UI</td><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px">系统控件自动获得新外观；自定义UI需检查兼容</td><td style="padding: 10px 13px; border: 1px solid #e0e0e0; text-align: left; font-size: 14px"><span style="color:#FFA000;font-weight:bold;">💡 低危</span></td></tr></table>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">二、Flutter 开发者适配指南（重点）</h2>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">Flutter 社区已完成 iOS 26 适配。核心操作三步走：</p>
+
+<pre style="background-color: #282c34; color: #abb2bf; padding: 16px 20px; border-radius: 8px; margin: 16px 0; font-size: 13px; line-height: 1.65; font-family: Consolas, 'Courier New', monospace; overflow: auto;"><code># Step 1: 升级 Flutter SDK 到 3.41+（推荐稳定版）
+flutter upgrade
+
+# Step 2: 更新 iOS 原生依赖
+cd ios && pod update && cd ..
+
+# Step 3: 清理重建
+flutter clean && flutter pub get</code></pre>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0"><tr><th style="background-color: #3DDC84; color: #ffffff; padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 14px">Flutter 版本</th><th style="background-color: #3DDC84; color: #ffffff; padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 14px">iOS 26 支持</th><th style="background-color: #3DDC84; color: #ffffff; padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 14px">推荐度</th></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">3.37.x 及以下</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">⚠️ 部分</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">❌ 已停维</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px"><strong style="color: #E95420; font-weight: bold">3.38.x</strong></td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">✅ 完整</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">最低要求</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px"><strong style="color: #E95420; font-weight: bold">3.41.x</strong></td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">✅ 完整</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px"><strong style="color: #E95420; font-weight: bold">👍 首选推荐</strong></td></tr></table>
+
+<blockquote style="background-color: #FFF3E0; border-left: 5px solid #FF9800; padding: 12px 16px; margin: 14px 0; border-radius: 6px; font-size: 14px; color: #E65100"><p style="margin: 5px 0; line-height: 1.75; font-size: 14px; color: #E65100"><strong style="font-weight:bold">⚠️ 检查清单：</strong>Podfile 中 platform :ios 最低设为 15.0 → Base SDK 确认为 iOS 26 → SWIFT_VERSION ≥ 5.10 → 运行回归测试（冷启动≤3秒、前后台切换无闪退、深色模式正常）</p></blockquote>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">三、React Native &amp; 原生 Swift 快速指南</h2>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">RN 开发者：</strong>升级到 React Native 0.78+ → pod update → 清缓存。注意检查第三方原生库的 iOS 26 兼容性声明。</p>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">原生 Swift：</strong>按以下优先级迁移代码：</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0"><tr><th style="background-color: #3DDC84; color: #ffffff; padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 14px">优先级</th><th style="background-color: #3DDC84; color: #ffffff; padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 14px">旧 API</th><th style="background-color: #3DDC84; color: #ffffff; padding: 10px 12px; border: 1px solid #e0e0e0; text-align: left; font-weight: bold; font-size: 14px">替代方案</th></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px;color:#E53935;font-weight:bold;">P0 必须改</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">UIApplicationDelegate 生命周期</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">@main App + .scenePhase</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px;color:#E53935;font-weight:bold;">P0</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">UIWebView</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">WKWebView</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px;color:#FF9800;font-weight:bold;">P1 建议改</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">systemVersion 字符串比较</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">available(iOS 26, *)</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px;color:#FF9800;font-weight:bold;">P1</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">UILabel 固定行数</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">TextKit 2</td></tr></table>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">同时确保 <code style="background-color: #f0f0f0; color: #D32F2F; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">PrivacyInfo.xcprivacy</code> 隐私文件完整、Required Reason API 正确声明、隐私政策 URL 有效可访问。</p>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">四、常见问题 Q&amp;A</h2>
+
+<p style="margin: 10px 0; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q1：App 最低支持 iOS 14，还需要适配吗？</strong><br/><span style="color:#666">A：<strong style="color: #E95420; font-weight: bold">必须</strong>。SDK 编译版本和最低部署目标是两回事。用 Xcode 26 编译即可支持 iOS 14+，互不影响。</span></p>
+
+<p style="margin: 10px 0; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q2：升级后包体会变大吗？</strong><br/><span style="color:#666">A：通常 &lt;5%（约+2MB Foundation 链接）。超过 10% 请排查多余依赖。</span></p>
+
+<p style="margin: 10px 0; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q3：Flutter 第三方插件不支持怎么办？</strong><br/><span style="color:#666">A：主流插件（shared_preferences/dio/go_router 等）已适配。小众插件可查 GitHub Issue → 改 Podfile 配置 → 找替代方案 → 提 PR。</span></p>
+
+<p style="margin: 10px 0; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q4：来不及完成全部适配？</strong><br/><span style="color:#666">A：先做最小化适配（升Xcode + 解决编译错误 + 基本测试），后续迭代再完善液态玻璃 UI。<strong style="color: #E95420; font-weight: bold">底线是不崩溃</strong>。不要赌运气——审核系统自动检测 SDK 版本。</span></p>
+
+<p style="margin: 10px 0; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q5：各框架适配成本对比？</strong></p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 14px 0"><tr><th style="background-color: #3DDC84; color: #fff; padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 14px">框架</th><th style="background-color: #3DDC84; color: #fff; padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 14px">工作量</th><th style="background-color: #3DDC84; color: #fff; padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 14px">主要风险</th></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">Flutter 3.41+</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">低（1-2天）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">插件兼容性</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">React Native 0.78+</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">中（2-3天）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">原生模块兼容</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">原生 Swift</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">高（5-10天）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">全量代码审查</td></tr></table>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">五、20天冲刺时间表</h2>
+
+<table style="width: 100%; border-collapse: collapse; margin: 16px 0"><tr><th style="background-color: #3DDC84; color: #fff; padding: 10px 12px; border: 1px solid #e0e0e0; font-size: 14px">时间</th><th style="background-color: #3DDC84; color: #fff; padding: 10px 12px; border: 1px solid #e0e0e0; font-size: 14px">任务</th><th style="background-color: #3DDC84; color: #fff; padding: 10px 12px; border: 1px solid #e0e0e0; font-size: 14px">输出</th></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">第1-3天（8-10日）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">环境升级</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">Xcode 26 + build 通过</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">第4-7天（11-14日）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">代码适配</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">零 error/warning</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">第8-12天（15-19日）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">回归测试</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">测试报告通过</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">第13-16天（20-23日）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">TestFlight 内测</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">真实设备反馈</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">第17-19天（24-27日）</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">最终修复+材料准备</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">截图/描述/隐私政策</td></tr><tr><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px;font-weight:bold;color:#E53935;">第20天（28日）🚢</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px;font-weight:bold;color:#E53935;">提交 App Store</td><td style="padding: 9px 12px; border: 1px solid #e0e0e0; font-size: 13px">符合 iOS 26 要求</td></tr></table>
+
+<blockquote style="background-color: #FFEBEE; border-left: 5px solid #F44336; padding: 12px 16px; margin: 14px 0; border-radius: 6px; font-size: 14px; color: #B71C1C"><p style="margin: 5px 0; line-height: 1.75; font-size: 14px; color: #B71C1C"><strong style="font-weight:bold">⚠️ 审核需24-48小时</strong>，想赶在28日前<strong style="font-weight:bold">通过审核</strong>（非仅提交），建议 <strong style="font-weight:bold">4月22日前</strong>提交！</p></blockquote>
+
+<h2 style="font-size: 20px; font-weight: bold; color: #1976D2; margin: 20px 0 15px 0; padding: 8px 12px; border-left: 5px solid #3DDC84; padding-left: 10px; background-color: #E8F5E9; border-radius: 4px">总结</h2>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">核心动作就三步：</p>
+
+<ol style="margin: 10px 0; padding-left: 25px; line-height: 1.8"><li style="margin: 5px 0; line-height: 1.8">✅ <strong style="color: #E95420; font-weight: bold">升级 Xcode 26 + SDK</strong>（1天内搞定）</li><li style="margin: 5px 0; line-height: 1.8">✅ <strong style="color: #E95420; font-weight: bold">解决编译错误 + 适配新API</strong>（2-5天）</li><li style="margin: 5px 0; line-height: 1.8">✅ <strong style="color: #E95420; font-weight: bold">真机测试 + TestFlight 内测</strong>（3-5天）</li></ol>
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">20天足够</strong>，关键是现在就动起来。</p>
+
+<hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0">
+
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">💡 <strong style="color: #E95420; font-weight: bold">移动APP开发</strong> | 技术·实战·变现·洞察</p>
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">📱 关注我们，获取更多移动开发前沿干货和技术深度解析</p>
+<p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">❤️ 觉得有用？点个「在看」转发给团队里的 iOS 开发伙伴！</p>
+
+<hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0">
+<p style="margin: 10px 0; font-size: 13px; color: #999999"><em style="font-style: italic; color: #999999">参考来源：Apple Developer News（2026-02-03）、Flutter官方文档 | 发布时间：2026年4月8日</em></p>
+
+</div>
+</body>
+</html>

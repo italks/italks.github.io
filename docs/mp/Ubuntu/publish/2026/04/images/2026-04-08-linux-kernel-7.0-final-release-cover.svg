@@ -1,0 +1,160 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="500" viewBox="0 0 900 500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <!-- 发光效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="glowStrong" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 金属渐变 -->
+    <linearGradient id="metalGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff"/>
+      <stop offset="40%" style="stop-color:#e8e8e8"/>
+      <stop offset="60%" style="stop-color:#c0c0c0"/>
+      <stop offset="100%" style="stop-color:#a8a8a8"/>
+    </linearGradient>
+    <!-- 橙色发光 -->
+    <filter id="orangeGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <!-- 卡片背景 -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.08)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.02)"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- 装饰性网格线 -->
+  <g opacity="0.04">
+    <line x1="0" y1="80" x2="900" y2="80" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="160" x2="900" y2="160" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="240" x2="900" y2="240" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="320" x2="900" y2="320" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="1"/>
+    <line x1="150" y1="0" x2="150" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="450" y1="0" x2="450" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="750" y1="0" x2="750" y2="500" stroke="#fff" stroke-width="1"/>
+  </g>
+
+  <!-- 左上角装饰圆环 -->
+  <circle cx="60" cy="55" r="35" fill="none" stroke="#E95420" stroke-width="1.5" opacity="0.25"/>
+  <circle cx="60" cy="55" r="25" fill="none" stroke="#E95420" stroke-width="1" opacity="0.12"/>
+
+  <!-- 右上角装饰圆环 -->
+  <circle cx="845" cy="445" r="40" fill="none" stroke="#E95420" stroke-width="1.5" opacity="0.2"/>
+  <circle cx="845" cy="445" r="28" fill="none" stroke="#E95420" stroke-width="1" opacity="0.1"/>
+
+  <!-- ======== 核心标题区 ======== -->
+
+  <!-- Linux Kernel 前缀文字 -->
+  <text x="450" y="115" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="22" font-weight="300" fill="#8899aa" letter-spacing="6">Linux Kernel</text>
+
+  <!-- 主数字 "7.0" - 带强发光效果 -->
+  <text x="450" y="245" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="120" font-weight="900" fill="url(#metalGrad)" filter="url(#glowStrong)">7.0</text>
+  
+  <!-- 数字下划线装饰 -->
+  <line x1="310" y1="265" x2="590" y2="265" stroke="#E95420" stroke-width="3" filter="url(#orangeGlow)" opacity="0.7"/>
+
+  <!-- 正式发布标签 -->
+  <rect x="360" y="285" width="180" height="36" rx="18" fill="#E95420" opacity="0.18"/>
+  <text x="450" y="310" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="600" fill="#E95420" letter-spacing="4">正式发布</text>
+
+  <!-- 副标题 -->
+  <text x="450" y="365" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="16" fill="#99aabb" letter-spacing="2">Rust 入驻内核 · 性能狂飙 40%</text>
+
+  <!-- ======== 性能指标卡片 ======== -->
+
+  <!-- 左侧卡片：图形性能 -->
+  <g transform="translate(140, 400)">
+    <rect x="0" y="0" width="170" height="65" rx="10" fill="url(#cardGrad)" stroke="rgba(233,84,32,0.25)" stroke-width="1"/>
+    <text x="85" y="26" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#7799bb">图形性能</text>
+    <text x="85" y="52" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="24" font-weight="bold" fill="#E95420">↑ 40%</text>
+  </g>
+
+  <!-- 中间卡片：数据中心 -->
+  <g transform="translate(366, 400)">
+    <rect x="0" y="0" width="170" height="65" rx="10" fill="url(#cardGrad)" stroke="rgba(233,84,32,0.25)" stroke-width="1"/>
+    <text x="85" y="26" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#7799bb">数据中心</text>
+    <text x="85" y="52" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="24" font-weight="bold" fill="#E95420">↑ 25%</text>
+  </g>
+
+  <!-- 右侧卡片：安全漏洞减少 -->
+  <g transform="translate(592, 400)">
+    <rect x="0" y="0" width="170" height="65" rx="10" fill="url(#cardGrad)" stroke="rgba(76,175,80,0.3)" stroke-width="1"/>
+    <text x="85" y="26" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" fill="#7799bb">内存安全</text>
+    <text x="85" y="52" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="24" font-weight="bold" fill="#4CAF50">↓ 70%</text>
+  </g>
+
+  <!-- ======== Rust 图标（左侧） ======== -->
+  <g transform="translate(48, 200)">
+    <!-- 齿轮外圈 -->
+    <circle cx="32" cy="32" r="30" fill="none" stroke="#E95420" stroke-width="2" opacity="0.5"/>
+    <circle cx="32" cy="32" r="24" fill="#E95420" opacity="0.12"/>
+    <!-- 齿轮齿 -->
+    <g fill="#E95420" opacity="0.6">
+      <rect x="29" y="-2" width="6" height="10" rx="1"/>
+      <rect x="29" y="56" width="6" height="10" rx="1"/>
+      <rect x="-2" y="29" width="10" height="6" rx="1"/>
+      <rect x="56" y="29" width="10" height="6" rx="1"/>
+      <rect x="51" y="5" width="6" height="10" rx="1" transform="rotate(45,54,10)"/>
+      <rect x="7" y="49" width="6" height="10" rx="1" transform="rotate(45,10,54)"/>
+      <rect x="5" y="7" width="10" height="6" rx="1" transform="rotate(45,10,10)"/>
+      <rect x="49" y="51" width="10" height="6" rx="1" transform="rotate(45,54,54)"/>
+    </g>
+    <!-- R 字母 -->
+    <text x="32" y="39" text-anchor="middle" font-family="'Helvetica Neue',Arial,sans-serif" font-size="22" font-weight="bold" fill="#E95420">R</text>
+  </g>
+
+  <!-- CPU 图标（右侧） -->
+  <g transform="translate(792, 195)">
+    <!-- CPU 方形主体 -->
+    <rect x="14" y="14" width="44" height="44" rx="5" fill="none" stroke="#E95420" stroke-width="1.8" opacity="0.55"/>
+    <rect x="22" y="22" width="28" height="28" rx="3" fill="#E95420" opacity="0.1"/>
+    <!-- CPU 引脚 -->
+    <g stroke="#E95420" stroke-width="1.5" opacity="0.4">
+      <line x1="24" y1="6" x2="24" y2="14"/><line x1="36" y1="6" x2="36" y2="14"/><line x1="48" y1="6" x2="48" y2="14"/>
+      <line x1="24" y1="58" x2="24" y2="66"/><line x1="36" y1="58" x2="36" y2="66"/><line x1="48" y1="58" x2="48" y2="66"/>
+      <line x1="6" y1="24" x2="14" y2="24"/><line x1="6" y1="36" x2="14" y2="36"/><line x1="6" y1="48" x2="14" y2="48"/>
+      <line x1="58" y1="24" x2="66" y2="24"/><line x1="58" y1="36" x2="66" y2="36"/><line x1="58" y1="48" x2="66" y2="48"/>
+    </g>
+    <!-- 内部芯片图案 -->
+    <rect x="30" y="30" width="12" height="12" rx="1" fill="#E95420" opacity="0.3"/>
+  </g>
+
+  <!-- 底部品牌栏 -->
+  <rect x="0" y="476" width="900" height="24" fill="#000" opacity="0.3"/>
+  <text x="450" y="493" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#667788" letter-spacing="3">UbuntuNews · 资讯 · 工具 · 教程 · 社区</text>
+
+  <!-- 粒子装饰点 -->
+  <circle cx="130" cy="135" r="1.5" fill="#E95420" opacity="0.5"/>
+  <circle cx="770" cy="145" r="1.5" fill="#E95420" opacity="0.4"/>
+  <circle cx="180" cy="350" r="1" fill="#fff" opacity="0.2"/>
+  <circle cx="720" cy="340" r="1.2" fill="#fff" opacity="0.15"/>
+  <circle cx="250" cy="280" r="1" fill="#E95420" opacity="0.3"/>
+  <circle cx="650" cy="290" r="1.3" fill="#E95420" opacity="0.25"/>
+
+</svg>
