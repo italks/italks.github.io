@@ -1,0 +1,230 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变：深夜蓝→Kotlin紫 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1A0F2E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0D1B2A;stop-opacity:1" />
+    </linearGradient>
+    <!-- 版本徽章渐变：Kotlin橙→Kotlin紫 -->
+    <linearGradient id="badgeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <!-- 手机屏幕渐变 -->
+    <linearGradient id="screenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E2D3D;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0A1628;stop-opacity:1" />
+    </linearGradient>
+    <!-- 特性标签渐变1 -->
+    <linearGradient id="tag1Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0.05" />
+    </linearGradient>
+    <!-- 特性标签渐变2 -->
+    <linearGradient id="tag2Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0.05" />
+    </linearGradient>
+    <!-- 特性标签渐变3 -->
+    <linearGradient id="tag3Grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D2FF;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#00D2FF;stop-opacity:0.05" />
+    </linearGradient>
+    <!-- 光晕 -->
+    <radialGradient id="glowGrad" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#7C3AED;stop-opacity:0.2" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:0" />
+    </radialGradient>
+    <!-- 网格线 -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#7C3AED" stroke-width="0.3" opacity="0.15"/>
+    </pattern>
+    <!-- 裁剪路径 -->
+    <clipPath id="phoneClipLeft">
+      <rect x="55" y="110" width="150" height="280" rx="18"/>
+    </clipPath>
+    <clipPath id="phoneClipRight">
+      <rect x="695" y="110" width="150" height="280" rx="18"/>
+    </clipPath>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  <rect width="900" height="500" fill="url(#glowGrad)"/>
+
+  <!-- 装饰粒子点 -->
+  <circle cx="30" cy="40" r="2" fill="#FF6B35" opacity="0.6"/>
+  <circle cx="870" cy="60" r="1.5" fill="#7C3AED" opacity="0.8"/>
+  <circle cx="100" cy="450" r="1.5" fill="#00D2FF" opacity="0.5"/>
+  <circle cx="800" cy="470" r="2" fill="#FF6B35" opacity="0.4"/>
+  <circle cx="450" cy="20" r="1" fill="#FFFFFF" opacity="0.6"/>
+  <circle cx="600" cy="480" r="1" fill="#7C3AED" opacity="0.7"/>
+  <circle cx="50" cy="250" r="1.5" fill="#00D2FF" opacity="0.4"/>
+  <circle cx="860" cy="300" r="1" fill="#FF6B35" opacity="0.5"/>
+
+  <!-- ===== 左侧 Android 手机 ===== -->
+  <!-- 手机外壳 -->
+  <rect x="55" y="110" width="150" height="280" rx="18" fill="#111827" stroke="#374151" stroke-width="1.5"/>
+  <!-- 手机屏幕背景 -->
+  <rect x="63" y="122" width="134" height="256" rx="12" fill="url(#screenGrad)"/>
+  <!-- 顶部摄像头 -->
+  <circle cx="130" cy="134" r="5" fill="#1F2937"/>
+  <circle cx="130" cy="134" r="2.5" fill="#374151"/>
+  <!-- 底部 Home 区域 -->
+  <rect x="100" y="378" width="60" height="4" rx="2" fill="#374151"/>
+
+  <!-- Android UI 内容 -->
+  <!-- 顶部状态栏 -->
+  <rect x="63" y="122" width="134" height="18" rx="12" fill="#1F2937" opacity="0.8"/>
+  <text x="73" y="133" font-size="7" fill="#9CA3AF" font-family="monospace">9:41</text>
+  <!-- Material UI 卡片 -->
+  <rect x="70" y="148" width="120" height="40" rx="8" fill="#1E3A5F" opacity="0.9"/>
+  <rect x="77" y="156" width="60" height="6" rx="3" fill="#3B82F6"/>
+  <rect x="77" y="167" width="40" height="4" rx="2" fill="#6B7280"/>
+  <!-- Compose UI 元素 -->
+  <rect x="70" y="196" width="55" height="55" rx="8" fill="#7C3AED" opacity="0.7"/>
+  <text x="97" y="227" font-size="10" fill="white" font-family="monospace" text-anchor="middle">@</text>
+  <rect x="133" y="196" width="57" height="25" rx="6" fill="#FF6B35" opacity="0.8"/>
+  <rect x="133" y="226" width="57" height="25" rx="6" fill="#1D4ED8" opacity="0.7"/>
+  <!-- 底部导航 -->
+  <rect x="70" y="258" width="120" height="30" rx="6" fill="#111827"/>
+  <rect x="78" y="264" width="20" height="18" rx="3" fill="#374151"/>
+  <rect x="104" y="264" width="20" height="18" rx="3" fill="#374151"/>
+  <rect x="130" y="264" width="20" height="18" rx="3" fill="#374151"/>
+  <!-- Android 标签 -->
+  <rect x="70" y="295" width="50" height="16" rx="8" fill="#34D399" opacity="0.2"/>
+  <text x="95" y="306" font-size="7" fill="#34D399" font-family="sans-serif" text-anchor="middle">Android</text>
+  <!-- 代码预览 UI -->
+  <rect x="70" y="318" width="120" height="48" rx="6" fill="#0D1117" opacity="0.9"/>
+  <text x="75" y="330" font-size="5.5" fill="#FF6B35" font-family="monospace">@Preview</text>
+  <text x="75" y="340" font-size="5.5" fill="#9CA3AF" font-family="monospace">@Composable</text>
+  <text x="75" y="350" font-size="5.5" fill="#7C3AED" font-family="monospace">fun HomeScreen</text>
+  <text x="75" y="360" font-size="5.5" fill="#6B7280" font-family="monospace">  Text("Hello")</text>
+
+  <!-- ===== 右侧 iPhone ===== -->
+  <!-- 手机外壳 -->
+  <rect x="695" y="110" width="150" height="280" rx="20" fill="#1C1C1E" stroke="#3A3A3C" stroke-width="1.5"/>
+  <!-- 手机屏幕背景 -->
+  <rect x="703" y="118" width="134" height="264" rx="16" fill="url(#screenGrad)"/>
+  <!-- 动态岛 -->
+  <rect x="737" y="124" width="66" height="14" rx="7" fill="#1C1C1E"/>
+  <!-- 底部滑条 -->
+  <rect x="740" y="373" width="60" height="4" rx="2" fill="#3A3A3C"/>
+
+  <!-- iOS UI 内容（与 Android 相同的 CMP 界面！） -->
+  <!-- 顶部 -->
+  <rect x="703" y="118" width="134" height="18" rx="16" fill="#1C1C1E" opacity="0.8"/>
+  <!-- Material UI 卡片（相同UI！） -->
+  <rect x="710" y="148" width="120" height="40" rx="8" fill="#1E3A5F" opacity="0.9"/>
+  <rect x="717" y="156" width="60" height="6" rx="3" fill="#3B82F6"/>
+  <rect x="717" y="167" width="40" height="4" rx="2" fill="#6B7280"/>
+  <!-- Compose UI 元素（相同！） -->
+  <rect x="710" y="196" width="55" height="55" rx="8" fill="#7C3AED" opacity="0.7"/>
+  <text x="737" y="227" font-size="10" fill="white" font-family="monospace" text-anchor="middle">@</text>
+  <rect x="773" y="196" width="57" height="25" rx="6" fill="#FF6B35" opacity="0.8"/>
+  <rect x="773" y="226" width="57" height="25" rx="6" fill="#1D4ED8" opacity="0.7"/>
+  <!-- iOS 底部导航 -->
+  <rect x="710" y="258" width="120" height="30" rx="6" fill="#1C1C1E"/>
+  <rect x="718" y="264" width="20" height="18" rx="3" fill="#3A3A3C"/>
+  <rect x="744" y="264" width="20" height="18" rx="3" fill="#3A3A3C"/>
+  <rect x="770" y="264" width="20" height="18" rx="3" fill="#3A3A3C"/>
+  <!-- iOS 标签 -->
+  <rect x="710" y="295" width="36" height="16" rx="8" fill="#A78BFA" opacity="0.2"/>
+  <text x="728" y="306" font-size="7" fill="#A78BFA" font-family="sans-serif" text-anchor="middle">iOS</text>
+  <!-- 代码预览 UI -->
+  <rect x="710" y="318" width="120" height="48" rx="6" fill="#0D1117" opacity="0.9"/>
+  <text x="715" y="330" font-size="5.5" fill="#FF6B35" font-family="monospace">@Preview  ← 相同！</text>
+  <text x="715" y="340" font-size="5.5" fill="#9CA3AF" font-family="monospace">@Composable</text>
+  <text x="715" y="350" font-size="5.5" fill="#7C3AED" font-family="monospace">fun HomeScreen</text>
+  <text x="715" y="360" font-size="5.5" fill="#6B7280" font-family="monospace">  Text("Hello")</text>
+
+  <!-- ===== 中间连接符：= 号 ===== -->
+  <!-- 左箭头线 -->
+  <line x1="205" y1="250" x2="290" y2="250" stroke="#FF6B35" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <!-- 右箭头线 -->
+  <line x1="610" y1="250" x2="695" y2="250" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.6"/>
+  <!-- 等号 -->
+  <text x="260" y="244" font-size="14" fill="#FF6B35" font-family="monospace" opacity="0.7">=</text>
+  <text x="635" y="244" font-size="14" fill="#7C3AED" font-family="monospace" opacity="0.7">=</text>
+
+  <!-- ===== 中央版本徽章区域 ===== -->
+  <!-- 主版本徽章外圈光晕 -->
+  <circle cx="450" cy="185" r="85" fill="#7C3AED" opacity="0.06"/>
+  <circle cx="450" cy="185" r="72" fill="none" stroke="#7C3AED" stroke-width="0.5" opacity="0.3" stroke-dasharray="3,2"/>
+  <!-- 主版本徽章 -->
+  <rect x="353" y="110" width="194" height="150" rx="20" fill="url(#badgeGrad)" opacity="0.12"/>
+  <rect x="353" y="110" width="194" height="150" rx="20" fill="none" stroke="url(#badgeGrad)" stroke-width="1.5"/>
+
+  <!-- 品牌 Logo 区 -->
+  <!-- JetBrains 风格 Kotlin 字母 K -->
+  <text x="360" y="144" font-size="28" fill="url(#badgeGrad)" font-family="'Arial Black', sans-serif" font-weight="900" opacity="0.4">K</text>
+
+  <!-- 主标题 -->
+  <text x="450" y="152" font-size="14" fill="#E2E8F0" font-family="'Arial Black', sans-serif" font-weight="700" text-anchor="middle" letter-spacing="0.5">Compose Multiplatform</text>
+
+  <!-- 版本号大字 -->
+  <text x="450" y="200" font-size="48" fill="url(#badgeGrad)" font-family="'Arial Black', sans-serif" font-weight="900" text-anchor="middle" letter-spacing="-1">1.10</text>
+
+  <!-- 里程碑标签 -->
+  <rect x="386" y="212" width="128" height="22" rx="11" fill="url(#badgeGrad)" opacity="0.15"/>
+  <rect x="386" y="212" width="128" height="22" rx="11" fill="none" stroke="url(#badgeGrad)" stroke-width="0.8"/>
+  <text x="450" y="226" font-size="9" fill="#FF6B35" font-family="sans-serif" text-anchor="middle" letter-spacing="1.5">🏆 里程碑版本</text>
+
+  <!-- ===== 副标题区域 ===== -->
+  <text x="450" y="295" font-size="17" fill="#F1F5F9" font-family="'Arial Black', sans-serif" font-weight="700" text-anchor="middle" letter-spacing="0.3">KMP 正式「威胁」Flutter</text>
+
+  <!-- 分隔线 -->
+  <line x1="320" y1="310" x2="580" y2="310" stroke="#7C3AED" stroke-width="0.5" opacity="0.4"/>
+
+  <!-- ===== 三大特性标签 ===== -->
+  <!-- 标签1：统一@Preview -->
+  <rect x="295" y="325" width="96" height="36" rx="10" fill="url(#tag1Grad)"/>
+  <rect x="295" y="325" width="96" height="36" rx="10" fill="none" stroke="#FF6B35" stroke-width="1" opacity="0.6"/>
+  <text x="343" y="338" font-size="8" fill="#FF6B35" font-family="monospace" text-anchor="middle" font-weight="bold">统一 @Preview</text>
+  <text x="343" y="352" font-size="7.5" fill="#9CA3AF" font-family="sans-serif" text-anchor="middle">无需再看 import 头晕</text>
+
+  <!-- 标签2：Navigation 3 -->
+  <rect x="402" y="325" width="96" height="36" rx="10" fill="url(#tag2Grad)"/>
+  <rect x="402" y="325" width="96" height="36" rx="10" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.6"/>
+  <text x="450" y="338" font-size="8" fill="#A78BFA" font-family="monospace" text-anchor="middle" font-weight="bold">Navigation 3</text>
+  <text x="450" y="352" font-size="7.5" fill="#9CA3AF" font-family="sans-serif" text-anchor="middle">跨平台统一路由</text>
+
+  <!-- 标签3：Hot Reload 内置 -->
+  <rect x="509" y="325" width="96" height="36" rx="10" fill="url(#tag3Grad)"/>
+  <rect x="509" y="325" width="96" height="36" rx="10" fill="none" stroke="#00D2FF" stroke-width="1" opacity="0.6"/>
+  <text x="557" y="338" font-size="8" fill="#00D2FF" font-family="monospace" text-anchor="middle" font-weight="bold">Hot Reload 内置</text>
+  <text x="557" y="352" font-size="7.5" fill="#9CA3AF" font-family="sans-serif" text-anchor="middle">零配置，开箱即用</text>
+
+  <!-- ===== 底部信息栏 ===== -->
+  <rect x="0" y="472" width="900" height="28" fill="#0D1117" opacity="0.95"/>
+  <!-- AGP要求提示 -->
+  <text x="30" y="488" font-size="9" fill="#6B7280" font-family="monospace">⚠  需要 AGP 9.0.0+</text>
+  <!-- Kotlin版本 -->
+  <text x="200" y="488" font-size="9" fill="#6B7280" font-family="monospace">Kotlin 2.1.20</text>
+  <!-- JetBrains 发布时间 -->
+  <text x="340" y="488" font-size="9" fill="#6B7280" font-family="monospace">JetBrains · 2026年3月16日发布</text>
+  <!-- 账号标签 -->
+  <text x="750" y="488" font-size="9" fill="#FF6B35" font-family="monospace" text-anchor="end">APP开发前线</text>
+  <rect x="756" y="476" width="130" height="17" rx="4" fill="none" stroke="#FF6B35" stroke-width="0.6" opacity="0.5"/>
+  <text x="872" y="488" font-size="9" fill="#FF6B35" font-family="monospace">▶</text>
+
+  <!-- ===== 装饰性代码背景（左上角） ===== -->
+  <text x="240" y="80" font-size="8" fill="#374151" font-family="monospace" opacity="0.4">import androidx.compose.ui.tooling.preview.Preview</text>
+  <text x="340" y="95" font-size="8" fill="#374151" font-family="monospace" opacity="0.3">@Composable fun App() { /* Write once, run anywhere */ }</text>
+
+  <!-- ===== 版本对比小徽章 ===== -->
+  <rect x="30" y="380" width="50" height="20" rx="10" fill="#FF6B35" opacity="0.15"/>
+  <rect x="30" y="380" width="50" height="20" rx="10" fill="none" stroke="#FF6B35" stroke-width="0.8" opacity="0.6"/>
+  <text x="55" y="393" font-size="7" fill="#FF6B35" font-family="monospace" text-anchor="middle">vs 1.9.x</text>
+
+  <rect x="820" y="380" width="50" height="20" rx="10" fill="#34D399" opacity="0.1"/>
+  <rect x="820" y="380" width="50" height="20" rx="10" fill="none" stroke="#34D399" stroke-width="0.8" opacity="0.5"/>
+  <text x="845" y="393" font-size="7" fill="#34D399" font-family="monospace" text-anchor="middle">稳定版 ✓</text>
+
+  <!-- 顶部右侧周四标签 -->
+  <rect x="798" y="18" width="82" height="22" rx="11" fill="#7C3AED" opacity="0.2"/>
+  <rect x="798" y="18" width="82" height="22" rx="11" fill="none" stroke="#7C3AED" stroke-width="1" opacity="0.5"/>
+  <text x="839" y="32" font-size="8.5" fill="#A78BFA" font-family="sans-serif" text-anchor="middle" letter-spacing="0.5">周四技术干货</text>
+</svg>
