@@ -1,0 +1,162 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f0f23"/>
+      <stop offset="50%" style="stop-color:#1a1a3e"/>
+      <stop offset="100%" style="stop-color:#0d1117"/>
+    </linearGradient>
+    <!-- 光晕效果 -->
+    <radialGradient id="glow1" cx="20%" cy="30%" r="40%">
+      <stop offset="0%" style="stop-color:#6366f1;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="70%" r="35%">
+      <stop offset="0%" style="stop-color:#ef4444;stop-opacity:0.2"/>
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:0"/>
+    </radialGradient>
+    <!-- Cursor品牌色 -->
+    <linearGradient id="cursorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366f1"/>
+      <stop offset="100%" style="stop-color:#8b5cf6"/>
+    </linearGradient>
+    <!-- Claude品牌色 -->
+    <linearGradient id="claudeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#ef4444"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#glow1)"/>
+  <rect width="900" height="500" fill="url(#glow2)"/>
+
+  <!-- 网格背景线 -->
+  <g opacity="0.06" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- 左侧：Cursor 3 卡片 -->
+  <g transform="translate(60, 120)">
+    <!-- 卡片背景 -->
+    <rect x="0" y="0" width="340" height="260" rx="16" fill="#16163a" opacity="0.85" stroke="#6366f1" stroke-width="1.5"/>
+    
+    <!-- Cursor 标识 -->
+    <circle cx="45" cy="40" r="22" fill="url(#cursorGrad)" opacity="0.15"/>
+    <text x="45" y="47" text-anchor="middle" font-family="system-ui, -apple-system" font-size="18" font-weight="bold" fill="#8b5cf6">C3</text>
+    
+    <!-- 标题 -->
+    <text x="78" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#e2e8f0">Cursor 3</text>
+    
+    <!-- 副标题 -->
+    <text x="24" y="82" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">Agent 统一工作区</text>
+    
+    <!-- 特性列表 -->
+    <g transform="translate(24, 105)">
+      <circle cx="7" cy="6" r="4" fill="#10b981"/>
+      <text x="20" y="11" font-family="system-ui, sans-serif" font-size="12.5" fill="#cbd5e1">多仓库协同开发</text>
+      
+      <circle cx="7" cy="34" r="4" fill="#10b981"/>
+      <text x="20" y="39" font-family="system-ui, sans-serif" font-size="12.5" fill="#cbd5e1">本地 / 云端无缝切换</text>
+      
+      <circle cx="7" cy="62" r="4" fill="#10b981"/>
+      <text x="20" y="67" font-family="system-ui, sans-serif" font-size="12.5" fill="#cbd5e1">可视化验证输出</text>
+      
+      <circle cx="7" cy="90" r="4" fill="#10b981"/>
+      <text x="20" y="95" font-family="system-ui, sans-serif" font-size="12.5" fill="#cbd5e1">多 Agent 并行协作</text>
+    </g>
+    
+    <!-- 底部标签 -->
+    <rect x="24" y="222" width="90" height="24" rx="12" fill="#6366f1" opacity="0.2"/>
+    <text x="69" y="239" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#a5b4fc">重磅发布</text>
+  </g>
+
+  <!-- 右侧：Claude Code 泄露卡片 -->
+  <g transform="translate(500, 120)">
+    <!-- 卡片背景 -->
+    <rect x="0" y="0" width="340" height="260" rx="16" fill="#16163a" opacity="0.85" stroke="#ef4444" stroke-width="1.5"/>
+    
+    <!-- Claude 标识（警告样式） -->
+    <circle cx="45" cy="40" r="22" fill="url(#claudeGrad)" opacity="0.2"/>
+    <text x="45" y="46" text-anchor="middle" font-family="system-ui, -apple-system" font-size="16" font-weight="bold" fill="#f97316">⚠ CC</text>
+    
+    <!-- 标题 -->
+    <text x="78" y="46" font-family="system-ui, -apple-system, sans-serif" font-size="20" font-weight="700" fill="#e2e8f0">Claude Code</text>
+    
+    <!-- 副标题 -->
+    <text x="24" y="82" font-family="system-ui, sans-serif" font-size="13" fill="#94a3b8">源码泄露事件</text>
+    
+    <!-- 数据展示 -->
+    <g transform="translate(24, 105)">
+      <!-- 泄露数据 -->
+      <rect x="0" y="0" width="140" height="55" rx="8" fill="#ef4444" opacity="0.1"/>
+      <text x="70" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fca5a5">泄露代码量</text>
+      <text x="70" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#f87171">51.2万行</text>
+      
+      <!-- 文件数 -->
+      <rect x="155" y="0" width="140" height="55" rx="8" fill="#f97316" opacity="0.1"/>
+      <text x="225" y="24" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#fdba74">涉及文件数</text>
+      <text x="225" y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="20" font-weight="800" fill="#fb923c">1900个</text>
+      
+      <!-- 原因 -->
+      <circle cx="7" cy="78" r="4" fill="#ef4444"/>
+      <text x="20" y="83" font-family="system-ui, sans-serif" font-size="12.5" fill="#cbd5e1">Source Map 打包失误</text>
+      
+      <circle cx="7" cy="106" r="4" fill="#f97316"/>
+      <text x="20" y="111" font-family="system-ui, sans-serif" font-size="12.5" fill="#cbd5e1">未发布功能提前曝光</text>
+    </g>
+    
+    <!-- 底部标签 -->
+    <rect x="24" y="222" width="90" height="24" rx="12" fill="#ef4444" opacity="0.2"/>
+    <text x="69" y="239" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#fca5a5">安全事件</text>
+  </g>
+
+  <!-- 中间 VS 分隔符 -->
+  <g transform="translate(420, 220)">
+    <circle cx="30" cy="30" r="28" fill="#1a1a3e" stroke="#475569" stroke-width="1.5" stroke-dasharray="4 3"/>
+    <text x="30" y="36" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" font-weight="bold" fill="#64748b">VS</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="450" y="55" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="28" font-weight="800" fill="#f1f5f9">
+    AI 编程圈双热点
+  </text>
+  <text x="450" y="85" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#94a3b8">
+    Cursor 3 发布 ｜ Claude Code 源码泄露深度复盘
+  </text>
+
+  <!-- 底部时间线 -->
+  <g transform="translate(60, 410)">
+    <line x1="0" y1="20" x2="780" y2="20" stroke="#334155" stroke-width="2"/>
+    
+    <!-- 时间点1: 3/31 -->
+    <circle cx="100" cy="20" r="8" fill="#f97316"/>
+    <text x="100" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">3/31</text>
+    <text x="100" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Claude Code</text>
+    <text x="100" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">源码泄露</text>
+    
+    <!-- 时间点2: 4/3 -->
+    <circle cx="420" cy="20" r="8" fill="#6366f1"/>
+    <text x="420" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">4/3</text>
+    <text x="420" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Cursor 3</text>
+    <text x="420" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">正式发布</text>
+    
+    <!-- 时间点3: 现在 -->
+    <circle cx="700" cy="20" r="8" fill="#10b981"/>
+    <text x="700" y="48" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">4/5</text>
+    <text x="700" y="65" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">深度分析</text>
+    <text x="700" y="80" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">开发者影响</text>
+  </g>
+
+  <!-- 右下角水印 -->
+  <text x="870" y="488" text-anchor="end" font-family="system-ui, sans-serif" font-size="10" fill="#475569">italks · AI编程观察</text>
+</svg>
