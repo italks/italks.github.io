@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#161b22"/>
+    </linearGradient>
+    
+    <!-- Ubuntu橙色渐变 -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#c44316"/>
+    </linearGradient>
+
+    <!-- 主光晕 -->
+    <radialGradient id="glowMain" cx="50%" cy="45%" r="40%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- 分隔线渐变 -->
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#333333;stop-opacity:0"/>
+      <stop offset="50%" style="stop-color:#333333;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#333333;stop-opacity:0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 光晕 -->
+  <rect width="900" height="500" fill="url(#glowMain)"/>
+
+  <!-- ====== 上半区：Logo + 版本徽章 + 标签 ====== -->
+
+  <!-- 左侧Ubuntu Logo -->
+  <g transform="translate(140, 165)">
+    <circle cx="0" cy="0" r="55" fill="#E95420" opacity="0.12"/>
+    <circle cx="0" cy="0" r="42" fill="url(#orangeGrad)"/>
+    <!-- Ubuntu Logo：三个朋友 -->
+    <circle cx="0" cy="-20" r="5.5" fill="white" opacity="0.9"/>
+    <circle cx="-17.3" cy="10" r="5.5" fill="white" opacity="0.9"/>
+    <circle cx="17.3" cy="10" r="5.5" fill="white" opacity="0.9"/>
+    <line x1="-1.5" y1="-15.5" x2="-14" y2="7" stroke="white" stroke-width="2" opacity="0.65"/>
+    <line x1="1.5" y1="-15.5" x2="14" y2="7" stroke="white" stroke-width="2" opacity="0.65"/>
+    <line x1="-12" y1="13.5" x2="12" y2="13.5" stroke="white" stroke-width="2" opacity="0.65"/>
+  </g>
+
+  <!-- 右侧内核版本徽章 -->
+  <g transform="translate(755, 155)">
+    <rect x="-52" y="-36" width="104" height="72" rx="14" ry="14" fill="#14141e" stroke="#f9c74f" stroke-width="1.8" opacity="0.9"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="30" font-weight="800" fill="#f9c74f">7.0</text>
+    <text x="0" y="24" text-anchor="middle" font-family="'SF Pro Display',Arial,sans-serif" font-size="11" font-weight="600" fill="#777777">KERNEL</text>
+  </g>
+
+  <!-- 标签（精简为2个） -->
+  <g transform="translate(230, 108)">
+    <rect x="0" y="0" width="96" height="26" rx="13" ry="13" fill="#E95420" opacity="0.18"/>
+    <text x="48" y="17.5" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="12" font-weight="600" fill="#E95420">🧊 内核冻结</text>
+    
+    <rect x="108" y="0" width="58" height="26" rx="13" ry="13" fill="#43aa8b" opacity="0.18"/>
+    <text x="137" y="17.5" text-anchor="middle" font-family="'SF Pro Display',Arial,sans-serif" font-size="12" font-weight="700" fill="#43aa8b">LTS</text>
+  </g>
+
+  <!-- ====== 中间：标题区域（留白充足） ====== -->
+
+  <!-- 主标题 -->
+  <text x="450" y="195" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="38" font-weight="800" fill="#ffffff">
+    Ubuntu 26.04 今日内核冻结
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="450" y="238" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="20" font-weight="400" fill="#aaaaaa">
+    Linux 7.0 正式入驻 · 这5个亮点值得关注
+  </text>
+
+  <!-- ====== 数据高亮条（核心视觉焦点） ====== -->
+
+  <g transform="translate(130, 280)">
+    <rect x="0" y="0" width="640" height="64" rx="14" ry="14" fill="#12121a" opacity="0.85"/>
+
+    <!-- 四个数据项，均匀分布 -->
+    <g transform="translate(80, 24)">
+      <text x="0" y="0" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#E95420">+40%</text>
+      <text x="0" y="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#888888">图形性能</text>
+    </g>
+
+    <line x1="160" y1="12" x2="160" y2="48" stroke="#2a2a35" stroke-width="1"/>
+
+    <g transform="translate(240, 24)">
+      <text x="0" y="0" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#43aa8b">-70%</text>
+      <text x="0" y="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#888888">安全漏洞</text>
+    </g>
+
+    <line x1="320" y1="12" x2="320" y2="48" stroke="#2a2a35" stroke-width="1"/>
+
+    <g transform="translate(400, 24)">
+      <text x="0" y="0" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#f9c74f">+25%</text>
+      <text x="0" y="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#888888">数据中心</text>
+    </g>
+
+    <line x1="480" y1="12" x2="480" y2="48" stroke="#2a2a35" stroke-width="1"/>
+
+    <g transform="translate(560, 24)">
+      <text x="0" y="0" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="26" font-weight="800" fill="#9381ff">10Y</text>
+      <text x="0" y="22" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="11" fill="#888888">LTS支持</text>
+    </g>
+  </g>
+
+  <!-- ====== 时间线（极简一行） ====== -->
+
+  <g transform="translate(450, 392)">
+    <!-- 底线 -->
+    <line x1="-200" y1="0" x2="200" y2="0" stroke="#333340" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- 节点1: 冻结（今天 - 高亮） -->
+    <circle cx="-180" cy="0" r="7" fill="#E95420"/>
+    <text x="-180" y="22" text-anchor="middle" font-family="'SF Pro Display','Arial,sans-serif" font-size="12" font-weight="700" fill="#E95420">4/9 冻结</text>
+
+    <!-- 节点2: 最终冻结 -->
+    <circle cx="-60" cy="0" r="4.5" fill="#555560"/>
+    <text x="-60" y="22" text-anchor="middle" font-family="'SF Pro Display','Arial,sans-serif" font-size="11" fill="#666666">4/16</text>
+
+    <!-- 节点3: RC -->
+    <circle cx="60" cy="0" r="4.5" fill="#555560"/>
+    <text x="60" y="22" text-anchor="middle" font-family="'SF Pro Display','Arial,sans-serif" font-size="11" fill="#666666">4/20 RC</text>
+
+    <!-- 节点4: 发布（高亮） -->
+    <circle cx="180" cy="0" r="7" fill="#43aa8b"/>
+    <text x="180" y="22" text-anchor="middle" font-family="'SF Pro Display','Arial,sans-serif" font-size="12" font-weight="700" fill="#43aa8b">4/23 发布</text>
+  </g>
+
+  <!-- ====== 底部品牌栏 ====== -->
+
+  <g transform="translate(0, 448)">
+    <line x1="120" y1="0" x2="780" y2="0" stroke="url(#lineGrad)" stroke-width="1" opacity="0.5"/>
+    <text x="450" y="34" text-anchor="middle" font-family="'SF Pro Display','Helvetica Neue',Arial,sans-serif" font-size="14" font-weight="600" fill="#E95420" opacity="0.9">
+      💡 UbuntuNews ｜资讯·工具·教程·社区
+    </text>
+  </g>
+</svg>
