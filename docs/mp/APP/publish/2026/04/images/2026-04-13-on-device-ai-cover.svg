@@ -1,0 +1,208 @@
+<svg width="900" height="500" viewBox="0 0 900 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background: dark gradient -->
+  <defs>
+    <linearGradient id="bgGrad" x1="0" y1="0" x2="900" y2="500" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0e1a"/>
+      <stop offset="50%" stop-color="#0d1b2a"/>
+      <stop offset="100%" stop-color="#0a0e1a"/>
+    </linearGradient>
+    <!-- Gemma glow -->
+    <radialGradient id="gemmaGlow" cx="290" cy="250" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#4285F4" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4285F4" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Qwen glow -->
+    <radialGradient id="qwenGlow" cx="610" cy="250" r="180" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#FF6A00" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#FF6A00" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Center glow -->
+    <radialGradient id="centerGlow" cx="450" cy="250" r="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#00D4AA" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#00D4AA" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Phone gradient -->
+    <linearGradient id="phoneGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1a2640"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+    <!-- AI chip gradient -->
+    <linearGradient id="chipGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="100%" stop-color="#00D4AA"/>
+    </linearGradient>
+    <linearGradient id="qwenChipGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF6A00"/>
+      <stop offset="100%" stop-color="#FF9500"/>
+    </linearGradient>
+    <!-- Grid line -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#1a2e4a" stroke-width="0.5"/>
+    </pattern>
+    <!-- Blur filter -->
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    <filter id="textGlow">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background fill -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <!-- Grid overlay -->
+  <rect width="900" height="500" fill="url(#grid)" opacity="0.4"/>
+
+  <!-- Glow effects -->
+  <ellipse cx="290" cy="250" rx="200" ry="200" fill="url(#gemmaGlow)"/>
+  <ellipse cx="610" cy="250" rx="200" ry="200" fill="url(#qwenGlow)"/>
+  <ellipse cx="450" cy="250" rx="130" ry="130" fill="url(#centerGlow)"/>
+
+  <!-- ===== LEFT: PHONE + Gemma 4 ===== -->
+  <!-- Phone body -->
+  <rect x="220" y="100" width="140" height="260" rx="20" fill="url(#phoneGrad)" stroke="#4285F4" stroke-width="2" opacity="0.9"/>
+  <!-- Phone screen -->
+  <rect x="228" y="120" width="124" height="210" rx="10" fill="#0a0e1a"/>
+  <!-- Phone screen content -->
+  <rect x="236" y="132" width="108" height="16" rx="3" fill="#1e3a5f"/>
+  <text x="290" y="143" font-family="'SF Pro', 'PingFang SC', Arial, sans-serif" font-size="8" fill="#4285F4" text-anchor="middle" font-weight="bold">Gemma 4 Running</text>
+  <!-- AI chip visualization on screen -->
+  <rect x="250" y="158" width="80" height="60" rx="6" fill="#0d1b2a" stroke="#4285F4" stroke-width="1"/>
+  <rect x="258" y="164" width="24" height="24" rx="3" fill="url(#chipGrad)" opacity="0.9"/>
+  <text x="270" y="180" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">AI</text>
+  <rect x="288" y="164" width="34" height="8" rx="2" fill="#1e3a5f"/>
+  <rect x="288" y="176" width="28" height="6" rx="2" fill="#1a2a40"/>
+  <rect x="288" y="186" width="31" height="6" rx="2" fill="#1a2a40"/>
+  <!-- Token stream animation lines -->
+  <rect x="250" y="228" width="80" height="5" rx="2" fill="#4285F4" opacity="0.7"/>
+  <rect x="250" y="237" width="60" height="5" rx="2" fill="#4285F4" opacity="0.5"/>
+  <rect x="250" y="246" width="70" height="5" rx="2" fill="#4285F4" opacity="0.4"/>
+  <rect x="250" y="255" width="45" height="5" rx="2" fill="#4285F4" opacity="0.3"/>
+  <!-- Offline badge -->
+  <rect x="237" y="275" width="106" height="22" rx="5" fill="#0d3a1f" stroke="#00C853" stroke-width="1"/>
+  <text x="290" y="289" font-family="Arial" font-size="9" fill="#00C853" text-anchor="middle" font-weight="bold">✈ 离线运行 · 零延迟</text>
+  <!-- Phone notch -->
+  <rect x="268" y="108" width="44" height="10" rx="5" fill="#0a0e1a"/>
+  <!-- Phone home bar -->
+  <rect x="265" y="348" width="50" height="4" rx="2" fill="#4285F4" opacity="0.6"/>
+
+  <!-- Google logo badge -->
+  <circle cx="290" cy="86" r="18" fill="#0d1b2a" stroke="#4285F4" stroke-width="1.5"/>
+  <text x="290" y="91" font-family="Arial" font-size="14" fill="#4285F4" text-anchor="middle" font-weight="bold">G</text>
+
+  <!-- Gemma 4 label below phone -->
+  <text x="290" y="385" font-family="'SF Pro', Arial, sans-serif" font-size="18" fill="#4285F4" text-anchor="middle" font-weight="bold">Gemma 4</text>
+  <text x="290" y="403" font-family="Arial" font-size="11" fill="#6a9fd8" text-anchor="middle">E2B / E4B · 功耗降60%</text>
+
+  <!-- ===== CENTER: VS + Phone chip ===== -->
+  <!-- VS circle -->
+  <circle cx="450" cy="250" r="42" fill="#0a1520" stroke="#00D4AA" stroke-width="2"/>
+  <text x="450" y="243" font-family="Arial" font-size="20" fill="#00D4AA" text-anchor="middle" font-weight="bold">VS</text>
+  <text x="450" y="262" font-family="Arial" font-size="9" fill="#00D4AA" text-anchor="middle" opacity="0.8">端侧AI对决</text>
+
+  <!-- Connecting lines left -->
+  <line x1="370" y1="250" x2="408" y2="250" stroke="#4285F4" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+  <!-- Connecting lines right -->
+  <line x1="492" y1="250" x2="530" y2="250" stroke="#FF6A00" stroke-width="1.5" stroke-dasharray="4,3" opacity="0.7"/>
+
+  <!-- Center bottom: key metrics -->
+  <rect x="390" y="310" width="120" height="60" rx="8" fill="#0a1520" stroke="#00D4AA" stroke-width="1"/>
+  <text x="450" y="330" font-family="Arial" font-size="9" fill="#00D4AA" text-anchor="middle" font-weight="bold">Android 开发者必看</text>
+  <text x="450" y="346" font-family="Arial" font-size="8" fill="#8adfcc" text-anchor="middle">隐私 · 低延迟 · 零成本</text>
+  <text x="450" y="360" font-family="Arial" font-size="8" fill="#8adfcc" text-anchor="middle">离线可用 · 混合推理</text>
+
+  <!-- ===== RIGHT: PHONE + Qwen 3 ===== -->
+  <!-- Phone body -->
+  <rect x="540" y="100" width="140" height="260" rx="20" fill="url(#phoneGrad)" stroke="#FF6A00" stroke-width="2" opacity="0.9"/>
+  <!-- Phone screen -->
+  <rect x="548" y="120" width="124" height="210" rx="10" fill="#0a0e1a"/>
+  <!-- Phone screen content -->
+  <rect x="556" y="132" width="108" height="16" rx="3" fill="#3a1e0d"/>
+  <text x="610" y="143" font-family="Arial" font-size="8" fill="#FF6A00" text-anchor="middle" font-weight="bold">Qwen 3 Running</text>
+  <!-- AI chip visualization on screen -->
+  <rect x="570" y="158" width="80" height="60" rx="6" fill="#0d1b2a" stroke="#FF6A00" stroke-width="1"/>
+  <rect x="578" y="164" width="24" height="24" rx="3" fill="url(#qwenChipGrad)" opacity="0.9"/>
+  <text x="590" y="180" font-family="Arial" font-size="9" fill="#fff" text-anchor="middle" font-weight="bold">AI</text>
+  <rect x="608" y="164" width="34" height="8" rx="2" fill="#3a1e0d"/>
+  <rect x="608" y="176" width="28" height="6" rx="2" fill="#2a1a0d"/>
+  <rect x="608" y="186" width="31" height="6" rx="2" fill="#2a1a0d"/>
+  <!-- Token stream -->
+  <rect x="570" y="228" width="80" height="5" rx="2" fill="#FF6A00" opacity="0.7"/>
+  <rect x="570" y="237" width="65" height="5" rx="2" fill="#FF6A00" opacity="0.5"/>
+  <rect x="570" y="246" width="72" height="5" rx="2" fill="#FF6A00" opacity="0.4"/>
+  <rect x="570" y="255" width="50" height="5" rx="2" fill="#FF6A00" opacity="0.3"/>
+  <!-- China badge -->
+  <rect x="557" y="275" width="106" height="22" rx="5" fill="#3a1a00" stroke="#FF6A00" stroke-width="1"/>
+  <text x="610" y="289" font-family="Arial" font-size="9" fill="#FF9A3C" text-anchor="middle" font-weight="bold">🇨🇳 国内首选 · MNN框架</text>
+  <!-- Phone notch -->
+  <rect x="588" y="108" width="44" height="10" rx="5" fill="#0a0e1a"/>
+  <!-- Phone home bar -->
+  <rect x="585" y="348" width="50" height="4" rx="2" fill="#FF6A00" opacity="0.6"/>
+
+  <!-- Alibaba badge -->
+  <circle cx="610" cy="86" r="18" fill="#0d1b2a" stroke="#FF6A00" stroke-width="1.5"/>
+  <text x="610" y="91" font-family="Arial" font-size="10" fill="#FF6A00" text-anchor="middle" font-weight="bold">阿里</text>
+
+  <!-- Qwen 3 label below phone -->
+  <text x="610" y="385" font-family="Arial" font-size="18" fill="#FF6A00" text-anchor="middle" font-weight="bold">Qwen 3</text>
+  <text x="610" y="403" font-family="Arial" font-size="11" fill="#d4925a" text-anchor="middle">MNN · 中文深度优化</text>
+
+  <!-- ===== TOP TITLE ===== -->
+  <!-- Title background strip -->
+  <rect x="0" y="0" width="900" height="72" fill="#000000" opacity="0.4"/>
+
+  <!-- Year badge -->
+  <rect x="30" y="14" width="60" height="26" rx="5" fill="#00D4AA" opacity="0.15" stroke="#00D4AA" stroke-width="1"/>
+  <text x="60" y="31" font-family="Arial" font-size="13" fill="#00D4AA" text-anchor="middle" font-weight="bold">2026</text>
+
+  <!-- Main title -->
+  <text x="450" y="36" font-family="'SF Pro Display', 'PingFang SC', Arial, sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle" font-weight="bold" filter="url(#textGlow)">端侧AI爆发年</text>
+
+  <!-- Sub title -->
+  <text x="450" y="57" font-family="Arial" font-size="13" fill="#8ec5d4" text-anchor="middle">Android 开发者必须掌握的手机端 AI 革命</text>
+
+  <!-- AppDev Weekly tag -->
+  <rect x="790" y="14" width="92" height="26" rx="5" fill="#FF6A00" opacity="0.15" stroke="#FF6A00" stroke-width="1"/>
+  <text x="836" y="31" font-family="Arial" font-size="10" fill="#FF9A3C" text-anchor="middle" font-weight="bold">AppDev Weekly</text>
+
+  <!-- ===== BOTTOM BAR ===== -->
+  <rect x="0" y="440" width="900" height="60" fill="#000000" opacity="0.5"/>
+
+  <!-- Bottom info pills -->
+  <!-- Pill 1: Gemma 4 E4B -->
+  <rect x="30" y="453" width="120" height="28" rx="14" fill="#4285F4" opacity="0.15" stroke="#4285F4" stroke-width="1"/>
+  <text x="90" y="471" font-family="Arial" font-size="10" fill="#4285F4" text-anchor="middle" font-weight="bold">Gemma 4 · Apache 2.0</text>
+
+  <!-- Pill 2: Qwen 3 -->
+  <rect x="165" y="453" width="110" height="28" rx="14" fill="#FF6A00" opacity="0.15" stroke="#FF6A00" stroke-width="1"/>
+  <text x="220" y="471" font-family="Arial" font-size="10" fill="#FF9A3C" text-anchor="middle" font-weight="bold">Qwen 3 · MNN框架</text>
+
+  <!-- Pill 3: Android 17 -->
+  <rect x="290" y="453" width="110" height="28" rx="14" fill="#00D4AA" opacity="0.15" stroke="#00D4AA" stroke-width="1"/>
+  <text x="345" y="471" font-family="Arial" font-size="10" fill="#00D4AA" text-anchor="middle" font-weight="bold">Android 17 AI API</text>
+
+  <!-- Pill 4: Mixed inference -->
+  <rect x="415" y="453" width="100" height="28" rx="14" fill="#9B59B6" opacity="0.15" stroke="#9B59B6" stroke-width="1"/>
+  <text x="465" y="471" font-family="Arial" font-size="10" fill="#c39bd3" text-anchor="middle" font-weight="bold">混合推理架构</text>
+
+  <!-- Pill 5: G I/O countdown -->
+  <rect x="530" y="453" width="130" height="28" rx="14" fill="#E84393" opacity="0.15" stroke="#E84393" stroke-width="1"/>
+  <text x="595" y="471" font-family="Arial" font-size="10" fill="#E84393" text-anchor="middle" font-weight="bold">🔥 I/O 2026 · 36天后</text>
+
+  <!-- Pill 6: On-device -->
+  <rect x="675" y="453" width="120" height="28" rx="14" fill="#00C853" opacity="0.15" stroke="#00C853" stroke-width="1"/>
+  <text x="735" y="471" font-family="Arial" font-size="10" fill="#00C853" text-anchor="middle" font-weight="bold">✈ 离线 · 零成本 · 隐私</text>
+
+  <!-- Top decorative line -->
+  <line x1="0" y1="72" x2="900" y2="72" stroke="#1a3050" stroke-width="1"/>
+  <!-- Bottom decorative line -->
+  <line x1="0" y1="440" x2="900" y2="440" stroke="#1a3050" stroke-width="1"/>
+
+  <!-- Corner accent dots -->
+  <circle cx="8" cy="8" r="3" fill="#00D4AA" opacity="0.5"/>
+  <circle cx="892" cy="8" r="3" fill="#00D4AA" opacity="0.5"/>
+  <circle cx="8" cy="492" r="3" fill="#00D4AA" opacity="0.5"/>
+  <circle cx="892" cy="492" r="3" fill="#00D4AA" opacity="0.5"/>
+</svg>
