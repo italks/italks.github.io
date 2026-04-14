@@ -1,0 +1,199 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#1a1a2e"/>
+    </linearGradient>
+    
+    <!-- 主标题渐变 -->
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d2ff"/>
+      <stop offset="50%" style="stop-color:#3a7bd5"/>
+      <stop offset="100%" style="stop-color:#e94560"/>
+    </linearGradient>
+    
+    <!-- Kuikly 品牌色 -->
+    <linearGradient id="kuiklyGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E94560"/>
+      <stop offset="100%" style="stop-color:#FF6B8A"/>
+    </linearGradient>
+    
+    <!-- Flutter 渐变 -->
+    <linearGradient id="flutterGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#42A5F5"/>
+      <stop offset="100%" style="stop-color:#1E88E5"/>
+    </linearGradient>
+    
+    <!-- KMP 渐变 -->
+    <linearGradient id="kmpGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#7C4DFF"/>
+      <stop offset="100%" style="stop-color:#651FFF"/>
+    </linearGradient>
+    
+    <!-- RN 渐变 -->
+    <linearGradient id="rnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#61DAFB"/>
+      <stop offset="100%" style="stop-color:#26A69A"/>
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- 卡片阴影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 背景装饰网格线 -->
+  <g opacity="0.04">
+    <line x1="0" y1="100" x2="900" y2="100" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="200" x2="900" y2="200" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="300" x2="900" y2="300" stroke="#fff" stroke-width="1"/>
+    <line x1="0" y1="400" x2="900" y2="400" stroke="#fff" stroke-width="1"/>
+    <line x1="180" y1="0" x2="180" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="360" y1="0" x2="360" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="540" y1="0" x2="540" y2="500" stroke="#fff" stroke-width="1"/>
+    <line x1="720" y1="0" x2="720" y2="500" stroke="#fff" stroke-width="1"/>
+  </g>
+  
+  <!-- 背景光晕装饰 -->
+  <circle cx="750" cy="80" r="120" fill="#E94560" opacity="0.06" filter="url(#softGlow)"/>
+  <circle cx="100" cy="420" r="100" fill="#3a7bd5" opacity="0.05" filter="url(#softGlow)"/>
+  <circle cx="450" cy="250" r="180" fill="#7C4DFF" opacity="0.03"/>
+
+  <!-- 顶部标签栏 -->
+  <g transform="translate(450, 38)">
+    <!-- 腾讯出品标签 -->
+    <rect x="-180" y="-14" width="90" height="28" rx="14" fill="#E94560" opacity="0.9"/>
+    <text x="-135" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">腾讯开源</text>
+    
+    <!-- 2026年4月标签 -->
+    <rect x="-80" y="-14" width="95" height="28" rx="14" fill="rgba(58,123,213,0.85)"/>
+    <text x="-32" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">2026.04</text>
+    
+    <!-- 四端覆盖标签 -->
+    <rect x="25" y="-14" width="95" height="28" rx="14" fill="rgba(124,77,255,0.85)"/>
+    <text x="72" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="12" fill="#fff" text-anchor="middle" font-weight="600">四端一码</text>
+    
+    <!-- NEW 标签 -->
+    <rect x="130" y="-14" width="50" height="28" rx="14" fill="#FFD700" opacity="0.9"/>
+    <text x="155" y="5" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#333" text-anchor="middle" font-weight="800">NEW</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="450" y="105" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="34" fill="url(#titleGrad)" text-anchor="middle" font-weight="800" filter="url(#glow)">
+    腾讯 Kuikly 横空出世！
+  </text>
+  
+  <!-- 副标题 -->
+  <text x="450" y="145" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="18" fill="rgba(255,255,255,0.75)" text-anchor="middle" font-weight="400">
+    Flutter / KMP / RN 之外，跨端开发有了「第四选择」
+  </text>
+
+  <!-- 分隔线 -->
+  <line x1="150" y1="168" x2="750" y2="168" stroke="url(#kuiklyGrad)" stroke-width="2" opacity="0.5"/>
+  <line x1="350" y1="168" x2="550" y2="168" stroke="#E94560" stroke-width="3" opacity="0.8"/>
+
+  <!-- 四端支持图标区域 -->
+  <g transform="translate(450, 215)">
+    <!-- Android -->
+    <g transform="translate(-180, 0)">
+      <rect x="-35" y="-22" width="70" height="44" rx="10" fill="rgba(66,165,245,0.15)" stroke="rgba(66,165,245,0.4)" stroke-width="1"/>
+      <text x="0" y="3" font-size="20" text-anchor="middle">🤖</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">Android</text>
+    </g>
+    
+    <!-- iOS -->
+    <g transform="translate(-60, 0)">
+      <rect x="-32" y="-22" width="64" height="44" rx="10" fill="rgba(233,69,96,0.15)" stroke="rgba(233,69,96,0.4)" stroke-width="1"/>
+      <text x="0" y="3" font-size="18" text-anchor="middle">🍎</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">iOS</text>
+    </g>
+    
+    <!-- Web -->
+    <g transform="translate(55, 0)">
+      <rect x="-30" y="-22" width="60" height="44" rx="10" fill="rgba(97,218,251,0.15)" stroke="rgba(97,218,251,0.4)" stroke-width="1"/>
+      <text x="0" y="3" font-size="18" text-anchor="middle">🌐</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">Web</text>
+    </g>
+    
+    <!-- 小程序 -->
+    <g transform="translate(170, 0)">
+      <rect x="-35" y="-22" width="70" height="44" rx="10" fill="rgba(124,77,255,0.15)" stroke="rgba(124,77,255,0.4)" stroke-width="1"/>
+      <text x="0" y="3" font-size="18" text-anchor="middle">💚</text>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.7)" text-anchor="middle">小程序</text>
+    </g>
+  </g>
+
+  <!-- 对比卡片区域 -->
+  <g transform="translate(0, 290)">
+    <!-- 卡片背景 -->
+    <rect x="60" y="0" width="780" height="175" rx="16" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.08)" stroke-width="1" filter="url(#cardShadow)"/>
+    
+    <!-- 框架对比表格头 -->
+    <g transform="translate(110, 30)">
+      <!-- 表头 -->
+      <text x="0" y="0" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600">框架</text>
+      <text x="140" y="0" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600">性能</text>
+      <text x="260" y="0" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600">四端</text>
+      <text x="370" y="0" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600">热更新</text>
+      <text x="490" y="0" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.4)" font-weight="600">生态</text>
+      
+      <!-- Kuikly 行（高亮） -->
+      <rect x="-45" y="14" width="620" height="32" rx="6" fill="url(#kuiklyGrad)" opacity="0.15"/>
+      <rect x="-45" y="14" width="3" height="32" rx="1.5" fill="url(#kuiklyGrad)"/>
+      <text x="0" y="36" font-family="system-ui, sans-serif" font-size="13" fill="#FF6B8A" font-weight="700">Kuikly ⭐</text>
+      <text x="140" y="36" font-family="system-ui, sans-serif" font-size="12" fill="#fff" font-weight="600">⭐⭐⭐⭐⭐</text>
+      <text x="260" y="36" font-family="system-ui, sans-serif" font-size="12" fill="#4ADE80" font-weight="600">✅ 全部</text>
+      <text x="370" y="36" font-family="system-ui, sans-serif" font-size="12" fill="#4ADE80" font-weight="600">✅ 内置</text>
+      <text x="490" y="36" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">⭐⭐ 成长中</text>
+      
+      <!-- Flutter 行 -->
+      <text x="0" y="64" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.85)" font-weight="600">Flutter</text>
+      <text x="140" y="64" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">⭐⭐⭐⭐⭐</text>
+      <text x="260" y="64" font-family="system-ui, sans-serif" font-size="12" fill="#F87171">❌ 缺小程序</text>
+      <text x="370" y="64" font-family="system-ui, sans-serif" font-size="12" fill="#F87171">❌ 需第三方</text>
+      <text x="490" y="64" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">⭐⭐⭐⭐⭐ 成熟</text>
+      
+      <!-- KMP 行 -->
+      <text x="0" y="92" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.85)" font-weight="600">KMP+CMP</text>
+      <text x="140" y="92" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">⭐⭐⭐⭐⭐</text>
+      <text x="260" y="92" font-family="system-ui, sans-serif" font-size="12" fill="#F87171">❌ 仅移动+Web</text>
+      <text x="370" y="92" font-family="system-ui, sans-serif" font-size="12" fill="#F87171">❌ 需第三方</text>
+      <text x="490" y="92" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">⭐⭐⭐</text>
+      
+      <!-- RN 行 -->
+      <text x="0" y="120" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.85)" font-weight="600">React Native</text>
+      <text x="140" y="120" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">⭐⭐⭐</text>
+      <text x="260" y="120" font-family="system-ui, sans-serif" font-size="12" fill="#F87171">❌ 缺小程序</text>
+      <text x="370" y="120" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.7)">⚠️ CodePush</text>
+      <text x="490" y="120" font-family="system-ui, sans-serif" font-size="12" fill="rgba(255,255,255,0.6)">⭐⭐⭐⭐</text>
+    </g>
+  </g>
+
+  <!-- 底部亮点标签 -->
+  <g transform="translate(450, 480)">
+    <circle cx="-160" cy="0" r="3" fill="#E94560" opacity="0.8"/>
+    <text x="-150" y="4" font-family="system-ui, sans-serif" font-size="11" fill="rgba(255,255,255,0.5)">原生性能 · Dart-like 语法 · Shiply 热更新</text>
+  </g>
+</svg>

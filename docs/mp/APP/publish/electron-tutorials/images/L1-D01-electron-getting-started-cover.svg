@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#131836"/>
+      <stop offset="100%" stop-color="#1a1040"/>
+    </linearGradient>
+
+    <!-- 主色调渐变 - Electron 蓝 -->
+    <linearGradient id="electronBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#478cbf"/>
+      <stop offset="100%" stop-color="#2d6da8"/>
+    </linearGradient>
+
+    <!-- 强调色渐变 -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9b59b6"/>
+      <stop offset="50%" stop-color="#667eea"/>
+      <stop offset="100%" stop-color="#478cbf"/>
+    </linearGradient>
+
+    <!-- 光晕效果 -->
+    <radialGradient id="glow1" cx="20%" cy="30%" r="40%">
+      <stop offset="0%" stop-color="#478cbf" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#478cbf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="80%" cy="70%" r="35%">
+      <stop offset="0%" stop-color="#9b59b6" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#9b59b6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 卡片阴影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <!-- 装饰网格图案 -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#gridPattern)"/>
+  
+  <!-- 光晕层 -->
+  <rect width="900" height="500" fill="url(#glow1)"/>
+  <rect width="900" height="500" fill="url(#glow2)"/>
+
+  <!-- ========== 左侧：Electron Logo + 视觉元素 ========== -->
+  
+  <!-- Electron 原子图标 (简化版) -->
+  <g transform="translate(140, 250)">
+    <!-- 外圈轨道 1 -->
+    <ellipse cx="0" cy="0" rx="85" ry="32" fill="none" stroke="#478cbf" stroke-width="2.5" stroke-opacity="0.7"
+             transform="rotate(-25)" stroke-dasharray="8,4">
+      <animateTransform attributeName="transform" type="rotate" from="-25" to="335" dur="20s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- 外圈轨道 2 -->
+    <ellipse cx="0" cy="0" rx="85" ry="32" fill="none" stroke="#667eea" stroke-width="2.5" stroke-opacity="0.5"
+             transform="rotate(60)" stroke-dasharray="8,4">
+      <animateTransform attributeName="transform" type="rotate" from="60" to="420" dur="18s" repeatCount="indefinite"/>
+    </ellipse>
+    
+    <!-- 外圈轨道 3 -->
+    <ellipse cx="0" cy="0" rx="85" ry="32" fill="none" stroke="#9b59b6" stroke-width="2.5" stroke-opacity="0.4"
+             transform="rotate(145)" stroke-dasharray="8,4">
+      <animateTransform attributeName="transform" type="rotate" from="145" to="505" dur="22s" repeatCount="indefinite"/>
+    </ellipse>
+
+    <!-- 原子核 -->
+    <circle cx="0" cy="0" r="16" fill="url(#electronBlue)" filter="url(#softGlow)"/>
+    <circle cx="0" cy="0" r="10" fill="#1a1040"/>
+
+    <!-- 电子粒子 -->
+    <circle cx="82" cy="-14" r="5" fill="#478cbf" filter="url(#softGlow)">
+      <animateMotion dur="20s" repeatCount="indefinite" path="M 82,-14 A 85,32 -25 1,1 -82,14 A 85,32 -25 1,1 82,-14"/>
+    </circle>
+    <circle cx="-42" cy="73" r="4.5" fill="#667eea" filter="url(#softGlow)">
+      <animateMotion dur="18s" repeatCount="indefinite" path="M -42,73 A 85,32 60 1,1 42,-73 A 85,32 60 1,1 -42,73"/>
+    </circle>
+    <circle cx="-42" cy="-58" r="4" fill="#9b59b6" filter="url(#softGlow)" opacity="0.8">
+      <animateMotion dur="22s" repeatCount="indefinite" path="M -42,-58 A 85,32 145 1,1 42,58 A 85,32 145 1,1 -42,-58"/>
+    </circle>
+  </g>
+
+  <!-- 浮动代码卡片 - main.js -->
+  <g transform="translate(45, 90)" filter="url(#cardShadow)">
+    <rect width="150" height="72" rx="8" fill="#1e2235" fill-opacity="0.9" stroke="#2d3654" stroke-width="1"/>
+    <!-- 标签栏 -->
+    <rect width="150" height="22" rx="8" fill="#252b42"/>
+    <rect y="14" width="150" height="8" fill="#252b42"/>
+    <!-- 小圆点 -->
+    <circle cx="14" cy="11" r="4" fill="#ff5f57"/>
+    <circle cx="28" cy="11" r="4" fill="#ffbd2e"/>
+    <circle cx="42" cy="11" r="4" fill="#28c840"/>
+    <!-- 文件名 -->
+    <text x="76" y="15" font-family="Monaco,Consolas,monospace" font-size="9" fill="#8892b0" text-anchor="middle">main.js</text>
+    <!-- 代码内容 -->
+    <text x="12" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#c792ea">const</text>
+    <text x="38" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#a6e3a1">{ app }</text>
+    <text x="77" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#8892b0">=</text>
+    <text x="86" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#82aaff">require</text>
+    <text x="128" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#c3e88d">('electron')</text>
+    <text x="12" y="56" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#c792ea">new</text>
+    <text x="33" y="56" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#82aaff">BrowserWindow</text>
+    <text x="114" y="56" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#89ddff">()</text>
+  </g>
+
+  <!-- 浮动代码卡片 - preload.js -->
+  <g transform="translate(55, 340)" filter="url(#cardShadow)">
+    <rect width="148" height="68" rx="8" fill="#1e2235" fill-opacity="0.9" stroke="#2d3654" stroke-width="1"/>
+    <rect width="148" height="22" rx="8" fill="#252b42"/>
+    <rect y="14" width="148" height="8" fill="#252b42"/>
+    <circle cx="14" cy="11" r="4" fill="#ff5f57"/>
+    <circle cx="28" cy="11" r="4" fill="#ffbd2e"/>
+    <circle cx="42" cy="11" r="4" fill="#28c840"/>
+    <text x="75" y="15" font-family="Monaco,Consolas,monospace" font-size="9" fill="#8892b0" text-anchor="middle">preload.js</text>
+    <text x="12" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#82aaff">contextBridge</text>
+    <text x="95" y="40" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#89ddff">.</text>
+    <text x="12" y="56" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#82aaff">exposeInMainWorld</text>
+    <text x="115" y="56" font-family="Monaco,Consolas,monospace" font-size="9.5" fill="#89ddff">()</text>
+  </g>
+
+  <!-- 浮动代码卡片 - index.html -->
+  <g transform="translate(210, 370)" filter="url(#cardShadow)">
+    <rect width="120" height="52" rx="8" fill="#1e2235" fill-opacity="0.85" stroke="#2d3654" stroke-width="1"/>
+    <rect width="120" height="22" rx="8" fill="#252b42"/>
+    <rect y="14" width="120" height="8" fill="#252b42"/>
+    <circle cx="14" cy="11" r="4" fill="#ff5f57"/>
+    <circle cx="28" cy="11" r="4" fill="#ffbd2e"/>
+    <circle cx="42" cy="11" r="4" fill="#28c840"/>
+    <text x="67" y="15" font-family="Monaco,Consolas,monospace" font-size="9" fill="#8892b0" text-anchor="middle">index.html</text>
+    <text x="12" y="40" font-family="Monaco,Consolas,monospace" font-size="9" fill="#ffcb6b">&lt;html&gt;</text>
+    <text x="54" y="40" font-family="Monaco,Consolas,monospace" font-size="9" fill="#89ddff">🖥️</text>
+  </g>
+
+  <!-- 连接线装饰 -->
+  <path d="M 195 162 Q 220 200 180 340" fill="none" stroke="#478cbf" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4,4"/>
+  <path d="M 203 374 Q 230 380 210 396" fill="none" stroke="#667eea" stroke-width="1" stroke-opacity="0.2" stroke-dasharray="4,4"/>
+
+
+  <!-- ========== 右侧：标题文字区域 ========== -->
+
+  <!-- 系列 Label -->
+  <g transform="translate(360, 75)">
+    <rect x="0" y="0" width="110" height="28" rx="14" fill="url(#accentGrad)" fill-opacity="0.15" stroke="url(#accentGrad)" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="55" y="19.5" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif" font-size="13" font-weight="600" fill="#c4b5fd" text-anchor="middle" letter-spacing="1">L1 / Day 1</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="430" y="155" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="44" font-weight="800" fill="#ffffff" letter-spacing="1">
+    Electron
+  </text>
+  <text x="430" y="208" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="38" font-weight="700" fill="url(#accentGrad)">
+    入门完全指南
+  </text>
+
+  <!-- 分割线 -->
+  <line x1="430" y1="228" x2="700" y2="228" stroke="url(#accentGrad)" stroke-width="2" stroke-linecap="round" opacity="0.5"/>
+
+  <!-- 副标题 -->
+  <text x="430" y="262" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="19" font-weight="400" fill="#a0aec0" letter-spacing="0.5">
+    30 分钟搭建你的第一个跨平台桌面应用
+  </text>
+
+  <!-- 特性标签 -->
+  <g transform="translate(430, 295)">
+    <!-- Tag 1 -->
+    <rect x="0" y="0" width="118" height="34" rx="17" fill="#1e2235" stroke="#2d3654" stroke-width="1"/>
+    <circle cx="18" cy="17" r="5" fill="#478cbf"/>
+    <text x="30" y="22" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">Chromium + Node</text>
+
+    <!-- Tag 2 -->
+    <g transform="translate(128, 0)">
+      <rect x="0" y="0" width="108" height="34" rx="17" fill="#1e2235" stroke="#2d3654" stroke-width="1"/>
+      <circle cx="18" cy="17" r="5" fill="#667eea"/>
+      <text x="30" y="22" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">VS Code 同款</text>
+    </g>
+
+    <!-- Tag 3 -->
+    <g transform="translate(244, 0)">
+      <rect x="0" y="0" width="96" height="34" rx="17" fill="#1e2235" stroke="#2d3654" stroke-width="1"/>
+      <circle cx="18" cy="17" r="5" fill="#9b59b6"/>
+      <text x="30" y="22" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">零基础友好</text>
+    </g>
+  </g>
+
+  <!-- 底部平台标识 -->
+  <g transform="translate(430, 420)">
+    <text x="0" y="0" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="13" font-weight="600" fill="#4a5568" letter-spacing="2">CROSS-PLATFORM</text>
+    
+    <!-- Windows -->
+    <g transform="translate(0, 16)">
+      <rect x="0" y="0" width="64" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <svg x="10" y="5" width="16" height="16" viewBox="0 0 24 24"><path d="M3 5v14l7-1.5V6.5L3 5zm8 12l10 2V5L11 7v10z" fill="#0078d4"/></svg>
+      <text x="31" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">Windows</text>
+    </g>
+    
+    <!-- macOS -->
+    <g transform="translate(72, 16)">
+      <rect x="0" y="0" width="56" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="8" y="17.5" font-family="-apple-system,sans-serif" font-size="13" fill="#a0aec0">🍎</text>
+      <text x="26" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">macOS</text>
+    </g>
+    
+    <!-- Linux -->
+    <g transform="translate(136, 16)">
+      <rect x="0" y="0" width="56" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="8" y="17.5" font-family="-apple-system,sans-serif" font-size="13" fill="#a0aec0">🐧</text>
+      <text x="26" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">Linux</text>
+    </g>
+  </g>
+
+  <!-- 右下角公众号标识 -->
+  <g transform="translate(720, 450)">
+    <rect x="0" y="0" width="160" height="34" rx="17" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08" stroke-width="1"/>
+    <text x="16" y="22" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" font-weight="500" fill="#718096">📱 APP移动开发</text>
+  </g>
+
+
+  <!-- ========== 装饰元素 ========== -->
+  
+  <!-- 顶部装饰线 -->
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#accentGrad)" stroke-width="3"/>
+  
+  <!-- 底部装饰线 -->
+  <line x1="0" y1="497" x2="900" y2="497" stroke="url(#accentGrad)" stroke-width="3" opacity="0.3"/>
+  
+  <!-- 角落装饰点 -->
+  <circle cx="20" cy="480" r="3" fill="#478cbf" opacity="0.4"/>
+  <circle cx="32" cy="480" r="3" fill="#667eea" opacity="0.3"/>
+  <circle cx="44" cy="480" r="3" fill="#9b59b6" opacity="0.2"/>
+  
+  <!-- 右上角几何装饰 -->
+  <g transform="translate(850, 30)" opacity="0.08">
+    <polygon points="0,25 25,0 50,25 25,50" fill="none" stroke="#fff" stroke-width="1.5"/>
+    <polygon points="12.5,25 25,12.5 37.5,25 25,37.5" fill="none" stroke="#fff" stroke-width="1"/>
+    <circle cx="25" cy="25" r="4" fill="#fff"/>
+  </g>
+
+  <!-- 左下角几何装饰 -->
+  <g transform="translate(15, 440)" opacity="0.06">
+    <rect x="0" y="0" width="20" height="20" rx="3" fill="none" stroke="#fff" stroke-width="1" transform="rotate(15)"/>
+    <rect x="6" y="6" width="20" height="20" rx="3" fill="none" stroke="#fff" stroke-width="1" transform="rotate(15)"/>
+  </g>
+</svg>

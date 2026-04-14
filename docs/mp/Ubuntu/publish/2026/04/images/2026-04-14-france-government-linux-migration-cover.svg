@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    <!-- 强调色渐变 -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#FF6B35"/>
+    </linearGradient>
+    <!-- 法国国旗蓝白红渐变 -->
+    <linearGradient id="franceGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#002395"/>
+      <stop offset="33%" style="stop-color:#FFFFFF"/>
+      <stop offset="66%" style="stop-color:#ED2939"/>
+    </linearGradient>
+    <!-- 光晕效果 -->
+    <radialGradient id="glowGrad" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:0"/>
+    </radialGradient>
+    <!-- 网格图案 -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 网格 -->
+  <rect width="900" height="500" fill="url(#grid)"/>
+
+  <!-- 光晕 -->
+  <ellipse cx="450" cy="180" rx="350" ry="180" fill="url(#glowGrad)"/>
+
+  <!-- 装饰线条 -->
+  <line x1="60" y1="420" x2="840" y2="420" stroke="url(#accentGrad)" stroke-width="2" opacity="0.3"/>
+  <line x1="80" y1="430" x2="820" y2="430" stroke="#E95420" stroke-width="1" opacity="0.15"/>
+
+  <!-- 左侧装饰条 -->
+  <rect x="45" y="120" width="5" height="280" rx="2.5" fill="url(#accentGrad)" opacity="0.8"/>
+
+  <!-- 右上角标签 -->
+  <g transform="translate(700, 35)">
+    <rect x="0" y="0" width="160" height="36" rx="18" fill="#E95420" opacity="0.9"/>
+    <text x="80" y="24" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff" text-anchor="middle">🔥 热点新闻</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="70" y="155" font-family="Microsoft YaHei, Arial, sans-serif" font-size="44" font-weight="bold" fill="#ffffff" line-height="1.2">
+    弃用 Windows
+  </text>
+
+  <text x="70" y="210" font-family="Microsoft YaHei, Arial, sans-serif" font-size="38" font-weight="bold" fill="url(#accentGrad)">
+    全面转向 Linux！
+  </text>
+
+  <!-- 副标题 -->
+  <text x="70" y="260" font-family="Microsoft YaHei, Arial, sans-serif" font-size="20" fill="#a0aec0">
+    法国政府8万人"去微软化"，Linux迎来国家级胜利
+  </text>
+
+  <!-- 数据亮点卡片组 -->
+  <g transform="translate(70, 295)">
+    <!-- 卡片1: 8万人 -->
+    <rect x="0" y="0" width="175" height="90" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#E95420" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="87" y="38" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#FF6B35" text-anchor="middle">8万+</text>
+    <text x="87" y="65" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">人规模迁移</text>
+    
+    <!-- 卡片2: 数字主权 -->
+    <rect x="195" y="0" width="175" height="90" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#E95420" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="282" y="38" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold" fill="#FF6B35" text-anchor="middle">数字主权</text>
+    <text x="282" y="65" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">国家战略升级</text>
+
+    <!-- 卡片3: 全面替代 -->
+    <rect x="390" y="0" width="175" height="90" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#E95420" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="477" y="38" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold" fill="#FF6B35" text-anchor="middle">全面替代</text>
+    <text x="477" y="65" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">Windows + Teams</text>
+
+    <!-- 卡片4: 2026秋季 -->
+    <rect x="585" y="0" width="175" height="90" rx="10" fill="#ffffff" fill-opacity="0.05" stroke="#E95420" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="672" y="38" font-family="Microsoft YaHei, Arial, sans-serif" font-size="22" font-weight="bold" fill="#FF6B35" text-anchor="middle">2026 秋季</text>
+    <text x="672" y="65" font-family="Microsoft YaHei, Arial, sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">方案敲定</text>
+  </g>
+
+  <!-- 底部信息栏 -->
+  <g transform="translate(70, 450)">
+    <!-- Ubuntu 标识 -->
+    <circle cx="12" cy="-8" r="16" fill="#E95420" opacity="0.9"/>
+    <text x="12" y="-3" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">🐧</text>
+    
+    <text x="40" y="-2" font-family="Microsoft YaHei, Arial, sans-serif" font-size="15" fill="#718096">UbuntuNews</text>
+    
+    <!-- 分隔线 -->
+    <line x1="150" y1="-12" x2="150" y2="-4" stroke="#4a5568" stroke-width="1"/>
+
+    <!-- 关键词标签 -->
+    <text x="165" y="-2" font-family="Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#4a5568">#数字主权</text>
+    <text x="265" y="-2" font-family="Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#4a5568">#开源胜利</text>
+    <text x="365" y="-2" font-family="Microsoft YaHei, Arial, sans-serif" font-size="13" fill="#4a5568">#Linux桌面年</text>
+  </g>
+
+  <!-- 右下角装饰：Linux企鹅轮廓暗示 -->
+  <g transform="translate(800, 380)" opacity="0.08">
+    <ellipse cx="25" cy="55" rx="24" ry="32" fill="#ffffff"/>
+    <ellipse cx="25" cy="20" rx="17" ry="19" fill="#ffffff"/>
+    <ellipse cx="11" cy="14" rx="6" ry="7" fill="#ffffff"/>
+    <ellipse cx="39" cy="14" rx="6" ry="7" fill="#ffffff"/>
+    <ellipse cx="19" cy="23" rx="3" ry="4" fill="#1a1a2e"/>
+    <ellipse cx="31" cy="23" rx="3" ry="4" fill="#1a1a2e"/>
+    <ellipse cx="25" cy="33" rx="4" ry="3" fill="#FF6B35"/>
+  </g>
+
+  <!-- 左上角装饰圆点 -->
+  <circle cx="750" cy="110" r="40" fill="none" stroke="#E95420" stroke-width="1" opacity="0.15"/>
+  <circle cx="750" cy="110" r="28" fill="none" stroke="#E95420" stroke-width="1" opacity="0.1"/>
+  <circle cx="750" cy="110" r="16" fill="#E95420" opacity="0.08"/>
+
+  <!-- 浮动装饰元素 -->
+  <g opacity="0.4">
+    <circle cx="130" cy="85" r="3" fill="#E95420"/>
+    <circle cx="600" cy="75" r="2" fill="#FF6B35"/>
+    <circle cx="800" cy="250" r="2.5" fill="#E95420"/>
+    <circle cx="100" cy="340" r="2" fill="#FF6B35" opacity="0.6"/>
+  </g>
+
+  <!-- VS 对比箭头（Windows → Linux）-->
+  <g transform="translate(300, 165)" opacity="0.15">
+    <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" fill="#64748b" text-anchor="end">❌ Windows</text>
+    <text x="15" y="-5" font-family="Arial, sans-serif" font-size="24" fill="#E95420">→</text>
+    <text x="90" y="0" font-family="Arial, sans-serif" font-size="16" fill="#E95420">✅ Linux</text>
+  </g>
+</svg>
