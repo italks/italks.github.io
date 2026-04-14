@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0e27"/>
+      <stop offset="50%" stop-color="#131836"/>
+      <stop offset="100%" stop-color="#1a1025"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f43f5e"/>
+      <stop offset="50%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#d946ef"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="28%" cy="35%" r="48%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.12"/>
+      <stop offset="100%" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-opacity="0.03"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  <rect width="900" height="500" fill="url(#glow1)"/>
+
+  <!-- ========== 左侧：应用预览 + 毕业徽章 ========== -->
+
+  <!-- 完整应用窗口预览 -->
+  <g transform="translate(140, 240)" filter="url(#shadow)">
+    <rect x="-105" y="-120" width="210" height="240" rx="10" fill="#0f1117" stroke="#ec4899" stroke-width="1.5" stroke-opacity="0.4"/>
+
+    <!-- 标题栏 -->
+    <rect x="-105" y="-120" width="210" height="26" rx="10" fill="#161b22"/>
+    <rect y="-94" width="210" height="8" fill="#161b22"/>
+    <circle cx="-91" cy="-107" r="3.5" fill="#ff5f57"/>
+    <circle cx="-80" cy="-107" r="3.5" fill="#ffbd2e"/>
+    <circle cx="-69" cy="-107" r="3.5" fill="#28c840"/>
+    <text x="0" y="-103" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="9.5" fill="#8892b0" text-anchor="middle">MyNotepad</text>
+
+    <!-- 标签栏 -->
+    <line x1="-100" y1="-88" x2="100" y2="-88" stroke="#ffffff" stroke-opacity="0.05"/>
+    
+    <g transform="translate(-96,-84)">
+      <rect width="56" height="20" rx="4" fill="#ec4899" fill-opacity="0.12" stroke="#ec4899" stroke-width="0.5" stroke-opacity="0.3"/>
+      <text x="6" y="13.5" font-family="-apple-system,sans-serif" font-size="7.5" fill="#f472b6">note.md</text>
+      <circle cx="50" cy="10" r="3" fill="#fbbf24"/>
+    </g>
+    <g transform="translate(-36,-84)">
+      <rect width="52" height="20" rx="4" fill="transparent"/>
+      <text x="6" y="13.5" font-family="-apple-system,sans-serif" font-size="7.5" fill="#636c7a">readme.md</text>
+    </g>
+    <g transform="translate(20,-84)">
+      <rect width="46" height="20" rx="4" fill="transparent"/>
+      <text x="6" y="13.5" font-family="-apple-system,sans-serif" font-size="7.5" fill="#636c7a">app.tsx</text>
+    </g>
+
+    <!-- 编辑区内容 -->
+    <g transform="translate(-95,-58)">
+      <rect width="190" height="140" rx="4" fill="#0d1017"/>
+      
+      <text x="8" y="16" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">1</text>
+      <text x="22" y="16" font-family="Monaco,Consolas,monospace" font-size="8" fill="#c792ea"># </text>
+      <text x="32" y="16" font-family="Monaco,Consolas,monospace" font-size="8" fill="#82aaff">My Notes</text>
+      
+      <text x="8" y="32" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">2</text>
+      <text x="22" y="32" font-family="Monaco,Consolas,monospace" font-size="8" fill="#636c7a">--- ---</text>
+      
+      <text x="8" y="48" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">3</text>
+      
+      <text x="8" y="64" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">4</text>
+      <text x="22" y="64" font-family="Monaco,Consolas,monospace" font-size="8" fill="#e2e8f0">Hello Electron!</text>
+      
+      <text x="8" y="80" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">5</text>
+      <text x="22" y="80" font-family="Monaco,Consolas,monospace" font-size="8" fill="#e2e8f0">This is my first</text>
+      
+      <text x="8" y="96" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">6</text>
+      <text x="22" y="96" font-family="Monaco,Consolas,monospace" font-size="8" fill="#e2e8f0">notepad app built</text>
+      
+      <text x="8" y="112" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">7</text>
+      <text x="22" y="112" font-family="Monaco,Consolas,monospace" font-size="8" fill="#e2e8f0">from scratch.</text>
+      
+      <text x="8" y="128" font-family="Monaco,Consolas,monospace" font-size="8" fill="#333844">8</text>
+
+      <!-- 光标闪烁 -->
+      <line x1="90" y1="122" x2="98" y2="122" stroke="#ec4899" stroke-width="1.5">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </line>
+    </g>
+
+    <!-- 状态栏 -->
+    <rect x="-105" y="104" width="210" height="16" fill="#161b22"/>
+    <text x="-95" y="115" font-family="Monaco,Consolas,monospace" font-size="7" fill="#636c7a">Ln 7, Col 14  UTF-8  Modified</text>
+  </g>
+
+  <!-- 奖杯 / 毕业徽章 -->
+  <g transform="translate(140, 85)">
+    <circle r="34" fill="#fbbf24" opacity="0.08"/>
+    <circle r="28" fill="#fbbf24" opacity="0.12"/>
+    
+    <!-- 奖杯图标 -->
+    <g transform="scale(1.4)">
+      <path d="M -8,-10 C -8,-18 8,-18 8,-10 C 8,-5 5,-2 5,2 L -5,2 C -5,-2 -8,-5 -8,-10 Z"
+            fill="none" stroke="#fbbf24" stroke-width="1.8" stroke-linejoin="round" opacity="0.85"/>
+      <line x1="-3" y1="2" x2="3" y2="2" stroke="#fbbf24" stroke-width="1.5" opacity="0.75"/>
+      <line x1="0" y1="2" x2="0" y2="7" stroke="#fbbf24" stroke-width="1.5" opacity="0.75"/>
+      <line x1="-5" y1="7" x2="5" y2="7" stroke="#fbbf24" stroke-width="1.5" opacity="0.75"/>
+      
+      <!-- 装饰星星 -->
+      <circle cx="-11" cy="-14" r="1.5" fill="#fbbf24" opacity="0.6">
+        <animate attributeName="opacity" values="0.3;1;0.3" dur="2s" repeatCount="indefinite"/>
+      </circle>
+      <circle cx="11" cy="-12" r="1.2" fill="#f59e0b" opacity="0.5">
+        <animate attributeName="opacity" values="0.2;0.8;0.2" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+    
+    <text x="0" y="55" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="10" font-weight="700" fill="#fbbf24" text-anchor="middle" letter-spacing="2">L2 COMPLETE</text>
+  </g>
+
+
+  <!-- ========== 右侧：标题区域 ========== -->
+
+  <!-- 系列标签 -->
+  <g transform="translate(360,72)">
+    <rect width="115" height="30" rx="15" fill="#ec4899" fill-opacity="0.15" stroke="url(#accent)" stroke-opacity="0.45"/>
+    <text x="57.5" y="20.5" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="14" font-weight="700" fill="#f9a8d4" text-anchor="middle" letter-spacing="1.5">
+      L2 / Day 7
+    </text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="430" y="150" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="44" font-weight="800" fill="#ffffff">
+    综合实战
+  </text>
+  
+  <!-- 副标题（渐变） -->
+  <text x="430" y="202" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="37" font-weight="700" fill="url(#accent)">
+    简易记事本（完整可运行）
+  </text>
+
+  <!-- 分割线 -->
+  <line x1="430" y1="222" x2="720" y2="222" stroke="url(#accent)" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+
+  <!-- 描述文字 -->
+  <text x="430" y="258" font-family="-apple-system,BlinkMacSystemFont,sans-serif" font-size="18" fill="#a0aec0">
+    从零打造多标签编辑器，L1+L2 全知识点融会贯通
+  </text>
+
+  <!-- 特性标签 -->
+  <g transform="translate(430,292)">
+    <rect width="108" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/>
+    <circle cx="18" cy="17" r="5" fill="#f43f5e"/>
+    <text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">完整源码</text>
+
+    <g transform="translate(116,0)">
+      <rect width="118" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/>
+      <circle cx="18" cy="17" r="5" fill="#ec4899"/>
+      <text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">多标签编辑</text>
+    </g>
+
+    <g transform="translate(242,0)">
+      <rect width="98" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/>
+      <circle cx="18" cy="17" r="5" fill="#d946ef"/>
+      <text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">可直接运行</text>
+    </g>
+  </g>
+
+  <!-- 技术栈标签 -->
+  <g transform="translate(430,350)">
+    <text x="0" y="0" font-family="-apple-system,sans-serif" font-size="11" font-weight="600" fill="#636c7a" letter-spacing="1.5">技术栈</text>
+
+    <g transform="translate(0,10)">
+      <rect x="0" y="0" width="62" height="24" rx="12" fill="#1e2235" stroke="#2d3654"/>
+      <text x="31" y="16" font-family="-apple-system,sans-serif" font-size="10" fill="#61dafb" text-anchor="middle">React</text>
+    </g>
+    <g transform="translate(68,10)">
+      <rect x="0" y="0" width="60" height="24" rx="12" fill="#1e2235" stroke="#2d3654"/>
+      <text x="30" y="16" font-family="-apple-system,sans-serif" font-size="10" fill="#3178c6" text-anchor="middle">TS</text>
+    </g>
+    <g transform="translate(134,10)">
+      <rect x="0" y="0" width="68" height="24" rx="12" fill="#1e2235" stroke="#2d3654"/>
+      <text x="34" y="16" font-family="-apple-system,sans-serif" font-size="10" fill="#f472b6" text-anchor="middle">Zustand</text>
+    </g>
+    <g transform="translate(208,10)">
+      <rect x="0" y="0" width="76" height="24" rx="12" fill="#1e2235" stroke="#2d3654"/>
+      <text x="38" y="16" font-family="-apple-system,sans-serif" font-size="10" fill="#22d3ee" text-anchor="middle">Tailwind</text>
+    </g>
+    <g transform="translate(290,10)">
+      <rect x="0" y="0" width="90" height="24" rx="12" fill="#1e2235" stroke="#2d3654"/>
+      <text x="45" y="16" font-family="-apple-system,sans-serif" font-size="10" fill="#9b59b6" text-anchor="middle">electron-vite</text>
+    </g>
+  </g>
+
+  <!-- 底部信息栏 -->
+  <g transform="translate(430,420)">
+    <text font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#4a5568" letter-spacing="2">
+      PROJECT · HANDS-ON · GRADUATION
+    </text>
+    
+    <g transform="translate(0,16)">
+      <rect x="0" y="0" width="74" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">可运行</text>
+      
+      <g transform="translate(80,0)">
+        <rect x="0" y="0" width="86" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+        <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">完整架构</text>
+      </g>
+      <g transform="translate(172,0)">
+        <rect x="0" y="0" width="84" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+        <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">L2 毕业</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- 公众号标识 -->
+  <g transform="translate(720,450)">
+    <rect width="160" height="34" rx="17" fill="#ffffff" fill-opacity="0.04" stroke="#ffffff" stroke-opacity="0.08"/>
+    <text x="16" y="22" font-family="-apple-system,sans-serif" font-size="12" font-weight="500" fill="#718096">
+      APP移动开发
+    </text>
+  </g>
+
+
+  <!-- ========== 装饰元素 ========== -->
+  
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#accent)" stroke-width="3"/>
+  <line x1="0" y1="497" x2="900" y2="497" stroke="url(#accent)" stroke-width="3" opacity="0.3"/>
+  
+  <!-- 左下角圆点 -->
+  <circle cx="20" cy="480" r="3" fill="#f43f5e" opacity="0.4"/>
+  <circle cx="32" cy="480" r="3" fill="#ec4899" opacity="0.3"/>
+  <circle cx="44" cy="480" r="3" fill="#d946ef" opacity="0.2"/>
+  
+  <!-- 右上角几何装饰 -->
+  <g transform="translate(850,30)" opacity="0.08">
+    <polygon points="0,25 25,0 50,25 25,50" fill="none" stroke="#ffffff" stroke-width="1.5"/>
+    <polygon points="12.5,25 25,12.5 37.5,25 25,37.5" fill="none" stroke="#ffffff" stroke-width="1"/>
+    <circle cx="25" cy="25" r="4" fill="#ffffff"/>
+  </g>
+</svg>

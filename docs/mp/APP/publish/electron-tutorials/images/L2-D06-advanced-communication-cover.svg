@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0e27"/><stop offset="50%" stop-color="#131836"/><stop offset="100%" stop-color="#101a28"/></linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4"/><stop offset="50%" stop-color="#22d3ee"/><stop offset="100%" stop-color="#67e8f9"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="25%" cy="40%" r="45%"><stop offset="0%" stop-color="#06b6d4" stop-opacity="0.12"/><stop offset="100%" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/></filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-opacity="0.03"/></pattern>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bg)"/><rect width="900" height="500" fill="url(#grid)"/><rect width="900" height="500" fill="url(#glow1)"/>
+
+  <!-- ========== 高级通信图解 ========== -->
+
+  <!-- MessagePort 流式传输 -->
+  <g transform="translate(140, 160)">
+    <rect x="-85" y="-55" width="170" height="110" rx="12" fill="#1e2235" stroke="#06b6d4" stroke-width="1.5" stroke-opacity="0.5" filter="url(#shadow)"/>
+    <text x="0" y="-32" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" fill="#22d3ee" text-anchor="middle">MessagePort</text>
+    
+    <!-- 数据流动画 -->
+    <g transform="translate(-70,-10)">
+      <rect width="140" height="18" rx="4" fill="#06b6d4" fill-opacity="0.08"/>
+      <text x="8" y="13" font-family="Monaco,monospace" font-size="9" fill="#67e8f9">Stream Data →</text>
+      <!-- 流动点 -->
+      <circle r="3" fill="#22d3ee">
+        <animateMotion dur="1.5s" repeatCount="indefinite" path="M 0,9 L 130,9"/>
+        <animate attributeName="opacity" values="1;1;0" keyTimes="0;0.7;1" dur="1.5s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <g transform="translate(-70,16)">
+      <rect width="140" height="18" rx="4" fill="#06b6d4" fill-opacity="0.05"/>
+      <text x="8" y="13" font-family="Monaco,monospace" font-size="9" fill="#636c7a">Large File Transfer</text>
+    </g>
+    
+    <text x="0" y="44" font-family="-apple-system,sans-serif" font-size="9" fill="#8892b0" text-anchor="middle">⚡ 零拷贝 · 大数据流式传输</text>
+  </g>
+
+  <!-- BroadcastChannel 跨窗口 -->
+  <g transform="translate(140, 320)">
+    <rect x="-85" y="-38" width="170" height="76" rx="12" fill="#1e2235" stroke="#22d3ee" stroke-width="1.5" stroke-opacity="0.35" filter="url(#shadow)"/>
+    <text x="0" y="-14" font-family="-apple-system,sans-serif" font-size="11" font-weight="700" fill="#67e8f9" text-anchor="middle">BroadcastChannel</text>
+
+    <!-- 多个窗口接收广播 -->
+    <g transform="translate(-65, 2)">
+      <rect width="42" height="26" rx="4" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.2"/>
+      <text x="21" y="17" font-family="-apple-system,sans-serif" font-size="8" fill="#22d3ee" text-anchor="middle">Win A</text>
+    </g>
+    <g transform="translate(-15, 2)">
+      <rect width="42" height="26" rx="4" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.2"/>
+      <text x="21" y="17" font-family="-apple-system,sans-serif" font-size="8" fill="#22d3ee" text-anchor="middle">Win B</text>
+    </g>
+    <g transform="translate(35, 2)">
+      <rect width="42" height="26" rx="4" fill="#06b6d4" fill-opacity="0.1" stroke="#06b6d4" stroke-opacity="0.2"/>
+      <text x="21" y="17" font-family="-apple-system,sans-serif" font-size="8" fill="#22d3ee" text-anchor="middle">Win C</text>
+    </g>
+    
+    <!-- 广播波浪线 -->
+    <path d="M -75,-20 Q -43,-30 -10,-20 Q 23,-10 55,-20 Q 88,-30 75,-20"
+          fill="none" stroke="#22d3ee" stroke-width="1.5" opacity="0.5">
+      <animate attributeName="opacity" values="0.3;0.8;0.3" dur="2s" repeatCount="indefinite"/>
+    </path>
+  </g>
+
+  <!-- Transferable 标签 -->
+  <g transform="translate(55, 420)" filter="url(#shadow)">
+    <rect width="120" height="46" rx="8" fill="#1e2235" opacity="0.92" stroke="#2d3654"/>
+    <text x="12" y="19" font-family="Monaco,monospace" font-size="9.5" fill="#c792ea">Transferable</text>
+    <text x="72" y="19" font-family="Monaco,monospace" font-size="9.5" fill="#89ddff">&lt;</text>
+    <text x="82" y="19" font-family="Monaco,monospace" font-size="9.5" fill="#ffcb6b">T</text>
+    <text x="91" y="19" font-family="Monaco,monospace" font-size="9.5" fill="#89ddff">&gt;</text>
+    <text x="12" y="37" font-family="Monaco,monospace" font-size="8.5" fill="#636c7a">// 零拷贝所有权转移</text>
+  </g>
+
+
+  <!-- 标题区 -->
+  <g transform="translate(360,75)">
+    <rect width="115" height="28" rx="14" fill="#06b6d4" fill-opacity="0.12" stroke="url(#accent)" stroke-opacity="0.4"/>
+    <text x="57.5" y="19.5" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#cffafe" text-anchor="middle" letter-spacing="1">L2 / Day 6</text>
+  </g>
+
+  <text x="430" y="152" font-family="-apple-system,'Segoe UI','PingFang SC',sans-serif" font-size="44" font-weight="800" fill="#fff">高级通信模式</text>
+  <text x="430" y="204" font-family="-apple-system,'Segoe UI','PingFang SC',sans-serif" font-size="37" font-weight="700" fill="url(#accent)">MessagePort 与跨窗口</text>
+
+  <line x1="430" y1="224" x2="720" y2="224" stroke="url(#accent)" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+  <text x="430" y="258" font-family="-apple-system,sans-serif" font-size="18" fill="#a0aec0">突破基础 IPC，掌握 Electron 28+ 高级通信能力</text>
+
+  <g transform="translate(430,290)">
+    <rect width="118" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/><circle cx="18" cy="17" r="5" fill="#06b6d4"/>
+    <text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">流式传输</text>
+    <g transform="translate(126,0)"><rect width="118" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/><circle cx="18" cy="17" r="5" fill="#22d3ee"/><text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">跨窗口广播</text></g>
+    <g transform="translate(252,0)"><rect width="98" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/><circle cx="18" cy="17" r="5" fill="#67e8f9"/><text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">零拷贝 Transferable</text></g>
+  </g>
+
+  <g transform="translate(430,420)">
+    <text font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#4a5568" letter-spacing="2">STREAM · BROADCAST · ZERO-COPY</text>
+    <g transform="translate(0,16)">
+      <rect x="0" y="0" width="86" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">🌊 MessagePort</text>
+      <g transform="translate(92,0)"><rect x="0" y="0" width="96" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">📢 BroadcastCh.</text></g>
+      <g transform="translate(194,0)"><rect x="0" y="0" width="80" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">🚀 Transferable</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(720,450)"><rect width="160" height="34" rx="17" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.08"/>
+  <text x="16" y="22" font-family="-apple-system,sans-serif" font-size="12" font-weight="500" fill="#718096">📱 APP移动开发</text></g>
+
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#accent)" stroke-width="3"/>
+  <line x1="0" y1="497" x2="900" y2="497" stroke="url(#accent)" stroke-width="3" opacity="0.3"/>
+  <circle cx="20" cy="480" r="3" fill="#06b6d4" opacity="0.4"/><circle cx="32" cy="480" r="3" fill="#22d3ee" opacity="0.3"/><circle cx="44" cy="480" r="3" fill="#67e8f9" opacity="0.2"/>
+  <g transform="translate(850,30)" opacity="0.08"><polygon points="0,25 25,0 50,25 25,50" fill="none" stroke="#fff" stroke-width="1.5"/><polygon points="12.5,25 25,12.5 37.5,25 25,37.5" fill="none" stroke="#fff" stroke-width="1"/><circle cx="25" cy="25" r="4" fill="#fff"/></g>
+</svg>

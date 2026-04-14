@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0e27"/><stop offset="50%" stop-color="#131836"/><stop offset="100%" stop-color="#1a1535"/></linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/><stop offset="50%" stop-color="#fb923c"/><stop offset="100%" stop-color="#fbbf24"/>
+    </linearGradient>
+    <radialGradient id="glow1" cx="28%" cy="38%" r="45%"><stop offset="0%" stop-color="#f97316" stop-opacity="0.12"/><stop offset="100%" stop-opacity="0"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.4"/></filter>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-opacity="0.03"/></pattern>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bg)"/><rect width="900" height="500" fill="url(#grid)"/><rect width="900" height="500" fill="url(#glow1)"/>
+
+  <!-- ========== 多窗口视觉 ========== -->
+  
+  <!-- 主窗口（最大） -->
+  <g transform="translate(140, 200)">
+    <rect x="-90" y="-80" width="180" height="160" rx="10" fill="#1e2235" stroke="#f97316" stroke-width="2" stroke-opacity="0.6" filter="url(#shadow)"/>
+    <!-- 标题栏 -->
+    <rect x="-90" y="-80" width="180" height="26" rx="10" fill="#252b42"/>
+    <rect y="-54" width="180" height="8" fill="#252b42"/>
+    <circle cx="-76" cy="-67" r="4" fill="#ff5f57"/><circle cx="-64" cy="-67" r="4" fill="#ffbd2e"/><circle cx="-52" cy="-67" r="4" fill="#28c840"/>
+    <text x="0" y="-63" font-family="-apple-system,sans-serif" font-size="9.5" fill="#8892b0" text-anchor="middle">MainWindow</text>
+    
+    <!-- 标签栏 -->
+    <line x1="-85" y1="-50" x2="85" y2="-50" stroke="#ffffff" stroke-opacity="0.05"/>
+    <g transform="translate(-82, -46)"><rect width="50" height="20" rx="4" fill="#f97316" fill-opacity="0.15"/><text x="6" y="13.5" font-family="-apple-system,sans-serif" font-size="8" fill="#fb923c">file.md</text></g>
+    <g transform="translate(-28, -46)"><rect width="50" height="20" rx="4" fill="transparent"/><text x="6" y="13.5" font-family="-apple-system,sans-serif" font-size="8" fill="#636c7a">app.tsx</text></g>
+    <g transform="translate(26, -46)"><rect width="48" height="20" rx="4" fill="transparent"/><text x="6" y="13.5" font-family="-apple-system,sans-serif" font-size="8" fill="#636c7a">config</text></g>
+    
+    <!-- 编辑区内容示意 -->
+    <text x="0" y="0" font-family="Monaco,monospace" font-size="9" fill="#636c7a" text-anchor="middle">┌─ Editor Group ─┐</text>
+    <text x="0" y="18" font-family="Monaco,monospace" font-size="9" fill="#8892b0" text-anchor="middle">│ Hello World!   │</text>
+    <text x="0" y="34" font-family="Monaco,monospace" font-size="9" fill="#82aaff" text-anchor="middle">│ const app = ... │</text>
+    <text x="0" y="52" font-family="Monaco,monospace" font-size="9" fill="#c792ea" text-anchor="middle">│ function () {} │</text>
+    
+    <!-- 状态栏 -->
+    <rect x="-90" y="64" width="180" height="16" rx="0" fill="#161b2e"/>
+    <text x="-78" y="75" font-family="Monaco,monospace" font-size="7.5" fill="#636c7a">Ln 1 · Col 1 · UTF-8</text>
+  </g>
+
+  <!-- 设置窗口（子窗口，右上） -->
+  <g transform="translate(260, 95)" filter="url(#shadow)">
+    <rect x="0" y="0" width="120" height="90" rx="8" fill="#1e2235" stroke="#fb923c" stroke-width="1.5" stroke-opacity="0.4"/>
+    <rect width="120" height="22" rx="8" fill="#252b42"/><rect y="14" width="120" height="8" fill="#252b42"/>
+    <circle cx="14" cy="11" r="3.5" fill="#ff5f57"/><circle cx="26" cy="11" r="3.5" fill="#ffbd2e"/><circle cx="38" cy="11" r="3.5" fill="#28c840"/>
+    <text x="72" y="14.5" font-family="-apple-system,sans-serif" font-size="8.5" fill="#8892b0">Settings</text>
+    <text x="12" y="42" font-family="-apple-system,sans-serif" font-size="9.5" fill="#e2e8f0">⚙️ 设置</text>
+    <text x="12" y="58" font-family="-apple-system,sans-serif" font-size="9.5" fill="#a0aec0">  主题: Dark</text>
+    <text x="12" y="74" font-family="-apple-system,sans-serif" font-size="9.5" fill="#a0aec0">  字体: 14px</text>
+    <!-- 连接虚线到主窗口 -->
+    <line x1="0" y1="55" x2="-30" y2="110" stroke="#f97316" stroke-width="1" stroke-dasharray="3,3" opacity="0.35"/>
+  </g>
+
+  <!-- 窗口管理代码卡片 -->
+  <g transform="translate(38, 370)" filter="url(#shadow)">
+    <rect width="160" height="62" rx="8" fill="#1e2235" opacity="0.92" stroke="#2d3654"/>
+    <circle cx="12" cy="11" r="4" fill="#ff5f57"/><circle cx="24" cy="11" r="4" fill="#ffbd2e"/><circle cx="36" cy="11" r="4" fill="#28c840"/>
+    <text x="11" y="33" font-family="Monaco,monospace" font-size="9.5" fill="#c792ea">class</text>
+    <text x="37" y="33" font-family="Monaco,monospace" font-size="9.5" fill="#82aaff">WindowManager</text>
+    <text x="122" y="33" font-family="Monaco,monospace" font-size="9.5" fill="#89ddff">{}</text>
+    <text x="11" y="51" font-family="Monaco,monospace" font-size="9" fill="#636c7a">// singleton + persistState</text>
+  </g>
+
+  <!-- VS Code Logo 文字标识 -->
+  <g transform="translate(210, 380)">
+    <rect width="70" height="24" rx="12" fill="#f97316" fill-opacity="0.1" stroke="#f97316" stroke-opacity="0.3"/>
+    <text x="35" y="16" font-family="-apple-system,sans-serif" font-size="9.5" font-weight="600" fill="#fb923c" text-anchor="middle">VS Code</text>
+  </g>
+
+
+  <!-- 标题区 -->
+  <g transform="translate(360,75)">
+    <rect width="115" height="28" rx="14" fill="#f97316" fill-opacity="0.12" stroke="url(#accent)" stroke-opacity="0.4"/>
+    <text x="57.5" y="19.5" font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#fed7aa" text-anchor="middle" letter-spacing="1">L2 / Day 5</text>
+  </g>
+
+  <text x="430" y="152" font-family="-apple-system,'Segoe UI','PingFang SC',sans-serif" font-size="44" font-weight="800" fill="#fff">多窗口架构</text>
+  <text x="430" y="204" font-family="-apple-system,'Segoe UI','PingFang SC',sans-serif" font-size="37" font-weight="700" fill="url(#accent)">VS Code 级别窗口体系</text>
+
+  <line x1="430" y1="224" x2="720" y2="224" stroke="url(#accent)" stroke-width="2" opacity="0.4" stroke-linecap="round"/>
+  <text x="430" y="258" font-family="-apple-system,sans-serif" font-size="18" fill="#a0aec0">从主窗口到设置弹窗，构建专业级多窗口管理系统</text>
+
+  <g transform="translate(430,290)">
+    <rect width="108" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/><circle cx="18" cy="17" r="5" fill="#f97316"/>
+    <text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">WindowManager</text>
+    <g transform="translate(116,0)"><rect width="98" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/><circle cx="18" cy="17" r="5" fill="#fb923c"/><text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">状态持久化</text></g>
+    <g transform="translate(222,0)"><rect width="98" height="34" rx="17" fill="#1e2235" stroke="#2d3654"/><circle cx="18" cy="17" r="5" fill="#fbbf24"/><text x="30" y="22" font-family="-apple-system,sans-serif" font-size="13" font-weight="500" fill="#e2e8f0">Splash Screen</text></g>
+  </g>
+
+  <g transform="translate(430,420)">
+    <text font-family="-apple-system,sans-serif" font-size="13" font-weight="600" fill="#4a5568" letter-spacing="2">WINDOW · ARCHITECTURE · MANAGEMENT</text>
+    <g transform="translate(0,16)">
+      <rect x="0" y="0" width="74" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">🪟 主+子窗口</text>
+      <g transform="translate(80,0)"><rect x="0" y="0" width="84" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">💾 位置记忆</text></g>
+      <g transform="translate(170,0)"><rect x="0" y="0" width="86" height="26" rx="5" fill="#1a1f35" stroke="#2d3654" stroke-width="0.8"/>
+      <text x="10" y="17.5" font-family="-apple-system,sans-serif" font-size="10.5" font-weight="500" fill="#718096">🎬 Splash 页</text></g>
+    </g>
+  </g>
+
+  <g transform="translate(720,450)"><rect width="160" height="34" rx="17" fill="#fff" fill-opacity="0.04" stroke="#fff" stroke-opacity="0.08"/>
+  <text x="16" y="22" font-family="-apple-system,sans-serif" font-size="12" font-weight="500" fill="#718096">📱 APP移动开发</text></g>
+
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#accent)" stroke-width="3"/>
+  <line x1="0" y1="497" x2="900" y2="497" stroke="url(#accent)" stroke-width="3" opacity="0.3"/>
+  <circle cx="20" cy="480" r="3" fill="#f97316" opacity="0.4"/><circle cx="32" cy="480" r="3" fill="#fb923c" opacity="0.3"/><circle cx="44" cy="480" r="3" fill="#fbbf24" opacity="0.2"/>
+  <g transform="translate(850,30)" opacity="0.08"><polygon points="0,25 25,0 50,25 25,50" fill="none" stroke="#fff" stroke-width="1.5"/><polygon points="12.5,25 25,12.5 37.5,25 25,37.5" fill="none" stroke="#fff" stroke-width="1"/><circle cx="25" cy="25" r="4" fill="#fff"/></g>
+</svg>
