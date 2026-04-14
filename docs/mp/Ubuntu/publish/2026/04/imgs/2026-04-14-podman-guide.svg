@@ -1,0 +1,153 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1a1a2e"/>
+      <stop offset="50%" stop-color="#16213e"/>
+      <stop offset="100%" stop-color="#0f0f23"/>
+    </linearGradient>
+    <!-- 强调色渐变 -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E95420"/>
+      <stop offset="100%" stop-color="#f37335"/>
+    </linearGradient>
+    <!-- 卡片阴影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    <!-- 光晕效果 -->
+    <radialGradient id="glow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#E95420" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#E95420" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- 光晕 -->
+  <rect width="900" height="500" fill="url(#glow)"/>
+
+  <!-- 网格装饰线 -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="125" x2="900" y2="125"/>
+    <line x1="0" y1="250" x2="900" y2="250"/>
+    <line x1="0" y1="375" x2="900" y2="375"/>
+    <line x1="180" y1="0" x2="180" y2="500"/>
+    <line x1="360" y1="0" x2="360" y2="500"/>
+    <line x1="540" y1="0" x2="540" y2="500"/>
+    <line x1="720" y1="0" x2="720" y2="500"/>
+  </g>
+
+  <!-- 标题区域 -->
+  <text x="60" y="75" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="42" font-weight="700" fill="#ffffff">
+    Podman 入门指南
+  </text>
+
+  <!-- 副标题 -->
+  <text x="62" y="115" font-family="-apple-system, 'PingFang SC', 'Microsoft YaHei', sans-serif" font-size="18" fill="#8892b0">
+    安装 · 常用命令 · 与 Docker 深度对比
+  </text>
+
+  <!-- 分隔线 -->
+  <rect x="60" y="135" width="80" height="3" rx="1.5" fill="url(#accent)"/>
+
+  <!-- 三张核心卖点卡片 -->
+
+  <!-- 卡片 1: Daemonless -->
+  <g filter="url(#cardShadow)">
+    <rect x="55" y="170" width="250" height="140" rx="12" fill="#1e2235" fill-opacity="0.85"/>
+    <rect x="55" y="170" width="250" height="140" rx="12" fill="none" stroke="#2d3348" stroke-width="1"/>
+  </g>
+
+  <!-- 卡片1 图标：无守护进程 -->
+  <circle cx="105" cy="215" r="20" fill="#E95420" fill-opacity="0.15"/>
+  <g transform="translate(93, 203)" stroke="#E95420" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <!-- 禁止符号 + 进程图标 -->
+    <circle cx="12" cy="12" r="9"/>
+    <line x1="6" y1="6" x2="18" y2="18"/>
+    <path d="M7 14h10M9 11h6M12 8v8" opacity="0.5" stroke-width="1.5"/>
+  </g>
+
+  <text x="138" y="220" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" font-weight="600" fill="#ffffff">无守护进程</text>
+  <text x="73" y="248" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#8892b0">Daemonless 架构</text>
+  <text x="73" y="270" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#8892b0">fork-exec 直接创建进程</text>
+  <text x="73" y="292" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#64ffda">零单点故障风险</text>
+
+
+  <!-- 卡片 2: Rootless -->
+  <g filter="url(#cardShadow)">
+    <rect x="325" y="170" width="250" height="140" rx="12" fill="#1e2235" fill-opacity="0.85"/>
+    <rect x="325" y="170" width="250" height="140" rx="12" fill="none" stroke="#2d3348" stroke-width="1"/>
+  </g>
+
+  <!-- 卡片2 图标：盾牌 -->
+  <circle cx="375" cy="215" r="20" fill="#64ffda" fill-opacity="0.15"/>
+  <g transform="translate(363, 201)" stroke="#64ffda" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M12 3L4 7v4c0 4.5 3.5 8.7 8 10 4.5-1.3 8-5.5 8-10V7l-8-4z"/>
+    <polyline points="9 12 11 14 15 10"/>
+  </g>
+
+  <text x="408" y="220" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" font-weight="600" fill="#ffffff">默认无根运行</text>
+  <text x="343" y="248" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#8892b0">Rootless 开箱即用</text>
+  <text x="343" y="270" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#8892b0">普通用户直接跑容器</text>
+  <text x="343" y="292" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#64ffda">安全隔离，零权限提升</text>
+
+
+  <!-- 卡片 3: 兼容性 -->
+  <g filter="url(#cardShadow)">
+    <rect x="595" y="170" width="250" height="140" rx="12" fill="#1e2235" fill-opacity="0.85"/>
+    <rect x="595" y="170" width="250" height="140" rx="12" fill="none" stroke="#2d3348" stroke-width="1"/>
+  </g>
+
+  <!-- 卡片3 图标：兼容箭头 -->
+  <circle cx="645" cy="215" r="20" fill="#a78bfa" fill-opacity="0.15"/>
+  <g transform="translate(633, 205)" stroke="#a78bfa" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="7 4 12 9 17 4"/>
+    <path d="M12 9v10"/>
+    <path d="M4 18h16" opacity="0.5"/>
+  </g>
+
+  <text x="678" y="220" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="16" font-weight="600" fill="#ffffff">95%+ 命令兼容</text>
+  <text x="613" y="248" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#8892b0">OCI 镜像格式通用</text>
+  <text x="613" y="270" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#8892b0">alias docker=podman 即用</text>
+  <text x="613" y="292" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13" fill="#a78bfa">零学习成本迁移</text>
+
+
+  <!-- 对比表格区域 -->
+  <text x="60" y="350" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="15" font-weight="600" fill="#ccd6f6">
+    Podman vs Docker 核心差异
+  </text>
+
+  <!-- 对比表 -->
+  <g font-family="-apple-system, 'PingFang SC', sans-serif" font-size="13">
+    <!-- 表头 -->
+    <rect x="55" y="368" width="790" height="32" rx="6" fill="#E95420" fill-opacity="0.15"/>
+    <text x="80" y="389" font-weight="600" fill="#E95420">维度</text>
+    <text x="260" y="389" font-weight="600" fill="#ccd6f6">Docker</text>
+    <text x="520" y="389" font-weight="600" fill="#64ffda">Podman</text>
+
+    <!-- 行 1: 架构 -->
+    <rect x="55" y="402" width="790" height="32" rx="6" fill="#1e2235" fill-opacity="0.6"/>
+    <text x="80" y="423" fill="#8892b0">架构</text>
+    <text x="260" y="423" fill="#ccd6f6">守护进程 dockerd</text>
+    <text x="520" y="423" fill="#64ffda">无守护进程 fork-exec</text>
+
+    <!-- 行 2: 权限 -->
+    <rect x="55" y="436" width="790" height="32" rx="6" fill="#1e2235" fill-opacity="0.3"/>
+    <text x="80" y="457" fill="#8892b0">默认权限</text>
+    <text x="260" y="457" fill="#ccd6f6">root 运行</text>
+    <text x="520" y="457" fill="#64ffda">rootless 无根运行</text>
+  </g>
+
+  <!-- 右下角标签 -->
+  <g transform="translate(720, 430)">
+    <rect x="0" y="0" width="125" height="30" rx="15" fill="#E95420" fill-opacity="0.15"/>
+    <rect x="0" y="0" width="125" height="30" rx="15" fill="none" stroke="#E95420" stroke-width="1" stroke-opacity="0.4"/>
+    <circle cx="20" cy="15" r="5" fill="#E95420"/>
+    <text x="35" y="20" font-family="-apple-system, 'PingFang SC', sans-serif" font-size="12" font-weight="500" fill="#E95420">UbuntuNews</text>
+  </g>
+
+  <!-- 底部装饰条 -->
+  <rect x="0" y="498" width="900" height="2" fill="url(#accent)"/>
+</svg>
