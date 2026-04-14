@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="orange2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#f37725"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg2)"/>
+  <!-- Terminal window -->
+  <rect x="60" y="100" width="340" height="220" rx="12" fill="#282c34"/>
+  <!-- Title bar -->
+  <rect x="60" y="100" width="340" height="36" rx="12" fill="#21252b"/>
+  <rect x="60" y="124" width="340" height="12" fill="#21252b"/>
+  <circle cx="90" cy="118" r="6" fill="#ff5f56"/><circle cx="112" cy="118" r="6" fill="#ffbd2e"/><circle cx="134" cy="118" r="6" fill="#27c93f"/>
+  <text x="230" y="123" font-family="monospace" font-size="13" fill="#abb2bf" text-anchor="middle">PowerShell</text>
+  <!-- Terminal content -->
+  <text x="80" y="165" font-family="monospace" font-size="15" fill="#61afef">$ wsl --install</text>
+  <text x="80" y="195" font-family="monospace" font-size="14" fill="#98c379">Installing: Ubuntu 22.04 LTS...</text>
+  <text x="80" y="225" font-family="monospace" font-size="14" fill="#e5c07b">Download: ████████████ 100%</text>
+  <text x="80" y="255" font-family="monospace" font-size="14" fill="#56b6c2">✓ Installation complete!</text>
+  <text x="80" y="290" font-family="monospace" font-size="15" fill="#E95420">▶ Press Enter to restart...</text>
+  <!-- Cursor blink -->
+  <rect x="248" y="278" width="8" height="16" rx="2" fill="#E95420">
+    <animate attributeName="opacity" values="1;0;1" dur="1.5s" repeatCount="indefinite"/>
+  </rect>
+  <!-- Method badges -->
+  <g transform="translate(450,120)">
+    <rect x="0" y="0" width="140" height="70" rx="10" fill="#E95420" opacity="0.12" stroke="#E95420" stroke-width="1.5"/>
+    <text x="70" y="30" font-family="'Microsoft YaHei',sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">方式一</text>
+    <text x="70" y="54" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#E95420" text-anchor="middle">Microsoft Store</text>
+    
+    <rect x="160" y="0" width="140" height="70" rx="10" fill="#E95420" opacity="0.12" stroke="#E95420" stroke-width="1.5"/>
+    <text x="230" y="30" font-family="'Microsoft YaHei',sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">方式二</text>
+    <text x="230" y="54" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#E95420" text-anchor="middle">命令行一行搞定</text>
+    
+    <rect x="320" y="0" width="130" height="70" rx="10" fill="#E95420" opacity="0.12" stroke="#E95420" stroke-width="1.5"/>
+    <text x="385" y="30" font-family="'Microsoft YaHei',sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">方式三</text>
+    <text x="385" y="54" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#E95420" text-anchor="middle">手动安装包</text>
+  </g>
+  <!-- Timer icon -->
+  <g transform="translate(520,240)">
+    <circle cx="40" cy="35" r="32" fill="none" stroke="#E95420" stroke-width="3" opacity="0.7"/>
+    <line x1="40" y1="35" x2="40" y2="18" stroke="#E95420" stroke-width="3" stroke-linecap="round"/>
+    <line x1="40" y1="35" x2="55" y2="42" stroke="#f37725" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="105" y="42" font-family="'Microsoft YaHei',sans-serif" font-size="26" fill="#fff" font-weight="bold">5 分钟</text>
+    <text x="105" y="64" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#8892b0">搞定安装</text>
+  </g>
+  <!-- Title -->
+  <text x="60" y="380" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="38" font-weight="bold" fill="#ffffff">WSL 安装一条龙</text>
+  <text x="60" y="420" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="24" fill="#E95420">3 种方式任你选 · 5 分钟搞定</text>
+  <rect x="700" y="430" width="140" height="34" rx="17" fill="#E95420" opacity="0.15"/>
+  <text x="770" y="453" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">入门篇 #02</text>
+</svg>

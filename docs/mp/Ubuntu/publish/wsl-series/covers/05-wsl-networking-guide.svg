@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg5)"/>
+  <!-- Network diagram -->
+  <g transform="translate(60,90)">
+    <!-- Windows host -->
+    <rect x="0" y="20" width="140" height="80" rx="12" fill="#0078d4" opacity="0.15" stroke="#0078d4" stroke-width="1.5"/>
+    <text x="70" y="55" font-family="'Microsoft YaHei',sans-serif" font-size="15" fill="#fff" text-anchor="middle" font-weight="bold">Windows</text>
+    <text x="70" y="78" font-family="'Microsoft YaHei',sans-serif" font-size="12" fill="#8892b0" text-anchor="middle">Host 主机</text>
+    
+    <!-- WSL box -->
+    <rect x="200" y="10" width="160" height="100" rx="12" fill="#E95420" opacity="0.1" stroke="#E95420" stroke-width="2"/>
+    <text x="280" y="45" font-family="'Microsoft YaHei',sans-serif" font-size="16" fill="#E95420" text-anchor="middle" font-weight="bold">WSL</text>
+    <text x="280" y="68" font-family="'Microsoft YaHei',sans-serif" font-size="11" fill="#8892b0" text-anchor="middle">localhost:3000</text>
+    <text x="280" y="86" font-family="'Microsoft YaHei',sans-serif" font-size="11" fill="#98c379" text-anchor="middle">✓ 服务运行中</text>
+
+    <!-- NAT / Bridge indicator -->
+    <g transform="translate(400,30)">
+      <path d="M0 35 L50 35" stroke="#61afef" stroke-width="2" stroke-dasharray="6,3"/>
+      <text x="25" y="25" font-family="'Microsoft YaHei',sans-serif" font-size="10" fill="#61afef" text-anchor="middle">NAT</text>
+    </g>
+
+    <!-- Internet/External -->
+    <rect x="480" y="20" width="130" height="75" rx="12" fill="#282c34" opacity="0.7" stroke="#56b6c2" stroke-width="1"/>
+    <text x="545" y="52" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#56b6c2" text-anchor="middle">外部访问</text>
+    <text x="545" y="74" font-family="'Microsoft YaHei',sans-serif" font-size="11" fill="#8892b0" text-anchor="middle">浏览器/其他设备</text>
+
+    <!-- Port forward arrow -->
+    <path d="M145 60 L195 60 M185 48 L200 60 L185 72" stroke="#E95420" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Port forwarding code block -->
+  <g transform="translate(60,220)">
+    <rect x="0" y="0" width="420" height="100" rx="10" fill="#282c34" opacity="0.9"/>
+    <text x="18" y="28" font-family="monospace" font-size="13" fill="#e06c75"># 端口转发：从 Windows 访问 WSL 服务</text>
+    <text x="18" y="54" font-family="monospace" font-size="13" fill="#61afef">netsh interface portproxy add v4tov4</text>
+    <text x="32" y="76" font-family="monospace" font-size="13" fill="#98c379">listenport=3000 listenaddress=0.0.0.0</text>
+    <text x="32" y="96" font-family="monospace" font-size="13" fill="#56b6c2">connectport=3000 connectaddress=localhost</text>
+  </g>
+
+  <!-- Key points badges -->
+  <g transform="translate(520,230)">
+    <rect x="0" y="0" width="160" height="42" rx="8" fill="#E95420" opacity="0.1"/>
+    <text x="80" y="26" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">🌐 localhost 访问</text>
+    
+    <rect x="175" y="0" width="165" height="42" rx="8" fill="#E95420" opacity="0.1"/>
+    <text x="257" y="26" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">🔀 IP 转发配置</text>
+
+    <rect x="0" y="54" width="160" height="42" rx="8" fill="#E95420" opacity="0.1"/>
+    <text x="80" y="80" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">🛡️ 防火墙放行</text>
+
+    <rect x="175" y="54" width="165" height="42" rx="8" fill="#E95420" opacity="0.1"/>
+    <text x="257" y="80" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">🐛 常见问题排查</text>
+  </g>
+
+  <!-- Title -->
+  <text x="50" y="380" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="38" font-weight="bold" fill="#ffffff">网络完全指南</text>
+  <text x="50" y="420" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="24" fill="#E95420">端口转发一网打尽</text>
+  <rect x="720" y="430" width="140" height="34" rx="17" fill="#E95420" opacity="0.15"/>
+  <text x="790" y="453" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">入门篇 #05</text>
+</svg>

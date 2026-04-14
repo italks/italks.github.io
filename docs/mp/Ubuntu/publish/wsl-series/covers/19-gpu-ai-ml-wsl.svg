@@ -1,0 +1,108 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg19" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0a1a"/><stop offset="100%" stop-color="#141430"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg19)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#19</text>
+
+<!-- Title -->
+<text x="450" y="48" font-family="Microsoft YaHei,Arial,sans-serif" font-size="27" fill="#fff" text-anchor="middle" font-weight="bold">在 WSL 中跑 AI/ML 模型？CUDA + PyTorch 实战指南</text>
+<text x="450" y="72" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">GPU 直通 / 深度学习训练 / 本地部署大模型</text>
+
+<!-- GPU Chip diagram (left) -->
+<text x="70" y="108" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">GPU 架构示意</text>
+<rect x="50" y="118" width="280" height="200" rx="10" fill="#0f1628" stroke="#1e3a5f" stroke-width="1.5"/>
+
+<!-- GPU die -->
+<rect x="85" y="140" width="210" height="120" rx="6" fill="#1a2744" stroke="#2563eb" stroke-width="2"/>
+<text x="190" y="165" font-family="Arial,sans-serif" font-size="14" fill="#60a5fa" text-anchor="middle" font-weight="bold">NVIDIA CUDA GPU 核心</text>
+
+<!-- CUDA cores grid -->
+<g transform="translate(100, 180)">
+  <rect x="0" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="23" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="46" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="69" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="92" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="115" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="138" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="161" y="0" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="0" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="23" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="46" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="69" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="92" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="115" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="138" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="161" y="18" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="0" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="23" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="46" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="69" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="92" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="115" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="138" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+  <rect x="161" y="36" width="18" height="13" rx="2" fill="#3b82f6"/>
+</g>
+
+<!-- Memory chips -->
+<rect x="85" y="270" width="45" height="30" rx="4" fill="#374151"/><text x="107" y="290" font-family="Arial" font-size="8" fill="#9ca3af" text-anchor="middle">GDDR6</text>
+<rect x="140" y="270" width="45" height="30" rx="4" fill="#374151"/><text x="162" y="290" font-family="Arial" font-size="8" fill="#9ca3af" text-anchor="middle">GDDR6</text>
+<rect x="195" y="270" width="45" height="30" rx="4" fill="#374151"/><text x="217" y="290" font-family="Arial" font-size="8" fill="#9ca3af" text-anchor="middle">GDDR6</text>
+<rect x="250" y="270" width="45" height="30" rx="4" fill="#374151"/><text x="272" y="290" font-family="Arial" font-size="8" fill="#9ca3af" text-anchor="middle">GDDR6</text>
+
+<!-- PCIe connector -->
+<rect x="155" y="306" width="70" height="12" rx="3" fill="#d4af37"/>
+<text x="190" y="332" font-family="Arial" font-size="9" fill="#d4af37" text-anchor="middle">PCIe 直通 WSL</text>
+
+<!-- AI/ML Frameworks cards (right) -->
+<text x="360" y="108" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">AI/ML 应用场景</text>
+
+<rect x="350" y="118" width="245" height="58" rx="8" fill="#1a1033" stroke="#a855f7" stroke-width="1"/>
+<circle cx="375" y="147" r="14" fill="#a855f7"/>
+<polygon points="370,140 380,147 370,154 375,147" fill="#fff"/>
+<text x="400" y="142" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">本地大模型推理</text>
+<text x="400" y="162" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">LLaMA、Qwen 微调与部署</text>
+
+<rect x="610" y="118" width="245" height="58" rx="8" fill="#1a1033" stroke="#ec4899" stroke-width="1"/>
+<circle cx="635" y="147" r="14" fill="#ec4899"/>
+<rect x="628" y="139" width="14" height="16" rx="3" fill="#fff"/>
+<text x="660" y="142" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">AI 绘图生成</text>
+<text x="660" y="162" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">Stable Diffusion、YOLO 目标检测</text>
+
+<rect x="350" y="186" width="245" height="58" rx="8" fill="#1a1033" stroke="#06b6d4" stroke-width="1"/>
+<circle cx="375" y="215" r="14" fill="#06b6d4"/>
+<rect x="368" y="207" width="14" height="16" rx="3" fill="#fff"/>
+<text x="400" y="210" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">数据分析科学</text>
+<text x="400" y="230" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">Jupyter、Pandas、Scikit-learn</text>
+
+<rect x="610" y="186" width="245" height="58" rx="8" fill="#1a1033" stroke="#f97316" stroke-width="1"/>
+<circle cx="635" y="215" r="14" fill="#f97316"/>
+<polygon points="628,208 642,215 628,222 635,215" fill="#fff"/>
+<text x="660" y="210" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">游戏引擎开发</text>
+<text x="660" y="230" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">Unity、Unreal Engine + CUDA 加速</text>
+
+<!-- Framework logos bar -->
+<text x="360" y="270" font-family="Microsoft YaHei,Arial" font-size="13" fill="#E95420" font-weight="bold">支持框架</text>
+<rect x="350" y="280" width="125" height="38" rx="6" fill="#1e293b" stroke="#ef4444" stroke-width="1"/>
+<text x="412" y="304" font-family="Arial,sans-serif" font-size="13" fill="#fca5a5" text-anchor="middle" font-weight="bold">PyTorch</text>
+
+<rect x="485" y="280" width="125" height="38" rx="6" fill="#1e293b" stroke="#fbbf24" stroke-width="1"/>
+<text x="547" y="304" font-family="Arial,sans-serif" font-size="13" fill="#fde68a" text-anchor="middle" font-weight="bold">TensorFlow</text>
+
+<rect x="620" y="280" width="115" height="38" rx="6" fill="#1e293b" stroke="#3b82f6" stroke-width="1"/>
+<text x="677" y="304" font-family="Arial,sans-serif" font-size="13" fill="#93c5fd" text-anchor="middle" font-weight="bold">ONNX</text>
+
+<rect x="745" y="280" width="110" height="38" rx="6" fill="#1e293b" stroke="#10b981" stroke-width="1"/>
+<text x="800" y="304" font-family="Arial,sans-serif" font-size="12" fill="#6ee7b7" text-anchor="middle" font-weight="bold">MLX</text>
+
+<!-- Command hint -->
+<rect x="50" y="340" width="800" height="52" rx="10" fill="rgba(233,84,32,0.07)"/>
+<text x="70" y="362" font-family="Consolas,monospace" font-size="12" fill="#7ee787">nvidia-smi</text>
+<text x="155" y="362" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">查看 GPU 状态 |</text>
+<text x="260" y="362" font-family="Consolas,monospace" font-size="12" fill="#ffa657">python -c "import torch; print(torch.cuda.is_available())"</text>
+<text x="600" y="362" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">验证 CUDA 可用</text>
+<text x="70" y="383" font-family="Consolas,monospace" font-size="11" fill="#61afef">nvidia-container-cli list</text>
+<text x="250" y="383" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">Docker 容器中也可直接使用 GPU 资源</text>
+
+<!-- Tag -->
+<rect x="315" y="415" width="270" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="433" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">GPU / CUDA / AI / 深度学习 / 本地大模型</text>
+</svg>

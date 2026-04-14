@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg14" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#111827"/><stop offset="100%" stop-color="#1f2937"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg14)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#14</text>
+
+<!-- Title -->
+<text x="450" y="52" font-family="Microsoft YaHei,Arial,sans-serif" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">.wslconfig 黑魔法：内存、CPU、磁盘随便调</text>
+<text x="450" y="76" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#9ca3af" text-anchor="middle">深度调优配置文件，释放 WSL 全部潜能</text>
+
+<!-- VS Code editor mockup for .wslconfig -->
+<rect x="40" y="98" width="480" height="310" rx="8" fill="#1e1e1e"/>
+<!-- Editor title bar -->
+<rect x="40" y="98" width="480" height="32" rx="8" fill="#323233"/>
+<circle cx="62" cy="114" r="6" fill="#ff5f56"/><circle cx="82" cy="114" r="6" fill="#febc2e"/><circle cx="102" cy="114" r="6" fill="#28c840"/>
+<text x="270" y="119" font-family="Consolas,monospace" font-size="12" fill="#cccccc">.wslconfig</text>
+
+<!-- File path bar -->
+<rect x="40" y="130" width="480" height="24" fill="#2d2d2d"/>
+<text x="55" y="147" font-family="Consolas,monospace" font-size="10" fill="#858585">C:\Users\You\.wslconfig</text>
+
+<!-- Line numbers gutter -->
+<rect x="40" y="154" width="36" height="254" fill="#252526"/>
+<text x="57" y="175" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">1</text>
+<text x="57" y="197" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">2</text>
+<text x="57" y="219" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">3</text>
+<text x="57" y="241" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">4</text>
+<text x="57" y="263" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">5</text>
+<text x="57" y="285" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">6</text>
+<text x="57" y="307" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">7</text>
+<text x="57" y="329" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">8</text>
+<text x="57" y="351" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">9</text>
+<text x="57" y="373" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">10</text>
+<text x="57" y="395" font-family="Consolas,monospace" font-size="11" fill="#858585" text-anchor="end">11</text>
+
+<!-- Code content with syntax highlighting -->
+<text x="84" y="173" font-family="Consolas,monospace" font-size="12" fill="#569cd6">[wsl2]</text>
+<text x="84" y="195" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">memory</text><text x="134" y="195" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="144" y="195" font-family="Consolas,monospace" font-size="12" fill="#ce9178">16GB</text>
+<text x="84" y="217" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">processors</text><text x="152" y="217" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="162" y="217" font-family="Consolas,monospace" font-size="12" fill="#b5cea8">8</text>
+<text x="84" y="239" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">swap</text><text x="118" y="239" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="128" y="239" font-family="Consolas,monospace" font-size="12" fill="#ce9178">4GB</text>
+<text x="84" y="261" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">localhostForwarding</text><text x="208" y="261" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="218" y="261" font-family="Consolas,monospace" font-size="12" fill="#569cd6">true</text>
+<text x="84" y="283" font-family="Consolas,monospace" font-size="12" fill="#6a9955"># 高级选项</text>
+<text x="84" y="305" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">vmIdleTimeout</text><text x="174" y="305" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="184" y="305" font-family="Consolas,monospace" font-size="12" fill="#ce9178">-1</text>
+<text x="84" y="327" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">debugConsole</text><text x="168" y="327" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="178" y="327" font-family="Consolas,monospace" font-size="12" fill="#569cd6">true</text>
+<text x="84" y="349" font-family="Consolas,monospace" font-size="12" fill="#9cdcfe">nestedVirtualization</text><text x="228" y="349" font-family="Consolas,monospace" font-size="12" fill="#d4d4d4">=</text><text x="238" y="349" font-family="Consolas,monospace" font-size="12" fill="#569cd6">false</text>
+
+<!-- Slider UI on right side -->
+<text x="550" y="118" font-family="Microsoft YaHei,Arial" font-size="15" fill="#E95420" font-weight="bold">可视化调节面板</text>
+
+<!-- Memory slider -->
+<rect x="545" y="132" width="320" height="65" rx="8" fill="#1f2937"/>
+<text x="560" y="153" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e5e7eb" font-weight="bold">内存 (Memory)</text>
+<rect x="560" y="163" width="260" height="8" rx="4" fill="#374151"/>
+<rect x="560" y="163" width="170" height="8" rx="4" fill="#E95420"/>
+<circle cx="730" cy="167" r="9" fill="#E95420"/>
+<text x="838" y="171" font-family="Arial" font-size="12" fill="#E95420" font-weight="bold">16GB</text>
+
+<!-- CPU slider -->
+<rect x="545" y="207" width="320" height="65" rx="8" fill="#1f2937"/>
+<text x="560" y="228" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e5e7eb" font-weight="bold">处理器 (CPU)</text>
+<rect x="560" y="238" width="260" height="8" rx="4" fill="#374151"/>
+<rect x="560" y="238" width="200" height="8" rx="4" fill="#3b82f6"/>
+<circle cx="760" cy="242" r="9" fill="#3b82f6"/>
+<text x="838" y="246" font-family="Arial" font-size="12" fill="#3b82f6" font-weight="bold">8 核</text>
+
+<!-- Swap slider -->
+<rect x="545" y="282" width="320" height="65" rx="8" fill="#1f2937"/>
+<text x="560" y="303" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e5e7eb" font-weight="bold">交换空间 (Swap)</text>
+<rect x="560" y="313" width="260" height="8" rx="4" fill="#374151"/>
+<rect x="560" y="313" width="75" height="8" rx="4" fill="#10b981"/>
+<circle cx="635" cy="317" r="9" fill="#10b981"/>
+<text x="838" y="321" font-family="Arial" font-size="12" fill="#10b981" font-weight="bold">4GB</text>
+
+<!-- Tip box -->
+<rect x="545" y="360" width="320" height="48" rx="8" fill="rgba(233,84,32,0.1)" stroke="#E95420" stroke-width="1"/>
+<text x="705" y="382" font-family="Microsoft YaHei,Arial" font-size="11" fill="#E95420" text-anchor="middle" font-weight="bold">建议设为物理内存的 50%~75%</text>
+<text x="705" y="400" font-family="Microsoft YaHei,Arial" font-size="10" fill="#9ca3af" text-anchor="middle">修改后需执行 wsl --shutdown 重启生效</text>
+
+<!-- Tag -->
+<rect x="350" y="435" width="200" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="453" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">配置调优 / 性能参数 / 深度定制</text>
+</svg>

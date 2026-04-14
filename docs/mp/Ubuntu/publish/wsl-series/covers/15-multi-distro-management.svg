@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg15" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+    <linearGradient id="accent15" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#ff7b3d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg15)"/>
+
+  <!-- 装饰网格线 -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="80" x2="900" y2="80"/>
+    <line x1="0" y1="160" x2="900" y2="160"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="320" x2="900" y2="320"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- 篇目标识 -->
+  <rect x="30" y="25" width="72" height="28" rx="4" fill="#E95420"/>
+  <text x="66" y="44" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">进阶篇</text>
+
+  <!-- 主标题 -->
+  <text x="40" y="75" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="32" fill="#ffffff" font-weight="bold">WSL 多发行版管理</text>
+  <text x="40" y="105" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#aaaaaa">同时运行 Ubuntu、Debian、Fedora、Arch，互不干扰</text>
+
+  <!-- 分隔线 -->
+  <rect x="40" y="120" width="820" height="2" rx="1" fill="url(#accent15)"/>
+
+  <!-- 5个发行版卡片 -->
+  <!-- Ubuntu -->
+  <g transform="translate(50,145)">
+    <rect width="148" height="140" rx="10" fill="#1e2a45" stroke="#E95420" stroke-width="2"/>
+    <circle cx="74" cy="45" r="26" fill="#E95420" opacity="0.9"/>
+    <text x="74" y="52" font-family="Arial,sans-serif" font-size="20" fill="#fff" text-anchor="middle" font-weight="bold">U</text>
+    <text x="74" y="85" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">Ubuntu</text>
+    <text x="74" y="105" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="11" fill="#aaa" text-anchor="middle">默认发行版</text>
+    <text x="74" y="125" font-family="'Consolas',monospace" font-size="10" fill="#E95420" text-anchor="middle">wsl --install</text>
+  </g>
+
+  <!-- Debian -->
+  <g transform="translate(212,145)">
+    <rect width="148" height="140" rx="10" fill="#1e2a45" stroke="#d42e12" stroke-width="2"/>
+    <circle cx="74" cy="45" r="26" fill="#d42e12" opacity="0.85"/>
+    <text x="74" y="52" font-family="Arial,sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">D</text>
+    <text x="74" y="85" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">Debian</text>
+    <text x="74" y="105" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="11" fill="#aaa" text-anchor="middle">稳定可靠</text>
+    <text x="74" y="125" font-family="'Consolas',monospace" font-size="10" fill="#d42e12" text-anchor="middle">wsl -i Debian</text>
+  </g>
+
+  <!-- Fedora -->
+  <g transform="translate(374,145)">
+    <rect width="148" height="140" rx="10" fill="#1e2a45" stroke="#3c6eb4" stroke-width="2"/>
+    <circle cx="74" cy="45" r="26" fill="#3c6eb4" opacity="0.85"/>
+    <text x="74" y="52" font-family="Arial,sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">F</text>
+    <text x="74" y="85" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">Fedora</text>
+    <text x="74" y="105" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="11" fill="#aaa" text-anchor="middle">前沿技术</text>
+    <text x="74" y="125" font-family="'Consolas',monospace" font-size="10" fill="#3c6eb4" text-anchor="middle">wsl -i Fedora</text>
+  </g>
+
+  <!-- Arch -->
+  <g transform="translate(536,145)">
+    <rect width="148" height="140" rx="10" fill="#1e2a45" stroke="#1793d1" stroke-width="2"/>
+    <circle cx="74" cy="45" r="26" fill="#1793d1" opacity="0.85"/>
+    <text x="74" y="52" font-family="Arial,sans-serif" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">A</text>
+    <text x="74" y="85" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">Arch</text>
+    <text x="74" y="105" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="11" fill="#aaa" text-anchor="middle">滚动更新</text>
+    <text x="74" y="125" font-family="'Consolas',monospace" font-size="10" fill="#1793d1" text-anchor="middle">wsl -i Arch</text>
+  </g>
+
+  <!-- openSUSE -->
+  <g transform="translate(698,145)">
+    <rect width="148" height="140" rx="10" fill="#1e2a45" stroke="#73ba25" stroke-width="2"/>
+    <circle cx="74" cy="45" r="26" fill="#73ba25" opacity="0.85"/>
+    <text x="74" y="52" font-family="Arial,sans-serif" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">oS</text>
+    <text x="74" y="85" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">openSUSE</text>
+    <text x="74" y="105" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="11" fill="#aaa" text-anchor="middle">企业级支持</text>
+    <text x="74" y="125" font-family="'Consolas',monospace" font-size="10" fill="#73ba25" text-anchor="middle">wsl -i SUSE</text>
+  </g>
+
+  <!-- 常用命令区域 -->
+  <rect x="40" y="305" width="420" height="175" rx="10" fill="#111827" opacity="0.6"/>
+  <text x="60" y="335" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#E95420" font-weight="bold">常用命令速查</text>
+  
+  <g transform="translate(60,350)">
+    <rect width="380" height="24" rx="4" fill="#1e2a45"/>
+    <text x="12" y="17" font-family="'Consolas',monospace" font-size="11" fill="#aaa"># 查看所有已安装发行版</text>
+  </g>
+  <g transform="translate(60,378)">
+    <rect width="380" height="24" rx="4" fill="#1e2a45"/>
+    <text x="12" y="17" font-family="'Consolas',monospace" font-size="11" fill="#7ee787">wsl --list --verbose</text>
+  </g>
+  <g transform="translate(60,406)">
+    <rect width="380" height="24" rx="4" fill="#1e2a45"/>
+    <text x="12" y="17" font-family="'Consolas',monospace" font-size="11" fill="#aaa"># 设置默认发行版</text>
+  </g>
+  <g transform="translate(60,434)">
+    <rect width="380" height="24" rx="4" fill="#1e2a45"/>
+    <text x="12" y="17" font-family="'Consolas',monospace" font-size="11" fill="#79c0ff">wsl --set-default Debian</text>
+  </g>
+  <g transform="translate(60,462)">
+    <rect width="380" height="24" rx="4" fill="#1e2a45"/>
+    <text x="12" y="17" font-family="'Consolas',monospace" font-size="11" fill="#ffa657">wsl -d Arch -u root</text>
+  </g>
+
+  <!-- 核心功能区域 -->
+  <rect x="480" y="305" width="380" height="175" rx="10" fill="#111827" opacity="0.6"/>
+  <text x="500" y="335" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="16" fill="#E95420" font-weight="bold">核心管理能力</text>
+  
+  <!-- 功能列表 -->
+  <g transform="translate(500,350)">
+    <circle cx="10" cy="8" r="5" fill="#E95420"/>
+    <text x="25" y="13" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#ddd">独立文件系统，互不冲突</text>
+  </g>
+  <g transform="translate(500,378)">
+    <circle cx="10" cy="8" r="5" fill="#3c6eb4"/>
+    <text x="25" y="13" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#ddd">共享 Windows 网络/端口</text>
+  </g>
+  <g transform="translate(500,406)">
+    <circle cx="10" cy="8" r="5" fill="#73ba25"/>
+    <text x="25" y="13" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#ddd">可单独启动/停止某个发行版</text>
+  </g>
+  <g transform="translate(500,434)">
+    <circle cx="10" cy="8" r="5" fill="#d42e12"/>
+    <text x="25" y="13" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#ddd">跨发行版访问文件系统</text>
+  </g>
+  <g transform="translate(500,462)">
+    <circle cx="10" cy="8" r="5" fill="#1793d1"/>
+    <text x="25" y="13" font-family="'Microsoft YaHei',Arial,sans-serif" font-size="13" fill="#ddd">导入/导出/备份任意发行版</text>
+  </g>
+
+  <!-- 底部装饰 -->
+  <rect x="0" y="492" width="900" height="8" fill="url(#accent15)" opacity="0.6"/>
+</svg>

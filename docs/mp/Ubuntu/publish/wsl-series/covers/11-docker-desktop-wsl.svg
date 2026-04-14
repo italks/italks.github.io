@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg11" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0c1929"/><stop offset="100%" stop-color="#1a365d"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg11)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#11</text>
+
+<!-- Title -->
+<text x="450" y="52" font-family="Microsoft YaHei,Arial,sans-serif" font-size="27" fill="#fff" text-anchor="middle" font-weight="bold">Docker Desktop + WSL 2：容器开发的黄金搭档</text>
+<text x="450" y="76" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">架构原理 / Compose 编排 / 最佳实践</text>
+
+<!-- Architecture diagram -->
+<!-- Windows Layer -->
+<rect x="60" y="105" width="400" height="55" rx="8" fill="#1e3a5f" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="260" y="128" font-family="Microsoft YaHei,Arial" font-size="13" fill="#93c5fd" text-anchor="middle" font-weight="bold">Windows 主机</text>
+<text x="260" y="148" font-family="Consolas,monospace" font-size="11" fill="#bfdbfe" text-anchor="middle">docker ps | docker compose up | Docker Desktop CLI</text>
+
+<!-- Arrow down -->
+<path d="M260 165 L260 185" stroke="#60a5fa" stroke-width="2" marker-end="url(#arr11)"/>
+<defs><marker id="arr11" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0 L6 3 L0 6z" fill="#60a5fa"/></marker></defs>
+
+<!-- WSL 2 Layer -->
+<rect x="60" y="190" width="400" height="140" rx="8" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+<text x="260" y="213" font-family="Microsoft YaHei,Arial" font-size="13" fill="#6ee7b7" text-anchor="middle" font-weight="bold">WSL 2 虚拟机（Linux 内核）</text>
+
+<!-- Containers in WSL -->
+<rect x="80" y="228" width="88" height="50" rx="6" fill="#0f172a" stroke="#3b82f6" stroke-width="1"/>
+<text x="124" y="250" font-family="Microsoft YaHei,Arial" font-size="10" fill="#93c5fd" text-anchor="middle">应用服务</text>
+<text x="124" y="264" font-family="Arial" font-size="8" fill="#64748b" text-anchor="middle">Container</text>
+
+<rect x="178" y="228" width="88" height="50" rx="6" fill="#0f172a" stroke="#10b981" stroke-width="1"/>
+<text x="222" y="250" font-family="Microsoft YaHei,Arial" font-size="10" fill="#6ee7b7" text-anchor="middle">数据库</text>
+<text x="222" y="264" font-family="Arial" font-size="8" fill="#64748b" text-anchor="middle">Container</text>
+
+<rect x="276" y="228" width="88" height="50" rx="6" fill="#0f172a" stroke="#f59e0b" stroke-width="1"/>
+<text x="320" y="250" font-family="Microsoft YaHei,Arial" font-size="10" fill="#fcd34d" text-anchor="middle">缓存</text>
+<text x="320" y="264" font-family="Arial" font-size="8" fill="#64748b" text-anchor="middle">Redis Cache</text>
+
+<rect x="374" y="228" width="74" height="50" rx="6" fill="#0f172a" stroke="#ef4444" stroke-width="1"/>
+<text x="411" y="250" font-family="Microsoft YaHei,Arial" font-size="10" fill="#fca5a5" text-anchor="middle">代理</text>
+<text x="411" y="264" font-family="Arial" font-size="8" fill="#64748b" text-anchor="middle">Nginx</text>
+
+<!-- Docker daemon label -->
+<rect x="80" y="290" width="368" height="32" rx="6" fill="rgba(16,185,129,0.15)"/>
+<text x="264" y="311" font-family="Consolas,monospace" font-size="11" fill="#6ee7b7" text-anchor="middle">dockerd 在 Linux VM 中原生运行</text>
+
+<!-- Right panel: Features -->
+<text x="495" y="118" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">核心优势</text>
+
+<rect x="485" y="130" width="390" height="68" rx="8" fill="#1e293b"/>
+<text x="500" y="152" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">Linux 原生容器</text>
+<text x="500" y="170" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">完整的 Linux 内核支持，无需虚拟化开销</text>
+<text x="700" y="152" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">文件系统</text>
+<text x="700" y="170" font-family="Consolas,monospace" font-size="10" fill="#94a3b8">ext4 / virtiofs</text>
+
+<rect x="485" y="208" width="390" height="68" rx="8" fill="#1e293b"/>
+<text x="500" y="230" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">Windows 互访</text>
+<text x="500" y="248" font-family="Consolas,monospace" font-size="10" fill="#94a3b8">\\wsl$\ 直接访问容器文件</text>
+<text x="700" y="230" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">端口转发</text>
+<text x="700" y="248" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">localhost 直连容器服务</text>
+
+<rect x="485" y="286" width="390" height="68" rx="8" fill="#1e293b"/>
+<text x="500" y="308" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">资源隔离</text>
+<text x="500" y="326" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">CPU/内存/磁盘独立分配</text>
+<text x="700" y="308" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">网络模式</text>
+<text x="700" y="326" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">镜像/桥接/NAT 灵活选择</text>
+
+<!-- Bottom tip -->
+<rect x="200" y="375" width="500" height="42" rx="21" fill="rgba(233,84,32,0.12)" stroke="#E95420" stroke-width="1"/>
+<text x="450" y="401" font-family="Microsoft YaHei,Arial" font-size="13" fill="#E95420" text-anchor="middle" font-weight="bold">容器与镜像管理：docker images / docker ps / compose up</text>
+
+<!-- Bottom tag -->
+<rect x="350" y="442" width="200" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="460" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">Docker / DevOps / 容器化</text>
+</svg>

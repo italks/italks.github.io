@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg16" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#121218"/><stop offset="100%" stop-color="#1c1c26"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg16)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#16</text>
+
+<!-- Title -->
+<text x="450" y="52" font-family="Microsoft YaHei,Arial,sans-serif" font-size="27" fill="#fff" text-anchor="middle" font-weight="bold">让 WSL 开机自启：systemd 服务管理完全指南</text>
+<text x="450" y="76" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">启用 systemd / 自定义服务 / 开机自启实战</text>
+
+<!-- Gear icon -->
+<g transform="translate(70, 108)">
+  <circle cx="55" cy="55" r="42" fill="none" stroke="#30363d" stroke-width="2"/>
+  <circle cx="55" cy="55" r="30" fill="none" stroke="#E95420" stroke-width="4" opacity="0.3"/>
+  <circle cx="55" cy="55" r="20" fill="#E95420" opacity="0.15"/>
+  <!-- Gear teeth -->
+  <g transform="translate(55,55)">
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(0)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(45)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(90)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(135)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(180)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(225)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(270)"/>
+    <rect x="-6" y="-48" width="12" height="14" rx="3" fill="#E95420" transform="rotate(315)"/>
+    <circle cx="0" cy="0" r="14" fill="#1e2433" stroke="#E95420" stroke-width="3"/>
+  </g>
+</g>
+
+<!-- Terminal: systemctl output -->
+<rect x="210" y="102" width="650" height="165" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<rect x="210" y="102" width="650" height="26" rx="8" fill="#161b22"/>
+<text x="225" y="120" font-family="Consolas,monospace" font-size="11" fill="#8b949e">bash — systemctl list-units --type=service --state=running</text>
+
+<text x="222" y="147" font-family="Consolas,monospace" font-size="11" fill="#7ee787" font-weight="bold">UNIT</text>
+<text x="420" y="147" font-family="Consolas,monospace" font-size="11" fill="#7ee787" font-weight="bold">LOAD</text>
+<text x="500" y="147" font-family="Consolas,monospace" font-size="11" fill="#7ee787" font-weight="bold">ACTIVE</text>
+<text x="600" y="147" font-family="Consolas,monospace" font-size="11" fill="#7ee787" font-weight="bold">SUB</text>
+<text x="700" y="147" font-family="Consolas,monospace" font-size="11" fill="#7ee787" font-weight="bold">DESCRIPTION</text>
+
+<line x1="215" y1="154" x2="850" y2="154" stroke="#21262d" stroke-width="1"/>
+
+<text x="222" y="172" font-family="Consolas,monospace" font-size="10" fill="#c9d1d9">docker.service</text>
+<text x="420" y="172" font-family="Consolas,monospace" font-size="10" fill="#7ee787">loaded</text>
+<text x="500" y="172" font-family="Consolas,monospace" font-size="10" fill="#3fb950">active</text>
+<text x="600" y="172" font-family="Consolas,monospace" font-size="10" fill="#3fb950">running</text>
+<text x="700" y="172" font-family="Consolas,monospace" font-size="10" fill="#8b949e">Docker 容器引擎</text>
+
+<text x="222" y="192" font-family="Consolas,monospace" font-size="10" fill="#c9d1d9">nginx.service</text>
+<text x="420" y="192" font-family="Consolas,monospace" font-size="10" fill="#7ee787">loaded</text>
+<text x="500" y="192" font-family="Consolas,monospace" font-size="10" fill="#3fb950">active</text>
+<text x="600" y="192" font-family="Consolas,monospace" font-size="10" fill="#3fb950">running</text>
+<text x="700" y="192" font-family="Consolas,monospace" font-size="10" fill="#8b949e">Web 反向代理服务器</text>
+
+<text x="222" y="212" font-family="Consolas,monospace" font-size="10" fill="#c9d1d9">mysql.service</text>
+<text x="420" y="212" font-family="Consolas,monospace" font-size="10" fill="#7ee787">loaded</text>
+<text x="500" y="212" font-family="Consolas,monospace" font-size="10" fill="#3fb950">active</text>
+<text x="600" y="212" font-family="Consolas,monospace" font-size="10" fill="#3fb950">running</text>
+<text x="700" y="212" font-family="Consolas,monospace" font-size="10" fill="#8b949e">MySQL 数据库服务</text>
+
+<text x="222" y="232" font-family="Consolas,monospace" font-size="10" fill="#c9d1d9">redis-server.service</text>
+<text x="420" y="232" font-family="Consolas,monospace" font-size="10" fill="#7ee787">loaded</text>
+<text x="500" y="232" font-family="Consolas,monospace" font-size="10" fill="#3fb950">active</text>
+<text x="600" y="232" font-family="Consolas,monospace" font-size="10" fill="#3fb950">running</text>
+<text x="700" y="232" font-family="Consolas,monospace" font-size="10" fill="#8b949e">Redis 缓存服务</text>
+
+<text x="222" y="256" font-family="Consolas,monospace" font-size="10" fill="#8b949e">4 services listed.</text>
+
+<!-- Enable commands -->
+<text x="50" y="290" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">常用命令速查</text>
+
+<rect x="40" y="300" width="410" height="100" rx="8" fill="#161b22"/>
+<text x="55" y="324" font-family="Consolas,monospace" font-size="12" fill="#7ee787">sudo systemctl enable docker</text>
+<text x="300" y="324" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">开机自启 Docker</text>
+
+<text x="55" y="348" font-family="Consolas,monospace" font-size="12" fill="#7ee787">sudo systemctl status nginx</text>
+<text x="280" y="348" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">查看 Nginx 运行状态</text>
+
+<text x="55" y="372" font-family="Consolas,monospace" font-size="12" fill="#7ee787">sudo systemctl restart mysql</text>
+<text x="290" y="372" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">重启 MySQL 服务</text>
+
+<text x="55" y="392" font-family="Consolas,monospace" font-size="12" fill="#ffa657">journalctl -u myapp -f</text>
+<text x="250" y="392" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">查看应用日志</text>
+
+<!-- Enable systemd hint -->
+<rect x="470" y="300" width="390" height="100" rx="8" fill="rgba(233,84,32,0.08)" stroke="#E95420" stroke-width="1"/>
+<text x="665" y="325" font-family="Microsoft YaHei,Arial" font-size="13" fill="#E95420" text-anchor="middle" font-weight="bold">如何启用 systemd？</text>
+<text x="495" y="350" font-family="Consolas,monospace" font-size="11" fill="#c9d1d9">编辑 /etc/wsl.conf 添加：</text>
+<text x="495" y="370" font-family="Consolas,monospace" font-size="11" fill="#7ee787">[boot]</text>
+<text x="495" y="388" font-family="Consolas,monospace" font-size="11" fill="#7ee787">systemd=true</text>
+<text x="700" y="388" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8b949e">然后重启 WSL</text>
+
+<!-- Tag -->
+<rect x="340" y="420" width="220" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="438" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">systemd / 服务管理 / 开机自启</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#16213e"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="500" fill="url(#bg4)"/>
+  <!-- Windows folder icon -->
+  <g transform="translate(60,110)">
+    <rect x="0" y="10" width="120" height="90" rx="8" fill="#f5a623" opacity="0.2" stroke="#f5a623" stroke-width="1.5"/>
+    <path d="M0 18 Q0 10 12 10 L45 10 L55 22 L112 22 Q120 22 120 30 L120 92 Q120 100 112 100 L8 100 Q0 100 0 92Z" fill="#0078d4" opacity="0.7"/>
+    <text x="60" y="65" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#fff" text-anchor="middle">Windows</text>
+    <text x="60" y="82" font-family="monospace" font-size="11" fill="#e0e0e0" text-anchor="middle">C:\Users\</text>
+  </g>
+  <!-- Arrow -->
+  <path d="M210 165 L280 165 M270 150 L285 165 L270 180" stroke="#E95420" stroke-width="3.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Linux folder icon -->
+  <g transform="translate(310,105)">
+    <rect x="0" y="15" width="130" height="95" rx="8" fill="#E95420" opacity="0.15" stroke="#E95420" stroke-width="1.5"/>
+    <text x="65" y="50" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle" font-weight="bold">Linux</text>
+    <text x="65" y="75" font-family="monospace" font-size="11" fill="#98c379" text-anchor="middle">/home/user/</text>
+    <circle cx="35" cy="85" r="16" fill="none" stroke="#E95420" stroke-width="1.5" opacity="0.5"/><circle cx="95" cy="88" r="12" fill="none" stroke="#E95420" stroke-width="1" opacity="0.3"/>
+  </g>
+  <!-- Bidirectional arrows below -->
+  <g transform="translate(60,250)">
+    <rect x="0" y="0" width="380" height="60" rx="8" fill="#282c34" opacity="0.7"/>
+    <text x="25" y="26" font-family="monospace" font-size="13" fill="#61afef">explorer.exe .</text>
+    <text x="200" y="26" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#8892b0">→ 打开当前目录</text>
+    <text x="25" y="48" font-family="monospace" font-size="13" fill="#98c379">/mnt/c/Users/</text>
+    <text x="160" y="48" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#8892b0">→ 访问 Windows</text>
+  </g>
+  <!-- Sync icon -->
+  <g transform="translate(500,115)">
+    <circle cx="60" cy="55" r="50" fill="#E95420" opacity="0.08"/>
+    <path d="M40 45 A20 20 0 1 1 80 45 M80 65 A20 20 0 1 1 40 65" stroke="#E95420" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <polygon points="38,42 32,52 44,49" fill="#E95420"/>
+    <polygon points="82,68 88,58 76,61" fill="#E95420"/>
+    <text x="140" y="52" font-family="'Microsoft YaHei',sans-serif" font-size="20" fill="#fff" font-weight="bold">文件互通</text>
+    <text x="140" y="76" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#8892b0">无缝访问</text>
+  </g>
+  <!-- Speed warning -->
+  <g transform="translate(520,240)">
+    <rect x="0" y="0" width="300" height="46" rx="8" fill="#e5c07b" opacity="0.1"/>
+    <text x="15" y="20" font-family="'Microsoft YaHei',sans-serif" font-size="13" fill="#e5c07b">⚡ 性能技巧：尽量在 Linux 文件系统操作</text>
+    <text x="15" y="38" font-family="'Microsoft YaHei',sans-serif" font-size="12" fill="#8892b0">跨文件系统访问速度会慢 3-5 倍</text>
+  </g>
+  <!-- Title -->
+  <text x="50" y="370" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="38" font-weight="bold" fill="#ffffff">Windows / Linux 文件互通</text>
+  <text x="50" y="415" font-family="'Microsoft YaHei','PingFang SC',sans-serif" font-size="24" fill="#E95420">跨系统文件操作 · 性能优化指南</text>
+  <rect x="720" y="430" width="140" height="34" rx="17" fill="#E95420" opacity="0.15"/>
+  <text x="790" y="453" font-family="'Microsoft YaHei',sans-serif" font-size="14" fill="#E95420" text-anchor="middle">入门篇 #04</text>
+</svg>

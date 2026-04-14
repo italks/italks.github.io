@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg20" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0f1923"/><stop offset="100%" stop-color="#152238"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg20)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#20</text>
+
+<!-- Title -->
+<text x="450" y="50" font-family="Microsoft YaHei,Arial,sans-serif" font-size="27" fill="#fff" text-anchor="middle" font-weight="bold">WSL 备份与迁移：换电脑不丢环境的完整方案</text>
+<text x="450" y="74" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">导出 / 导入 / Dotfiles / Docker 打包全攻略</text>
+
+<!-- Flow chart: Old PC -> Cloud -> New PC -->
+<!-- Old PC box -->
+<rect x="40" y="105" width="170" height="150" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+<text x="125" y="128" font-family="Microsoft YaHei,Arial" font-size="13" fill="#60a5fa" text-anchor="middle" font-weight="bold">旧电脑</text>
+
+<rect x="55" y="142" width="140" height="44" rx="6" fill="#0f172a"/>
+<text x="68" y="160" font-family="Consolas,monospace" font-size="10" fill="#7ee787">$ wsl --export</text>
+<text x="68" y="177" font-family="Consolas,monospace" font-size="9" fill="#8b949e">Ubuntu D:\bak\ubu.tar</text>
+
+<rect x="55" y="196" width="140" height="44" rx="6" fill="#0f172a"/>
+<text x="68" y="214" font-family="Consolas,monospace" font-size="10" fill="#ffa657">$ dotfiles backup</text>
+<text x="68" y="231" font-family="Consolas,monospace" font-size="9" fill="#8b949e"># 配置文件同步</text>
+
+<!-- Arrow to cloud -->
+<path d="M220 180 L300 180" stroke="#E95420" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arr20a)"/>
+<defs><marker id="arr20a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#E95420"/></marker></defs>
+<text x="260" y="172" font-family="Arial" font-size="10" fill="#E95420">上传</text>
+
+<!-- Cloud box -->
+<rect x="310" y="115" width="170" height="130" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+<!-- Cloud shape inside -->
+<ellipse cx="395" cy="165" rx="45" ry="25" fill="none" stroke="#10b981" stroke-width="1.5"/>
+<circle cx="365" cy="168" r="18" fill="none" stroke="#10b981" stroke-width="1.5"/>
+<circle cx="425" cy="168" r="18" fill="none" stroke="#10b981" stroke-width="1.5"/>
+<text x="395" y="205" font-family="Microsoft YaHei,Arial" font-size="12" fill="#6ee7b7" text-anchor="middle" font-weight="bold">云存储</text>
+<text x="395" y="225" font-family="Consolas,monospace" font-size="9" fill="#94a3b8" text-anchor="middle">GitHub/Gitee/网盘/NAS</text>
+<text x="395" y="240" font-family="Consolas,monospace" font-size="9" fill="#94a3b8" text-anchor="middle">~500MB 压缩包</text>
+
+<!-- Arrow from cloud -->
+<path d="M490 180 L570 180" stroke="#E95420" stroke-width="3" stroke-dasharray="8,4" marker-end="url(#arr20b)"/>
+<defs><marker id="arr20b" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8z" fill="#E95420"/></marker></defs>
+<text x="530" y="172" font-family="Arial" font-size="10" fill="#E95420">下载</text>
+
+<!-- New PC box -->
+<rect x="580" y="105" width="170" height="150" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5"/>
+<text x="665" y="128" font-family="Microsoft YaHei,Arial" font-size="13" fill="#c084fc" text-anchor="middle" font-weight="bold">新电脑</text>
+
+<rect x="595" y="142" width="140" height="44" rx="6" fill="#0f172a"/>
+<text x="608" y="160" font-family="Consolas,monospace" font-size="10" fill="#7ee787">$ wsl --import</text>
+<text x="608" y="177" font-family="Consolas,monospace" font-size="9" fill="#8b949e">Ubuntu D:\wsl ubu.tar</text>
+
+<rect x="595" y="196" width="140" height="44" rx="6" fill="#0f172a"/>
+<text x="608" y="214" font-family="Consolas,monospace" font-size="10" fill="#7ee787">$ dotfiles restore</text>
+<text x="608" y="231" font-family="Consolas,monospace" font-size="9" fill="#8b949e"># 一键恢复配置</text>
+
+<!-- Three backup methods comparison -->
+<text x="50" y="285" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">三种备份方案对比</text>
+
+<rect x="40" y="298" width="268" height="85" rx="8" fill="#1e293b"/>
+<rect x="52" y="308" width="80" height="22" rx="11" fill="#3b82f6"/>
+<text x="92" y="324" font-family="Microsoft YaHei,Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">wsl export/import</text>
+<text x="54" y="348" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">完整系统镜像备份还原</text>
+<text x="54" y="368" font-family="Microsoft YaHei,Arial" font-size="10" fill="#64748b">适合：整机迁移，保留所有环境</text>
+
+<rect x="318" y="298" width="268" height="85" rx="8" fill="#1e293b"/>
+<rect x="330" y="308" width="64" height="22" rx="11" fill="#10b981"/>
+<text x="362" y="324" font-family="Microsoft YaHei,Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Dotfiles</text>
+<text x="332" y="348" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">Git 同步配置文件 (.bashrc/.vim等)</text>
+<text x="332" y="368" font-family="Microsoft YaHei,Arial" font-size="10" fill="#64748b">适合：轻量级，多机快速恢复</text>
+
+<rect x="596" y="298" width="264" height="85" rx="8" fill="#1e293b"/>
+<rect x="608" y="308" width="106" height="22" rx="11" fill="#f59e0b"/>
+<text x="661" y="324" font-family="Microsoft YaHei,Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">Docker Compose</text>
+<text x="608" y="348" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">容器化环境打包，一键重建服务栈</text>
+<text x="608" y="368" font-family="Microsoft YaHei,Arial" font-size="10" fill="#64748b">适合：微服务/数据库等复杂环境</text>
+
+<!-- Tag -->
+<rect x="310" y="405" width="280" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="423" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">数据备份 / 环境迁移 / 换机不丢配置</text>
+</svg>

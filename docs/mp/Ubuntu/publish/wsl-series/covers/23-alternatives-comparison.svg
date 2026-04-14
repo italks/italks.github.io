@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg23" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#111118"/><stop offset="100%" stop-color="#1c1c28"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg23)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#23</text>
+<text x="450" y="48" font-family="Microsoft YaHei,Arial,sans-serif" font-size="26" fill="#fff" text-anchor="middle" font-weight="bold">除了 WSL 还有什么？8 种 Windows 上跑 Linux 方案横评</text>
+<text x="450" y="72" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">虚拟机 / 双系统 / 云开发 / 容器 全面对比，帮你选最合适的</text>
+<rect x="30" y="92" width="840" height="34" rx="6" fill="#21262d"/>
+<text x="140" y="114" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9" text-anchor="middle" font-weight="bold">方案名称</text>
+<text x="330" y="114" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9" text-anchor="middle" font-weight="bold">性能</text>
+<text x="440" y="114" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9" text-anchor="middle" font-weight="bold">易用性</text>
+<text x="550" y="114" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9" text-anchor="middle" font-weight="bold">隔离性</text>
+<text x="670" y="114" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9" text-anchor="middle" font-weight="bold">适合场景</text>
+<text x="800" y="114" font-family="Microsoft YaHei,Arial" font-size="12" fill="#c9d1d9" text-anchor="middle" font-weight="bold">推荐度</text>
+<rect x="30" y="130" width="840" height="38" rx="0" fill="#161b22" stroke="#E95420" stroke-width="1.5"/>
+<text x="140" y="154" font-family="Arial,sans-serif" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">WSL 2</text>
+<text x="330" y="154" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">近原生</text>
+<text x="440" y="154" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">简单</text>
+<text x="550" y="154" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">VM级</text>
+<text x="670" y="154" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">日常开发</text>
+<text x="800" y="154" font-family="Arial" font-size="12" fill="#E95420" text-anchor="middle">★★★★★</text>
+<rect x="30" y="168" width="840" height="38" rx="0" fill="#0d1117"/>
+<text x="140" y="192" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">Hyper-V / VMware</text>
+<text x="330" y="192" font-family="Microsoft YaHei,Arial" font-size="11" fill="#58a6ff" text-anchor="middle">原生</text>
+<text x="440" y="192" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">中等</text>
+<text x="550" y="192" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">强隔离</text>
+<text x="670" y="192" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">企业测试</text>
+<text x="800" y="192" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★★☆</text>
+<rect x="30" y="206" width="840" height="38" rx="0" fill="#161b22"/>
+<text x="140" y="230" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">VirtualBox</text>
+<text x="330" y="230" font-family="Microsoft YaHei,Arial" font-size="11" fill="#a371f7" text-anchor="middle">原生</text>
+<text x="440" y="230" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">简单</text>
+<text x="550" y="230" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">强隔离</text>
+<text x="670" y="230" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">学习实验</text>
+<text x="800" y="230" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★☆☆</text>
+<rect x="30" y="244" width="840" height="38" rx="0" fill="#0d1117"/>
+<text x="140" y="268" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">双系统 Dual Boot</text>
+<text x="330" y="268" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">近原生</text>
+<text x="440" y="268" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f85149" text-anchor="middle">困难</text>
+<text x="550" y="268" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">OS级</text>
+<text x="670" y="268" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">游戏/Linux</text>
+<text x="800" y="268" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★☆☆</text>
+<rect x="30" y="282" width="840" height="38" rx="0" fill="#161b22"/>
+<text x="140" y="306" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">GitHub Codespaces</text>
+<text x="330" y="306" font-family="Microsoft YaHei,Arial" font-size="11" fill="#a371f7" text-anchor="middle">原生</text>
+<text x="440" y="306" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">简单</text>
+<text x="550" y="306" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">容器级</text>
+<text x="670" y="306" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">快速体验</text>
+<text x="800" y="306" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★★☆</text>
+<rect x="30" y="320" width="840" height="38" rx="0" fill="#0d1117"/>
+<text x="140" y="344" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">Colima (macOS)</text>
+<text x="330" y="344" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f85149" text-anchor="middle">原生</text>
+<text x="440" y="344" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">中等</text>
+<text x="550" y="344" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">VM级</text>
+<text x="670" y="344" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">Mac 用户</text>
+<text x="800" y="344" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★☆☆</text>
+<rect x="30" y="358" width="840" height="38" rx="0" fill="#161b22"/>
+<text x="140" y="382" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">Gitpod 云IDE</text>
+<text x="330" y="382" font-family="Microsoft YaHei,Arial" font-size="11" fill="#a371f7" text-anchor="middle">原生</text>
+<text x="440" y="382" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">简单</text>
+<text x="550" y="382" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">容器级</text>
+<text x="670" y="382" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">PR 开发</text>
+<text x="800" y="382" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★★☆</text>
+<rect x="30" y="396" width="840" height="38" rx="0" fill="#0d1117"/>
+<text x="140" y="420" font-family="Arial,sans-serif" font-size="12" fill="#c9d1d9" text-anchor="middle">Docker Desktop</text>
+<text x="330" y="420" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">近原生</text>
+<text x="440" y="420" font-family="Microsoft YaHei,Arial" font-size="11" fill="#f0c000" text-anchor="middle">中等</text>
+<text x="550" y="420" font-family="Microsoft YaHei,Arial" font-size="11" fill="#3fb950" text-anchor="middle">容器级</text>
+<text x="670" y="420" font-family="Microsoft YaHei,Arial" font-size="11" fill="#8b949e" text-anchor="middle">微服务</text>
+<text x="800" y="420" font-family="Arial" font-size="12" fill="#f0c000" text-anchor="middle">★★★★☆</text>
+<rect x="30" y="434" width="840" height="38" rx="0 0 6 6" fill="#0d1117"/>
+<rect x="200" y="450" width="500" height="38" rx="19" fill="rgba(233,84,32,0.1)" stroke="#E95420" stroke-width="1"/>
+<text x="450" y="474" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">结论：WSL 2 是性能、集成度和易用性的最佳平衡点 ★</text>
+<rect x="340" y="490" width="220" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="508" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">方案对比 / 选型指南 / 横评分析</text>
+</svg>

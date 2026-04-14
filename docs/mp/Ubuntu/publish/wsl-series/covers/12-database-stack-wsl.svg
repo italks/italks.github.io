@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg12" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#13111c"/><stop offset="100%" stop-color="#1a1528"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg12)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#12</text>
+
+<!-- Title -->
+<text x="450" y="52" font-family="Microsoft YaHei,Arial,sans-serif" font-size="28" fill="#fff" text-anchor="middle" font-weight="bold">数据库全家桶：一键部署全栈数据存储</text>
+<text x="450" y="76" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#a0aec0" text-anchor="middle">MySQL + Redis + PostgreSQL + MongoDB 在 WSL 中运行</text>
+
+<!-- Database cylinders row -->
+<text x="450" y="112" font-family="Microsoft YaHei,Arial" font-size="15" fill="#E95420" text-anchor="middle" font-weight="bold">四大数据库引擎</text>
+
+<!-- MySQL -->
+<g transform="translate(80, 130)">
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#00758f"/>
+  <rect x="5" y="15" width="110" height="65" fill="#006579"/>
+  <ellipse cx="60" cy="80" rx="55" ry="15" fill="#005166"/>
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#00a1b4" opacity="0.5"/>
+  <text x="60" y="53" font-family="Arial" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">MySQL</text>
+  <text x="60" y="108" font-family="Consolas,monospace" font-size="12" fill="#00a1b4" text-anchor="middle">:3306</text>
+</g>
+
+<!-- PostgreSQL -->
+<g transform="translate(265, 130)">
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#336791"/>
+  <rect x="5" y="15" width="110" height="65" fill="#2868ab"/>
+  <ellipse cx="60" cy="80" rx="55" ry="15" fill="#1f5a8f"/>
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#4b8bbe" opacity="0.5"/>
+  <text x="60" y="53" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">PostgreSQL</text>
+  <text x="60" y="108" font-family="Consolas,monospace" font-size="12" fill="#4b8bbe" text-anchor="middle">:5432</text>
+</g>
+
+<!-- Redis -->
+<g transform="translate(450, 130)">
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#dc382d"/>
+  <rect x="5" y="15" width="110" height="65" fill="#c92c22"/>
+  <ellipse cx="60" cy="80" rx="55" ry="15" fill="#b41f15"/>
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#e54b42" opacity="0.5"/>
+  <text x="60" y="53" font-family="Arial" font-size="18" fill="#fff" text-anchor="middle" font-weight="bold">Redis</text>
+  <text x="60" y="108" font-family="Consolas,monospace" font-size="12" fill="#e54b42" text-anchor="middle">:6379</text>
+</g>
+
+<!-- MongoDB -->
+<g transform="translate(635, 130)">
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#4ea94b"/>
+  <rect x="5" y="15" width="110" height="65" fill="#449641"/>
+  <ellipse cx="60" cy="80" rx="55" ry="15" fill="#3a8237"/>
+  <ellipse cx="60" cy="15" rx="55" ry="15" fill="#5fbf5c" opacity="0.5"/>
+  <text x="60" y="53" font-family="Arial" font-size="16" fill="#fff" text-anchor="middle" font-weight="bold">MongoDB</text>
+  <text x="60" y="108" font-family="Consolas,monospace" font-size="12" fill="#5fbf5c" text-anchor="middle">:27017</text>
+</g>
+
+<!-- Deploy commands -->
+<text x="60" y="275" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">一行命令部署</text>
+<rect x="50" y="285" width="800" height="80" rx="10" fill="#1a1528" stroke="#334155" stroke-width="1"/>
+<text x="70" y="310" font-family="Consolas,monospace" font-size="13" fill="#7ee787">$ docker compose up -d</text>
+<text x="70" y="335" font-family="Consolas,monospace" font-size="13" fill="#79c0ff">$ sudo apt install mysql-server postgresql redis-server mongodb-org</text>
+<text x="70" y="358" font-family="Consolas,monospace" font-size="11" fill="#8b949e"># 或使用 apt 直接安装，两种方式任选</text>
+
+<!-- Connect from Windows -->
+<text x="60" y="395" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">Windows 连接方式（通过端口转发）</text>
+<rect x="50" y="405" width="800" height="55" rx="10" fill="rgba(233,84,32,0.08)"/>
+<text x="70" y="430" font-family="Consolas,monospace" font-size="12" fill="#ffa657">mysql -h localhost -P 3306    psql -h localhost -p 5432    redis-cli ping</text>
+<text x="70" y="450" font-family="Microsoft YaHei,Arial" font-size="11" fill="#94a3b8">所有数据库都可通过 localhost 直接从 Windows 客户端访问</text>
+
+<!-- Tag -->
+<rect x="330" y="472" width="240" height="24" rx="12" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="489" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">数据库 / 全栈开发 / 一键部署</text>
+</svg>

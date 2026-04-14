@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg06" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a1a2e"/><stop offset="100%" stop-color="#16213e"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg06)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#06</text>
+
+<!-- Title -->
+<text x="450" y="55" font-family="Microsoft YaHei,Arial,sans-serif" font-size="28" fill="#FFFFFF" text-anchor="middle" font-weight="bold">在 Windows 上运行 Linux 桌面应用？</text>
+<text x="450" y="80" font-family="Microsoft YaHei,Arial,sans-serif" font-size="14" fill="#a0aec0" text-anchor="middle">WSLg 图形界面完全体验</text>
+
+<!-- WSLg Window Mockup -->
+<rect x="60" y="110" width="380" height="260" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<!-- Window title bar -->
+<rect x="60" y="110" width="380" height="30" rx="10" fill="#161b22"/>
+<circle cx="85" cy="125" r="6" fill="#ff5f57"/>
+<circle cx="105" cy="125" r="6" fill="#febc2e"/>
+<circle cx="125" cy="125" r="6" fill="#28c840"/>
+<text x="250" y="130" font-family="Microsoft YaHei,Arial" font-size="12" fill="#8b949e">WSLg - 图形应用</text>
+
+<!-- App Grid inside window -->
+<!-- Row 1 -->
+<rect x="80" y="155" width="90" height="75" rx="8" fill="#1c2128"/>
+<rect x="100" y="170" width="28" height="22" rx="4" fill="#E95420"/>
+<text x="125" y="218" font-family="Microsoft YaHei,Arial" font-size="11" fill="#c9d1d9" text-anchor="middle">编辑器</text>
+
+<rect x="185" y="155" width="90" height="75" rx="8" fill="#1c2128"/>
+<circle cx="230" cy="188" r="14" fill="none" stroke="#58a6ff" stroke-width="3"/>
+<line x1="238" y1="196" x2="248" y2="206" stroke="#58a6ff" stroke-width="3"/>
+<text x="230" y="218" font-family="Microsoft YaHei,Arial" font-size="11" fill="#c9d1d9" text-anchor="middle">浏览器</text>
+
+<rect x="290" y="155" width="90" height="75" rx="8" fill="#1c2128"/>
+<path d="M315 175 L330 175 L335 180 L335 195 L315 195 Z" fill="#f0b72f"/>
+<rect x="320" y="183" width="10" height="2" fill="#333"/>
+<text x="335" y="218" font-family="Microsoft YaHei,Arial" font-size="11" fill="#c9d1d9" text-anchor="middle">文件管理</text>
+
+<!-- Row 2 -->
+<rect x="133" y="245" width="90" height="75" rx="8" fill="#1c2128"/>
+<rect x="153" y="262" width="24" height="18" rx="3" fill="#a371f7"/>
+<circle cx="160" cy="271" r="4" fill="#fff"/><circle cx="168" cy="271" r="4" fill="#fff"/><circle cx="176" cy="271" r="4" fill="#fff"/>
+<text x="178" y="308" font-family="Microsoft YaHei,Arial" font-size="11" fill="#c9d1d9" text-anchor="middle">图片查看</text>
+
+<rect x="240" y="245" width="90" height="75" rx="8" fill="#1c2128"/>
+<rect x="258" y="260" width="54" height="34" rx="5" fill="#282c34" stroke="#61afef" stroke-width="1.5"/>
+<text x="270" y="280" font-family="Consolas,monospace" font-size="8" fill="#61afef">$ gedit</text>
+<text x="285" y="308" font-family="Microsoft YaHei,Arial" font-size="11" fill="#c9d1d9" text-anchor="middle">终端</text>
+
+<!-- Terminal commands -->
+<rect x="78" y="332" width="345" height="32" rx="6" fill="#21262d"/>
+<text x="88" y="352" font-family="Consolas,monospace" font-size="11" fill="#7ee787">$ gedit &amp;    $ firefox &amp;    $ nautilus . &amp;</text>
+
+<!-- Feature Cards (Right side) -->
+<text x="480" y="135" font-family="Microsoft YaHei,Arial,sans-serif" font-size="16" fill="#E95420" font-weight="bold">核心特性</text>
+
+
+  <rect x="468" y="150" width="155" height="72" rx="6" fill="#1e2433"/>
+  <circle cx="486" cy="170" r="10" fill="#e74c3c"/>
+  <text x="486" y="174" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+  <text x="504" y="173" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">无需 X Server</text>
+  <text x="478" y="195" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8899aa">内置 Wayland 支持，开箱即用</text>
+
+  <rect x="468" y="232" width="155" height="72" rx="6" fill="#1e2433"/>
+  <circle cx="486" cy="252" r="10" fill="#3498db"/>
+  <text x="486" y="256" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
+  <text x="504" y="255" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">GPU 加速渲染</text>
+  <text x="478" y="277" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8899aa">利用 Windows GPU 进行图形渲染</text>
+
+  <rect x="468" y="314" width="155" height="72" rx="6" fill="#1e2433"/>
+  <circle cx="486" cy="334" r="10" fill="#2ecc71"/>
+  <text x="486" y="338" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+  <text x="504" y="337" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">剪贴板共享</text>
+  <text x="478" y="359" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8899aa">Windows 与 Linux 剪贴板互通</text>
+
+  <rect x="638" y="150" width="155" height="72" rx="6" fill="#1e2433"/>
+  <circle cx="656" cy="170" r="10" fill="#f39c12"/>
+  <text x="656" y="174" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">4</text>
+  <text x="674" y="173" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">音频支持</text>
+  <text x="648" y="195" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8899aa">PulseAudio/PipeWire 完美集成</text>
+
+  <rect x="638" y="232" width="155" height="72" rx="6" fill="#1e2433"/>
+  <circle cx="656" cy="252" r="10" fill="#e74c3c"/>
+  <text x="656" y="256" font-family="Arial" font-size="11" fill="#fff" text-anchor="middle" font-weight="bold">5</text>
+  <text x="674" y="255" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">多显示器</text>
+  <text x="648" y="277" font-family="Microsoft YaHei,Arial" font-size="10" fill="#8899aa">支持外接多屏显示输出</text>
+
+<!-- Bottom tag -->
+<rect x="340" y="455" width="220" height="28" rx="14" fill="rgba(233,84,32,0.15)" stroke="#E95420" stroke-width="1"/>
+<text x="450" y="474" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">GUI / WSLg / 桌面应用</text>
+</svg>

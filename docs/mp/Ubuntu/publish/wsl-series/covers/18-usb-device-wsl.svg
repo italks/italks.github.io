@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg18" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#0a0f1a"/><stop offset="100%" stop-color="#131c31"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg18)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#18</text>
+
+<!-- Title -->
+<text x="450" y="50" font-family="Microsoft YaHei,Arial,sans-serif" font-size="27" fill="#fff" text-anchor="middle" font-weight="bold">USB 设备连接 WSL？USB/IP 与硬件直通实战</text>
+<text x="450" y="74" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#94a3b8" text-anchor="middle">让 U盘/串口/开发板在 WSL 中正常工作</text>
+
+<!-- USB Plug icon (left) -->
+<g transform="translate(60, 105)">
+  <rect x="0" y="25" width="80" height="42" rx="4" fill="#c0c0c0"/>
+  <rect x="-8" y="33" width="12" height="26" rx="2" fill="#888"/>
+  <rect x="76" y="33" width="12" height="26" rx="2" fill="#888"/>
+  <!-- USB symbol -->
+  <rect x="28" y="38" width="24" height="16" rx="3" fill="#333"/>
+  <polygon points="34,43 46,47 34,51" fill="#fff"/>
+  <!-- Metal part -->
+  <rect x="15" y="10" width="50" height="18" rx="3" fill="#d4af37"/>
+  <line x1="22" y1="19" x2="58" y2="19" stroke="#b8960f" stroke-width="1"/>
+</g>
+
+<!-- Arrow to WSL -->
+<path d="M160 145 L210 145" stroke="#E95420" stroke-width="3" marker-end="url(#arr18)"/>
+<defs><marker id="arr18" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0 L7 3.5 L0 7z" fill="#E95420"/></marker></defs>
+<text x="185" y="137" font-family="Arial" font-size="9" fill="#E95420">USB/IP</text>
+
+<!-- Terminal window -->
+<rect x="220" y="100" width="420" height="175" rx="8" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+<rect x="220" y="100" width="420" height="26" rx="8" fill="#161b22"/>
+<circle cx="242" cy="113" r="5" fill="#ff5f57"/><circle cx="258" cy="113" r="5" fill="#febc2e"/><circle cx="274" cy="113" r="5" fill="#28c840"/>
+<text x="410" y="118" font-family="Consolas,monospace" font-size="11" fill="#8b949e">bash — USB 设备管理</text>
+
+<text x="236" y="146" font-family="Consolas,monospace" font-size="11" fill="#79c0ff">$ usbipd list</text>
+<text x="240" y="166" font-family="Consolas,monospace" font-size="10" fill="#8b949e">BUSID  DEVICE                          STATE</text>
+<text x="240" y="184" font-family="Consolas,monospace" font-size="10" fill="#7ee787">1-1    SanDisk Ultra 32GB              Not attached</text>
+<text x="240" y="202" font-family="Consolas,monospace" font-size="10" fill="#7ee787">1-2    CH340 Serial Converter            Not attached</text>
+
+<text x="236" y="228" font-family="Consolas,monospace" font-size="11" fill="#ffa657">$ usbipd bind -b 1-1 &amp;&amp; wsl attach -b 1-1</text>
+<text x="236" y="252" font-family="Consolas,monospace" font-size="11" fill="#7ee787"># 设备已连接到 WSL！</text>
+<text x="236" y="270" font-family="Consolas,monospace" font-size="10" fill="#3fb950">$ lsusb</text>
+
+<!-- Step cards on right -->
+<text x="660" y="118" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">操作步骤</text>
+
+<rect x="652" y="130" width="228" height="55" rx="8" fill="#1e293b"/>
+<circle cx="674" y="157" r="13" fill="#E95420"/>
+<text x="674" y="162" font-family="Arial" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">1</text>
+<text x="697" y="152" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">安装驱动</text>
+<text x="697" y="172" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">Windows 端安装 usbipd-win</text>
+
+<rect x="652" y="195" width="228" height="55" rx="8" fill="#1e293b"/>
+<circle cx="674" y="222" r="13" fill="#3b82f6"/>
+<text x="674" y="227" font-family="Arial" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">2</text>
+<text x="697" y="217" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">绑定设备</text>
+<text x="697" y="237" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">usbipd bind -b [总线ID]</text>
+
+<rect x="652" y="260" width="228" height="55" rx="8" fill="#1e293b"/>
+<circle cx="674" y="287" r="13" fill="#10b981"/>
+<text x="674" y="292" font-family="Arial" font-size="13" fill="#fff" text-anchor="middle" font-weight="bold">3</text>
+<text x="697" y="282" font-family="Microsoft YaHei,Arial" font-size="12" fill="#e2e8f0" font-weight="bold">挂载到 WSL</text>
+<text x="697" y="302" font-family="Microsoft YaHei,Arial" font-size="10" fill="#94a3b8">wsl --attach -b [总线ID]</text>
+
+<!-- Supported devices -->
+<text x="50" y="305" font-family="Microsoft YaHei,Arial" font-size="13" fill="#E95420" font-weight="bold">支持的设备类型</text>
+<rect x="40" y="315" width="595" height="55" rx="8" fill="rgba(233,84,32,0.06)"/>
+
+<rect x="56" y="327" width="90" height="32" rx="6" fill="#1e293b"/>
+<text x="101" y="348" font-family="Microsoft YaHei,Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">U 盘 / 移动硬盘</text>
+
+<rect x="158" y="327" width="90" height="32" rx="6" fill="#1e293b"/>
+<text x="203" y="348" font-family="Microsoft YaHei,Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">串口转换器</text>
+
+<rect x="260" y="327" width="90" height="32" rx="6" fill="#1e293b"/>
+<text x="305" y="348" font-family="Microsoft YaHei,Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">Arduino 开发板</text>
+
+<rect x="362" y="327" width="90" height="32" rx="6" fill="#1e293b"/>
+<text x="407" y="348" font-family="Microsoft YaHei,Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">ESP32 / STM32</text>
+
+<rect x="464" y="327" width="70" height="32" rx="6" fill="#1e293b"/>
+<text x="499" y="348" font-family="Microsoft YaHei,Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">摄像头</text>
+
+<rect x="544" y="327" width="75" height="32" rx="6" fill="#1e293b"/>
+<text x="581" y="348" font-family="Microsoft YaHei,Arial" font-size="11" fill="#e2e8f0" text-anchor="middle">打印机</text>
+
+<!-- Note -->
+<rect x="650" y="330" width="230" height="35" rx="6" fill="rgba(59,130,246,0.08)" stroke="#3b82f6" stroke-width="1"/>
+<text x="765" y="352" font-family="Microsoft YaHei,Arial" font-size="10" fill="#93c5fd" text-anchor="middle">需要 Windows 11 22H2+ 版本</text>
+
+<!-- Tag -->
+<rect x="320" y="395" width="260" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="413" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">USB 设备 / 硬件直通 / 开发调试</text>
+</svg>

@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+<defs><linearGradient id="bg17" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" stop-color="#1a1b26"/><stop offset="100%" stop-color="#24283b"/></linearGradient></defs><rect width="900" height="500" fill="url(#bg17)" rx="12"/>
+<rect x="820" y="16" width="64" height="26" rx="13" fill="#E95420"/><text x="852" y="34" font-family="Arial,sans-serif" font-size="14" fill="#fff" text-anchor="middle" font-weight="bold">#17</text>
+
+<!-- Title -->
+<text x="450" y="50" font-family="Microsoft YaHei,Arial,sans-serif" font-size="27" fill="#fff" text-anchor="middle" font-weight="bold">WSL 终端美化大作战：Oh My Posh + 字体 + 主题</text>
+<text x="450" y="74" font-family="Microsoft YaHei,Arial,sans-serif" font-size="13" fill="#a9b1d6" text-anchor="middle">打造颜值与效率兼具的开发者终端</text>
+
+<!-- Beautiful terminal mockup (Tokyo Night style) -->
+<rect x="50" y="96" width="800" height="240" rx="10" fill="#1a1b26" stroke="#414868" stroke-width="1"/>
+<!-- Terminal title bar -->
+<rect x="50" y="96" width="800" height="28" rx="10" fill="#16161e"/>
+<circle cx="77" cy="110" r="6" fill="#f7768e"/><circle cx="97" cy="110" r="6" fill="#e0af68"/><circle cx="117" cy="110" r="6" fill="#9ece6a"/>
+<text x="440" y="115" font-family="Microsoft YaHei,Arial" font-size="11" fill="#565f89">Windows Terminal — Ubuntu</text>
+
+<!-- Oh My Posh prompt segments -->
+<rect x="66" y="138" width="768" height="185" rx="6" fill="#1a1b26"/>
+
+<!-- Prompt line 1: user@host segment -->
+<rect x="72" y="150" width="86" height="22" rx="4" fill="#7aa2f7"/>
+<text x="115" y="166" font-family="Consolas,monospace" font-size="11" fill="#1a1b26" text-anchor="middle" font-weight="bold">user</text>
+
+<rect x="158" y="150" width="4" height="22" fill="#7aa2f7"/>
+<rect x="162" y="150" width="92" height="22" rx="0" fill="#bb9af7"/>
+<text x="208" y="166" font-family="Consolas,monospace" font-size="11" fill="#1a1b26" text-anchor="middle" font-weight="bold">dev-machine</text>
+
+<rect x="254" y="150" width="4" height="22" fill="#bb9af7"/>
+<rect x="258" y="150" width="54" height="22" rx="0" fill="#9ece6a"/>
+<text x="285" y="166" font-family="Consolas,monospace" font-size="11" fill="#1a1b26" text-anchor="middle" font-weight="bold">~/wsl</text>
+
+<rect x="312" y="150" width="4" height="22" fill="#9ece6a"/>
+<rect x="316" y="150" width="52" height="22" rx="0" fill="#f7768e"/>
+<text x="342" y="166" font-family="Consolas,monospace" font-size="10" fill="#fff" text-anchor="middle">main</text>
+
+<rect x="368" y="150" width="4" height="22" fill="#f7768e"/>
+<text x="380" y="166" font-family="Consolas,monospace" font-size="11" fill="#7aa2f7">$</text>
+
+<text x="398" y="166" font-family="Consolas,monospace" font-size="11" fill="#c0caf5">git status &amp;&amp; npm test</text>
+
+<!-- Output line -->
+<text x="80" y="192" font-family="Consolas,monospace" font-size="10" fill="#9ece6a">On branch main</text>
+<text x="80" y="210" font-family="Consolas,monospace" font-size="10" fill="#c0caf5">nothing to commit, working tree clean</text>
+<text x="80" y="228" font-family="Consolas,monospace" font-size="10" fill="#9ece6a">PASS: 42/42 tests</text>
+<text x="80" y="246" font-family="Consolas,monospace" font-size="10" fill="#e0af68">Duration: 3.2s</text>
+
+<!-- Prompt line 2 (shorter path) -->
+<rect x="72" y="264" width="70" height="20" rx="4" fill="#7aa2f7"/>
+<text x="107" y="279" font-family="Consolas,monospace" font-size="10" fill="#1a1b26" text-anchor="middle" font-weight="bold">user</text>
+<rect x="142" y="264" width="4" height="20" fill="#7aa2f7"/>
+<rect x="146" y="264" width="64" height="20" fill="#9ece6a"/>
+<text x="178" y="279" font-family="Consolas,monospace" font-size="10" fill="#1a1b26" text-anchor="middle" font-weight="bold">~</text>
+<rect x="210" y="264" width="4" height="20" fill="#9ece6a"/>
+<text x="222" y="279" font-family="Consolas,monospace" font-size="11" fill="#7aa2f7">$</text>
+<text x="238" y="279" font-family="Consolas,monospace" font-size="11" fill="#c0caf5">_</text>
+
+<!-- Cursor blink effect -->
+<rect x="236" y="269" width="7" height="15" fill="#7aa2f7" opacity="0.7">
+
+</rect>
+
+<!-- Feature cards below terminal -->
+<text x="50" y="358" font-family="Microsoft YaHei,Arial" font-size="14" fill="#E95420" font-weight="bold">美化三要素</text>
+
+<!-- Card 1: Oh My Posh -->
+<rect x="50" y="370" width="255" height="72" rx="8" fill="#1e2030" stroke="#7aa2f7" stroke-width="1"/>
+<text x="177" y="393" font-family="Microsoft YaHei,Arial" font-size="13" fill="#7aa2f7" text-anchor="middle" font-weight="bold">Oh My Posh</text>
+<text x="70" y="415" font-family="Microsoft YaHei,Arial" font-size="10" fill="#a9b1d6">分段式提示符主题引擎</text>
+<text x="70" y="432" font-family="Consolas,monospace" font-size="9" fill="#565f89">200+ 主题可选，支持自定义</text>
+
+<!-- Card 2: Nerd Font -->
+<rect x="322" y="370" width="255" height="72" rx="8" fill="#1e2030" stroke="#9ece6a" stroke-width="1"/>
+<text x="449" y="393" font-family="Microsoft YaHei,Arial" font-size="13" fill="#9ece6a" text-anchor="middle" font-weight="bold">Nerd Font 字体</text>
+<text x="342" y="415" font-family="Microsoft YaHei,Arial" font-size="10" fill="#a9b1d6">等宽编程字体 + 图标集</text>
+<text x="342" y="432" font-family="Consolas,monospace" font-size="9" fill="#565f89">推荐: JetBrainsMono Nerd Font</text>
+
+<!-- Card 3: Windows Terminal -->
+<rect x="595" y="370" width="255" height="72" rx="8" fill="#1e2030" stroke="#f7768e" stroke-width="1"/>
+<text x="722" y="393" font-family="Microsoft YaHei,Arial" font-size="13" fill="#f7768e" text-anchor="middle" font-weight="bold">Windows Terminal</text>
+<text x="615" y="415" font-family="Microsoft YaHei,Arial" font-size="10" fill="#a9b1d6">GPU 渲染 + 标签页 + 分屏</text>
+<text x="615" y="432" font-family="Consolas,monospace" font-size="9" fill="#565f89">透明度、背景图、配色方案</text>
+
+<!-- Tag -->
+<rect x="330" y="460" width="240" height="26" rx="13" fill="rgba(233,84,32,0.15)"/>
+<text x="450" y="478" font-family="Microsoft YaHei,Arial" font-size="12" fill="#E95420" text-anchor="middle" font-weight="bold">终端美化 / Oh My Posh / 主题</text>
+</svg>
