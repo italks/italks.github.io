@@ -1,0 +1,244 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img">
+  <title>WSL + Ubuntu 部署 Hermes Agent 自进化 AI 助手</title>
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    
+    <!-- Ubuntu 橙色渐变 -->
+    <linearGradient id="ubuntuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#DD4814"/>
+    </linearGradient>
+    
+    <!-- AI 紫蓝渐变 -->
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#772ce8"/>
+      <stop offset="50%" style="stop-color:#a855f7"/>
+      <stop offset="100%" style="stop-color:#E95420"/>
+    </linearGradient>
+    
+    <!-- 发光效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 强发光 -->
+    <filter id="strongGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 卡片阴影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 背景装饰网格 -->
+  <g opacity="0.05">
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="900" height="500" fill="url(#grid)"/>
+  </g>
+  
+  <!-- 背景装饰圆环 -->
+  <circle cx="750" cy="120" r="180" fill="none" stroke="#E95420" stroke-width="1" opacity="0.08"/>
+  <circle cx="750" cy="120" r="140" fill="none" stroke="#a855f7" stroke-width="1" opacity="0.06"/>
+  <circle cx="150" cy="400" r="120" fill="none" stroke="#E95420" stroke-width="1" opacity="0.06"/>
+  
+  <!-- 装饰粒子/光点 -->
+  <g fill="#E95420" opacity="0.6">
+    <circle cx="80" cy="80" r="2"/>
+    <circle cx="830" cy="420" r="2.5"/>
+    <circle cx="450" cy="60" r="1.5"/>
+    <circle cx="200" cy="350" r="2"/>
+    <circle cx="700" cy="380" r="1.5"/>
+  </g>
+  <g fill="#a855f7" opacity="0.5">
+    <circle cx="130" cy="150" r="1.5"/>
+    <circle cx="800" cy="280" r="2"/>
+    <circle cx="350" cy="430" r="1.5"/>
+    <circle cx="600" cy="90" r="2"/>
+  </g>
+
+  <!-- ===== 左侧：终端窗口模拟 ===== -->
+  <g transform="translate(45, 85)" filter="url(#cardShadow)">
+    <!-- 终端窗口背景 -->
+    <rect rx="12" ry="12" width="340" height="230" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    
+    <!-- 标题栏 -->
+    <rect rx="12" ry="12" width="340" height="32" fill="#161b22"/>
+    <rect x="0" y="20" width="340" height="12" fill="#161b22"/> <!-- 覆盖底部圆角 -->
+    
+    <!-- 窗口按钮 -->
+    <circle cx="22" cy="16" r="6" fill="#ff5f56"/>
+    <circle cx="44" cy="16" r="6" fill="#ffbd2e"/>
+    <circle cx="66" cy="16" r="6" fill="#27ca40"/>
+    
+    <!-- 标题栏文字 -->
+    <text x="175" y="21" text-anchor="middle" font-family="Consolas, Monaco, monospace" font-size="11" fill="#8b949e">wsl ~ ubuntu</text>
+    
+    <!-- 终端内容 -->
+    <g font-family="Consolas, Monaco, monospace" font-size="13">
+      <!-- 命令行提示符和命令 -->
+      <text x="18" y="58" fill="#8b949e">user@ubuntu:~$</text>
+      
+      <text x="128" y="58" fill="#79c0ff" font-weight="bold">curl -fsSL https://raw.git...</text>
+      <text x="308" y="58" fill="#f0883e">| bash</text>
+      
+      <!-- 安装进度输出 -->
+      <text x="18" y="82" fill="#7ee787">✓ Installing uv package manager...</text>
+      <text x="18" y="102" fill="#7ee787">✓ Python 3.11 configured</text>
+      <text x="18" y="122" fill="#7ee787">✓ Node.js v22 installed</text>
+      <text x="18" y="142" fill="#7ee787">✓ Setting up Hermes Agent...</text>
+      
+      <!-- 成功提示 -->
+      <text x="18" y="170" fill="#E95420" font-weight="bold" filter="url(#glow)">🎉 Installation complete!</text>
+      
+      <!-- 下一步提示 -->
+      <text x="18" y="198" fill="#8b949e">user@ubuntu:~$</text>
+      <text x="128" y="198" fill="#a5d6ff">hermes</text>
+      <rect x="196" y="187" width="8" height="14" fill="#a5d6ff" opacity="0.8">
+        <animate attributeName="opacity" values="1;0;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
+
+  <!-- ===== 中央：Hermes Logo / 飞马图标 ===== -->
+  <g transform="translate(470, 175)" filter="url(#strongGlow)">
+    <!-- 外圈光环动画 -->
+    <circle cx="0" cy="0" r="75" fill="none" stroke="url(#aiGrad)" stroke-width="2" opacity="0.3" stroke-dasharray="8 4">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+    </circle>
+    
+    <!-- 内圈 -->
+    <circle cx="0" cy="0" r="62" fill="#16213e" stroke="url(#aiGrad)" stroke-width="2.5"/>
+    
+    <!-- 飞马/Hermes 图标 - 简化的飞马剪影 -->
+    <g transform="scale(1.3)" fill="none" stroke="url(#aiGrad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+      <!-- 马头 -->
+      <path d="M-8,-15 Q-5,-24 5,-24 Q12,-24 14,-17 Q16,-12 12,-8" />
+      <!-- 鬃毛 -->
+      <path d="M0,-23 Q-3,-28 -8,-26 Q-12,-24 -10,-19" />
+      <path d="M3,-23 Q0,-29 -5,-28 Q-9,-26 -7,-21" />
+      <!-- 身体 -->
+      <path d="M12,-8 Q22,-5 25,5 Q27,15 20,22" />
+      <!-- 前腿 -->
+      <path d="M18,2 Q22,10 20,20" />
+      <path d="M22,5 Q28,12 26,22" />
+      <!-- 后腿 -->
+      <path d="M20,22 Q16,30 18,38" />
+      <path d="M25,18 Q24,28 28,35" />
+      <!-- 翅膀 -->
+      <path d="M8,-8 Q0,-18 -10,-20 Q-20,-22 -25,-15 Q-30,-8 -22,0 Q-14,8 -2,2" fill="url(#aiGrad)" fill-opacity="0.15"/>
+      <!-- 翅膀羽毛纹理 -->
+      <path d="M-5,-12 Q-12,-16 -18,-14" stroke-width="1.5" opacity="0.6"/>
+      <path d="M-3,-8 Q-10,-12 -16,-8" stroke-width="1.5" opacity="0.6"/>
+      <path d="M0,-3 Q-6,-8 -12,-3" stroke-width="1.5" opacity="0.6"/>
+      <!-- 尾巴 -->
+      <path d="M20,22 Q28,26 32,22 Q36,18 33,12" stroke-width="2"/>
+    </g>
+    
+    <!-- 底部文字标签 -->
+    <text x="0" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="15" font-weight="bold" fill="url(#aiGrad)">HERMES AGENT</text>
+  </g>
+
+  <!-- ===== 右侧：特性卡片 ===== -->
+  <g transform="translate(555, 85)" filter="url(#cardShadow)">
+    <!-- 特性卡片背景 -->
+    <rect rx="12" ry="12" width="300" height="230" fill="#0d1117" stroke="#30363d" stroke-width="1"/>
+    
+    <!-- 标题区域 -->
+    <rect rx="12" ry="12" width="300" height="42" fill="#161b22"/>
+    <rect x="0" y="30" width="300" height="12" fill="#161b22"/>
+    <text x="150" y="28" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#E95420">✨ 核心能力</text>
+    
+    <!-- 特性列表 -->
+    <g font-family="Arial, sans-serif" font-size="13">
+      <!-- 特性1：自进化记忆 -->
+      <g transform="translate(18, 62)">
+        <rect rx="6" ry="6" width="264" height="36" fill="#161b22"/>
+        <circle cx="24" cy="18" r="10" fill="#E95420" fill-opacity="0.15"/>
+        <text x="24" y="23" text-anchor="middle" font-size="14">🧠</text>
+        <text x="44" y="15" fill="#e6edf3" font-weight="bold">自进化记忆</text>
+        <text x="44" y="30" fill="#8b949e" font-size="11">跨会话记住偏好，越用越懂你</text>
+      </g>
+      
+      <!-- 特性2：多模型支持 -->
+      <g transform="translate(18, 108)">
+        <rect rx="6" ry="6" width="264" height="36" fill="#161b22"/>
+        <circle cx="24" cy="18" r="10" fill="#a855f7" fill-opacity="0.15"/>
+        <text x="24" y="23" text-anchor="middle" font-size="14">🤖</text>
+        <text x="44" y="15" fill="#e6edf3" font-weight="bold">200+ 大模型</text>
+        <text x="44" y="30" fill="#8b949e" font-size="11">OpenRouter / DeepSeek / GPT-4o</text>
+      </g>
+      
+      <!-- 特性3：完全开源 -->
+      <g transform="translate(18, 154)">
+        <rect rx="6" ry="6" width="264" height="36" fill="#161b22"/>
+        <circle cx="24" cy="18" r="10" fill="#27ca40" fill-opacity="0.15"/>
+        <text x="24" y="23" text-anchor="middle" font-size="14">📦</text>
+        <text x="44" y="15" fill="#e6edf3" font-weight="bold">完全开源免费</text>
+        <text x="44" y="30" fill="#8b949e" font-size="11">MIT 协议，可自由部署修改</text>
+      </g>
+    </g>
+  </g>
+
+  <!-- ===== 底部标题区 ===== -->
+  <g transform="translate(0, 340)">
+    <!-- 标题背景装饰条 -->
+    <rect x="50" y="0" width="4" height="70" rx="2" fill="url(#ubuntuGrad)" filter="url(#glow)"/>
+    
+    <!-- 主标题 -->
+    <text x="68" y="38" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="30" font-weight="bold" fill="#ffffff">
+      WSL + Ubuntu 部署
+    </text>
+    <text x="370" y="38" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="30" font-weight="bold" fill="url(#ubuntuGrad)">
+      Hermes Agent
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="68" y="65" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="16" fill="#8b949e">
+      一行命令拥有「越用越聪明」的自进化 AI 助手 · 20 分钟从零到上手
+    </text>
+  </g>
+
+  <!-- ===== 底部标签栏 ===== -->
+  <g transform="translate(50, 440)" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="12">
+    <!-- 标签 -->
+    <rect rx="14" ry="14" width="72" height="26" fill="#E95420" fill-opacity="0.15"/>
+    <text x="36" y="18" text-anchor="middle" fill="#E95420" font-weight="bold">WSL2</text>
+    
+    <rect x="82" rx="14" ry="14" width="72" height="26" fill="#a855f7" fill-opacity="0.15"/>
+    <text x="118" y="18" text-anchor="middle" fill="#a855f7" font-weight="bold">AI Agent</text>
+    
+    <rect x="164" rx="14" ry="14" width="76" height="26" fill="#27ca40" fill-opacity="0.15"/>
+    <text x="202" y="18" text-anchor="middle" fill="#27ca40" font-weight="bold">开源免费</text>
+    
+    <rect x="250" rx="14" ry="14" width="88" height="26" fill="#79c0ff" fill-opacity="0.15"/>
+    <text x="294" y="18" text-anchor="middle" fill="#79c0ff" font-weight="bold">Ubuntu 教程</text>
+
+    <rect x="348" rx="14" ry="14" width="84" height="26" fill="#f0883e" fill-opacity="0.15"/>
+    <text x="390" y="18" text-anchor="middle" fill="#f0883e" font-weight="bold">新手友好</text>
+  </g>
+
+  <!-- 右下角 Logo 水印 -->
+  <g transform="translate(820, 455)">
+    <text text-anchor="end" font-family="Arial, sans-serif" font-size="11" fill="#30363d">UbuntuNews</text>
+  </g>
+</svg>
