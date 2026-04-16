@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080c24"/>
+      <stop offset="100%" stop-color="#0f1540"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FF6B35"/>
+      <stop offset="100%" stop-color="#F7931E"/>
+    </linearGradient>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="10" flood-color="#000" flood-opacity="0.35"/>
+    </filter>
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="12" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- 顶部色条 -->
+  <rect width="900" height="3" fill="url(#accent)"/>
+
+  <!-- ========== 标题区（留白充足，无重叠）========== -->
+  <g transform="translate(450, 70)">
+    <!-- 主标题 -->
+    <text y="0" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="40" font-weight="800" fill="#fff" filter="url(#glow)">
+      缝合 Antigravity + Flutter
+    </text>
+    
+    <!-- 副标题 -->
+    <text y="36" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="17" fill="#94a3b8" font-weight="400">
+      用 Vibe Coding 10 分钟做一个能跑的 App
+    </text>
+  </g>
+
+  <!-- 标签行（紧凑排列在副标题下方） -->
+  <g transform="translate(450, 130)" font-family="'PingFang SC',Arial,sans-serif" font-size="11">
+    <rect x="-280" y="-11" width="90" height="22" rx="11" fill="rgba(66,133,244,0.15)"/>
+    <text x="-235" y="4" text-anchor="middle" fill="#4285F4" font-weight="600">Vibe Coding</text>
+    
+    <rect x="-175" y="-11" width="68" height="22" rx="11" fill="rgba(84,197,248,0.15)"/>
+    <text x="-141" y="4" text-anchor="middle" fill="#54C5F8" font-weight="600">Flutter</text>
+    
+    <rect x="-93" y="-11" width="86" height="22" rx="11" fill="rgba(155,89,182,0.15)"/>
+    <text x="-50" y="4" text-anchor="middle" fill="#C39BD3" font-weight="600">AI 自动编码</text>
+    
+    <rect x="7" y="-11" width="78" height="22" rx="11" fill="rgba(52,168,83,0.15)"/>
+    <text x="46" y="4" text-anchor="middle" fill="#34A853" font-weight="600">真机可跑</text>
+    
+    <rect x="99" y="-11" width="82" height="22" rx="11" fill="url(#accent)" opacity="0.9"/>
+    <text x="140" y="4" text-anchor="middle" fill="#fff" font-weight="600">2026 最新</text>
+  </g>
+
+  <!-- 分隔线 -->
+  <line x1="60" y1="158" x2="840" y2="158" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+
+  <!-- ========== 四步流程（核心区域，卡片式布局）========== -->
+  
+  <!-- Step 1 -->
+  <g transform="translate(50, 180)">
+    <rect width="185" height="220" rx="14" fill="#111827" stroke="rgba(66,133,244,0.18)" filter="url(#shadow)"/>
+    <!-- 编号 -->
+    <circle cx="28" cy="30" r="18" fill="#4285F4"/>
+    <text x="28" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff">1</text>
+    <text x="56" y="36" font-family="'PingFang SC',sans-serif" font-size="15" font-weight="700" fill="#e2e8f0">描述需求</text>
+    
+    <!-- 内容框 -->
+    <rect x="16" y="58" width="153" height="72" rx="8" fill="#1a2035"/>
+    <text x="92" y="80" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="11" fill="#94a3b8">自然语言输入</text>
+    <text x="92" y="100" text-anchor="middle" font-family="monospace" font-size="10" fill="#54C5F8">"做个记账App"</text>
+    <text x="92" y="118" text-anchor="middle" font-family="monospace" font-size="10" fill="#64748b">支持分类统计图表</text>
+    
+    <!-- 图标 -->
+    <text x="92" y="162" text-anchor="middle" font-size="28">💬</text>
+    <text x="92" y="196" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="11" fill="#64748b">Prompt 驱动</text>
+  </g>
+
+  <!-- 箭头 -->
+  <text x="252" y="295" text-anchor="middle" font-size="20" fill="#4285F4" opacity="0.5">→</text>
+
+  <!-- Step 2 -->
+  <g transform="translate(272, 180)">
+    <rect width="185" height="220" rx="14" fill="#111827" stroke="rgba(155,89,182,0.2)" filter="url(#shadow)"/>
+    <circle cx="28" cy="30" r="18" fill="#9B59B6"/>
+    <text x="28" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff">2</text>
+    <text x="56" y="36" font-family="'PingFang SC',sans-serif" font-size="15" font-weight="700" fill="#e2e8f0">AI 生成代码</text>
+    
+    <rect x="16" y="58" width="153" height="72" rx="8" fill="#1a2035"/>
+    <text x="26" y="78" font-family="monospace" font-size="9" fill="#c39bd3">class ExpenseApp</text>
+    <text x="26" y="93" font-family="monospace" font-size="9" fill="#94a3b8">  extends StatelessWidget</text>
+    <text x="26" y="108" font-family="monospace" font-size="9" fill="#54C5F8">  Widget build() {...}</text>
+    <text x="26" y="123" font-family="monospace" font-size="9" fill="#64748b">// Antigravity 自动生成</text>
+    
+    <text x="92" y="166" text-anchor="middle" font-size="28">🤖</text>
+    <text x="92" y="200" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="11" fill="#64748b">端到端生成</text>
+  </g>
+
+  <!-- 箭头 -->
+  <text x="474" y="295" text-anchor="middle" font-size="20" fill="#9B59B6" opacity="0.5">→</text>
+
+  <!-- Step 3 -->
+  <g transform="translate(494, 180)">
+    <rect width="185" height="220" rx="14" fill="#111827" stroke="rgba(84,197,248,0.2)" filter="url(#shadow)"/>
+    <circle cx="28" cy="30" r="18" fill="#02569B"/>
+    <text x="28" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff">3</text>
+    <text x="56" y="36" font-family="'PingFang SC',sans-serif" font-size="15" font-weight="700" fill="#e2e8f0">预览调试</text>
+    
+    <!-- 手机模拟框 -->
+    <rect x="50" y="52" width="85" height="95" rx="8" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+    <rect x="55" y="58" width="75" height="75" rx="3" fill="#1e293b"/>
+    <rect x="60" y="63" width="65" height="13" rx="3" fill="#4285F4" opacity="0.7"/>
+    <text x="92" y="73" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="7" font-weight="bold" fill="#fff">记账助手</text>
+    <rect x="62" y="82" width="38" height="6" rx="2" fill="#334155"/>
+    <rect x="62" y="92" width="50" height="6" rx="2" fill="#334155"/>
+    <rect x="62" y="102" width="30" height="6" rx="2" fill="#34A853" opacity="0.6"/>
+    <rect x="82" y="125" width="16" height="3" rx="1.5" fill="#475569"/>
+    
+    <text x="92" y="170" text-anchor="middle" font-size="26">📱</text>
+    <text x="92" y="202" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="11" fill="#64748b">Hot Reload 迭代</text>
+  </g>
+
+  <!-- 箭头 -->
+  <text x="696" y="295" text-anchor="middle" font-size="20" fill="#02569B" opacity="0.5">→</text>
+
+  <!-- Step 4（高亮 - 最终成果）-->
+  <g transform="translate(716, 165)">
+    <rect width="164" height="250" rx="14" fill="rgba(255,107,53,0.06)" stroke="rgba(255,107,53,0.35)" stroke-width="1.5" filter="url(#shadow)"/>
+    <circle cx="28" cy="30" r="18" fill="url(#accent)"/>
+    <text x="28" y="36" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" font-weight="bold" fill="#fff">4</text>
+    <text x="56" y="36" font-family="'PingFang SC',sans-serif" font-size="15" font-weight="700" fill="#FF6B35">真机运行</text>
+    
+    <!-- 大手机 -->
+    <g transform="translate(32, 52)">
+      <rect width="100" height="150" rx="10" fill="#0f172a" stroke="rgba(255,107,53,0.3)" stroke-width="1.5"/>
+      <rect x="6" y="8" width="88" height="126" rx="3" fill="#1e293b"/>
+      <rect x="11" y="13" width="78" height="18" rx="4" fill="#FF6B35" opacity="0.85"/>
+      <text x="50" y="26" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" font-weight="bold" fill="#fff">记账助手</text>
+      <text x="50" y="48" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" fill="#64748b">本月支出</text>
+      <text x="50" y="67" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" font-weight="bold" fill="#FF6B35">¥3,280</text>
+      <rect x="16" y="80" width="68" height="7" rx="2" fill="#334155"/>
+      <rect x="16" y="91" width="58" height="7" rx="2" fill="#334155"/>
+      <rect x="16" y="102" width="62" height="7" rx="2" fill="#334155"/>
+      <rect x="16" y="113" width="45" height="7" rx="2" fill="#334155"/>
+      <rect x="40" y="128" width="20" height="3" rx="1.5" fill="#475569"/>
+    </g>
+    
+    <!-- 成功标记 -->
+    <circle cx="138" cy="222" r="13" fill="#34A853"/>
+    <text x="138" y="227" text-anchor="middle" font-size="13" fill="#fff">✓</text>
+    <text x="82" y="242" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="12" font-weight="700" fill="#34A853">10 分钟完成!</text>
+  </g>
+
+  <!-- ========== 底部信息条 ========== -->
+  <line x1="50" y1="435" x2="850" y2="435" stroke="rgba(255,255,255,0.05)" stroke-width="1"/>
+  
+  <g transform="translate(50, 450)" font-family="'PingFang SC',Arial,sans-serif">
+    <text x="0" y="14" font-size="11" fill="#64748b">工具栈：</text>
+    <text x="55" y="14" font-size="12" font-weight="600" fill="#e2e8f0">Antigravity · Flutter · Firebase</text>
+    
+    <text x="290" y="14" font-size="11" fill="#64748b">亮点：</text>
+    <text x="330" y="14" font-size="12" font-weight="600" fill="#FF6B35">零基础 · 全AI生成 · 可落地</text>
+    
+    <text x="550" y="14" font-size="11" fill="#64748b">适合：</text>
+    <text x="588" y="14" font-size="12" font-weight="600" fill="#54C5F8">MVP / 原型 / Side Project</text>
+    
+    <!-- 时间徽章 -->
+    <rect x="750" y="0" width="80" height="24" rx="12" fill="rgba(52,168,83,0.12)"/>
+    <text x="790" y="16" text-anchor="middle" font-size="13" font-weight="800" fill="#34A853">10min</text>
+  </g>
+
+  <!-- 角落装饰 -->
+  <path d="M0 0 L30 0 L0 30Z" fill="#4285F4" opacity="0.07"/>
+  <path d="M900 500 L870 500 L900 470Z" fill="#FF6B35" opacity="0.07"/>
+</svg>
