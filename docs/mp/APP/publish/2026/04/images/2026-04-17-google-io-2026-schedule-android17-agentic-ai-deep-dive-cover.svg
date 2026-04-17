@@ -1,0 +1,219 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#070b1e"/>
+      <stop offset="60%" stop-color="#0f1542"/>
+      <stop offset="100%" stop-color="#0a0f28"/>
+    </linearGradient>
+
+    <!-- 顶部色条 -->
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Agent 光晕 -->
+    <radialGradient id="agentGlow" cx="50%" cy="45%" r="45%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.14"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- 卡片渐变 -->
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.06)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.015)"/>
+    </linearGradient>
+
+    <!-- 强调渐变 -->
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+
+    <filter id="shadow" x="-8%" y="-8%" width="116%" height="130%">
+      <feDropShadow dx="0" dy="6" stdDeviation="16" flood-color="#000" flood-opacity="0.45"/>
+    </filter>
+
+    <filter id="glow" x="-15%" y="-15%" width="130%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- 中心光晕 -->
+  <ellipse cx="450" cy="250" rx="400" ry="240" fill="url(#agentGlow)"/>
+
+  <!-- 顶部色条 -->
+  <rect width="900" height="3" fill="url(#bar)"/>
+
+  <!-- ========== 标题区 ========== -->
+
+  <!-- I/O 徽标 -->
+  <g transform="translate(450, 62)">
+    <text x="-72" y="0" text-anchor="middle" font-family="'Inter',Arial,sans-serif" font-size="46" font-weight="800" fill="#fff" letter-spacing="5">I</text>
+    <circle cx="-32" cy="-15" r="14" fill="none" stroke="#fff" stroke-width="3.5"/>
+    <text x="0" y="0" text-anchor="middle" font-family="'Inter',Arial,sans-serif" font-size="46" font-weight="800" fill="#fff" letter-spacing="5">O</text>
+    <text x="42" y="-2" font-family="'Inter',Arial,sans-serif" font-size="20" font-weight="700" fill="#a855f7" letter-spacing="10">2026</text>
+  </g>
+
+  <!-- 主标题 -->
+  <text x="450" y="120" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="30" font-weight="800" fill="#fff" filter="url(#glow)">
+    Android 17「代理式自动化」来了
+  </text>
+
+  <!-- 钩子副标题 -->
+  <text x="450" y="152" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="15" fill="#94a3b8">
+    你的 App，准备好被 AI 接管了吗？
+  </text>
+
+  <!-- 分隔线 -->
+  <line x1="200" y1="178" x2="700" y2="178" stroke="rgba(168,85,247,0.18)" stroke-width="1"/>
+
+
+  <!-- ========== 核心：三大看点（横向大卡片）========== -->
+
+  <!-- 卡片 1: Agentic AI — 最大焦点 -->
+  <g transform="translate(40, 200)">
+    <rect width="270" height="230" rx="18" fill="url(#card)" stroke="rgba(168,85,247,0.35)" stroke-width="1.5" filter="url(#shadow)"/>
+
+    <!-- HOT 角标 -->
+    <g transform="translate(226, -12)">
+      <rect x="-26" y="-12" width="52" height="24" rx="12" fill="#ef4444"/>
+      <text x="0" y="4" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="#fff">HOT</text>
+    </g>
+
+    <!-- 图标 + 编号 -->
+    <circle cx="44" cy="40" r="26" fill="rgba(168,85,247,0.14)"/>
+    <text x="44" y="48" text-anchor="middle" font-size="24">🤖</text>
+
+    <text x="82" y="34" font-family="'PingFang SC',sans-serif" font-size="18" font-weight="700" fill="#f1f5f9">Agentic AI</text>
+    <text x="82" y="54" font-family="'PingFang SC',sans-serif" font-size="11" fill="#a855f7">代理式自动化</text>
+
+    <!-- 核心描述 -->
+    <rect x="18" y="76" width="234" height="68" rx="12" fill="rgba(168,85,247,0.05)"/>
+    <text x="135" y="100" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="13" fill="#e2e8f0" font-weight="500">
+      AI Agent 自主调用你的 App API
+    </text>
+    <text x="135" y="122" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="11" fill="#94a3b8">
+      用户甚至不需要打开 App
+    </text>
+
+    <!-- 变化箭头对比 -->
+    <g transform="translate(18, 156)">
+      <rect width="108" height="54" rx="10" fill="rgba(100,116,139,0.08)" stroke="rgba(100,116,139,0.1)" stroke-width="0.5"/>
+      <text x="54" y="22" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" fill="#64748b">打开App → 点击</text>
+      <text x="54" y="38" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" fill="#64748b">手动操作完成</text>
+      
+      <!-- 箭头 -->
+      <text x="120" y="32" font-size="18" fill="#a855f7" opacity="0.5">→</text>
+      
+      <rect x="134" width="108" height="54" rx="10" fill="rgba(168,85,247,0.07)" stroke="rgba(168,85,247,0.15)" stroke-width="0.5"/>
+      <text x="188" y="22" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" fill="#a855f7" font-weight="600">AI理解意图</text>
+      <text x="188" y="38" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" fill="#a855f7" font-weight="600">自动调用完成</text>
+    </g>
+
+    <!-- 底签 -->
+    <rect x="64" y="204" width="142" height="20" rx="10" fill="rgba(239,68,68,0.1)"/>
+    <text x="135" y="218" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9.5" font-weight="600" fill="#ef4444">Android 17 最大变化</text>
+  </g>
+
+
+  <!-- 卡片 2: Gemini 3 + AICore -->
+  <g transform="translate(330, 200)">
+    <rect width="260" height="110" rx="16" fill="url(#card)" stroke="rgba(52,168,83,0.2)" stroke-width="1" filter="url(#shadow)"/>
+
+    <circle cx="38" cy="36" r="22" fill="rgba(52,168,83,0.12)"/>
+    <text x="38" y="43" text-anchor="middle" font-size="20">🧠</text>
+
+    <text x="72" y="31" font-family="'PingFang SC',sans-serif" font-size="16" font-weight="700" fill="#f1f5f9">Gemini 3</text>
+    <text x="72" y="49" font-family="'PingFang SC',sans-serif" font-size="10" fill="#64748b">系统级深度集成</text>
+
+    <line x1="18" y1="66" x2="242" y2="66" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+    <g font-family="'PingFang SC',sans-serif" font-size="11" fill="#94a3b8">
+      <circle cx="30" cy="84" r="3" fill="#34A853"/>
+      <text x="40" y="88">AICore 2.0 运行时</text>
+
+      <circle cx="148" cy="84" r="3" fill="#34A853"/>
+      <text x="158" y="88">Function Calling</text>
+    </g>
+  </g>
+
+  <!-- 卡片 3: 日程 & 倒计时 -->
+  <g transform="translate(330, 324)">
+    <rect width="260" height="106" rx="16" fill="url(#card)" stroke="rgba(249,115,22,0.25)" stroke-width="1" filter="url(#shadow)"/>
+
+    <circle cx="38" cy="34" r="22" fill="rgba(249,115,22,0.12)"/>
+    <text x="38" y="41" text-anchor="middle" font-size="20">📅</text>
+
+    <!-- 时间信息 -->
+    <text x="72" y="29" font-family="'PingFang SC',sans-serif" font-size="15" font-weight="700" fill="#f97316">5月19-20日</text>
+    <text x="72" y="47" font-family="'PingFang SC',sans-serif" font-size="10" fill="#64748b">山景城 · 8 场重磅 Session</text>
+
+    <line x1="18" y1="62" x2="242" y2="62" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+    <!-- 倒计时大字 -->
+    <text x="80" y="90" text-anchor="middle" font-family="'Inter',Arial,sans-serif" font-size="32" font-weight="800" fill="url(#accent)">32</text>
+    <text x="118" y="88" font-family="'PingFang SC',sans-serif" font-size="13" font-weight="600" fill="#f97316">天后开幕</text>
+  </g>
+
+  <!-- 卡片 4: 其他变化（竖向小列表） -->
+  <g transform="translate(610, 200)">
+    <rect width="250" height="230" rx="16" fill="url(#card)" stroke="rgba(255,255,255,0.06)" stroke-width="1" filter="url(#shadow)"/>
+
+    <text x="125" y="32" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="13" font-weight="700" fill="#64748b">更多重要变化</text>
+
+    <line x1="30" y1="48" x2="220" y2="48" stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+
+    <!-- 列表项 -->
+    <g transform="translate(24, 64)">
+      <rect width="202" height="36" rx="10" fill="rgba(66,133,244,0.06)"/>
+      <circle cx="22" cy="18" r="10" fill="rgba(66,133,244,0.12)"/>
+      <text x="22" y="22" text-anchor="middle" font-size="12">🖥️</text>
+      <text x="42" y="16" font-family="'PingFang SC',sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">桌面模式</text>
+      <text x="42" y="30" font-family="'PingFang SC',sans-serif" font-size="9" fill="#64748b">窗口化多任务 / 响应式布局</text>
+    </g>
+
+    <g transform="translate(24, 108)">
+      <rect width="202" height="36" rx="10" fill="rgba(251,188,4,0.06)"/>
+      <circle cx="22" cy="18" r="10" fill="rgba(251,188,4,0.12)"/>
+      <text x="22" y="22" text-anchor="middle" font-size="12">🔗</text>
+      <text x="42" y="16" font-family="'PingFang SC',sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">AI Intent v2.0</text>
+      <text x="42" y="30" font-family="'PingFang SC',sans-serif" font-size="9" fill="#64748b">跨App链式调用 / 结构化输出</text>
+    </g>
+
+    <g transform="translate(24, 152)">
+      <rect width="202" height="36" rx="10" fill="rgba(239,68,68,0.06)"/>
+      <circle cx="22" cy="18" r="10" fill="rgba(239,68,68,0.12)"/>
+      <text x="22" y="22" text-anchor="middle" font-size="12">🔒</text>
+      <text x="42" y="16" font-family="'PingFang SC',sans-serif" font-size="12" font-weight="600" fill="#e2e8f0">安全与隐私</text>
+      <text x="42" y="30" font-family="'PingFang SC',sans-serif" font-size="9" fill="#64748b">权限粒度 / 审计日志 / 沙箱隔离</text>
+    </g>
+
+    <!-- 适用人群标签组 -->
+    <g transform="translate(24, 198)">
+      <rect x="0" y="0" width="58" height="20" rx="10" fill="rgba(66,133,244,0.1)"/>
+      <text x="29" y="14" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" font-weight="600" fill="#4285F4">Android</text>
+
+      <rect x="65" y="0" width="50" height="20" rx="10" fill="rgba(84,197,248,0.1)"/>
+      <text x="90" y="14" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" font-weight="600" fill="#54C5F8">Flutter</text>
+
+      <rect x="121" y="0" width="56" height="20" rx="10" fill="rgba(168,85,247,0.1)"/>
+      <text x="149" y="14" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="9" font-weight="600" fill="#a855f7">AI 开发者</text>
+    </g>
+  </g>
+
+  <!-- ========== 极简底部 ========== -->
+  <g transform="translate(450, 472)">
+    <text x="0" y="0" text-anchor="middle" font-family="'PingFang SC',sans-serif" font-size="10" fill="#475569">
+      移动开发前沿 · AI × Android · 备战指南
+    </text>
+  </g>
+
+  <!-- 装饰角标 -->
+  <path d="M0 0 L28 0 L0 28Z" fill="#a855f7" opacity="0.07"/>
+  <path d="M900 500 L872 500 L900 472Z" fill="#f97316" opacity="0.06"/>
+</svg>
