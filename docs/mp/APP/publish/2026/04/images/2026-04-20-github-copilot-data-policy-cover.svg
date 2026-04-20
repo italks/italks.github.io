@@ -1,0 +1,266 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500" role="img">
+  <title>GitHub Copilot 数据条款变更 - 开发者应对指南</title>
+  
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="50%" style="stop-color:#161b22"/>
+      <stop offset="100%" style="stop-color:#1a1f2e"/>
+    </linearGradient>
+    
+    <!-- 警告红渐变 -->
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="100%" style="stop-color:#da3633"/>
+    </linearGradient>
+    
+    <!-- GitHub品牌色渐变 -->
+    <linearGradient id="ghGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="100%" style="stop-color:#1f6feb"/>
+    </linearGradient>
+    
+    <!-- 倒计时卡片渐变 -->
+    <linearGradient id="countdownGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="100%" style="stop-color:#b62324"/>
+    </linearGradient>
+    
+    <!-- 数据流线条渐变 -->
+    <linearGradient id="flowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#58a6ff"/>
+      <stop offset="50%" style="stop-color:#a371f7"/>
+      <stop offset="100%" style="stop-color:#f85149"/>
+    </linearGradient>
+
+    <!-- 光晕效果 -->
+    <radialGradient id="glowRed" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#f85149;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#f85149;stop-opacity:0"/>
+    </radialGradient>
+    
+    <radialGradient id="glowBlue" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" style="stop-color:#58a6ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#58a6ff;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- 网格图案 -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#30363d" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+
+    <!-- 卡片阴影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    
+    <filter id="glowEffect" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+
+  <!-- 顶部光晕 -->
+  <ellipse cx="450" cy="80" rx="350" ry="100" fill="url(#glowBlue)"/>
+  
+  <!-- 右下角警告红晕 -->
+  <ellipse cx="750" cy="400" rx="180" ry="140" fill="url(#glowRed)"/>
+
+  <!-- ========== 标题区域 ========== -->
+  <!-- GitHub图标 + 主标题 -->
+  <g transform="translate(450, 70)">
+    <!-- GitHub Octocat简化图标 -->
+    <g transform="translate(-280, -15)">
+      <circle cx="20" cy="20" r="22" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+      <path d="M20 4 C11.16 4 4 11.16 4 20 C4 27.84 9.42 34.52 16.88 35.98 C17.76 36.14 18.08 35.58 18.08 35.1 C18.08 34.68 18.06 33.54 18.06 32.32 C13.5 33.26 12.36 30.94 12.36 30.94 C11.48 28.74 10.24 28.18 10.24 28.18 C8.56 27.2 10.36 27.22 10.36 27.22 C12.2 27.36 13.24 29.12 13.24 29.12 C14.88 31.96 18.56 31.14 19.82 30.62 C20 29.56 20.52 28.82 21.08 28.38 C17.44 27.94 13.62 26.56 13.62 20.02 C13.62 18.18 14.28 16.66 15.38 15.46 C15.18 15.02 14.6 13.3 15.54 10.96 C15.54 10.96 16.96 10.5 20.04 12.68 C21.42 12.28 22.9 12.08 24.38 12.08 C25.86 12.08 27.34 12.28 28.72 12.68 C31.8 10.48 33.22 10.96 33.22 10.96 C34.16 13.3 33.58 15.02 33.38 15.46 C34.48 16.66 35.14 18.16 35.14 20.02 C35.14 26.58 31.32 27.92 27.66 28.36 C28.36 28.92 28.98 30.16 28.98 32.06 C28.98 34.78 28.96 36.96 28.96 37.64 C28.96 38.12 29.28 38.7 30.18 38.52 C37.62 37.04 43 30.36 43 22.52 C43 11.16 33.84 4 23 4 Z" fill="#58a6ff" transform="scale(0.85) translate(4,4)"/>
+    </g>
+    
+    <!-- 主标题 -->
+    <text x="0" y="-2" text-anchor="middle" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="32" font-weight="bold" fill="#ffffff">
+      GitHub Copilot
+    </text>
+    <text x="0" y="32" text-anchor="middle" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="22" fill="#f85149" font-weight="bold">
+      数据条款巨变！你的代码将被拿去训练AI
+    </text>
+  </g>
+
+  <!-- ========== 倒计时警示条（核心视觉锚点）========== -->
+  <g transform="translate(450, 145)">
+    <rect x="-220" y="-22" width="440" height="44" rx="22" fill="url(#countdownGrad)" filter="url(#cardShadow)"/>
+    <!-- 闪烁效果装饰线 -->
+    <rect x="-218" y="-20" width="4" height="40" rx="2" fill="#fff" opacity="0.4"/>
+    
+    <text x="0" y="7" text-anchor="middle" font-family="'SF Mono', 'Consolas', 'Courier New', monospace" font-size="20" font-weight="bold" fill="#ffffff" letter-spacing="1">
+      ⚡ 距条款生效仅剩 4 天 | 2026年4月24日（周五）
+    </text>
+  </g>
+
+  <!-- ========== 三大变化卡片 ========== -->
+  
+  <!-- 卡片1：数据采集范围扩大 -->
+  <g transform="translate(75, 230)" filter="url(#cardShadow)">
+    <rect width="240" height="150" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <!-- 顶部色条 -->
+    <rect width="240" height="4" rx="2" fill="url(#alertGrad)"/>
+    
+    <!-- 图标：数据库/数据流 -->
+    <g transform="translate(20, 22)">
+      <circle cx="14" cy="14" r="14" fill="#f85149" opacity="0.15"/>
+      <path d="M14 4 C7.37 4 2 7.13 2 11 C2 14.87 7.37 18 14 18 C20.63 18 26 14.87 26 11 C26 7.13 20.63 4 14 4 Z M14 16 C9.58 16 6 13.76 6 11 C6 8.24 9.58 6 14 6 C18.42 6 22 8.24 22 11 C22 13.76 18.42 16 14 16 Z M14 8 C11.79 8 10 9.34 10 11 C10 12.66 11.79 14 14 14 C16.21 14 18 12.66 18 11 C18 9.34 16.21 8 14 8 Z" fill="#f85149" transform="scale(0.9)"/>
+    </g>
+    
+    <text x="20" y="60" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#f85149">采集范围扩大</text>
+    <text x="20" y="82" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="12" fill="#8b949e">
+      <tspan x="20" dy="0">• 代码补全内容</tspan>
+      <tspan x="20" dy="18">• 输入/输出记录</tspan>
+      <tspan x="20" dy="18">• 拒绝的建议也采</tspan>
+      <tspan x="20" dy="18">• 编辑习惯全收录</tspan>
+    </text>
+  </g>
+
+  <!-- 卡片2：数据流向三方 -->
+  <g transform="translate(330, 230)" filter="url(#cardShadow)">
+    <rect width="240" height="150" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect width="240" height="4" rx="2" fill="url(#ghGrad)"/>
+    
+    <!-- 图标：分享/分发 -->
+    <g transform="translate(20, 22)">
+      <circle cx="14" cy="14" r="14" fill="#a371f7" opacity="0.15"/>
+      <path d="M18 16 L18 8 L14 12 M14 12 L18 12 L10 12 L10 16 M10 4 L10 20" stroke="#a371f7" stroke-width="2" fill="none" transform="scale(0.9) translate(3,2)"/>
+    </g>
+    
+    <text x="20" y="60" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#a371f7">数据共享三方</text>
+    
+    <!-- 三方logo示意 -->
+    <g transform="translate(20, 78)">
+      <!-- GitHub -->
+      <rect width="60" height="22" rx="4" fill="#21262d" stroke="#30363d"/>
+      <text x="30" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#58a6ff">GitHub</text>
+      
+      <!-- Microsoft -->
+      <rect x="65" width="60" height="22" rx="4" fill="#21262d" stroke="#30363d"/>
+      <text x="95" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#00a4ef">微软</text>
+      
+      <!-- OpenAI -->
+      <rect x="130" width="60" height="22" rx="4" fill="#21262d" stroke="#30363d"/>
+      <text x="160" y="15" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#10a37f">OpenAI</text>
+    </g>
+    
+    <text x="20" y="132" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="11" fill="#8b949e">⚠️ 你的Kotlin/Swift/Dart代码同时流入三家公司</text>
+  </g>
+
+  <!-- 卡片3：私有仓库不安全 -->
+  <g transform="translate(585, 230)" filter="url(#cardShadow)">
+    <rect width="240" height="150" rx="12" fill="#161b22" stroke="#30363d" stroke-width="1"/>
+    <rect width="240" height="4" rx="2" fill="#f0883e"/>
+    
+    <!-- 图标：锁/警告 -->
+    <g transform="translate(20, 22)">
+      <circle cx="14" cy="14" r="14" fill="#f0883e" opacity="0.15"/>
+      <path d="M12 7 C9.79 7 8 8.79 8 11 L8 13 L7 13 C5.89 13 5 13.89 5 15 L5 21 C5 22.11 5.89 23 7 23 L19 23 C20.11 23 21 22.11 21 21 L21 15 C21 13.89 20.11 13 19 13 L18 13 L18 11 C18 8.79 16.21 7 14 7 Z M12 9 L14 9 C15.1 9 16 9.9 16 11 L16 13 L10 13 L10 11 C10 9.9 10.9 9 12 9 Z M14 17 C14 18.1 13.1 19 12 19 C10.9 19 10 18.1 10 17 C10 15.9 10.9 15 12 15 C13.1 15 14 15.9 14 17 Z" fill="#f0883e" transform="scale(0.85) translate(3,3)"/>
+    </g>
+    
+    <text x="20" y="60" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="15" font-weight="bold" fill="#f0883e">私有仓库 ≠ 安全</text>
+    <text x="20" y="82" font-family="system-ui, -apple-system, 'Microsoft YaHei', sans-serif" font-size="12" fill="#8b949e">
+      <tspan x="20" dy="0">采的是「交互数据」</tspan>
+      <tspan x="20" dy="18">不是仓库本身</tspan>
+      <tspan x="20" dy="18" fill="#f85149">与是否公开无关!</tspan>
+      <tspan x="20" dy="18">Enterprise 是唯一豁免方案</tspan>
+    </text>
+  </g>
+
+  <!-- ========== 数据流动画示意 ========== -->
+  <g transform="translate(0, 400)">
+    <!-- 流动路径背景 -->
+    <line x1="80" y1="30" x2="820" y2="30" stroke="url(#flowGrad)" stroke-width="2" opacity="0.3"/>
+    
+    <!-- 数据节点 -->
+    <!-- 开发者代码 -->
+    <g transform="translate(80, 30)">
+      <circle r="20" fill="#0d1117" stroke="#58a6ff" stroke-width="2"/>
+      <text y="5" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#58a6ff">&lt;/&gt;</text>
+      <text y="45" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">你的代码</text>
+    </g>
+    
+    <!-- 箭头1 -->
+    <polygon points="155,30 145,24 145,36" fill="#58a6ff" opacity="0.6"/>
+    
+    <!-- Copilot处理 -->
+    <g transform="translate(210, 30)">
+      <circle r="22" fill="#0d1117" stroke="#a371f7" stroke-width="2"/>
+      <text y="-3" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" font-weight="bold" fill="#a371f7">Copilot</text>
+      <text y="9" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#a371f7">采集</text>
+      <text y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">交互数据</text>
+    </g>
+    
+    <!-- 箭头2 -->
+    <polygon points="290,30 280,24 280,36" fill="#a371f7" opacity="0.6"/>
+    
+    <!-- 训练模型 -->
+    <g transform="translate(360, 30)">
+      <circle r="22" fill="#0d1117" stroke="#f85149" stroke-width="2"/>
+      <text y="5" text-anchor="middle" font-family="system-ui, sans-serif" font-size="14" fill="#f85149">🤖</text>
+      <text y="47" text-anchor="middle" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e">训练AI</text>
+    </g>
+    
+    <!-- 分叉箭头 -->
+    <polyline points="420,30 440,30 450,18" stroke="#30363d" stroke-width="1.5" fill="none"/>
+    <polyline points="440,30 450,42" stroke="#30363d" stroke-width="1.5" fill="none"/>
+    
+    <!-- 三个输出方 -->
+    <g transform="translate(490, 18)">
+      <rect x="-28" y="-12" width="56" height="24" rx="4" fill="#21262d" stroke="#58a6ff" stroke-width="1"/>
+      <text y="5" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#58a6ff">GitHub</text>
+    </g>
+    <g transform="translate(580, 18)">
+      <rect x="-28" y="-12" width="56" height="24" rx="4" fill="#21262d" stroke="#00a4ef" stroke-width="1"/>
+      <text y="5" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#00a4ef">微软</text>
+    </g>
+    <g transform="translate(670, 18)">
+      <rect x="-28" y="-12" width="56" height="24" rx="4" fill="#21262d" stroke="#10a37f" stroke-width="1"/>
+      <text y="5" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#10a37f">OpenAI</text>
+    </g>
+    
+    <!-- 最终输出 -->
+    <polyline points="726,18 760,18 770,30" stroke="#30363d" stroke-width="1.5" fill="none"/>
+    <g transform="translate(800, 30)">
+      <circle r="18" fill="#0d1117" stroke="#f85149" stroke-width="1.5" stroke-dasharray="3,2"/>
+      <text y="-2" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f85149">?</text>
+      <text y="9" text-anchor="middle" font-family="system-ui, sans-serif" font-size="9" fill="#f85149">输出</text>
+      <text y="43" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#6e7681">未知用途</text>
+    </g>
+  </g>
+
+  <!-- ========== 底部行动标签 ========== -->
+  <g transform="translate(450, 472)">
+    <g transform="translate(-300, 0)">
+      <rect x="-40" y="-12" width="80" height="24" rx="12" fill="#f85149" opacity="0.15"/>
+      <text text-anchor="middle" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f85149">立即检查设置</text>
+    </g>
+    <g transform="translate(-140, 0)">
+      <rect x="-40" y="-12" width="80" height="24" rx="12" fill="#a371f7" opacity="0.15"/>
+      <text text-anchor="middle" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#a371f7">评估风险等级</text>
+    </g>
+    <g transform="translate(20, 0)">
+      <rect x="-40" y="-12" width="80" height="24" rx="12" fill="#58a6ff" opacity="0.15"/>
+      <text text-anchor="middle" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#58a6ff">5步应对方案</text>
+    </g>
+    <g transform="translate(180, 0)">
+      <rect x="-55" y="-12" width="110" height="24" rx="12" fill="#f0883e" opacity="0.15"/>
+      <text text-anchor="middle" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#f0883e">替代工具对比</text>
+    </g>
+    <g transform="translate(320, 0)">
+      <rect x="-30" y="-12" width="60" height="24" rx="12" fill="#3fb950" opacity="0.15"/>
+      <text text-anchor="middle" y="5" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#3fb950">移动开发</text>
+    </g>
+  </g>
+
+</svg>

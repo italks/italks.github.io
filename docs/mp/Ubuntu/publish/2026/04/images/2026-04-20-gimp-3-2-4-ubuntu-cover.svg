@@ -1,0 +1,142 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img">
+  <title>GIMP 3.2.4 更新 - Ubuntu 用户免费装</title>
+  
+  <!-- 深色背景 -->
+  <rect width="900" height="500" fill="#1a1a2e"/>
+  
+  <!-- 装饰性渐变圆 - 左上角 -->
+  <defs>
+    <radialGradient id="glow1" cx="10%" cy="15%" r="40%">
+      <stop offset="0%" stop-color="#E95420" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#E95420" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="glow2" cx="90%" cy="80%" r="35%">
+      <stop offset="0%" stop-color="#77216F" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#77216F" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E95420"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+    <linearGradient id="textGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#E0E0E0"/>
+    </linearGradient>
+  </defs>
+  
+  <circle cx="90" cy="75" r="180" fill="url(#glow1)"/>
+  <circle cx="810" cy="400" r="160" fill="url(#glow2)"/>
+  
+  <!-- 网格装饰线 -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <line x1="0" y1="125" x2="900" y2="125"/>
+    <line x1="0" y1="250" x2="900" y2="250"/>
+    <line x1="0" y1="375" x2="900" y2="375"/>
+    <line x1="225" y1="0" x2="225" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="675" y1="0" x2="675" y2="500"/>
+  </g>
+  
+  <!-- GIMP 风格图标区域（左侧） -->
+  <g transform="translate(60, 120)">
+    <!-- 画布/画板 -->
+    <rect x="0" y="30" width="160" height="200" rx="12" fill="#2d2d44" stroke="#E95420" stroke-width="2.5"/>
+    
+    <!-- 画笔图标示意 -->
+    <path d="M45 60 L115 130 L105 140 L35 70 Z" fill="url(#accentGrad)" opacity="0.9"/>
+    <rect x="28" y="55" width="18" height="24" rx="3" fill="#5D5D6D" transform="rotate(-45 37 67)"/>
+    
+    <!-- 山/风景示意（GIMP 默认图标风格） -->
+    <polygon points="30,190 65,140 95,170 125,125 155,190" fill="#4A7C59" opacity="0.8"/>
+    <polygon points="50,190 80,155 110,190" fill="#3D6B4F" opacity="0.85"/>
+    <circle cx="125" cy="75" r="16" fill="#FFB74D" opacity="0.7"/>
+    
+    <!-- 图层条目示意 -->
+    <g transform="translate(175, 35)">
+      <rect x="0" y="0" width="95" height="22" rx="4" fill="#3d3d5c" stroke="#555577" stroke-width="1"/>
+      <rect x="5" y="4" width="14" height="14" rx="2" fill="#E95420" opacity="0.7"/>
+      <text x="24" y="16" font-family="Arial, sans-serif" font-size="11" fill="#AAAAAA">Background</text>
+      
+      <rect x="0" y="28" width="95" height="22" rx="4" fill="#3d3d5c" stroke="#555577" stroke-width="1"/>
+      <rect x="5" y="32" width="14" height="14" rx="2" fill="#42A5F5" opacity="0.7"/>
+      <text x="24" y="44" font-family="Arial, sans-serif" font-size="11" fill="#AAAAAA">Layer 1</text>
+      
+      <rect x="0" y="56" width="95" height="22" rx="4" fill="#3d3d5c" stroke="#E95420" stroke-width="1.5"/>
+      <rect x="5" y="60" width="14" height="14" rx="2" fill="#66BB6A" opacity="0.9"/>
+      <text x="24" y="72" font-family="Arial, sans-serif" font-size="11" fill="#FFFFFF">Vector ★</text>
+      
+      <rect x="0" y="84" width="95" height="22" rx="4" fill="#3d3d5c" stroke="#555577" stroke-width="1"/>
+      <rect x="5" y="88" width="14" height="14" rx="2" fill="#AB47BC" opacity="0.7"/>
+      <text x="24" y="100" font-family="Arial, sans-serif" font-size="11" fill="#AAAAAA">Text</text>
+    </g>
+  </g>
+  
+  <!-- 主标题区（右侧） -->
+  <g transform="translate(330, 115)">
+    <!-- 版本标签 -->
+    <rect x="0" y="-8" width="145" height="36" rx="18" fill="url(#accentGrad)"/>
+    <text x="72.5" y="17" font-family="'Segoe UI', Arial, sans-serif" font-size="18" font-weight="bold" fill="#FFFFFF" text-anchor="middle">GIMP 3.2.4</text>
+    
+    <!-- 主标题 -->
+    <text x="0" y="78" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="42" font-weight="bold" fill="url(#textGrad)">图层革命来了</text>
+    
+    <!-- 副标题 -->
+    <text x="0" y="128" font-family="'Microsoft YaHei', 'PingFang SC', sans-serif" font-size="26" fill="#B0B0C0">Ubuntu 用户免费装</text>
+    
+    <!-- 分隔线 -->
+    <line x1="0" y1="148" x2="420" y2="148" stroke="url(#accentGrad)" stroke-width="2.5" stroke-linecap="round"/>
+    
+    <!-- 特性标签组 -->
+    <g transform="translate(0, 172)">
+      <!-- 标签1: 矢量图层 -->
+      <rect x="0" y="0" width="122" height="34" rx="17" fill="#E95420" fill-opacity="0.15" stroke="#E95420" stroke-width="1.2"/>
+      <text x="61" y="23" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="14" fill="#FF8A65" text-anchor="middle">🎯 矢量图层</text>
+      
+      <!-- 标签2: 链接图层 -->
+      <rect x="134" y="0" width="122" height="34" rx="17" fill="#77216F" fill-opacity="0.15" stroke="#77216F" stroke-width="1.2"/>
+      <text x="195" y="23" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="14" fill="#CE93D8" text-anchor="middle">🔗 链接图层</text>
+      
+      <!-- 标签3: 免费开源 -->
+      <rect x="268" y="0" width="122" height="34" rx="17" fill="#4CAF50" fill-opacity="0.15" stroke="#4CAF50" stroke-width="1.2"/>
+      <text x="329" y="23" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="14" fill="#81C784" text-anchor="middle">💰 完全免费</text>
+    </g>
+  </g>
+  
+  <!-- 底部信息栏 -->
+  <g transform="translate(0, 430)">
+    <rect x="0" y="0" width="900" height="70" fill="#0f0f1a" fill-opacity="0.7"/>
+    
+    <!-- Ubuntu Logo 圆圈 + 文字 -->
+    <circle cx="55" cy="35" r="18" fill="#E95420" fill-opacity="0.15" stroke="#E95420" stroke-width="1.5"/>
+    <text x="55" y="41" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#E95420" text-anchor="middle">U</text>
+    <text x="82" y="41" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="16" fill="#888899">UbuntuNews</text>
+    
+    <!-- 分隔线 -->
+    <line x1="185" y1="15" x2="185" y2="55" stroke="#333344" stroke-width="1"/>
+    
+    <!-- 倒计时 -->
+    <text x="210" y="31" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="14" fill="#666677">Ubuntu 26.04 LTS 距发布</text>
+    <rect x="385" y="17" width="52" height="32" rx="6" fill="#E95420" fill-opacity="0.2" stroke="#E95420" stroke-width="1.2"/>
+    <text x="411" y="39" font-family="'Segoe UI', Arial, sans-serif" font-size="19" font-weight="bold" fill="#FF7043" text-anchor="middle">3天</text>
+    
+    <!-- 右侧日期 -->
+    <text x="850" y="41" font-family="'Microsoft YaHei', Arial, sans-serif" font-size="13" fill="#555566" text-anchor="end">2026.04.20</text>
+  </g>
+  
+  <!-- 装饰元素：小点/粒子效果 -->
+  <g fill="#E95420" fill-opacity="0.15">
+    <circle cx="320" cy="380" r="3"/>
+    <circle cx="480" cy="400" r="2"/>
+    <circle cx="600" cy="370" r="4"/>
+    <circle cx="750" cy="390" r="2.5"/>
+    <circle cx="280" cy="410" r="2"/>
+    <circle cx="700" cy="365" r="3"/>
+  </g>
+  <g fill="#FFFFFF" fill-opacity="0.06">
+    <circle cx="150" cy="350" r="2"/>
+    <circle cx="500" cy="340" r="3"/>
+    <circle cx="800" cy="360" r="2"/>
+    <circle cx="380" cy="355" r="1.5"/>
+    <circle cx="650" cy="345" r="2.5"/>
+  </g>
+</svg>
