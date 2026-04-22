@@ -51,6 +51,30 @@
 
 ---
 
+### 2026-04-22 08:41（第二篇文章）
+
+**执行内容**：根据用户提供的热点素材，生成 Linux 7.1 NTFS 驱动专题文章
+
+**热点来源**：用户提供的4月21日消息（Linus合并NTFS驱动入Linux 7.1）
+
+**选题决策**：
+- **文章标题**：**Linus 亲批！Linux 终于有了原生 NTFS 驱动：写入性能暴涨 110%，WSL 用户狂喜**
+- 类型：热点新闻 + 技术深度
+- 核心亮点：
+  - Linus 称之为"NTFS Resurrection"
+  - Namjae Jeon（exFAT驱动同作者）历时4年重构，3.6万行代码
+  - 写入性能↑35%~110%，挂载4TB硬盘速度×4
+  - WSL内核机制详解：微软维护定制内核+9P协议访问Windows文件
+  - 查看WSL内核版本方法（uname -r / wsl --update）
+  - 微软WSL内核发布渠道（GitHub/Windows Update/Insider）
+  - Ubuntu 26.04用户升级路径
+
+**生成文件**：
+1. `docs/mp/Ubuntu/publish/2026/04/2026-04-22-linux-kernel-71-new-ntfs-driver-wsl.md`
+2. `docs/mp/Ubuntu/publish/2026/04/images/2026-04-22-linux-kernel-71-ntfs-driver-cover.svg`
+
+---
+
 ### 2026-04-21 08:19
 
 **执行内容**：每日选题分析 + 热点文章生成（周二）
