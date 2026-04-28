@@ -1,0 +1,169 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f0f23"/>
+    </linearGradient>
+    
+    <!-- 橙色光晕 -->
+    <radialGradient id="orangeGlow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" style="stop-color:#E95420;stop-opacity:0.25"/>
+      <stop offset="70%" style="stop-color:#E95420;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#E95420;stop-opacity:0"/>
+    </radialGradient>
+    
+    <!-- 红色警告渐变 -->
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff4444"/>
+      <stop offset="100%" style="stop-color:#cc0000"/>
+    </linearGradient>
+    
+    <!-- AI 紫色渐变 -->
+    <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#9b59b6"/>
+      <stop offset="100%" style="stop-color:#6c3483"/>
+    </linearGradient>
+    
+    <!-- 文字发光效果 -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 强发光效果 -->
+    <filter id="strongGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  
+  <!-- 橙色光晕背景 -->
+  <rect width="900" height="500" fill="url(#orangeGlow)"/>
+  
+  <!-- 网格装饰线（科技感）-->
+  <g opacity="0.06" stroke="#E95420" stroke-width="0.5">
+    <line x1="0" y1="120" x2="900" y2="120"/>
+    <line x1="0" y1="240" x2="900" y2="240"/>
+    <line x1="0" y1="360" x2="900" y2="360"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+  
+  <!-- 顶部标签栏 -->
+  <g>
+    <rect x="40" y="30" width="90" height="28" rx="14" fill="#E95420" opacity="0.9"/>
+    <text x="85" y="49" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">Ubuntu</text>
+    
+    <rect x="140" y="30" width="80" height="28" rx="14" fill="#3498db" opacity="0.8"/>
+    <text x="180" y="49" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">Linux</text>
+    
+    <rect x="230" y="30" width="75" height="28" rx="14" fill="url(#aiGrad)" opacity="0.85"/>
+    <text x="267" y="49" font-family="Arial, sans-serif" font-size="13" fill="white" text-anchor="middle" font-weight="bold">AI安全</text>
+  </g>
+  
+  <!-- 主标题区域 -->
+  <g filter="url(#glow)">
+    <!-- 第一行：核心数字冲击 -->
+    <text x="450" y="115" font-family="Arial, sans-serif" font-size="56" fill="#ffffff" text-anchor="middle" font-weight="bold">
+      一个脚本
+    </text>
+    
+    <!-- "23年" 大号强调数字 -->
+    <text x="450" y="185" font-family="Arial, sans-serif" font-size="72" fill="#E95420" text-anchor="middle" font-weight="bold" filter="url(#strongGlow)">
+      23 年
+    </text>
+    
+    <!-- 副标题 -->
+    <text x="450" y="235" font-family="Arial, sans-serif" font-size="32" fill="#e0e0e0" text-anchor="middle" font-weight="bold">
+      的内核漏洞被 AI 找到了
+    </text>
+  </g>
+  
+  <!-- 核心信息卡片区域 -->
+  <g transform="translate(60, 265)">
+    <!-- 卡片背景 -->
+    <rect x="0" y="0" width="780" height="200" rx="12" fill="#0d1117" opacity="0.7" stroke="#30363d" stroke-width="1"/>
+    
+    <!-- 三列信息展示 -->
+    
+    <!-- 左列：漏洞信息 -->
+    <g transform="translate(30, 20)">
+      <!-- 警告图标 -->
+      <circle cx="18" cy="18" r="16" fill="url(#redGrad)" opacity="0.9"/>
+      <text x="18" y="24" font-family="Arial" font-size="22" fill="white" text-anchor="middle" font-weight="bold">!</text>
+      
+      <text x="45" y="15" font-family="Arial, sans-serif" font-size="15" fill="#ff6666" font-weight="bold">CVE-2026-31402</text>
+      <text x="45" y="36" font-family="Arial, sans-serif" font-size="13" fill="#888">NFSv4 内存溢出 · 高危</text>
+      
+      <!-- 时间线 -->
+      <g transform="translate(0, 55)">
+        <rect x="0" y="0" width="210" height="50" rx="8" fill="#1a1a2e" stroke="#333" stroke-width="1"/>
+        <text x="10" y="20" font-family="Arial" font-size="11" fill="#888">📅 2003年写入</text>
+        <text x="110" y="20" font-family="Arial" font-size="11" fill="#888">→ 2026年被发现</text>
+        <text x="10" y="42" font-family="Arial, sans-serif" font-size="18" fill="#E95420" font-weight="bold">潜伏 23 年未被发现</text>
+      </g>
+    </g>
+    
+    <!-- 中间：AI发现方式 -->
+    <g transform="translate(280, 20)">
+      <!-- AI 图标 -->
+      <rect x="0" y="0" width="220" height="105" rx="10" fill="#1a0a2e" stroke="#9b59b6" stroke-width="1" opacity="0.8"/>
+      
+      <text x="110" y="28" font-family="Arial, sans-serif" font-size="14" fill="#bb86fc" text-anchor="middle" font-weight="bold">🤖 AI 发现方式</text>
+      
+      <!-- 代码框模拟 -->
+      <rect x="12" y="42" width="196" height="52" rx="5" fill="#0d1117" stroke="#333" stroke-width="0.5"/>
+      <text x="20" y="60" font-family="Consolas, monospace" font-size="11" fill="#79c0ff">$ for file in *.c; do</text>
+      <text x="20" y="76" font-family="Consolas, monospace" font-size="11" fill="#79c0ff">>   cat $file | ai --prompt</text>
+      <text x="20" y="88" font-family="Consolas, monospace" font-size="11" fill="#ffa657">>     "CTF: 你能搞坏什么？"</text>
+      
+      <text x="110" y="128" font-family="Arial, sans-serif" font-size="13" fill="#9b59b6" text-anchor="middle">Bash + Claude Opus 4.6</text>
+    </g>
+    
+    <!-- 右列：影响范围 -->
+    <g transform="translate(530, 20)">
+      <!-- 影响范围图标 -->
+      <circle cx="18" cy="18" r="16" fill="#e74c3c" opacity="0.85"/>
+      <text x="18" y="24" font-family="Arial" font-size="16" fill="white" text-anchor="middle" font-weight="bold">⚡</text>
+      
+      <text x="45" y="15" font-family="Arial, sans-serif" font-size="15" fill="#ff8888" font-weight="bold">影响广泛</text>
+      <text x="45" y="36" font-family="Arial, sans-serif" font-size="13" fill="#888">文件服务器 / NAS / 云实例</text>
+      
+      <!-- 影响列表 -->
+      <g transform="translate(0, 55)">
+        <rect x="0" y="0" width="220" height="50" rx="8" fill="#2a0a0a" stroke="#c0392b" stroke-width="1" opacity="0.6"/>
+        <text x="12" y="20" font-family="Arial" font-size="12" fill="#ff9999">☑ Linux 文件服务器</text>
+        <text x="12" y="38" font-family="Arial" font-size="12" fill="#ff9999">☑ NAS/医院存储/云实例</text>
+        <text x="115" y="20" font-family="Arial" font-size="12" fill="#ff9999">☑ 学校网盘后台</text>
+        <text x="115" y="38" font-family="Arial" font-size="12" fill="#ffaa66">利用门槛：极低！</text>
+      </g>
+    </g>
+    
+    <!-- 底部关键信息条 -->
+    <g transform="translate(0, 140)">
+      <rect x="20" y="10" width="740" height="46" rx="8" fill="#E95420" opacity="0.15" stroke="#E95420" stroke-width="1"/>
+      
+      <text x="370" y="38" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle" font-weight="bold">
+        🔒 Linus 亲口确认：AI 找 Bug 已成「新常态」 | Ubuntu 26.04 LTS 用户请立即检查更新
+      </text>
+    </g>
+  </g>
+  
+  <!-- 底部品牌栏 -->
+  <rect x="0" y="476" width="900" height="24" fill="#000000" opacity="0.5"/>
+  <text x="450" y="492" font-family="Arial, sans-serif" font-size="11" fill="#E95420" text-anchor="middle" opacity="0.8">
+    UbuntuNews · Linux 7.0 安全专题
+  </text>
+</svg>
