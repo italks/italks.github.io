@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img" aria-label="Linux 7.1-rc1发布封面 - NTFS驱动写入暴涨110%">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="50%" style="stop-color:#16213e"/>
+      <stop offset="100%" style="stop-color:#0f3460"/>
+    </linearGradient>
+    
+    <!-- 橙色高光渐变 -->
+    <linearGradient id="orangeGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#E95420"/>
+      <stop offset="100%" style="stop-color:#FF6B35"/>
+    </linearGradient>
+    
+    <!-- 绿色增长渐变 -->
+    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D26A"/>
+      <stop offset="100%" style="stop-color:#5FFF97"/>
+    </linearGradient>
+    
+    <!-- 卡片阴影 -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+    
+    <!-- 光晕效果 -->
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- 网格图案 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.06"/>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  
+  <!-- 装饰性圆环（左上） -->
+  <circle cx="80" cy="80" r="120" fill="none" stroke="#E95420" stroke-width="1" opacity="0.15"/>
+  <circle cx="80" cy="80" r="90" fill="none" stroke="#E95420" stroke-width="0.8" opacity="0.1"/>
+  
+  <!-- 装饰性圆环（右下） -->
+  <circle cx="820" cy="420" r="140" fill="none" stroke="#00D26A" stroke-width="1" opacity="0.12"/>
+  <circle cx="820" cy="420" r="100" fill="none" stroke="#00D26A" stroke-width="0.8" opacity="0.08"/>
+  
+  <!-- 左侧：主标题区域 -->
+  <g transform="translate(50, 60)">
+    <!-- 版本标签 -->
+    <rect x="0" y="0" width="160" height="38" rx="19" fill="url(#orangeGlow)" filter="url(#glow)"/>
+    <text x="80" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#fff">LINUX 7.1-rc1</text>
+    
+    <!-- 主标题 -->
+    <text x="0" y="85" font-family="'Microsoft YaHei', 'PingFang SC', Arial, sans-serif" font-size="36" font-weight="bold" fill="#FFFFFF">
+      <tspan x="0" dy="0">全新 NTFS 驱动</tspan>
+      <tspan x="0" dy="46">写入性能暴涨</tspan>
+    </text>
+    
+    <!-- 110% 数字高亮 -->
+    <text x="0" y="195" font-family="Arial Black, Impact, sans-serif" font-size="72" font-weight="900" fill="url(#greenGrad)" filter="url(#glow)">110%</text>
+    <text x="185" y="188" font-family="'Microsoft YaHei', sans-serif" font-size="22" fill="#aaa">提升速度</text>
+    
+    <!-- 副标题标签 -->
+    <line x1="0" y1="220" x2="280" y2="220" stroke="#E95420" stroke-width="3" opacity="0.6"/>
+    <text x="0" y="250" font-family="'Microsoft YaHei', sans-serif" font-size="15" fill="#8899aa">FRED 默认启用 · i486 架构正式退役 · Rust 扩张</text>
+  </g>
+  
+  <!-- 右侧：数据可视化卡片组 -->
+  <g transform="translate(380, 55)">
+    
+    <!-- 卡片1: NTFS 性能对比 -->
+    <g filter="url(#cardShadow)">
+      <rect x="0" y="0" width="230" height="150" rx="12" fill="#1e2a45" opacity="0.85"/>
+      
+      <!-- 卡片标题栏 -->
+      <rect x="0" y="0" width="230" height="36" rx="12" fill="#253352"/>
+      <rect x="0" y="24" width="230" height="12" fill="#253352"/>
+      <circle cx="18" cy="18" r="5" fill="#E95420"/>
+      <text x="32" y="23" font-family="'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#E0E0E0">NTFS 写入性能</text>
+      
+      <!-- 性能条形图 - 旧驱动 -->
+      <text x="18" y="62" font-family="Arial, sans-serif" font-size="11" fill="#888">旧驱动基准</text>
+      <rect x="18" y="70" width="180" height="14" rx="7" fill="#2a3a5a"/>
+      <rect x="18" y="70" width="90" height="14" rx="7" fill="#4a6a9a"/>
+      <text x="96" y="81" font-family="Arial, sans-serif" font-size="10" fill="#ccc">50%</text>
+      
+      <!-- 性能条形图 - 新驱动 -->
+      <text x="18" y="102" font-family="Arial, sans-serif" font-size="11" fill="#888">新驱动 (v7.1)</text>
+      <rect x="18" y="110" width="180" height="14" rx="7" fill="#2a3a5a"/>
+      <rect x="18" y="110" width="180" height="14" rx="7" fill="url(#greenGrad)"/>
+      <text x="155" y="121" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#fff">+110% 🚀</text>
+      
+      <!-- 对比箭头 -->
+      <text x="210" y="78" font-family="Arial, sans-serif" font-size="16" fill="#00D26A">→</text>
+    </g>
+    
+    <!-- 卡片2: 核心更新清单 -->
+    <g transform="translate(245, 0)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="225" height="150" rx="12" fill="#1e2a45" opacity="0.85"/>
+      
+      <rect x="0" y="0" width="225" height="36" rx="12" fill="#253352"/>
+      <rect x="0" y="24" width="225" height="12" fill="#253352"/>
+      <circle cx="18" cy="18" r="5" fill="#00D26A"/>
+      <text x="32" y="23" font-family="'Microsoft YaHei', sans-serif" font-size="13" font-weight="bold" fill="#E0E0E0">核心更新</text>
+      
+      <!-- 更新列表 -->
+      <g transform="translate(16, 52)">
+        <!-- 项目1 -->
+        <circle cx="6" cy="6" r="4" fill="#E95420"/>
+        <text x="18" y="10" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#ddd">NTFS 全新驱动合入主线</text>
+        
+        <!-- 项目2 -->
+        <circle cx="6" cy="34" r="4" fill="#FFB800"/>
+        <text x="18" y="38" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#ddd">FRED 错误处理默认启用</text>
+        
+        <!-- 项目3 -->
+        <circle cx="6" cy="62" r="4" fill="#E74C3C"/>
+        <text x="18" y="66" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#ddd">i486 架构（37年）退役</text>
+        
+        <!-- 项目4 -->
+        <circle cx="6" cy="90" r="4" fill="#3498DB"/>
+        <text x="18" y="94" font-family="'Microsoft YaHei', sans-serif" font-size="12" fill="#ddd">Rust 代码持续扩张</text>
+      </g>
+    </g>
+    
+    <!-- 底部时间线信息卡片 -->
+    <g transform="translate(0, 168)" filter="url(#cardShadow)">
+      <rect x="0" y="0" width="470" height="70" rx="12" fill="#1e2a45" opacity="0.85"/>
+      
+      <!-- 时间节点 -->
+      <g transform="translate(30, 28)">
+        <!-- RC1 -->
+        <circle cx="0" cy="14" r="8" fill="#E95420"/>
+        <text x="0" y="18" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" font-weight="bold" fill="#fff">✓</text>
+        <text x="0" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaa">4/27</text>
+        <text x="0" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">rc1</text>
+        
+        <!-- 连接线 -->
+        <line x1="12" y1="14" x2="148" y2="14" stroke="#3a4a6a" stroke-width="2" stroke-dasharray="4,3"/>
+        
+        <!-- RC2~7 -->
+        <circle cx="160" cy="14" r="8" fill="#3a4a6a" stroke="#5a6a8a" stroke-width="1.5"/>
+        <text x="160" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaa">5月</text>
+        <text x="160" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">rc2-7</text>
+        
+        <!-- 连接线 -->
+        <line x1="172" y1="14" x2="308" y2="14" stroke="#3a4a6a" stroke-width="2" stroke-dasharray="4,3"/>
+        
+        <!-- 正式版 -->
+        <circle cx="320" cy="14" r="8" fill="#00D26A"/>
+        <text x="320" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#00D26A">6月中</text>
+        <text x="320" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">正式版</text>
+        
+        <!-- 连接线 -->
+        <line x1="332" y1="14" x2="398" y2="14" stroke="#3a4a6a" stroke-width="2" stroke-dasharray="4,3"/>
+        
+        <!-- Ubuntu 更新 -->
+        <circle cx="410" cy="14" r="8" fill="#E95420" opacity="0.5"/>
+        <text x="410" y="44" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="#aaa">年底</text>
+        <text x="410" y="56" text-anchor="middle" font-family="Arial, sans-serif" font-size="9" fill="#666">HWE</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- 底部品牌栏 -->
+  <rect x="0" y="465" width="900" height="35" fill="#0d1117" opacity="0.8"/>
+  <text x="450" y="487" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" fill="#E95420" font-weight="bold">🐧 UbuntuNews</text>
+  <text x="560" y="487" font-family="'Microsoft YaHei', sans-serif" font-size="11" fill="#666">| 资讯·工具·教程·社区 | 2026.04.29</text>
+  
+  <!-- Tux 企鹅剪影（左下装饰） -->
+  <g transform="translate(20, 400) scale(0.45)" opacity="0.15">
+    <ellipse cx="55" cy="75" rx="50" ry="35" fill="#E95420"/>
+    <ellipse cx="55" cy="42" rx="38" ry="38" fill="#E95420"/>
+    <ellipse cx="35" cy="30" rx="12" ry="16" fill="#E95420"/>
+    <ellipse cx="75" cy="30" rx="12" ry="16" fill="#E95420"/>
+    <circle cx="35" cy="28" r="5" fill="#1a1a2e"/>
+    <circle cx="75" cy="28" r="5" fill="#1a1a2e"/>
+    <ellipse cx="55" cy="48" rx="8" ry="5" fill="#FFB800"/>
+    <path d="M45 58 Q55 68 65 58" stroke="#1a1a2e" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <ellipse cx="25" cy="55" rx="14" ry="8" fill="#E95420" transform="rotate(-30, 25, 55)"/>
+    <ellipse cx="85" cy="55" rx="14" ry="8" fill="#E95420" transform="rotate(30, 85, 55)"/>
+  </g>
+  
+  <!-- 右上角 "HOT" 标签 -->
+  <g transform="translate(790, 15)">
+    <rect x="0" y="0" width="90" height="30" rx="15" fill="#E74C3C"/>
+    <text x="45" y="20" text-anchor="middle" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#fff">🔥 HOT</text>
+  </g>
+  
+  <!-- 标题文字说明 -->
+  <title>Linux 7.1-rc1 发布 - NTFS驱动写入暴涨110%</title>
+  <desc>Linux内核7.1首个候选版本发布，全新NTFS原生驱动合入主线，写入性能最高提升110%，FRED默认启用，i486架构退役。</desc>
+</svg>

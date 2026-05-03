@@ -1,0 +1,178 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0D1117"/>
+      <stop offset="50%" style="stop-color:#161B22"/>
+      <stop offset="100%" style="stop-color:#0D1117"/>
+    </linearGradient>
+
+    <!-- 强调色渐变 - 紫色系 (Material 3 / Compose) -->
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6750A4"/>
+      <stop offset="50%" style="stop-color:#9372D6"/>
+      <stop offset="100%" style="stop-color:#E8DEF8"/>
+    </linearGradient>
+
+    <!-- 橙色强调渐变 -->
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF6E40"/>
+      <stop offset="100%" style="stop-color:#E95420"/>
+    </linearGradient>
+
+    <!-- 青色点缀 -->
+    <linearGradient id="cyanGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00D9FF"/>
+      <stop offset="100%" style="stop-color:#00B4D8"/>
+    </linearGradient>
+
+    <!-- 发光效果 -->
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="softGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="20" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- 网格图案 -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262D" stroke-width="0.5" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- 网格层 -->
+  <rect width="900" height="500" fill="url(#grid)" opacity="0.5"/>
+
+  <!-- 装饰性光斑 - 右上角紫色光晕 -->
+  <ellipse cx="780" cy="80" rx="200" ry="150" fill="#6750A4" opacity="0.08" filter="url(#softGlow)"/>
+
+  <!-- 装饰性光斑 - 左下角橙色光晕 -->
+  <ellipse cx="120" cy="420" rx="180" ry="130" fill="#FF6E40" opacity="0.06" filter="url(#softGlow)"/>
+
+  <!-- 装饰性几何元素 - 代表 Compose 的声明式UI组件 -->
+  <!-- 左侧：模拟 UI 卡片/组件 -->
+  <g transform="translate(60, 140)" opacity="0.85">
+    <!-- 外框卡片 -->
+    <rect x="0" y="0" width="160" height="220" rx="16" fill="#1C2128" stroke="#30363D" stroke-width="1.5"/>
+
+    <!-- 标题栏区域 -->
+    <rect x="0" y="0" width="160" height="36" rx="16" fill="#262C34"/>
+    <rect x="0" y="18" width="160" height="18" fill="#262C34"/>
+
+    <!-- 窗口控制按钮 -->
+    <circle cx="20" cy="18" r="5" fill="#FF5F57" opacity="0.8"/>
+    <circle cx="38" cy="18" r="5" fill="#FEBC2E" opacity="0.8"/>
+    <circle cx="56" cy="18" r="5" fill="#28C840" opacity="0.8"/>
+
+    <!-- 模拟代码/样式块 -->
+    <rect x="12" y="52" width="136" height="12" rx="3" fill="#6750A4" opacity="0.25"/>
+    <rect x="12" y="72" width="100" height="10" rx="3" fill="#30363D" opacity="0.6"/>
+    <rect x="12" y="90" width="120" height="10" rx="3" fill="#30363D" opacity="0.6"/>
+    <rect x="22" y="110" width="80" height="8" rx="2" fill="#00D9FF" opacity="0.15"/>
+
+    <!-- Style 属性可视化 -->
+    <rect x="12" y="132" width="136" height="32" rx="8" fill="#6750A4" opacity="0.15" stroke="#6750A4" stroke-width="1" opacity="0.3"/>
+    <rect x="20" y="140" width="48" height="16" rx="4" fill="#6750A4" opacity="0.35"/>
+    <text x="76" y="152" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#9372D6" opacity="0.8">Style</text>
+
+    <!-- 更多属性行 -->
+    <rect x="12" y="176" width="136" height="32" rx="8" fill="#FF6E40" opacity="0.1" stroke="#FF6E40" stroke-width="1" opacity="0.2"/>
+    <rect x="20" y="184" width="38" height="16" rx="4" fill="#FF6E40" opacity="0.25"/>
+    <text x="66" y="196" font-family="system-ui, -apple-system, sans-serif" font-size="9" fill="#FF6E40" opacity="0.6">Button</text>
+  </g>
+
+  <!-- 右下：模拟 UI 预览/组件树 -->
+  <g transform="translate(700, 280)" opacity="0.7">
+    <rect x="0" y="0" width="140" height="160" rx="14" fill="#1C2128" stroke="#30363D" stroke-width="1"/>
+
+    <!-- 小预览窗口头部 -->
+    <rect x="0" y="0" width="140" height="30" rx="14" fill="#21262D"/>
+    <rect x="0" y="15" width="140" height="15" fill="#21262D"/>
+    <circle cx="16" cy="15" r="4" fill="#FF5F57" opacity="0.6"/>
+    <circle cx="30" cy="15" r="4" fill="#FEBC2E" opacity="0.6"/>
+    <circle cx="44" cy="15" r="4" fill="#28C840" opacity="0.6"/>
+
+    <!-- 模拟 UI 组件节点（代表 Compose 组合） -->
+    <!-- Column -->
+    <rect x="14" y="42" width="112" height="104" rx="8" fill="#6750A4" opacity="0.08" stroke="#6750A4" stroke-width="0.8" stroke-dasharray="3,2" opacity="0.3"/>
+
+    <!-- Button 1 -->
+    <rect x="24" y="52" width="92" height="28" rx="8" fill="url(#accentGrad)" opacity="0.7" filter="url(#glow)"/>
+    <text x="70" y="70" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="white" text-anchor="middle" font-weight="600">Primary</text>
+
+    <!-- Spacer -->
+    <rect x="24" y="86" width="92" height="6" rx="2" fill="#30363D" opacity="0.3"/>
+
+    <!-- Button 2 -->
+    <rect x="24" y="98" width="92" height="28" rx="8" fill="none" stroke="#9372D6" stroke-width="1.5" opacity="0.6"/>
+    <text x="70" y="116" font-family="system-ui, -apple-system, sans-serif" font-size="10" fill="#9372D6" text-anchor="middle" font-weight="500">Secondary</text>
+  </g>
+
+  <!-- 主标题区域 -->
+  <g transform="translate(250, 120)">
+    <!-- 版本号标签 -->
+    <rect x="0" y="0" width="140" height="38" rx="19" fill="#6750A4" opacity="0.15" stroke="#9372D6" stroke-width="1.2"/>
+    <text x="70" y="26" font-family="system-ui, -apple-system, sans-serif" font-size="17" fill="#E8DEF8" text-anchor="middle" font-weight="700" letter-spacing="1">v1.11</text>
+
+    <!-- 主标题 -->
+    <text x="0" y="85" font-family="system-ui, -apple-system, sans-serif" font-size="44" fill="#F0F6FC" font-weight="800" letter-spacing="-0.5">
+      Compose
+    </text>
+
+    <!-- 副标题 - Styles API 高亮 -->
+    <text x="0" y="138" font-family="system-ui, -apple-system, sans-serif" font-size="36" font-weight="700">
+      <tspan fill="url(#accentGrad)">Styles API</tspan>
+      <tspan fill="#F0F6FC"> 革命</tspan>
+    </text>
+
+    <!-- 描述文字 -->
+    <text x="0" y="175" font-family="system-ui, -apple-system, sans-serif" font-size="15" fill="#8B949E" letter-spacing="0.5">
+      声明式样式系统 · 测试 v2 迁移 · 触控板适配
+    </text>
+  </g>
+
+  <!-- 底部装饰线 -->
+  <line x1="250" y1="320" x2="650" y2="320" stroke="url(#accentGrad)" stroke-width="2" opacity="0.4"/>
+
+  <!-- 底部关键词标签 -->
+  <g transform="translate(255, 340)">
+    <rect x="0" y="0" width="72" height="26" rx="13" fill="#6750A4" opacity="0.12"/>
+    <text x="36" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#9372D6" text-anchor="middle" font-weight="500">Android</text>
+
+    <rect x="82" y="0" width="72" height="26" rx="13" fill="#FF6E40" opacity="0.12"/>
+    <text x="118" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#FF6E40" text-anchor="middle" font-weight="500">Kotlin</text>
+
+    <rect x="164" y="0" width="88" height="26" rx="13" fill="#00D9FF" opacity="0.1"/>
+    <text x="208" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#00D9FF" text-anchor="middle" font-weight="500" opacity="0.8">Jetpack</text>
+
+    <rect x="262" y="0" width="80" height="26" rx="13" fill="#28C840" opacity="0.12"/>
+    <text x="302" y="18" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#7EE787" text-anchor="middle" font-weight="500">实战指南</text>
+  </g>
+
+  <!-- 装饰性连接线 - 从左卡片到主内容到右预览 -->
+  <path d="M 225 250 Q 240 260 255 245" fill="none" stroke="#6750A4" stroke-width="1" opacity="0.2" stroke-dasharray="4,3"/>
+  <path d="M 645 310 Q 680 320 695 350" fill="none" stroke="#6750A4" stroke-width="1" opacity="0.2" stroke-dasharray="4,3"/>
+
+  <!-- 浮动装饰粒子 -->
+  <circle cx="300" cy="400" r="2" fill="#9372D6" opacity="0.4"/>
+  <circle cx="580" cy="110" r="2.5" fill="#00D9FF" opacity="0.3"/>
+  <circle cx="650" cy="430" r="1.5" fill="#FF6E40" opacity="0.35"/>
+  <circle cx="180" cy="90" r="2" fill="#9372D6" opacity="0.25"/>
+  <circle cx="820" cy="200" r="1.8" fill="#00D9FF" opacity="0.3"/>
+  <circle cx="450" cy="450" r="2.2" fill="#7EE787" opacity="0.2"/>
+
+  <!-- 顶部细线装饰 -->
+  <line x1="0" y1="0" x2="900" y2="0" stroke="url(#accentGrad)" stroke-width="2" opacity="0.3"/>
+</svg>

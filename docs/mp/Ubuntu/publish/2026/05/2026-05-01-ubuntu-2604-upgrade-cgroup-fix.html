@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>微信公众号文章</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    }
+    .wechat-content {
+      font-size: 16px; line-height: 1.8; text-align: left; color: #333333; background-color: #ffffff; padding: 20px 15px; max-width: 100%
+    }
+    /* 斑马纹表格 */
+    .wechat-content tr:nth-child(even) {
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <div class="wechat-content">
+<h1 style="font-size: 24px; font-weight: bold; color: #000000; text-align: center; margin: 25px 0 20px 0; padding: 10px 0; border-bottom: 2px solid #E95420">Ubuntu 26.04 升级被拒？cgroup v1 迁移全攻略 + 升级后 12 项必做修复</h1><blockquote style="background-color: #f8f8f8; border-left: 4px solid #E95420; padding: 15px 20px; margin: 15px 0; color: #666666; font-size: 15px; border-radius: 4px"><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">升级报错 &quot;Refusing to run under cgroup v1&quot;？中文变日文？ll 命令出乱码？别慌，一文搞定所有升级坑点。</p></blockquote><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">⏱ 阅读时长：8 分钟 | 📅 2026-05-01</p><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">写在前面</h2><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">Ubuntu 26.04 LTS 发布已满一周，大量用户第一时间冲了升级——然后被各种报错劝退。</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">其中最炸裂的：<strong style="color: #E95420; font-weight: bold">systemd 259 彻底移除 cgroup v1 支持</strong>，升级直接中断。社区论坛、Ask Ubuntu 上相关问题暴增。</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">今天是五一假期，正是升级好时机。我整理了 <strong style="color: #E95420; font-weight: bold">升级被拒的 5 大原因和 3 种解决方案</strong>，外加 <strong style="color: #E95420; font-weight: bold">升级后 12 项必做修复清单</strong>，帮你一次性搞定。</p><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">一、升级被拒：cgroup v1 不再支持</h2><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">🔴 典型报错</h3><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code>Refusing to run under cgroup v1
+Your system is using cgroup v1, which is no longer supported
+upgrade blocker: cgroup v1 detected</code></pre><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">看到这个，升级直接中断。</p><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">为什么会中招？</h3><table style="width: 100%; border-collapse: collapse; margin: 15px 0"><tr>
+<th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">原因</th><th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">说明</th><th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">高危人群</th></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">GRUB 强制 cgroup v1</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">残留 <code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">systemd.unified_cgroup_hierarchy=0</code></td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">Docker 旧版用户、Home Assistant 用户</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">Docker 版本低于 20.10</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">Docker 19.03 依赖 cgroup v1</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">未更新 Docker 的用户</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">LXC/LXD 旧格式配置</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">残留 <code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">lxc.cgroup.*</code> (v1 格式)</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">容器化部署用户</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">GPU 驱动硬编码 v1 路径</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">旧版 NVIDIA Container Toolkit</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">AI/深度学习用户</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">Snap/AppArmor 配置冲突</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">旧 snapd 快照需 v1 shim</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">长期未 <code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">snap refresh</code> 的用户</td></tr>
+</table><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">快速自查：你中招了吗？</h3><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 显示 cgroup2fs = v2（安全），tmpfs = v1（会被拦截）</span>
+<span class="hljs-built_in">stat</span> -<span class="hljs-built_in">fc</span> %T /sys/fs/cgroup/
+
+<span class="hljs-comment"># 检查 Docker 的 cgroup 版本</span>
+docker info 2&gt;/dev/null | grep -i cgroup
+<span class="hljs-comment"># 期望输出：Cgroup Driver: systemd / Cgroup Version: 2</span></code></pre><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">二、3 种解决方案</h2><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">方案 1：正规迁移 cgroup v2（推荐）</h3><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">适用场景</strong>：GRUB 有残留 v1 参数 + Docker 版本过低</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">步骤 1</strong>：修改 GRUB</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 备份</span>
+<span class="hljs-built_in">sudo</span> <span class="hljs-built_in">cp</span> /etc/default/grub /etc/default/grub.backup-pre-2604
+
+<span class="hljs-comment"># 编辑，删除以下两行参数：</span>
+<span class="hljs-comment"># systemd.unified_cgroup_hierarchy=0</span>
+<span class="hljs-comment"># systemd.legacy_systemd_cgroup_controller=1</span>
+<span class="hljs-built_in">sudo</span> nano /etc/default/grub
+
+<span class="hljs-comment"># 更新引导</span>
+<span class="hljs-built_in">sudo</span> update-grub
+<span class="hljs-built_in">sudo</span> reboot</code></pre><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">重启后确认：<code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">stat -fc %T /sys/fs/cgroup/</code> 应显示 <code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">cgroup2fs</code></p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">步骤 2</strong>：更新 Docker</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 卸载旧版</span>
+<span class="hljs-built_in">sudo</span> apt remove docker docker-engine docker.io containerd runc
+
+<span class="hljs-comment"># 安装最新版</span>
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | \
+  <span class="hljs-built_in">sudo</span> gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+
+<span class="hljs-built_in">echo</span> <span class="hljs-string">&quot;deb [arch=<span class="hljs-subst">$(dpkg --print-architecture)</span> \
+  signed-by=/etc/apt/keyrings/docker.gpg] \
+  https://download.docker.com/linux/ubuntu \
+  <span class="hljs-subst">$(lsb_release -cs)</span> stable&quot;</span> | \
+  <span class="hljs-built_in">sudo</span> <span class="hljs-built_in">tee</span> /etc/apt/sources.list.d/docker.list
+
+<span class="hljs-built_in">sudo</span> apt update &amp;&amp; <span class="hljs-built_in">sudo</span> apt install docker-ce docker-ce-cli container.io
+<span class="hljs-built_in">sudo</span> systemctl restart docker
+
+<span class="hljs-comment"># 验证</span>
+docker info | grep -i cgroup
+<span class="hljs-comment"># 应显示 Cgroup Version: 2</span></code></pre><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">步骤 3</strong>：重新执行升级</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-built_in">sudo</span> apt update &amp;&amp; <span class="hljs-built_in">sudo</span> apt full-upgrade
+<span class="hljs-built_in">sudo</span> do-release-upgrade -d</code></pre><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">方案 2：仅修改容器端配置</h3><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">适用场景</strong>：主机 GRUB 已切 v2，但容器运行时仍要求 v1</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># Docker daemon 明示 cgroup v2</span>
+<span class="hljs-built_in">sudo</span> <span class="hljs-built_in">tee</span> /etc/docker/daemon.json &lt;&lt;<span class="hljs-string">&#x27;EOF&#x27;</span>
+{
+  <span class="hljs-string">&quot;exec-opts&quot;</span>: [<span class="hljs-string">&quot;native.cgroupdriver=systemd&quot;</span>]
+}
+EOF
+<span class="hljs-built_in">sudo</span> systemctl restart docker
+
+<span class="hljs-comment"># LXC 配置改写</span>
+<span class="hljs-comment"># 旧：lxc.cgroup.memory.limit_in_bytes = 512M</span>
+<span class="hljs-comment"># 新：lxc.cgroup2.memory.max = 512M</span></code></pre><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">方案 3：两阶段升级（生产环境）</h3><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">适用场景</strong>：生产服务器，稳字当头</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 先升 25.10（同时支持 v1 和 v2）</span>
+<span class="hljs-built_in">sudo</span> sed -i <span class="hljs-string">&#x27;s/Prompt=lts/Prompt=normal/&#x27;</span> /etc/update-manager/release-upgrades
+<span class="hljs-built_in">sudo</span> do-release-upgrade
+
+<span class="hljs-comment"># 在 25.10 上用 cgroup v2 运行验证 1~2 周</span>
+<span class="hljs-comment"># 确认 Docker、K8s、systemd-cgtop 指标正常后</span>
+<span class="hljs-comment"># 再升 26.04</span>
+<span class="hljs-built_in">sudo</span> do-release-upgrade</code></pre><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">三、升级后 12 项必做修复</h2><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">升级完成不代表万事大吉。以下按优先级排序，逐项检查：</p><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">🔴 P0：系统体检（立即做）</h3><table style="width: 100%; border-collapse: collapse; margin: 15px 0"><tr>
+<th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">检查项</th><th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">命令</th><th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">关注点</th></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">内核版本</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left"><code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">uname -a</code></td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">应为 7.0.x</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">失败服务</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left"><code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">systemctl --failed</code></td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">必须为空</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">包管理状态</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left"><code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">dpkg --audit</code></td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">必须无报错</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">磁盘空间</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left"><code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">df -h</code></td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">/ 需 &gt;5GB 可用</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">启动错误</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left"><code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">journalctl -p 3 -b</code></td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">无 critical 错误</td></tr>
+</table><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">🟠 P1：关键功能恢复</h3><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">6. APT 源收敛</strong></p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 禁用还停在旧版本的第三方源</span>
+<span class="hljs-built_in">ls</span> /etc/apt/sources.list.d/
+<span class="hljs-built_in">sudo</span> apt update
+apt list --upgradable</code></pre><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">第三方源必须确认已提供 26.04 包，否则升级后 apt update 会报错。</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">7. GPU 驱动验证</strong></p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># NVIDIA</span>
+nvidia-smi
+
+<span class="hljs-comment"># AMD ROCm</span>
+rocminfo
+rocm-smi</code></pre><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">8. 中文显示修复</strong></p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">升级后中文可能变成日文字形（CJK fallback 顺序变了）：</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 验证</span>
+fc-match <span class="hljs-string">&#x27;sans-serif:charset=590d&#x27;</span>
+
+<span class="hljs-comment"># 修复：新增本地 fontconfig 规则</span>
+<span class="hljs-built_in">sudo</span> <span class="hljs-built_in">tee</span> /etc/fonts/local.conf &lt;&lt;<span class="hljs-string">&#x27;EOF&#x27;</span>
+&lt;?xml version=<span class="hljs-string">&quot;1.0&quot;</span>?&gt;
+&lt;!DOCTYPE fontconfig SYSTEM <span class="hljs-string">&quot;urn:fontconfig:fonts.dtd&quot;</span>&gt;
+&lt;fontconfig&gt;
+  &lt;<span class="hljs-built_in">alias</span>&gt;
+    &lt;family&gt;sans-serif&lt;/family&gt;
+    &lt;prefer&gt;
+      &lt;family&gt;Noto Sans CJK SC&lt;/family&gt;
+    &lt;/prefer&gt;
+  &lt;/alias&gt;
+&lt;/fontconfig&gt;
+EOF
+
+fc-cache -f</code></pre><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">🟡 P2：桌面与开发环境</h3><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">9. 输入法检查</strong></p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">GNOME 50 + Wayland 下输入法链路可能被升级覆盖，确认：</p><ul style="margin: 10px 0; padding-left: 25px; line-height: 1.8"><li style="margin: 5px 0; line-height: 1.8">Rime / ibus 配置已恢复</li><li style="margin: 5px 0; line-height: 1.8">输入法快捷键与终端快捷键无冲突</li></ul><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">10. Wayland 兼容性</strong></p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">XWayland 下可能遇到 Xauthority 过期：</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 自动选择最新的 Mutter Xwayland auth 文件</span>
+find <span class="hljs-string">&quot;<span class="hljs-variable">${XDG_RUNTIME_DIR:-/run/user/$(id -u)}</span>&quot;</span> \
+  -maxdepth 1 -<span class="hljs-built_in">type</span> f -name <span class="hljs-string">&#x27;.mutter-Xwaylandauth.*&#x27;</span> \
+  -<span class="hljs-built_in">printf</span> <span class="hljs-string">&#x27;%T@ %p\n&#x27;</span> | <span class="hljs-built_in">sort</span> -nr | awk <span class="hljs-string">&#x27;NR == 1 {print $2}&#x27;</span></code></pre><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">11. ll 命令修复</strong></p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">rust-coreutils 的 ls 可能导致 ll 输出列间距异常：</p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 确认当前调用的是哪个 ls</span>
+<span class="hljs-built_in">type</span> -a <span class="hljs-built_in">ls</span>
+
+<span class="hljs-comment"># 修复：切回 GNU 版（推荐）</span>
+<span class="hljs-built_in">sudo</span> apt install coreutils-from-gnu --allow-remove-essential</code></pre><h3 style="font-size: 18px; font-weight: bold; color: #333333; margin: 18px 0 12px 0; padding: 5px 0">🟢 P3：清理与优化</h3><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">12. 残留包清理 + 索引收敛</strong></p><pre style="background-color: #282c34; color: #abb2bf; padding: 15px 20px; border-radius: 6px; margin: 15px 0; font-size: 14px; line-height: 1.6; font-family: Consolas, Monaco, monospace; overflow: auto"><code><span class="hljs-comment"># 清理旧版本残留</span>
+<span class="hljs-built_in">sudo</span> apt autoremove --purge
+
+<span class="hljs-comment"># GNOME LocalSearch 索引范围收窄</span>
+<span class="hljs-comment"># 升级后可能重新索引整个家目录，CPU 狂飙</span>
+<span class="hljs-comment"># 设置 &gt; 搜索 &gt; 搜索位置，排除 node_modules、venv、build 等</span></code></pre><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">四、升级时间线建议</h2><table style="width: 100%; border-collapse: collapse; margin: 15px 0"><tr>
+<th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">时间节点</th><th style="background-color: #E95420; color: #ffffff; padding: 10px; border: 1px solid #ddd; text-align: left; font-weight: bold">建议操作</th></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">发布日 ~ 1 周后</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">开发者/爱好者可升级，参考本文修复</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left"><strong style="color: #E95420; font-weight: bold">26.04.1 修正版</strong>（约 7 月）</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">普通用户建议等此版本自动升级</td></tr>
+<tr>
+<td style="padding: 10px; border: 1px solid #ddd; text-align: left">2029 年 4 月前</td><td style="padding: 10px; border: 1px solid #ddd; text-align: left">24.04 LTS 用户不受影响，可安心等待</td></tr>
+</table><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">五、常见 FAQ</h2><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q：可以不升级继续用 24.04 吗？</strong>
+完全可以。24.04 LTS 支持到 2029 年 4 月，ESM 至 2034 年 4 月。</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q：Docker 19 升级后能用吗？</strong>
+不能。必须更新到 Docker 24.0+ 后再升级系统。</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q：Home Assistant 用户怎么办？</strong>
+删除 GRUB 中的 <code style="background-color: #f5f5f5; color: #E95420; padding: 2px 6px; border-radius: 3px; font-size: 14px; font-family: Consolas, Monaco, monospace">systemd.unified_cgroup_hierarchy=0</code>，更新 HA 至 2026.1+ 版本。</p><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333"><strong style="color: #E95420; font-weight: bold">Q：双系统 Windows + Ubuntu 受影响吗？</strong>
+TPM 全盘加密兼容 BitLocker，双系统友好。但升级前建议备份重要数据。</p><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><h2 style="font-size: 20px; font-weight: bold; color: #E95420; margin: 20px 0 15px 0; padding: 8px 0; border-left: 4px solid #E95420; padding-left: 10px">总结</h2><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">Ubuntu 26.04 是一次<strong style="color: #E95420; font-weight: bold">从内核到桌面的全维度大升级</strong>，但升级路上的坑不少：</p><ol style="margin: 10px 0; padding-left: 25px; line-height: 1.8"><li style="margin: 5px 0; line-height: 1.8"><strong style="color: #E95420; font-weight: bold">cgroup v1 是最大拦路虎</strong> —— 先自查、再迁移、后升级</li><li style="margin: 5px 0; line-height: 1.8"><strong style="color: #E95420; font-weight: bold">升级后 12 项修复要逐项过</strong> —— 先系统健康，再桌面环境，最后清理优化</li><li style="margin: 5px 0; line-height: 1.8"><strong style="color: #E95420; font-weight: bold">普通用户建议等 26.04.1</strong> —— 开发者和爱好者可以冲，但做好踩坑准备</li></ol><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">五一假期有充裕时间，正好是升级的好时机。祝升级顺利！</p><hr style="border: none; height: 1px; background-color: #E95420; margin: 20px 0"><p style="margin: 10px 0; text-indent: 2em; line-height: 1.8; font-size: 16px; color: #333333">💡 <strong style="color: #E95420; font-weight: bold">UbuntuNews</strong> | 资讯·工具·教程·社区
+🐧 关注我们，获取更多Ubuntu/Linux技术干货
+💬 加入QQ群/频道，与全国爱好者交流成长
+❤️ 觉得有用？点个&quot;在看&quot;分享给更多人！</p>
+  </div>
+</body>
+</html>

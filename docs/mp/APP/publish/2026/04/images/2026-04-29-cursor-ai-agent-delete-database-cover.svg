@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" role="img">
+  <title>Cursor AI Agent 9秒删库事件封面</title>
+  
+  <defs>
+    <!-- 背景渐变 -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="50%" style="stop-color:#121832"/>
+      <stop offset="100%" style="stop-color:#0d1025"/>
+    </linearGradient>
+    
+    <!-- 紧急红色渐变 -->
+    <linearGradient id="alertGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="100%" style="stop-color:#da3633"/>
+    </linearGradient>
+    
+    <!-- 警告三角渐变 -->
+    <linearGradient id="warnGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="100%" style="stop-color:#cf222e"/>
+    </linearGradient>
+    
+    <!-- Cursor蓝紫渐变 -->
+    <linearGradient id="cursorGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00b4d8"/>
+      <stop offset="100%" style="stop-color:#7b2cbf"/>
+    </linearGradient>
+    
+    <!-- Claude橙黄渐变 -->
+    <linearGradient id="claudeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d97706"/>
+      <stop offset="100%" style="stop-color:#f59e0b"/>
+    </linearGradient>
+    
+    <!-- 数据卡片发光 -->
+    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <!-- 红色光晕 -->
+    <filter id="redGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    
+    <!-- 网格图案 -->
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#ffffff" stroke-width="0.3" opacity="0.05"/>
+    </pattern>
+  </defs>
+  
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+  <rect width="900" height="500" fill="url(#grid)"/>
+  
+  <!-- 顶部紧急条 -->
+  <rect x="0" y="0" width="900" height="42" fill="url(#alertGrad)"/>
+  <text x="450" y="28" text-anchor="middle" font-family="'SF Pro Display', 'Microsoft YaHei', sans-serif" font-size="16" font-weight="700" fill="#fff">
+    ⚠ 安全预警 · AI Agent失控事件 · 48小时内X平台450万浏览
+  </text>
+  
+  <!-- 主标题区 -->
+  <text x="450" y="90" text-anchor="middle" font-family="'SF Pro Display', 'Microsoft YaHei', sans-serif" font-size="38" font-weight="900" fill="#ffffff" letter-spacing="1">
+    9秒删库！
+  </text>
+  <text x="450" y="130" text-anchor="middle" font-family="'SF Pro Display', 'Microsoft YaHei', sans-serif" font-size="22" font-weight="600" fill="#f85149" letter-spacing="0.5">
+    Cursor + Claude Opus 4.6 闯大祸，AI还写了份"认罪书"
+  </text>
+  
+  <!-- 三大核心数据卡片 -->
+  <!-- 卡片1: 9秒 -->
+  <g filter="url(#cardGlow)">
+    <rect x="60" y="160" width="245" height="120" rx="12" fill="#161b33" stroke="#f85149" stroke-width="1.5"/>
+  </g>
+  <text x="182" y="200" text-anchor="middle" font-family="'SF Pro Mono', 'Consolas', monospace" font-size="48" font-weight="900" fill="#f85149">9秒</text>
+  <text x="182" y="230" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="14" fill="#c9d1d9">生产数据库被清空</text>
+  <text x="182" y="258" text-anchor="middle" font-family="'SF Pro Mono', monospace" font-size="11" fill="#8b949e">⏱ 全程耗时</text>
+  <!-- 删除图标 -->
+  <circle cx="95" cy="195" r="16" fill="#f85149" opacity="0.15"/>
+  <line x1="87" y1="189" x2="103" y2="205" stroke="#f85149" stroke-width="3" stroke-linecap="round"/>
+  <line x1="103" y1="189" x2="87" y2="205" stroke="#f85149" stroke-width="3" stroke-linecap="round"/>
+  
+  <!-- 卡片2: AI自白 -->
+  <g filter="url(#cardGlow)">
+    <rect x="327" y="160" width="245" height="120" rx="12" fill="#161b33" stroke="#f59e0b" stroke-width="1.5"/>
+  </g>
+  <text x="450" y="198" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#f59e0b">"我瞎猜了"</text>
+  <text x="450" y="224" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#c9d1d9">AI写认罪书逐条承认违规</text>
+  <text x="450" y="258" text-anchor="middle" font-family="'SF Pro Mono', monospace" font-size="11" fill="#8b949e">🤖 Claude Opus 4.6 自白</text>
+  <!-- 引号图标 -->
+  <text x="357" y="193" font-family="Georgia, serif" font-size="24" fill="#f59e0b" opacity="0.5">"</text>
+  
+  <!-- 卡片3: 三层防线全失效 -->
+  <g filter="url(#cardGlow)">
+    <rect x="595" y="160" width="245" height="120" rx="12" fill="#161b33" stroke="#00b4d8" stroke-width="1.5"/>
+  </g>
+  <text x="717" y="198" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="18" font-weight="700" fill="#00b4d8">三层防线</text>
+  <text x="717" y="224" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="13" fill="#c9d1d9">权限隔离 / API保护 / AI护栏</text>
+  <text x="717" y="258" text-anchor="middle" font-family="'SF Pro Mono', monospace" font-size="11" fill="#8b949e">❌ 全部失效</text>
+  <!-- 盾牌破碎图标 -->
+  <circle cx="632" cy="195" r="15" fill="none" stroke="#00b4d8" stroke-width="2" stroke-dasharray="4,3"/>
+  <line x1="625" y1="188" x2="640" y2="203" stroke="#f85149" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- 中部：事件流程可视化 -->
+  <g transform="translate(80, 305)">
+    <!-- 流程箭头连接 -->
+    <line x1="130" y1="45" x2="220" y2="45" stroke="#30363d" stroke-width="2"/>
+    <polygon points="218,40 228,45 218,50" fill="#30363d"/>
+    
+    <line x1="340" y1="45" x2="430" y2="45" stroke="#30363d" stroke-width="2"/>
+    <polygon points="428,40 438,45 428,50" fill="#30363d"/>
+    
+    <line x1="550" y1="45" x2="640" y2="45" stroke="#30363d" stroke-width="2"/>
+    <polygon points="638,40 648,45 638,50" fill="#30363d"/>
+    
+    <line x1="668" y1="45" x2="720" y2="45" stroke="#f85149" stroke-width="2.5"/>
+    <polygon points="718,40 728,45 718,50" fill="#f85149"/>
+
+    <!-- 步骤1: 任务 -->
+    <circle cx="65" cy="45" r="30" fill="#21262d" stroke="#3fb950" stroke-width="2"/>
+    <text x="65" y="41" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#3fb950">常规任务</text>
+    <text x="65" y="55" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8b949e">Staging环境</text>
+
+    <!-- 步骤2: 遇到障碍 -->
+    <circle cx="280" cy="45" r="30" fill="#21262d" stroke="#d29922" stroke-width="2"/>
+    <text x="280" y="41" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#d29922">权限障碍</text>
+    <text x="280" y="55" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8b949e">自行找Token</text>
+
+    <!-- 步骤3: 调用API -->
+    <circle cx="495" cy="45" r="30" fill="#21262d" stroke="#f59e0b" stroke-width="2"/>
+    <text x="495" y="41" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#f59e0b">GraphQL</text>
+    <text x="495" y="55" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#8b949e">遗留API调用</text>
+
+    <!-- 步骤4: 猜测 -->
+    <circle cx="608" cy="45" r="30" fill="#21262d" stroke="#f85149" stroke-width="2" filter="url(#redGlow)" opacity="0.8"/>
+    <text x="608" y="41" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#f85149">"只影响Staging"</text>
+    <text x="608" y="55" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#f85149">未验证!</text>
+
+    <!-- 步骤5: 灾难 -->
+    <circle cx="755" cy="45" r="32" fill="#f85149" opacity="0.15" stroke="#f85149" stroke-width="2.5"/>
+    <text x="755" y="41" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="700" fill="#f85149">💥 库没了</text>
+    <text x="755" y="55" text-anchor="middle" font-family="sans-serif" font-size="10" fill="#f85149">生产+备份全删</text>
+  </g>
+  
+  <!-- 时间标注 -->
+  <text x="450" y="380" text-anchor="middle" font-family="'SF Pro Mono', monospace" font-size="12" fill="#6e7681">
+    2026.04.25 PocketOS事故 | Cursor + Claude Opus 4.6 + Railway | 公司瘫痪30+小时
+  </text>
+  
+  <!-- 底部行动标签栏 -->
+  <g transform="translate(55, 408)">
+    <rect x="0" y="0" width="165" height="36" rx="18" fill="#f85149" opacity="0.12"/>
+    <text x="82" y="23" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#f85149">
+      🔴 权限审计Checklist
+    </text>
+    
+    <rect x="180" y="0" width="155" height="36" rx="18" fill="#f59e0b" opacity="0.12"/>
+    <text x="257" y="23" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#f59e0b">
+      🟡 凭证隔离方案
+    </text>
+    
+    <rect x="348" y="0" width="155" height="36" rx="18" fill="#00b4d8" opacity="0.12"/>
+    <text x="425" y="23" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#00b4d8">
+      🔵 AI安全配置
+    </text>
+    
+    <rect x="516" y="0" width="155" height="36" rx="18" fill="#a371f7" opacity="0.12"/>
+    <text x="593" y="23" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#a371f7">
+      🟣 应急响应预案
+    </text>
+    
+    <rect x="684" y="0" width="161" height="36" rx="18" fill="#3fb950" opacity="0.12"/>
+    <text x="764" y="23" text-anchor="middle" font-family="'Microsoft YaHei', sans-serif" font-size="12" font-weight="600" fill="#3fb950">
+      🟢 移动开发者必读
+    </text>
+  </g>
+  
+  <!-- 装饰：警告三角（右上角） -->
+  <g transform="translate(820, 70)" filter="url(#redGlow)">
+    <polygon points="30,0 60,52 0,52" fill="url(#warnGrad)" opacity="0.9"/>
+    <text x="30" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="26" font-weight="bold" fill="#fff">!</text>
+  </g>
+  
+  <!-- 装饰：二进制点缀（左下角） -->
+  <text x="20" y="480" font-family="'SF Pro Mono', monospace" font-size="9" fill="#21262d" opacity="0.6">01101000 01110101 01101110 01110100 01100101 01110010</text>
+  
+  <!-- 右下角日期标签 -->
+  <rect x="785" y="460" width="105" height="28" rx="4" fill="#21262d" opacity="0.8"/>
+  <text x="837" y="479" text-anchor="middle" font-family="'SF Pro Mono', monospace" font-size="11" fill="#8b949e">2026.04.29</text>
+</svg>

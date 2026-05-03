@@ -1,0 +1,151 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#161b22"/>
+    </linearGradient>
+    <linearGradient id="ubuntuGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E95420"/>
+      <stop offset="100%" stop-color="#C7421A"/>
+    </linearGradient>
+    <linearGradient id="fedoraGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#51A2DA"/>
+      <stop offset="100%" stop-color="#3C8EC4"/>
+    </linearGradient>
+    <linearGradient id="vsGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFD700"/>
+      <stop offset="100%" stop-color="#FFA500"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- Subtle grid pattern -->
+  <g opacity="0.04" stroke="#fff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- Decorative diagonal line -->
+  <line x1="450" y1="60" x2="450" y2="440" stroke="#333" stroke-width="1" stroke-dasharray="4,4" opacity="0.5"/>
+
+  <!-- Ubuntu side (left) -->
+  <g transform="translate(225, 160)">
+    <!-- Ubuntu circle of friends logo simplified -->
+    <circle cx="0" cy="0" r="52" fill="none" stroke="url(#ubuntuGrad)" stroke-width="3" filter="glow"/>
+    <circle cx="0" cy="0" r="16" fill="url(#ubuntuGrad)"/>
+    <circle cx="0" cy="-38" r="9" fill="url(#ubuntuGrad)"/>
+    <circle cx="33" cy="19" r="9" fill="url(#ubuntuGrad)"/>
+    <circle cx="-33" cy="19" r="9" fill="url(#ubuntuGrad)"/>
+  </g>
+
+  <!-- Ubuntu label -->
+  <text x="225" y="240" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#E95420" filter="softShadow">Ubuntu 26.04</text>
+  <text x="225" y="264" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">LTS · Linux 7.0 · 5年支持</text>
+
+  <!-- Ubuntu feature tags -->
+  <g transform="translate(105, 285)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#E95420" opacity="0.15" stroke="#E95420" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#E95420">Linux 7.0</text>
+  </g>
+  <g transform="translate(195, 285)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#E95420" opacity="0.15" stroke="#E95420" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#E95420">X11可选</text>
+  </g>
+  <g transform="translate(105, 317)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#E95420" opacity="0.15" stroke="#E95420" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#E95420">APT+Snap</text>
+  </g>
+  <g transform="translate(195, 317)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#E95420" opacity="0.15" stroke="#E95420" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#E95420">TPM加密</text>
+  </g>
+
+  <!-- VS badge (center) -->
+  <g transform="translate(450, 160)">
+    <circle cx="0" cy="0" r="30" fill="#1a1f29" stroke="url(#vsGrad)" stroke-width="2" filter="glow"/>
+    <text x="0" y="7" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="900" fill="url(#vsGrad)">VS</text>
+  </g>
+
+  <!-- Same week badge -->
+  <g transform="translate(450, 95)">
+    <rect x="-68" y="-12" width="136" height="24" rx="12" fill="#FFD700" opacity="0.15" stroke="#FFD700" stroke-width="0.8" stroke-opacity="0.5"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600" fill="#FFD700">同一周发布！</text>
+  </g>
+
+  <!-- Fedora side (right) -->
+  <g transform="translate(675, 160)">
+    <!-- Fedora infinity logo simplified -->
+    <path d="M-8,-28 C18,-28 32,-16 32,-2 C32,12 18,20 4,20 C-10,20 -18,12 -18,2 C-18,-8 -8,-14 4,-14 C14,-14 20,-8 20,0 C20,6 14,12 6,12" 
+          fill="none" stroke="url(#fedoraGrad)" stroke-width="4" stroke-linecap="round" filter="glow"/>
+    <circle cx="6" cy="6" r="5" fill="url(#fedoraGrad)"/>
+  </g>
+
+  <!-- Fedora label -->
+  <text x="675" y="240" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#51A2DA" filter="softShadow">Fedora 44</text>
+  <text x="675" y="264" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="13" fill="#8b949e">滚动 · Linux 6.19 · GCC 16</text>
+
+  <!-- Fedora feature tags -->
+  <g transform="translate(555, 285)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#51A2DA" opacity="0.15" stroke="#51A2DA" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#51A2DA">DNF5</text>
+  </g>
+  <g transform="translate(645, 285)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#51A2DA" opacity="0.15" stroke="#51A2DA" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#51A2DA">X11移除</text>
+  </g>
+  <g transform="translate(555, 317)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#51A2DA" opacity="0.15" stroke="#51A2DA" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#51A2DA">Plasma 6.6</text>
+  </g>
+  <g transform="translate(645, 317)">
+    <rect x="0" y="0" width="80" height="24" rx="4" fill="#51A2DA" opacity="0.15" stroke="#51A2DA" stroke-width="0.5" stroke-opacity="0.3"/>
+    <text x="40" y="16" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#51A2DA">NTSYNC</text>
+  </g>
+
+  <!-- Key comparison bars -->
+  <g transform="translate(100, 380)">
+    <text x="0" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#8b949e">内核</text>
+    <rect x="55" y="-10" width="320" height="14" rx="3" fill="#21262d"/>
+    <rect x="55" y="-10" width="280" height="14" rx="3" fill="url(#ubuntuGrad)" opacity="0.7"/>
+    <text x="345" y="2" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#E95420" font-weight="600">7.0</text>
+    <rect x="55" y="10" width="320" height="14" rx="3" fill="#21262d"/>
+    <rect x="55" y="10" width="246" height="14" rx="3" fill="url(#fedoraGrad)" opacity="0.7"/>
+    <text x="345" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#51A2DA" font-weight="600">6.19</text>
+  </g>
+
+  <g transform="translate(500, 380)">
+    <text x="0" y="0" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#8b949e">支持</text>
+    <rect x="55" y="-10" width="320" height="14" rx="3" fill="#21262d"/>
+    <rect x="55" y="-10" width="320" height="14" rx="3" fill="url(#ubuntuGrad)" opacity="0.7"/>
+    <text x="345" y="2" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#E95420" font-weight="600">5年LTS</text>
+    <rect x="55" y="10" width="320" height="14" rx="3" fill="#21262d"/>
+    <rect x="55" y="10" width="88" height="14" rx="3" fill="url(#fedoraGrad)" opacity="0.7"/>
+    <text x="345" y="22" font-family="'Segoe UI', Arial, sans-serif" font-size="10" fill="#51A2DA" font-weight="600">13个月</text>
+  </g>
+
+  <!-- Title -->
+  <text x="450" y="42" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="26" font-weight="800" fill="#ffffff" filter="softShadow">同周双发！Ubuntu 26.04 vs Fedora 44</text>
+  <text x="450" y="68" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="15" fill="#8b949e">GNOME 50 同桌竞技，谁更适合你？</text>
+
+  <!-- Bottom brand -->
+  <text x="450" y="478" text-anchor="middle" font-family="'Segoe UI', Arial, sans-serif" font-size="11" fill="#484f58">UbuntuNews | 2026年4月30日</text>
+</svg>
