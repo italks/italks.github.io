@@ -98,6 +98,88 @@
 
 ---
 
+### 2026-05-04 08:20（第5次执行）
+**选题结果**：
+- 文章标题：Ubuntu 官网瘫痪！DDoS 攻击 + 漏洞 9 年提权，两大危机同时爆发
+- 类型：热点新闻+安全漏洞（双重危机叠加）
+- 文件：docs/mp/Ubuntu/publish/2026/05/2026-05-04-ubuntu-ddos-cve-copyfail.md
+- 封面：docs/mp/Ubuntu/publish/2026/05/images/2026-05-04-ubuntu-ddos-cve-copyfail-cover.svg
+- 排版HTML：docs/mp/Ubuntu/publish/2026/05/2026-05-04-ubuntu-ddos-cve-copyfail.html
+
+**选题理由**：
+- 两大热点同时爆发：Canonical遭DDoS攻击（4/30起）+ CVE-2026-31431 Copy Fail漏洞（4/29披露）
+- 双重叠加效应：漏洞急需修补，但安全服务瘫痪，用户无法获取更新——安全沟通真空
+- 时效性极强：攻击仍在持续/恢复中，漏洞披露仅5天
+- 覆盖全部用户画像：新手（切镜像源）+ 技术爱好者（漏洞原理）+ 开发者（容器逃逸）+ 运维（紧急缓解）
+- 实用性强：提供4步自救指南（禁用模块→切镜像源→APT替代Snap→确认后撤销）
+- 符合"热点型+痛点型"标题公式，"两大危机同时爆发"制造紧迫感
+
+**核心内容**：
+1. DDoS攻击时间线+受影响/不受影响服务列表
+2. CVE-2026-31431漏洞速查（732字节PoC、100%成功率、9年潜伏）
+3. 双重危机叠加分析（漏洞+攻击=安全沟通真空）
+4. 4步自救指南：禁用algif_aead→切镜像源→APT替代Snap→确认后撤销
+5. 容器环境特别提醒（Docker/K8s）
+
+**执行状态**：成功
+
+---
+
+### 2026-05-05 08:20（第6次执行）
+**选题结果**：
+- 文章标题：AI 正在重塑 Linux 内核开发！Linus 亲口确认，7.1-rc2 补丁激增背后
+- 类型：热点新闻+AI趋势分析
+- 文件：docs/mp/Ubuntu/publish/2026/05/2026-05-05-linux-7.1-rc2-ai-kernel-dev.md
+- 封面：docs/mp/Ubuntu/publish/2026/05/images/2026-05-05-linux-7.1-rc2-ai-kernel-dev-cover.svg
+- 排版HTML：docs/mp/Ubuntu/publish/2026/05/2026-05-05-linux-7.1-rc2-ai-kernel-dev.html
+
+**选题理由**：
+- Linux 7.1-rc2于5月3-4日发布，与4/29 rc1文章形成内容闭环
+- AI改变内核开发是Linus亲口确认的新现象，从7.0周期开始显现，极具话题性
+- AI+Linux内核的交叉题材吸引技术爱好者+AI关注者双重受众
+- 同时涵盖5大实用修复（AMD/Intel显卡、NTFS、网络、安全），实用价值不减
+- 符合"悬念型+时效型"标题公式，"Linus亲口确认"增强权威性
+
+**核心内容**：
+1. Linus首次正面回应AI对内核开发的影响：补丁激增与AI工具有关
+2. KVM自测试补丁激增真相：变量重命名符合编码规范，一次性操作
+3. 5大实用修复：AMD RDNA4/Intel Xe显卡、TCP竞态条件、NVMe认证、NTFS核心逻辑
+4. AI补丁风暴分析：机遇（效率提升）vs 隐忧（缺乏上下文理解）
+5. 7.1正式版时间线：RC2→RC7→6月中旬正式版
+6. Ubuntu用户尝鲜3种方式：Mainline/手动/HWE
+
+**执行状态**：成功
+
+---
+
+### 2026-05-06 08:20（第7次执行）
+**选题结果**：
+- 文章标题：Ubuntu 26.04 颜值翻倍！GNOME 50 必装 8 款扩展 + Tweaks 调教全攻略
+- 类型：实用工具+美化教程
+- 文件：docs/mp/Ubuntu/publish/2026/05/2026-05-06-ubuntu-2604-gnome50-beautify-guide.md
+- 封面：docs/mp/Ubuntu/publish/2026/05/images/2026-05-06-ubuntu-2604-gnome50-beautify-cover.svg
+- 排版HTML：docs/mp/Ubuntu/publish/2026/05/2026-05-06-ubuntu-2604-gnome50-beautify-guide.html
+
+**选题理由**：
+- 周三实用工具定位，"炫酷桌面"是历史高互动类型（2000-5000阅读区间）
+- Ubuntu 26.04发布两周，用户升级后美化需求高峰期
+- GNOME 50扩展生态全面适配，美化门槛比以往更低
+- 覆盖新手（安装Tweaks）+ 技术爱好者（8款扩展配置）双重受众
+- DDoS攻击已于5/5全部恢复，热点已跟进完毕，切换回实用内容节奏
+- 符合"数字型+痛点型"标题公式，"颜值翻倍"直击美化需求，"8款必装"提供明确价值
+
+**核心内容**：
+1. GNOME Tweaks + Shell Integration 两件套安装
+2. 8款必装扩展逐一拆解：Dash to Dock/Blur My Shell/User Themes/Caffeine/Clipboard Indicator/GSConnect/Vitals/Appindicator
+3. 主题×图标×字体三件套搭配：Orchis-Dark/Tela/Bibata/Fira Code
+4. Tweaks隐藏选项调教：光标大小/窗口焦点/字体渲染
+5. 进阶美化：动态壁纸/GRUB美化/终端美化/Conky
+6. 一键安装速查命令汇总
+
+**执行状态**：成功
+
+---
+
 ## 注意事项
 - 每次执行后更新此文件
 - 记录选题理由和预期效果

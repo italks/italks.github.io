@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <!-- Background gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0a0e27"/>
+      <stop offset="50%" style="stop-color:#121832"/>
+      <stop offset="100%" style="stop-color:#0d1229"/>
+    </linearGradient>
+
+    <!-- Accent glow gradient -->
+    <radialGradient id="accentGlow" cx="50%" cy="40%" r="60%">
+      <stop offset="0%" style="stop-color:#6C5CE7;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#6C5CE7;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Green glow for TRAE -->
+    <radialGradient id="greenGlow" cx="22%" cy="55%" r="35%">
+      <stop offset="0%" style="stop-color:#00D2A8;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#00D2A8;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Orange glow for cursor -->
+    <radialGradient id="orangeGlow" cx="78%" cy="55%" r="35%">
+      <stop offset="0%" style="stop-color:#FF6B35;stop-opacity:0.25"/>
+      <stop offset="100%" style="stop-color:#FF6B35;stop-opacity:0"/>
+    </radialGradient>
+
+    <!-- Card shadow -->
+    <filter id="cardShadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="12" flood-color="#000" flood-opacity="0.4"/>
+    </filter>
+
+    <!-- Glow effect for text -->
+    <filter id="textGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- VS badge gradient -->
+    <linearGradient id="vsBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF4757"/>
+      <stop offset="100%" style="stop-color:#FF6B81"/>
+    </linearGradient>
+
+    <!-- Free badge gradient -->
+    <linearGradient id="freeBadge" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00D2A8"/>
+      <stop offset="100%" style="stop-color:#00B894"/>
+    </linearGradient>
+    
+    <!-- Grid pattern -->
+    <pattern id="gridPattern" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Grid overlay -->
+  <rect width="900" height="500" fill="url(#gridPattern)"/>
+
+  <!-- Accent ambient glow -->
+  <rect width="900" height="500" fill="url(#accentGlow)"/>
+
+  <!-- Green glow (TRAE side) -->
+  <rect width="900" height="500" fill="url(#greenGlow)"/>
+
+  <!-- Orange glow (Cursor side) -->
+  <rect width="900" height="500" fill="url(#orangeGlow)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="80" cy="420" r="60" fill="#6C5CE7" opacity="0.06"/>
+  <circle cx="820" cy="90" r="45" fill="#00D2A8" opacity="0.08"/>
+  <circle cx="750" cy="430" r="30" fill="#FF6B35" opacity="0.05"/>
+  
+  <!-- Decorative lines -->
+  <line x1="0" y1="120" x2="900" y2="120" stroke="#ffffff" stroke-opacity="0.04" stroke-width="1"/>
+  <line x1="450" y1="130" x2="450" y2="480" stroke="#ffffff" stroke-opacity="0.06" stroke-width="1" stroke-dasharray="4,6"/>
+
+  <!-- Top badge area -->
+  <g transform="translate(450, 58)">
+    <!-- Free badge -->
+    <rect x="-115" y="-18" width="86" height="26" rx="13" fill="url(#freeBadge)" filter="url(#cardShadow)"/>
+    <text x="-72" y="1" text-anchor="middle" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" fill="#fff">🆓 免费</text>
+    
+    <!-- Hot badge -->
+    <rect x="29" y="-18" width="76" height="26" rx="13" fill="#FF4757" filter="url(#cardShadow)"/>
+    <text x="67" y="1" text-anchor="middle" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="700" fill="#fff">🔥 爆测</text>
+  </g>
+
+  <!-- Main title -->
+  <text x="450" y="112" text-anchor="middle" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="38" font-weight="800" fill="#FFFFFF" filter="url(#textGlow)">
+    TRAE SOLO 深度实测
+  </text>
+
+  <!-- Subtitle -->
+  <text x="450" y="148" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="17" font-weight="400" fill="#b8c0d6">
+    字节跳动免费 AI 编程，能否颠覆 Cursor？
+  </text>
+
+  <!-- ===== LEFT CARD: TRAE SOLO ===== -->
+  <g transform="translate(65, 185)">
+    <!-- Card background -->
+    <rect width="350" height="270" rx="16" fill="#151a33" stroke="#00D2A8" stroke-width="1.5" stroke-opacity="0.4" filter="url(#cardShadow)" opacity="0.95"/>
+
+    <!-- Card header bar -->
+    <rect width="350" height="48" rx="16" fill="#00D2A8" fill-opacity="0.12"/>
+    <rect x="0" y="32" width="350" height="16" fill="#00D2A8" fill-opacity="0.12"/>
+
+    <!-- Logo icon -->
+    <circle cx="32" cy="24" r="14" fill="#00D2A8" fill-opacity="0.2"/>
+    <text x="32" y="29" text-anchor="middle" font-size="16">⚡</text>
+
+    <!-- Card title -->
+    <text x="56" y="30" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#00D2A8">TRAE SOLO</text>
+    
+    <!-- Badge -->
+    <rect x="260" y="12" width="70" height="24" rx="12" fill="url(#freeBadge)"/>
+    <text x="295" y="28" text-anchor="middle" font-family="'SF Pro Display','PingFang SC',sans-serif" font-size="12" font-weight="700" fill="#fff">FREE</text>
+
+    <!-- Feature items -->
+    <g transform="translate(24, 68)">
+      <!-- Item 1 -->
+      <circle cx="8" cy="8" r="4" fill="#00D2A8" fill-opacity="0.3"/>
+      <circle cx="8" cy="8" r="2" fill="#00D2A8"/>
+      <text x="22" y="13" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">零代码全自动编程</text>
+      
+      <!-- Item 2 -->
+      <circle cx="8" cy="42" r="4" fill="#00D2A8" fill-opacity="0.3"/>
+      <circle cx="8" cy="42" r="2" fill="#00D2A8"/>
+      <text x="22" y="47" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">图像转代码 · 移动端最强</text>
+
+      <!-- Item 3 -->
+      <circle cx="8" cy="76" r="4" fill="#00D2A8" fill-opacity="0.3"/>
+      <circle cx="8" cy="76" r="2" fill="#00D2A8"/>
+      <text x="22" y="81" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">中文原生 · 国内直连</text>
+
+      <!-- Item 4 -->
+      <circle cx="8" cy="110" r="4" fill="#00D2A8" fill-opacity="0.3"/>
+      <circle cx="8" cy="110" r="2" fill="#00D2A8"/>
+      <text x="22" y="115" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">平均 4.3 分钟出 Demo</text>
+      
+      <!-- Item 5 -->
+      <circle cx="8" cy="144" r="4" fill="#00D2A8" fill-opacity="0.3"/>
+      <circle cx="8" cy="144" r="2" fill="#00D2A8"/>
+      <text x="22" y="149" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">语音/图片多模态输入</text>
+
+      <!-- Item 6 -->
+      <circle cx="8" cy="178" r="4" fill="#FF4757" fill-opacity="0.3"/>
+      <circle cx="8" cy="178" r="2" fill="#FF4757"/>
+      <text x="22" y="183" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#a0aec0">复杂项目(500行+)吃力</text>
+    </g>
+  </g>
+
+  <!-- ===== CENTER: VS BADGE ===== -->
+  <g transform="translate(450, 320)">
+    <circle cx="0" cy="0" r="28" fill="url(#vsBadge)" filter="url(#cardShadow)"/>
+    <text x="0" y="6" text-anchor="middle" font-family="'SF Pro Display','PingFang SC',sans-serif" font-size="15" font-weight="800" fill="#fff" letter-spacing="1">VS</text>
+  </g>
+
+  <!-- ===== RIGHT CARD: CURSOR ===== -->
+  <g transform="translate(485, 185)">
+    <!-- Card background -->
+    <rect width="350" height="270" rx="16" fill="#151a33" stroke="#FF6B35" stroke-width="1.5" stroke-opacity="0.4" filter="url(#cardShadow)" opacity="0.95"/>
+
+    <!-- Card header bar -->
+    <rect width="350" height="48" rx="16" fill="#FF6B35" fill-opacity="0.12"/>
+    <rect x="0" y="32" width="350" height="16" fill="#FF6B35" fill-opacity="0.12"/>
+
+    <!-- Logo icon -->
+    <circle cx="32" cy="24" r="14" fill="#FF6B35" fill-opacity="0.2"/>
+    <text x="32" y="29" text-anchor="middle" font-size="16">🖥️</text>
+
+    <!-- Card title -->
+    <text x="56" y="30" font-family="'SF Pro Display','PingFang SC','Microsoft YaHei',sans-serif" font-size="18" font-weight="700" fill="#FF6B35">Cursor 3</text>
+    
+    <!-- Price badge -->
+    <rect x="255" y="12" width="75" height="24" rx="12" fill="#FF6B35" fill-opacity="0.2" stroke="#FF6B35" stroke-width="1" stroke-opacity="0.4"/>
+    <text x="292" y="28" text-anchor="middle" font-family="'SF Pro Display','PingFang SC',sans-serif" font-size="11" font-weight="600" fill="#FF6B35">$20/月</text>
+
+    <!-- Feature items -->
+    <g transform="translate(24, 68)">
+      <!-- Item 1 -->
+      <circle cx="8" cy="8" r="4" fill="#FF6B35" fill-opacity="0.3"/>
+      <circle cx="8" cy="8" r="2" fill="#FF6B35"/>
+      <text x="22" y="13" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">多 Agent 并行协作</text>
+      
+      <!-- Item 2 -->
+      <circle cx="8" cy="42" r="4" fill="#FF6B35" fill-opacity="0.3"/>
+      <circle cx="8" cy="42" r="2" fill="#FF6B35"/>
+      <text x="22" y="47" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">Glass 界面全新体验</text>
+
+      <!-- Item 3 -->
+      <circle cx="8" cy="76" r="4" fill="#FF6B35" fill-opacity="0.3"/>
+      <circle cx="8" cy="76" r="2" fill="#FF6B35"/>
+      <text x="22" y="81" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">代码品质高 · 架构合理</text>
+
+      <!-- Item 4 -->
+      <circle cx="8" cy="110" r="4" fill="#FF6B35" fill-opacity="0.3"/>
+      <circle cx="8" cy="110" r="2" fill="#FF6B35"/>
+      <text x="22" y="115" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">调试精准 · 可控性强</text>
+      
+      <!-- Item 5 -->
+      <circle cx="8" cy="144" r="4" fill="#FF6B35" fill-opacity="0.3"/>
+      <circle cx="8" cy="144" r="2" fill="#FF6B35"/>
+      <text x="22" y="149" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#e4e8f1">生产级项目主力 IDE</text>
+
+      <!-- Item 6 - con -->
+      <circle cx="8" cy="178" r="4" fill="#6C5CE7" fill-opacity="0.3"/>
+      <circle cx="8" cy="178" r="2" fill="#6C5CE7"/>
+      <text x="22" y="183" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="14" font-weight="500" fill="#a0aec0">需代理访问 · 收费较高</text>
+    </g>
+  </g>
+
+  <!-- Bottom highlight bar -->
+  <g transform="translate(450, 472)">
+    <rect x="-200" y="-14" width="400" height="28" rx="14" fill="#6C5CE7" fill-opacity="0.15" stroke="#6C5CE7" stroke-width="1" stroke-opacity="0.3"/>
+    <text x="0" y="4" text-anchor="middle" font-family="'PingFang SC','Microsoft YaHei',sans-serif" font-size="13" font-weight="600" fill="#b8b0e0">
+      5 个项目真实实测 · 移动开发者选型指南 · 免费试用
+    </text>
+  </g>
+</svg>

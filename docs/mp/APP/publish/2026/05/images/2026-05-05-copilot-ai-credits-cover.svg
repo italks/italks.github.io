@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f97316"/>
+      <stop offset="100%" stop-color="#fb923c"/>
+    </linearGradient>
+    <linearGradient id="redGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ef4444"/>
+      <stop offset="100%" stop-color="#f87171"/>
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#22c55e"/>
+      <stop offset="100%" stop-color="#4ade80"/>
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- 背景装饰网格 -->
+  <g opacity="0.04">
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M 30 0 L 0 0 0 30" fill="none" stroke="#fff" stroke-width="0.5"/>
+    </pattern>
+    <rect width="900" height="500" fill="url(#grid)"/>
+  </g>
+
+  <!-- 装饰性圆环 -->
+  <circle cx="800" cy="80" r="120" fill="none" stroke="#f97316" stroke-width="1" opacity="0.08"/>
+  <circle cx="800" cy="80" r="90" fill="none" stroke="#3b82f6" stroke-width="1" opacity="0.06"/>
+  <circle cx="100" cy="420" r="100" fill="none" stroke="#22c55e" stroke-width="1" opacity="0.06"/>
+  <circle cx="100" cy="420" r="70" fill="none" stroke="#f97316" stroke-width="1" opacity="0.04"/>
+
+  <!-- 左上角标签 -->
+  <rect x="40" y="32" width="90" height="28" rx="14" fill="#ef4444" opacity="0.9"/>
+  <text x="85" y="51" font-family="system-ui, -apple-system, sans-serif" font-size="13" font-weight="600" fill="#fff" text-anchor="middle">重磅</text>
+
+  <!-- 主标题 -->
+  <text x="45" y="95" font-family="system-ui, -apple-system, sans-serif" font-size="38" font-weight="700" fill="#ffffff">
+    Copilot 大变天！
+  </text>
+  <text x="45" y="140" font-family="system-ui, -apple-system, sans-serif" font-size="26" font-weight="600" fill="#f97316">
+    6月起按量收费，你的钱包准备好了吗？
+  </text>
+
+  <!-- 分隔线 -->
+  <line x1="45" y1="158" x2="300" y2="158" stroke="url(#accentGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- 核心变化卡片 -->
+  <rect x="40" y="178" width="380" height="140" rx="12" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+  <text x="60" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#f97316">核心变化</text>
+
+  <!-- 旧模式 → 新模式 -->
+  <g transform="translate(60, 225)">
+    <!-- 旧模式 -->
+    <rect x="0" y="0" width="145" height="70" rx="8" fill="#21262d" stroke="#484f58" stroke-width="1"/>
+    <text x="72" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle">旧模式</text>
+    <text x="72" y="44" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#e6edf3" text-anchor="middle">固定 $10/月</text>
+    <text x="72" y="60" font-family="system-ui, sans-serif" font-size="10" fill="#8b949e" text-anchor="middle">300次请求</text>
+
+    <!-- 箭头 -->
+    <path d="M155 35 L175 35" stroke="#f97316" stroke-width="2" marker-end="url(#arrowOrange)"/>
+    <defs>
+      <marker id="arrowOrange" markerWidth="8" markerHeight="8" refX="6" refY="4" orient="auto">
+        <path d="M0 0 L8 4 L0 8" fill="none" stroke="#f97316" stroke-width="2"/>
+      </marker>
+    </defs>
+
+    <!-- 新模式 -->
+    <rect x="185" y="0" width="145" height="70" rx="8" fill="#1c2128" stroke="#f97316" stroke-width="1.5"/>
+    <text x="257" y="24" font-family="system-ui, sans-serif" font-size="11" fill="#f97316" text-anchor="middle">新模式</text>
+    <text x="257" y="44" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#f97316" text-anchor="middle">AI Credits</text>
+    <text x="257" y="60" font-family="system-ui, sans-serif" font-size="10" fill="#f97316" text-anchor="middle">按 Token 计费</text>
+  </g>
+
+  <!-- 右侧：四工具对比卡片 -->
+  <rect x="440" y="178" width="420" height="140" rx="12" fill="#1c2128" stroke="#30363d" stroke-width="1"/>
+  <text x="460" y="208" font-family="system-ui, -apple-system, sans-serif" font-size="15" font-weight="600" fill="#3b82f6">四大工具对决</text>
+
+  <!-- 工具对比条形图 -->
+  <g transform="translate(460, 222)">
+    <!-- TRAE SOLO -->
+    <text x="0" y="14" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#22c55e">TRAE</text>
+    <rect x="55" y="3" width="340" height="16" rx="3" fill="#21262d"/>
+    <rect x="55" y="3" width="340" height="16" rx="3" fill="url(#greenGrad)" opacity="0.85"/>
+    <text x="380" y="15" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#22c55e">免费</text>
+
+    <!-- Cursor -->
+    <text x="0" y="42" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#60a5fa">Cursor</text>
+    <rect x="55" y="31" width="340" height="16" rx="3" fill="#21262d"/>
+    <rect x="55" y="31" width="240" height="16" rx="3" fill="url(#blueGrad)" opacity="0.75"/>
+    <text x="305" y="43" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#60a5fa">$20/月</text>
+
+    <!-- Copilot -->
+    <text x="0" y="70" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#fb923c">Copilot</text>
+    <rect x="55" y="59" width="340" height="16" rx="3" fill="#21262d"/>
+    <rect x="55" y="59" width="130" height="16" rx="3" fill="url(#accentGrad)" opacity="0.7"/>
+    <text x="195" y="71" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#fb923c">$10~$39+?</text>
+
+    <!-- Claude Code -->
+    <text x="0" y="98" font-family="system-ui, sans-serif" font-size="12" font-weight="600" fill="#d4a5ff">Claude</text>
+    <rect x="55" y="87" width="340" height="16" rx="3" fill="#21262d"/>
+    <rect x="55" y="87" width="95" height="16" rx="3" fill="#a855f7" opacity="0.65"/>
+    <text x="160" y="99" font-family="ui-monospace, monospace" font-size="11" font-weight="600" fill="#d4a5ff">$100/月</text>
+  </g>
+
+  <!-- 底部影响分析区 -->
+  <g transform="translate(40, 338)">
+    <!-- 轻度用户 -->
+    <rect x="0" y="0" width="265" height="68" rx="10" fill="#0d2818" stroke="#22c55e" stroke-width="1" opacity="0.5"/>
+    <circle cx="25" cy="22" r="12" fill="#22c55e" opacity="0.2"/>
+    <text x="25" y="27" font-family="system-ui, sans-serif" font-size="14" fill="#22c55e" text-anchor="middle">✓</text>
+    <text x="48" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#22c55e">轻度用户</text>
+    <text x="48" y="48" font-family="system-ui, sans-serif" font-size="12" fill="#86efac">可能降低成本 ↓</text>
+    <text x="48" y="63" font-family="system-ui, sans-serif" font-size="11" fill="#6b7780">基础补全不消耗Credits</text>
+
+    <!-- 重度用户 -->
+    <rect x="280" y="0" width="265" height="68" rx="10" fill="#2d0a0a" stroke="#ef4444" stroke-width="1" opacity="0.5"/>
+    <circle cx="305" cy="22" r="12" fill="#ef4444" opacity="0.2"/>
+    <text x="305" y="27" font-family="system-ui, sans-serif" font-size="14" fill="#ef4444" text-anchor="middle">!</text>
+    <text x="328" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#ef4444">重度用户</text>
+    <text x="328" y="48" font-family="system-ui, sans-serif" font-size="12" fill="#fca5a5">成本可能翻倍 ↑↑</text>
+    <text x="328" y="63" font-family="system-ui, sans-serif" font-size="11" fill="#6b7780">Agent功能按Token烧钱</text>
+
+    <!-- 企业用户 -->
+    <rect x="560" y="0" width="300" height="68" rx="10" fill="#0d1a2d" stroke="#3b82f6" stroke-width="1" opacity="0.5"/>
+    <circle cx="585" cy="22" r="12" fill="#3b82f6" opacity="0.2"/>
+    <text x="585" y="27" font-family="system-ui, sans-serif" font-size="14" fill="#3b82f6" text-anchor="middle">☷</text>
+    <text x="608" y="27" font-family="system-ui, sans-serif" font-size="14" font-weight="600" fill="#3b82f6">企业团队</text>
+    <text x="608" y="48" font-family="system-ui, sans-serif" font-size="12" fill="#93c5fd">共享额度池 + 预算管控</text>
+    <text x="608" y="63" font-family="system-ui, sans-serif" font-size="11" fill="#6b7780">6-8月促销额外赠送Credits</text>
+  </g>
+
+  <!-- 底部时间提醒条 -->
+  <rect x="40" y="426" width="820" height="46" rx="8" fill="#f97316" opacity="0.12"/>
+  <rect x="40" y="426" width="820" height="46" rx="8" fill="none" stroke="#f97316" stroke-width="1" opacity="0.3"/>
+  <text x="450" y="454" font-family="system-ui, -apple-system, sans-serif" font-size="17" font-weight="700" fill="#f97316" text-anchor="middle">
+    ⏰ 距离 6月1日 正式生效 还有不到 26 天 — 立即查看你的计费预览面板！
+  </text>
+
+  <!-- 右下角品牌角标 -->
+  <rect x="780" y="4" width="116" height="26" rx="13" fill="#21262d" stroke="#30363d" stroke-width="1"/>
+  <text x="838" y="21" font-family="system-ui, sans-serif" font-size="11" font-weight="600" fill="#8b949e" text-anchor="middle">APP开发前沿</text>
+</svg>

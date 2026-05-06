@@ -83,6 +83,12 @@
 - 5/1: Ubuntu 26.04升级避坑全攻略（cgroup v1迁移+12项修复）
 - 策略：发布后深度跟进用户痛点，五一假期升级指南
 
+### 2026年5月上旬（第19-20周）
+- 核心主题：Ubuntu 26.04升级坑点、cgroup v1迁移、DDoS攻击+Copy Fail漏洞
+- 5/1: Ubuntu 26.04升级避坑全攻略（cgroup v1迁移+12项修复）
+- 5/4: Ubuntu官网瘫痪！DDoS攻击+漏洞9年提权，两大危机同时爆发
+- 策略：安全热点紧急跟进，双重危机叠加选题，提供实操自救指南
+
 ---
 
 ## 关键指标目标
@@ -145,3 +151,4 @@ node ~/.workbuddy/skills/md-wechat/scripts/convert.js <input.md> -o <output.html
 - **2026-04-23**：Ubuntu 26.04 LTS 正式发布日重磅专题完成
 - **2026-04-30**：Ubuntu 26.04 vs Fedora 44 对比评测（同周双发热点）
 - **2026-05-01**：Ubuntu 26.04 升级避坑全攻略（cgroup v1迁移+12项修复）
+- **2026-05-04**：Ubuntu DDoS攻击+CVE-2026-31431 Copy Fail双重危机

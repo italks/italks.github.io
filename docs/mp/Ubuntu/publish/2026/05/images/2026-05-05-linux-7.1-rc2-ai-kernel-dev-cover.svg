@@ -1,0 +1,205 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#1a1e2e"/>
+    </linearGradient>
+    <linearGradient id="aiGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed"/>
+      <stop offset="50%" stop-color="#a855f7"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="ubuntuOrange" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E95420"/>
+      <stop offset="100%" stop-color="#FF7043"/>
+    </linearGradient>
+    <linearGradient id="circuitLine" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.1"/>
+      <stop offset="50%" stop-color="#a855f7" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0.1"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="tuxClip">
+      <circle cx="680" cy="250" r="85"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bg)"/>
+
+  <!-- Circuit pattern lines -->
+  <g opacity="0.15" stroke="#a855f7" stroke-width="1" fill="none">
+    <line x1="0" y1="80" x2="350" y2="80"/>
+    <line x1="350" y1="80" x2="380" y2="110"/>
+    <line x1="380" y1="110" x2="550" y2="110"/>
+    <line x1="0" y1="200" x2="280" y2="200"/>
+    <line x1="280" y1="200" x2="310" y2="170"/>
+    <line x1="310" y1="170" x2="450" y2="170"/>
+    <line x1="450" y1="170" x2="480" y2="200"/>
+    <line x1="0" y1="350" x2="200" y2="350"/>
+    <line x1="200" y1="350" x2="230" y2="320"/>
+    <line x1="230" y1="320" x2="400" y2="320"/>
+    <line x1="0" y1="430" x2="300" y2="430"/>
+    <line x1="300" y1="430" x2="330" y2="400"/>
+    <line x1="330" y1="400" x2="500" y2="400"/>
+  </g>
+
+  <!-- Circuit nodes -->
+  <g fill="#a855f7" opacity="0.3">
+    <circle cx="350" cy="80" r="3"/>
+    <circle cx="380" cy="110" r="3"/>
+    <circle cx="280" cy="200" r="3"/>
+    <circle cx="310" cy="170" r="3"/>
+    <circle cx="450" cy="170" r="3"/>
+    <circle cx="480" cy="200" r="3"/>
+    <circle cx="200" cy="350" r="3"/>
+    <circle cx="230" cy="320" r="3"/>
+    <circle cx="300" cy="430" r="3"/>
+    <circle cx="330" cy="400" r="3"/>
+  </g>
+
+  <!-- Decorative grid dots -->
+  <g fill="#a855f7" opacity="0.06">
+    <circle cx="50" cy="50" r="2"/><circle cx="100" cy="50" r="2"/><circle cx="150" cy="50" r="2"/><circle cx="200" cy="50" r="2"/><circle cx="250" cy="50" r="2"/>
+    <circle cx="50" cy="460" r="2"/><circle cx="100" cy="460" r="2"/><circle cx="150" cy="460" r="2"/><circle cx="200" cy="460" r="2"/><circle cx="250" cy="460" r="2"/>
+    <circle cx="750" cy="50" r="2"/><circle cx="800" cy="50" r="2"/><circle cx="850" cy="50" r="2"/>
+    <circle cx="750" cy="460" r="2"/><circle cx="800" cy="460" r="2"/><circle cx="850" cy="460" r="2"/>
+  </g>
+
+  <!-- Left content area -->
+  <!-- Tag line -->
+  <rect x="55" y="75" width="120" height="28" rx="14" fill="url(#aiGlow)" opacity="0.9"/>
+  <text x="115" y="94" font-family="Arial, sans-serif" font-size="13" font-weight="bold" fill="#ffffff" text-anchor="middle">🔥 热点追踪</text>
+
+  <!-- Main title -->
+  <text x="55" y="155" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">
+    <tspan fill="url(#aiGlow)">AI</tspan> 正在重塑
+  </text>
+  <text x="55" y="210" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#ffffff" letter-spacing="2">
+    Linux 内核开发
+  </text>
+
+  <!-- Subtitle -->
+  <text x="55" y="260" font-family="Arial, sans-serif" font-size="20" fill="#8b949e" letter-spacing="1">
+    Linus 亲口确认 · 7.1-rc2 补丁激增背后
+  </text>
+
+  <!-- Key stats boxes -->
+  <g transform="translate(55, 295)">
+    <!-- Box 1 -->
+    <rect x="0" y="0" width="155" height="70" rx="8" fill="#1c2333" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+    <text x="78" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#a855f7" text-anchor="middle">7.1-rc2</text>
+    <text x="78" y="52" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">最新内核版本</text>
+
+    <!-- Box 2 -->
+    <rect x="170" y="0" width="155" height="70" rx="8" fill="#1c2333" stroke="#E95420" stroke-width="1" opacity="0.9"/>
+    <text x="248" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="url(#ubuntuOrange)" text-anchor="middle">5 大修复</text>
+    <text x="248" y="52" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">显卡/网络/安全/NTFS</text>
+
+    <!-- Box 3 -->
+    <rect x="340" y="0" width="155" height="70" rx="8" fill="#1c2333" stroke="#7c3aed" stroke-width="1" opacity="0.9"/>
+    <text x="418" y="30" font-family="Arial, sans-serif" font-size="22" font-weight="bold" fill="#c084fc" text-anchor="middle">6月中旬</text>
+    <text x="418" y="52" font-family="Arial, sans-serif" font-size="12" fill="#8b949e" text-anchor="middle">预计正式版发布</text>
+  </g>
+
+  <!-- Right side: Tux + AI visual -->
+  <!-- AI neural network ring around Tux -->
+  <g transform="translate(680, 250)" filter="url(#softGlow)">
+    <!-- Outer ring -->
+    <circle cx="0" cy="0" r="105" fill="none" stroke="#7c3aed" stroke-width="2" opacity="0.3" stroke-dasharray="8 4"/>
+    <!-- Middle ring -->
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#a855f7" stroke-width="1.5" opacity="0.4" stroke-dasharray="4 8"/>
+    <!-- Inner ring -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#c084fc" stroke-width="1" opacity="0.5"/>
+
+    <!-- Neural network nodes on outer ring -->
+    <circle cx="0" cy="-105" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="74" cy="-74" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="105" cy="0" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="74" cy="74" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="0" cy="105" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="-74" cy="74" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="-105" cy="0" r="5" fill="#a855f7" opacity="0.8"/>
+    <circle cx="-74" cy="-74" r="5" fill="#a855f7" opacity="0.8"/>
+
+    <!-- Neural connections -->
+    <line x1="0" y1="-105" x2="74" y2="-74" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="74" y1="-74" x2="105" y2="0" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="105" y1="0" x2="74" y2="74" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="74" y1="74" x2="0" y2="105" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="0" y1="105" x2="-74" y2="74" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-74" y1="74" x2="-105" y2="0" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-105" y1="0" x2="-74" y2="-74" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-74" y1="-74" x2="0" y2="-105" stroke="#a855f7" stroke-width="0.8" opacity="0.3"/>
+  </g>
+
+  <!-- Tux penguin simplified -->
+  <g transform="translate(680, 250)">
+    <!-- Body -->
+    <ellipse cx="0" cy="10" rx="38" ry="45" fill="#1a1a2e" stroke="#2d2d44" stroke-width="1"/>
+    <!-- Belly -->
+    <ellipse cx="0" cy="15" rx="26" ry="32" fill="#e8e8e8"/>
+    <!-- Head -->
+    <circle cx="0" cy="-30" r="26" fill="#1a1a2e"/>
+    <!-- Eyes -->
+    <circle cx="-10" cy="-35" r="5" fill="#ffffff"/>
+    <circle cx="10" cy="-35" r="5" fill="#ffffff"/>
+    <circle cx="-9" cy="-36" r="2.5" fill="#1a1a2e"/>
+    <circle cx="11" cy="-36" r="2.5" fill="#1a1a2e"/>
+    <!-- Beak -->
+    <polygon points="-7,-26 7,-26 0,-18" fill="#E95420"/>
+    <!-- Feet -->
+    <ellipse cx="-14" cy="55" rx="12" ry="5" fill="#E95420"/>
+    <ellipse cx="14" cy="55" rx="12" ry="5" fill="#E95420"/>
+    <!-- Flippers -->
+    <ellipse cx="-35" cy="5" rx="10" ry="22" fill="#1a1a2e" transform="rotate(15, -35, 5)"/>
+    <ellipse cx="35" cy="5" rx="10" ry="22" fill="#1a1a2e" transform="rotate(-15, 35, 5)"/>
+  </g>
+
+  <!-- AI label -->
+  <g transform="translate(680, 365)">
+    <rect x="-35" y="-12" width="70" height="24" rx="12" fill="url(#aiGlow)" opacity="0.9"/>
+    <text x="0" y="4" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff" text-anchor="middle">AI × 内核</text>
+  </g>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="475" width="900" height="25" fill="url(#aiGlow)" opacity="0.15"/>
+  <text x="450" y="492" font-family="Arial, sans-serif" font-size="11" fill="#8b949e" text-anchor="middle" letter-spacing="3">UBUNTUNEWS · 资讯 · 工具 · 教程 · 社区</text>
+
+  <!-- Version tag bottom-left -->
+  <text x="55" y="440" font-family="monospace" font-size="13" fill="#4a5568" letter-spacing="1">Linux 7.1-rc2 · 2026.05.05</text>
+
+  <!-- Pulse animation on neural nodes -->
+  <g transform="translate(680, 250)">
+    <circle cx="0" cy="-105" r="5" fill="#a855f7" opacity="0.6">
+      <animate attributeName="r" values="3;7;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="105" cy="0" r="5" fill="#a855f7" opacity="0.6">
+      <animate attributeName="r" values="3;7;3" dur="2.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="0" cy="105" r="5" fill="#a855f7" opacity="0.6">
+      <animate attributeName="r" values="3;7;3" dur="1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="1.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="-105" cy="0" r="5" fill="#a855f7" opacity="0.6">
+      <animate attributeName="r" values="3;7;3" dur="2.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.8;0.3;0.8" dur="2.5s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+</svg>

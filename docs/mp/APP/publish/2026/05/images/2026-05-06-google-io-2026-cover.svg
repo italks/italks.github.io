@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="900" height="500">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d1117"/>
+      <stop offset="50%" stop-color="#161b22"/>
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="33%" stop-color="#34A853"/>
+      <stop offset="66%" stop-color="#FBBC05"/>
+      <stop offset="100%" stop-color="#EA4335"/>
+    </linearGradient>
+    <linearGradient id="geminiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="50%" stop-color="#7B68EE"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="androidGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3DDC84"/>
+      <stop offset="100%" stop-color="#00BFA5"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="900" height="500" fill="url(#bgGrad)"/>
+
+  <!-- Grid pattern -->
+  <g opacity="0.04" stroke="#ffffff" stroke-width="0.5">
+    <line x1="0" y1="100" x2="900" y2="100"/>
+    <line x1="0" y1="200" x2="900" y2="200"/>
+    <line x1="0" y1="300" x2="900" y2="300"/>
+    <line x1="0" y1="400" x2="900" y2="400"/>
+    <line x1="150" y1="0" x2="150" y2="500"/>
+    <line x1="300" y1="0" x2="300" y2="500"/>
+    <line x1="450" y1="0" x2="450" y2="500"/>
+    <line x1="600" y1="0" x2="600" y2="500"/>
+    <line x1="750" y1="0" x2="750" y2="500"/>
+  </g>
+
+  <!-- Decorative circles -->
+  <circle cx="800" cy="80" r="120" fill="none" stroke="#4285F4" stroke-width="1" opacity="0.15"/>
+  <circle cx="800" cy="80" r="90" fill="none" stroke="#4285F4" stroke-width="0.5" opacity="0.1"/>
+  <circle cx="100" cy="420" r="100" fill="none" stroke="#3DDC84" stroke-width="1" opacity="0.12"/>
+  <circle cx="100" cy="420" r="70" fill="none" stroke="#3DDC84" stroke-width="0.5" opacity="0.08"/>
+
+  <!-- Top accent line -->
+  <rect x="0" y="0" width="900" height="4" fill="url(#accentGrad)"/>
+
+  <!-- Main title area -->
+  <text x="60" y="95" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="48" font-weight="800" fill="#ffffff" letter-spacing="-1">Google I/O</text>
+
+  <text x="60" y="145" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="42" font-weight="700" fill="url(#accentGrad)" letter-spacing="-0.5">2026 终极前瞻</text>
+
+  <!-- Countdown badge -->
+  <g transform="translate(420, 65)">
+    <rect x="0" y="0" width="160" height="50" rx="25" fill="#EA4335" fill-opacity="0.15" stroke="#EA4335" stroke-width="1.5"/>
+    <text x="80" y="23" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="14" font-weight="600" fill="#EA4335" text-anchor="middle">倒计时</text>
+    <text x="80" y="43" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="20" font-weight="800" fill="#ffffff" text-anchor="middle">13 天</text>
+  </g>
+
+  <!-- Subtitle -->
+  <text x="60" y="195" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="18" font-weight="400" fill="#8b949e" letter-spacing="0.5">Android 17 · Gemini 4.0 · XR 智能眼镜 · Aluminum OS</text>
+
+  <!-- Divider -->
+  <line x1="60" y1="220" x2="520" y2="220" stroke="url(#accentGrad)" stroke-width="2" opacity="0.6"/>
+
+  <!-- Feature cards -->
+  <!-- Card 1: Gemini -->
+  <g transform="translate(60, 250)">
+    <rect x="0" y="0" width="175" height="200" rx="12" fill="#161b22" stroke="#30363D" stroke-width="1"/>
+    <rect x="0" y="0" width="175" height="44" rx="12" fill="url(#geminiGrad)" fill-opacity="0.15"/>
+    <rect x="0" y="32" width="175" height="12" fill="url(#geminiGrad)" fill-opacity="0.15"/>
+    <!-- Gemini icon shape -->
+    <g transform="translate(18, 10)">
+      <path d="M0 12 C0 5.4 5.4 0 12 0 C16.5 0 20.3 2.7 22.2 6.5 C21.2 6.2 20.1 6 19 6 C11.3 6 5 12.3 5 20 C5 21.1 5.1 22.2 5.4 23.2 C2.4 21.2 0.3 17.9 0 14 L0 12 Z" fill="#A78BFA" transform="translate(0,0) scale(0.85)"/>
+      <path d="M24 12 C24 18.6 18.6 24 12 24 C7.5 24 3.7 21.3 1.8 17.5 C2.8 17.8 3.9 18 5 18 C12.7 18 19 11.7 19 4 C19 2.9 18.8 1.8 18.6 0.8 C21.6 2.8 23.7 6.1 24 10 L24 12 Z" fill="#7C3AED" transform="translate(0,0) scale(0.85)"/>
+    </g>
+    <text x="52" y="28" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#A78BFA">Gemini 4.0</text>
+    <text x="14" y="68" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#c9d1d9">AI 编程代际跃迁</text>
+    <text x="14" y="88" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Agentic AI 自主编码</text>
+    <text x="14" y="106" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">多模态原生支持</text>
+    <text x="14" y="124" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">端侧 Nano 轻量化</text>
+    <rect x="14" y="144" width="147" height="40" rx="6" fill="#A78BFA" fill-opacity="0.08"/>
+    <text x="24" y="168" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#A78BFA">AI Agent 新范式 →</text>
+  </g>
+
+  <!-- Card 2: Android 17 -->
+  <g transform="translate(255, 250)">
+    <rect x="0" y="0" width="175" height="200" rx="12" fill="#161b22" stroke="#30363D" stroke-width="1"/>
+    <rect x="0" y="0" width="175" height="44" rx="12" fill="url(#androidGrad)" fill-opacity="0.15"/>
+    <rect x="0" y="32" width="175" height="12" fill="url(#androidGrad)" fill-opacity="0.15"/>
+    <!-- Android robot icon simplified -->
+    <g transform="translate(16, 7)">
+      <rect x="6" y="8" width="16" height="14" rx="3" fill="#3DDC84"/>
+      <rect x="8" y="22" width="4" height="8" rx="1" fill="#3DDC84"/>
+      <rect x="16" y="22" width="4" height="8" rx="1" fill="#3DDC84"/>
+      <rect x="3" y="10" width="4" height="4" rx="1" fill="#161b22"/>
+      <rect x="21" y="10" width="4" height="4" rx="1" fill="#161b22"/>
+      <line x1="6" y1="4" x2="3" y2="0" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+      <line x1="22" y1="4" x2="25" y2="0" stroke="#3DDC84" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="52" y="28" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#3DDC84">Android 17</text>
+    <text x="14" y="68" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#c9d1d9">正式版定档六月</text>
+    <text x="14" y="88" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">App Bubbles 全局浮窗</text>
+    <text x="14" y="106" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">权限精细化管控</text>
+    <text x="14" y="124" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Compose 1.11 系统加持</text>
+    <rect x="14" y="144" width="147" height="40" rx="6" fill="#3DDC84" fill-opacity="0.08"/>
+    <text x="24" y="168" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#3DDC84">UI 革新 + 性能提升 →</text>
+  </g>
+
+  <!-- Card 3: XR -->
+  <g transform="translate(450, 250)">
+    <rect x="0" y="0" width="175" height="200" rx="12" fill="#161b22" stroke="#30363D" stroke-width="1"/>
+    <rect x="0" y="0" width="175" height="44" rx="12" fill="#FBBC05" fill-opacity="0.12"/>
+    <rect x="0" y="32" width="175" height="12" fill="#FBBC05" fill-opacity="0.12"/>
+    <!-- Glasses icon -->
+    <g transform="translate(16, 9)">
+      <ellipse cx="10" cy="12" rx="10" ry="8" fill="none" stroke="#FBBC05" stroke-width="2"/>
+      <ellipse cx="30" cy="12" rx="10" ry="8" fill="none" stroke="#FBBC05" stroke-width="2"/>
+      <line x1="20" y1="12" x2="20" y2="12" stroke="#FBBC05" stroke-width="2"/>
+      <path d="M0 12 Q-3 8 -2 4" fill="none" stroke="#FBBC05" stroke-width="1.5" stroke-linecap="round"/>
+      <path d="M40 12 Q43 8 42 4" fill="none" stroke="#FBBC05" stroke-width="1.5" stroke-linecap="round"/>
+    </g>
+    <text x="54" y="28" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#FBBC05">Android XR</text>
+    <text x="14" y="68" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#c9d1d9">智能眼镜平台</text>
+    <text x="14" y="88" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">完整 SDK 有望发布</text>
+    <text x="14" y="106" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Gemini Live 原生集成</text>
+    <text x="14" y="124" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">三星/高通生态合作</text>
+    <rect x="14" y="144" width="147" height="40" rx="6" fill="#FBBC05" fill-opacity="0.08"/>
+    <text x="24" y="168" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="600" fill="#FBBC05">全新计算平台 →</text>
+  </g>
+
+  <!-- Card 4: More -->
+  <g transform="translate(645, 250)">
+    <rect x="0" y="0" width="195" height="200" rx="12" fill="#161b22" stroke="#30363D" stroke-width="1"/>
+    <rect x="0" y="0" width="195" height="44" rx="12" fill="#EA4335" fill-opacity="0.12"/>
+    <rect x="0" y="32" width="195" height="12" fill="#EA4335" fill-opacity="0.12"/>
+    <!-- Plus/More icon -->
+    <g transform="translate(18, 10)">
+      <circle cx="12" cy="12" r="10" fill="none" stroke="#EA4335" stroke-width="2"/>
+      <line x1="12" y1="6" x2="12" y2="18" stroke="#EA4335" stroke-width="2" stroke-linecap="round"/>
+      <line x1="6" y1="12" x2="18" y2="12" stroke="#EA4335" stroke-width="2" stroke-linecap="round"/>
+    </g>
+    <text x="50" y="28" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="15" font-weight="700" fill="#EA4335">更多重磅</text>
+    <text x="16" y="68" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#c9d1d9">Aluminum OS 新系统</text>
+    <text x="16" y="92" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Chrome OS 兄弟系统</text>
+    <text x="16" y="114" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Android 生态进军 PC</text>
+    <text x="16" y="140" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="12" font-weight="400" fill="#c9d1d9">Google TV + AI</text>
+    <text x="16" y="162" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Nano Banana 图像生成</text>
+    <text x="16" y="182" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="400" fill="#8b949e">Veo 视频生成能力</text>
+  </g>
+
+  <!-- Bottom tag bar -->
+  <rect x="60" y="468" width="220" height="26" rx="13" fill="#4285F4" fill-opacity="0.12" stroke="#4285F4" stroke-width="1" opacity="0.8"/>
+  <text x="170" y="485" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="12" font-weight="600" fill="#4285F4" text-anchor="middle">移动开发者必看攻略</text>
+
+  <rect x="295" y="468" width="130" height="26" rx="13" fill="#30363D" stroke="#30363D" stroke-width="1"/>
+  <text x="360" y="485" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="11" font-weight="500" fill="#8b949e" text-anchor="middle">5月19日 开幕</text>
+
+  <!-- Date badge -->
+  <g transform="translate(770, 458)">
+    <rect x="0" y="0" width="70" height="36" rx="8" fill="#EA4335" fill-opacity="0.15"/>
+    <text x="35" y="16" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="10" font-weight="600" fill="#EA4335" text-anchor="middle">2026.05</text>
+    <text x="35" y="31" font-family="-apple-system, 'SF Pro Display', 'Segoe UI', sans-serif" font-size="13" font-weight="800" fill="#ffffff" text-anchor="middle">06</text>
+  </g>
+</svg>
